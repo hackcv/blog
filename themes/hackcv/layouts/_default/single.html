@@ -1,0 +1,66 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "meta" }}
+<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}">
+{{- $tags := .Params.tags -}}
+{{- $cats := .Params.categories -}}
+<meta name="keywords" content="{{ with $tags }}{{ delimit $tags ", " }}{{ end }}{{ with $cats }}{{ if $tags }}, {{ end }}{{ delimit $cats ", " }}{{ end }}">
+<meta name="author" content="{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+{{ define "main" }}
+<div class="article-header">
+  <div class="container">
+    <h1 class="article-title">{{ .Title }}</h1>
+    <div class="article-meta">
+      {{ with .Params.author }}<span>👤 {{ . }}</span>{{ end }}
+      <span>📅 {{ .Date.Format "2006-01-02" }}</span>
+      {{ with .Params.categories }}<span>📂 {{ delimit . ", " }}</span>{{ end }}
+      <span>⏱️ {{ $min := 1 }}{{ $time := int (math.Ceil (div (float .WordCount) 300.0)) }}{{ if lt $time $min }}{{ $min }}{{ else }}{{ $time }}{{ end }} 分钟阅读</span>
+    </div>
+  </div>
+</div>
+
+{{- $cover := partial "cover.html" (dict "page" .) -}}
+{{ if $cover }}
+<img src="{{ $cover }}" alt="{{ .Title }}" class="article-cover" loading="eager">
+{{ end }}
+
+<div class="container" style="max-width:760px;padding-bottom:48px">
+  <div class="article-content">
+    {{ .Content }}
+  </div>
+
+  {{ if .Params.tags }}
+  <div class="tag-list">
+    {{ range .Params.tags }}
+    <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag"># {{ . }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  {{ if .TableOfContents }}
+  <div class="toc-wrap" style="margin-top:32px">
+    <details class="toc">
+      <summary>📑 {{ i18n "toc" }}</summary>
+      {{ .TableOfContents }}
+    </details>
+  </div>
+  {{ end }}
+
+  {{ $related := where .Site.RegularPages "Section" "posts" | intersect (where .Site.RegularPages "Title" "!=" .Title) | first 3 }}
+  {{ if $related }}
+  <div class="related">
+    <h3 style="font-size:1rem;font-weight:600;margin-bottom:16px">📖 {{ i18n "related_posts" }}</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px">
+      {{ range $related }}
+      <div>
+        {{- $cover := partial "cover.html" (dict "page" .) -}}
+        <img src="{{ $cover }}" alt="{{ .Title }}" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;margin-bottom:8px">
+        <a href="{{ .RelPermalink }}" style="font-size:.875rem;font-weight:500;line-height:1.4">{{ .Title }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,16 @@
+{
+  "title": "Welcome to hackcv",
+  "url": "/en/posts/welcome/",
+  "permalink": "https://hackcv.com/en/posts/welcome/",
+  "date": "2026-03-21",
+  "lastmod": "2026-03-21",
+  "author": "hackcv",
+  "description": "hackcv is an AI-powered news aggregation and summarization platform.",
+  "categories": ["Technology"],
+  "tags": ["AI","News"],
+  "cover": "https://picsum.photos/seed/welcome-to-hackcv/1200/675",
+  "readingTime": 1,
+  "wordCount": 66,
+  "content": "\u003ch1 id=\"welcome-to-hackcv\"\u003eWelcome to hackcv\u003c/h1\u003e\n\u003cp\u003ehackcv is a minimalist, AI-powered news aggregation platform. We help you stay updated with the latest AI and technology news.\u003c/p\u003e\n\u003ch2 id=\"features\"\u003eFeatures\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e🤖 AI-curated content from around the world\u003c/li\u003e\n\u003cli\u003e📝 Smart summaries to save your time\u003c/li\u003e\n\u003cli\u003e⚡ Clean reading experience, no ads\u003c/li\u003e\n\u003cli\u003e📱 Responsive design for all devices\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"our-mission\"\u003eOur Mission\u003c/h2\u003e\n\u003cp\u003eMaking information accessible and digestible. AI works for you, not the other way around.\u003c/p\u003e\n",
+  "summary": "Welcome to hackcv hackcv is a minimalist, AI-powered news aggregation platform. We help you stay updated with the latest AI and technology news.\nFeatures 🤖 AI-curated content from around the world 📝 Smart summaries to save your time ⚡ Clean reading experience, no ads 📱 Responsive design for all devices Our Mission Making information accessible and digestible. AI works for you, not the other way around.\n"
+}

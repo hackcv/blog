@@ -1,0 +1,21 @@
+{{- $pages := where .Site.RegularPages "Section" "posts" | first 20 -}}
+{
+  "total": {{ len $pages }},
+  "posts": [
+    {{- range $i, $p := $pages }}{{ if $i }},{{ end }}
+    {
+      "title": {{ $p.Title | jsonify }},
+      "url": {{ $p.RelPermalink | jsonify }},
+      "permalink": {{ $p.Permalink | jsonify }},
+      "date": {{ $p.Date.Format "2006-01-02" | jsonify }},
+      "author": {{ $p.Params.author | default "" | jsonify }},
+      "description": {{ $p.Description | default "" | jsonify }},
+      "categories": {{ $p.Params.categories | jsonify }},
+      "tags": {{ $p.Params.tags | jsonify }},
+      "cover": {{ partial "cover.html" (dict "page" $p) | jsonify }},
+      "readingTime": {{ math.Ceil (div (float $p.WordCount) 300.0) }},
+      "wordCount": {{ $p.WordCount }}
+    }
+    {{- end }}
+  ]
+}

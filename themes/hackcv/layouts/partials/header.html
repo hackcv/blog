@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="{{ .Site.BaseURL }}" class="site-logo">hack<span>cv</span></a>
+    <nav class="nav">
+      <a href="{{ .Site.BaseURL }}">{{ i18n "home" }}</a>
+      {{ with .Site.GetPage "section" "categories" }}
+      <a href="{{ .RelPermalink }}">{{ i18n "categories" }}</a>
+      {{ end }}
+      {{ with .Site.GetPage "section" "tags" }}
+      <a href="{{ .RelPermalink }}">{{ i18n "tags" }}</a>
+      {{ end }}
+      <a href="{{ .Site.BaseURL }}about">{{ i18n "about" }}</a>
+    </nav>
+  </div>
+</header>

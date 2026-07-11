@@ -1,0 +1,30 @@
+{
+  "title": "News",
+  "total": 2,
+  "posts": [
+    {
+      "title": "3 22",
+      "url": "/3-22/",
+      "permalink": "https://hackcv.com/3-22/",
+      "date": "2026-03-22",
+      "author": "hackcv",
+      "description": "hackcv is an AI-powered news aggregation and summarization platform.",
+      "categories": ["Technology"],
+      "tags": ["AI","News"],
+      "cover": "https://picsum.photos/seed/3-22/1200/675",
+      "readingTime": 0
+    },
+    {
+      "title": "Welcome to hackcv",
+      "url": "/en/posts/welcome/",
+      "permalink": "https://hackcv.com/en/posts/welcome/",
+      "date": "2026-03-21",
+      "author": "hackcv",
+      "description": "hackcv is an AI-powered news aggregation and summarization platform.",
+      "categories": ["Technology"],
+      "tags": ["AI","News"],
+      "cover": "https://picsum.photos/seed/welcome-to-hackcv/1200/675",
+      "readingTime": 1
+    }
+  ]
+}

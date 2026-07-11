@@ -1,0 +1,25 @@
+home: 首页
+categories: 分类
+tags: 标签
+about: 关于
+privacy: 隐私政策
+all_posts: 查看全部
+latest_posts: 最新文章
+total_posts: "共 %d 篇"
+read_more: 了解更多
+reading_time: "%d 分钟阅读"
+related_posts: 相关推荐
+toc: 目录
+prev_page: 上一页
+next_page: 下一页
+no_cover: 无封面图
+author: 作者
+date: 日期
+category: 分类
+tag: 标签
+search: 搜索
+back_home: 返回首页
+page_not_found: 页面未找到
+page_not_found_desc: 抱歉，你访问的页面不存在或已移动。
+copyright: 版权所有
+about_tagline: AI 资讯聚合与摘要站点

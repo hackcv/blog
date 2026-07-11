@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Title }}. {{ i18n "copyright" }}.</p>
+    <div class="footer-links">
+      <a href="{{ .Site.BaseURL }}about">{{ i18n "about" }}</a>
+      <a href="{{ .Site.BaseURL }}privacy">{{ i18n "privacy" }}</a>
+      {{ with .Site.Params.github }}
+      <a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
+      {{ end }}
+    </div>
+  </div>
+</footer>

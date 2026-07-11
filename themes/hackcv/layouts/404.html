@@ -1,0 +1,9 @@
+{{ define "title" }}404 - {{ i18n "page_not_found" }}{{ end }}
+{{ define "main" }}
+<div style="text-align:center;padding:80px 20px">
+  <div style="font-size:5rem;font-weight:700;color:var(--border);margin-bottom:16px">404</div>
+  <h1 style="font-size:1.5rem;font-weight:600;margin-bottom:12px">{{ i18n "page_not_found" }}</h1>
+  <p style="color:var(--text-muted);margin-bottom:24px">{{ i18n "page_not_found_desc" }}</p>
+  <a href="{{ .Site.BaseURL }}" style="display:inline-block;background:var(--accent);color:#fff;padding:10px 24px;border-radius:8px;font-weight:500">← {{ i18n "back_home" }}</a>
+</div>
+{{ end }}

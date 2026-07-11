@@ -1,0 +1,88 @@
+{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <h1>{{ .Site.Title }}</h1>
+    <p>{{ .Site.Params.description | default (i18n "latest_posts") }}</p>
+  </div>
+</section>
+
+<!-- Latest Posts Grid -->
+<section class="featured">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ i18n "latest_posts" }}</h2>
+      <a href="{{ .Site.BaseURL }}posts" style="font-size:.85rem;color:var(--accent)">{{ i18n "all_posts" }} →</a>
+    </div>
+    <div class="grid">
+      {{ range first 6 (where $.Site.RegularPages "Section" "posts") }}
+      <article class="card">
+        {{- $cover := partial "cover.html" (dict "page" . "keyword" "tech") -}}
+        <img src="{{ $cover }}" alt="{{ .Title }}" class="card-thumb" loading="lazy">
+        <div class="card-body">
+          {{ with .Params.categories }}
+          <span class="card-tag">{{ index . 0 }}</span>
+          {{ end }}
+          <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <div class="card-meta">
+            <span>📅 {{ .Date.Format "01-02" }}</span>
+            <span>⏱️ {{ $min := 1 }}{{ $time := int (math.Ceil (div (float .WordCount) 300.0)) }}{{ if lt $time $min }}{{ $min }}{{ else }}{{ $time }}{{ end }} 分钟阅读</span>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+{{ range first 3 (.Site.Home.Sections) }}
+{{ end }}
+
+{{ $cats := slice }}
+{{ range $k, $v := .Site.Taxonomies.categories }}
+{{ $cats = $cats | append (dict "name" $k "count" (len $v)) }}
+{{ end }}
+
+{{ if $cats }}
+<section style="padding:0 0 48px">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ i18n "categories" }}</h2>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      {{ range $cats }}
+      <a href="{{ $.Site.BaseURL }}categories/{{ .name | urlize }}" style="
+        display:inline-flex;align-items:center;gap:8px;
+        background:var(--bg-secondary);border:1px solid var(--border);
+        padding:8px 16px;border-radius:8px;
+        font-size:.875rem;font-weight:500;color:var(--text);
+        transition:all .15s;
+      " onmouseover="this.style.background='var(--accent)',this.style.color='#fff',this.style.borderColor='var(--accent)'" onmouseout="this.style.background='var(--bg-secondary)',this.style.color='var(--text)',this.style.borderColor='var(--border)'">
+        📂 {{ .name }}
+        <span style="font-size:.75rem;opacity:.6">({{ .count }})</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- About teaser -->
+<section style="background:var(--bg-secondary);border-top:1px solid var(--border);padding:40px 0">
+  <div class="container" style="text-align:center">
+    <h2 style="font-size:1.3rem;font-weight:600;margin-bottom:10px">{{ i18n "about" }} hackcv</h2>
+    <p style="color:var(--text-muted);max-width:500px;margin:0 auto 20px;font-size:.95rem">
+      {{ i18n "about_tagline" | default "AI 资讯聚合与摘要站点" }}
+    </p>
+    <a href="{{ .Site.BaseURL }}about" style="
+      display:inline-flex;align-items:center;gap:6px;
+      background:var(--accent);color:#fff;
+      padding:10px 22px;border-radius:8px;font-size:.875rem;font-weight:500;
+    ">{{ i18n "read_more" }} →</a>
+  </div>
+</section>
+
+{{ end }}

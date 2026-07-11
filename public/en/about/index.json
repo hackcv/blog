@@ -1,0 +1,16 @@
+{
+  "title": "About",
+  "url": "/en/about/",
+  "permalink": "https://hackcv.com/en/about/",
+  "date": "2026-03-21",
+  "lastmod": "2026-03-21",
+  "author": "",
+  "description": "About hackcv",
+  "categories": null,
+  "tags": null,
+  "cover": "https://picsum.photos/seed/about/1200/675",
+  "readingTime": 1,
+  "wordCount": 67,
+  "content": "\u003ch1 id=\"about-hackcv\"\u003eAbout hackcv\u003c/h1\u003e\n\u003cp\u003ehackcv is an AI news aggregation and summarization platform.\u003c/p\u003e\n\u003ch2 id=\"philosophy\"\u003ePhilosophy\u003c/h2\u003e\n\u003cp\u003eLet AI help filter and summarize information, so you can focus on what truly matters.\u003c/p\u003e\n\u003ch2 id=\"features\"\u003eFeatures\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e🤖 AI-curated global AI/tech news\u003c/li\u003e\n\u003cli\u003e📝 Smart summaries for quick insights\u003c/li\u003e\n\u003cli\u003e⚡ Clean reading experience, no ads\u003c/li\u003e\n\u003cli\u003e📱 Responsive design\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"tech-stack\"\u003eTech Stack\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eHugo static site generator\u003c/li\u003e\n\u003cli\u003eAI content curation \u0026amp; summarization\u003c/li\u003e\n\u003cli\u003eModern minimalist theme\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"contact\"\u003eContact\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eGitHub: \u003ca href=\"https://github.com\"\u003ehttps://github.com\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eEmail: \u003ca href=\"mailto:hello@hackcv.com\"\u003ehello@hackcv.com\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n",
+  "summary": "About hackcv hackcv is an AI news aggregation and summarization platform.\nPhilosophy Let AI help filter and summarize information, so you can focus on what truly matters.\nFeatures 🤖 AI-curated global AI/tech news 📝 Smart summaries for quick insights ⚡ Clean reading experience, no ads 📱 Responsive design Tech Stack Hugo static site generator AI content curation \u0026amp; summarization Modern minimalist theme Contact GitHub: https://github.com Email: hello@hackcv.com "
+}

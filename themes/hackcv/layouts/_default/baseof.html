@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title -->
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+  
+  <!-- Base SEO Meta -->
+  {{- block "meta" . }}
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{- $tags := .Params.tags -}}
+  {{- $cats := .Params.categories -}}
+  <meta name="keywords" content="{{ with $tags }}{{ delimit $tags ", " }}{{ end }}{{ with $cats }}{{ if $tags }}, {{ end }}{{ delimit $cats ", " }}{{ end }}">
+  <meta name="author" content="{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{- end }}
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:locale" content="{{ .Site.Language.Lang }}">
+  {{- if .IsPage }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:author" content="{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
+  {{- with .Params.tags }}
+  {{- range . }}
+  <meta property="article:tag" content="{{ . }}">
+  {{- end }}
+  {{- end }}
+  {{- end }}
+  {{- $cover := partial "cover.html" (dict "page" .) }}
+  {{- if $cover }}
+  <meta property="og:image" content="{{ $cover | absURL }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  {{- end }}
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ .Title }}">
+  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  {{- if $cover }}
+  <meta name="twitter:image" content="{{ $cover | absURL }}">
+  {{- end }}
+  {{ with .Site.Params.twitter }}
+  <meta name="twitter:site" content="@{{ . }}">
+  {{ end }}
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="{{ .Site.BaseURL }}favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}apple-touch-icon.png">
+  
+  <!-- RSS -->
+  {{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+  
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  {{ $styles := resources.Get "css/main.css" | minify }}
+  {{ if $styles }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{ end }}
+  
+  <!-- JSON-LD Structured Data -->
+  {{- if .IsPage }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ .Permalink }}"
+    },
+    "headline": "{{ .Title }}",
+    "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
+    "image": "{{ $cover | absURL }}",
+    "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+    "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ with .Params.author }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ .Site.Title }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ .Site.BaseURL }}logo.png"
+      }
+    }
+  }
+  </script>
+  {{- else if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "{{ .Site.Title }}",
+    "description": "{{ .Site.Params.description }}",
+    "url": "{{ .Site.BaseURL }}",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ .Site.BaseURL }}search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  {{- end }}
+</head>
+<body>
+  {{ partial "header" . }}
+  <main>
+    {{- block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer" . }}
+{{ partial "analytics" . }}
+</body>
+</html>

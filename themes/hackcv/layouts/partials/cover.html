@@ -1,0 +1,26 @@
+{{/*
+  默认封面图逻辑
+
+  使用方式：
+  {{ partial "cover.html" (dict "page" . "keyword" "tech") }}
+
+  优先级：
+  1. .Params.cover 有值 → 使用用户指定的图
+  2. 有 defaultCover 配置 → 使用配置的图片
+  3. 使用随机图服务
+*/}}
+
+{{- $page := .page -}}
+{{- $keyword := .keyword | default "minimal" -}}
+
+{{- with $page.Params.cover -}}
+  {{ . }}
+{{- else -}}
+  {{- $service := $page.Site.Params.coverService | default "picsum" -}}
+  {{- $seed := $page.Title -}}
+  {{- if eq $service "unsplash" -}}
+    https://source.unsplash.com/1200x675?{{ $keyword | urlize }}&random={{ now.Unix }}
+  {{- else -}}
+    https://picsum.photos/seed/{{ $seed | urlize }}/1200/675
+  {{- end -}}
+{{- end -}}

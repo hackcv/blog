@@ -1,0 +1,16 @@
+{
+  "title": "隐私策略",
+  "url": "/privacy/",
+  "permalink": "https://hackcv.com/privacy/",
+  "date": "2026-03-21",
+  "lastmod": "2026-03-21",
+  "author": "",
+  "description": "hackcv 隐私策略说明",
+  "categories": null,
+  "tags": null,
+  "cover": "https://picsum.photos/seed/%E9%9A%90%E7%A7%81%E7%AD%96%E7%95%A5/1200/675",
+  "readingTime": 1,
+  "wordCount": 43,
+  "content": "\u003ch1 id=\"隐私策略\"\u003e隐私策略\u003c/h1\u003e\n\u003cp\u003ehackcv 是一个由 AI 驱动的资讯聚合与摘要工具。我们重视你的隐私。\u003c/p\u003e\n\u003ch2 id=\"我们不收集什么\"\u003e我们不收集什么\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e❌ 不需要注册账号\u003c/li\u003e\n\u003cli\u003e❌ 不收集姓名、手机号、邮箱等个人信息\u003c/li\u003e\n\u003cli\u003e❌ 不使用 Cookies 进行用户追踪\u003c/li\u003e\n\u003cli\u003e❌ 不投放个性化广告\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"自动获取的信息\"\u003e自动获取的信息\u003c/h2\u003e\n\u003cp\u003e当你访问 hackcv 时，我们的服务器可能会自动记录以下信息：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003e访问时间\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e访问的页面\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e浏览器类型\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e大致地理位置（仅限国家/地区级别）\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e这些信息仅用于网站运维和统计分析，不会关联到任何个人。\u003c/p\u003e\n\u003ch2 id=\"ai-处理\"\u003eAI 处理\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e所有资讯内容由 AI 自动采集和总结\u003c/li\u003e\n\u003cli\u003e我们不对人工进行用户画像\u003c/li\u003e\n\u003cli\u003eAI 生成的内容仅供参考，不构成投资建议\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"第三方服务\"\u003e第三方服务\u003c/h2\u003e\n\u003cp\u003ehackcv 可能包含指向第三方网站的链接。我们不对这些网站的隐私实践负责。\u003c/p\u003e\n\u003ch2 id=\"变更通知\"\u003e变更通知\u003c/h2\u003e\n\u003cp\u003e本政策可能会随时间更新。如有重大变更，我们会在网站首页通知。\u003c/p\u003e\n\u003ch2 id=\"联系我们\"\u003e联系我们\u003c/h2\u003e\n\u003cp\u003e如对本政策有疑问，请通过 GitHub Issues 或邮件联系我们。\u003c/p\u003e\n",
+  "summary": "隐私策略 hackcv 是一个由 AI 驱动的资讯聚合与摘要工具。我们重视你的隐私。\n我们不收集什么 ❌ 不需要注册账号 ❌ 不收集姓名、手机号、邮箱等个人信息 ❌ 不使用 Cookies 进行用户追踪 ❌ 不投放个性化广告 自动获取的信息 当你访问 hackcv 时，我们的服务器可能会自动记录以下信息：\n访问时间 访问的页面 浏览器类型 大致地理位置（仅限国家/地区级别） 这些信息仅用于网站运维和统计分析，不会关联到任何个人。\nAI 处理 所有资讯内容由 AI 自动采集和总结 我们不对人工进行用户画像 AI 生成的内容仅供参考，不构成投资建议 第三方服务 hackcv 可能包含指向第三方网站的链接。我们不对这些网站的隐私实践负责。\n变更通知 本政策可能会随时间更新。如有重大变更，我们会在网站首页通知。\n联系我们 如对本政策有疑问，请通过 GitHub Issues 或邮件联系我们。\n"
+}

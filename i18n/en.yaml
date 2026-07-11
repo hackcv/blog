@@ -1,0 +1,25 @@
+home: Home
+categories: Categories
+tags: Tags
+about: About
+privacy: Privacy Policy
+all_posts: View All
+latest_posts: Latest Posts
+total_posts: "%d posts"
+read_more: Read More
+reading_time: "%d min read"
+related_posts: Related Posts
+toc: Table of Contents
+prev_page: Previous
+next_page: Next
+no_cover: No Cover
+author: Author
+date: Date
+category: Category
+tag: Tag
+search: Search
+back_home: Back to Home
+page_not_found: Page Not Found
+page_not_found_desc: Sorry, the page you are looking for does not exist or has been moved.
+copyright: All rights reserved
+about_tagline: AI News Aggregator & Summarizer

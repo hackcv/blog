@@ -1,0 +1,26 @@
+{{- $keyword := "tech" -}}
+{{- $size := "1200x675" -}}
+
+{{- with .Get 1 -}}
+  {{- $size = . -}}
+{{- end -}}
+
+{{- with .Get 0 -}}
+  {{- $keyword = . -}}
+{{- end -}}
+
+{{- $width := "1200" -}}
+{{- $height := "675" -}}
+{{- if in $size "x" -}}
+  {{- $parts := split $size "x" -}}
+  {{- $width = index $parts 0 -}}
+  {{- $height = index $parts 1 -}}
+{{- end -}}
+
+{{- $service := .Site.Params.coverService | default "picsum" -}}
+
+{{- if eq $service "unsplash" -}}
+  https://source.unsplash.com/{{ $width }}x{{ $height }}?{{ $keyword | urlize }}&random={{ now.Unix }}
+{{- else -}}
+  https://picsum.photos/seed/{{ $keyword | urlize }}/{{ $width }}/{{ $height }}
+{{- end -}}

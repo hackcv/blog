@@ -1,0 +1,50 @@
+baseURL = 'https://example.org/'
+languageCode = 'zh-CN'
+title = 'hackcv'
+theme = 'hackcv'
+
+defaultContentLanguage = 'zh-cn'
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.zh-cn]
+    languageCode = 'zh-CN'
+    languageName = '简体中文'
+    weight = 1
+  [languages.en]
+    languageCode = 'en-US'
+    languageName = 'English'
+    weight = 2
+
+[params]
+description = "AI 资讯聚合与摘要站点"
+coverService = "picsum"
+github = "https://github.com"
+email = "hello@hackcv.com"
+twitter = "hackcv"
+
+[params.analytics]
+umamiWebsiteId = "cb8c433a-10c8-4ecc-a259-fd8c6c974b92"
+umamiSource = "https://cloud.umami.is/script.js"
+
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS", "JSON"]
+page = ["HTML", "JSON"]
+taxonomy = ["HTML"]
+term = ["HTML", "JSON"]
+
+[services.rss]
+limit = 20
+
+[taxonomies]
+tag = "tags"
+category = "categories"
+
+[build]
+writeStats = true

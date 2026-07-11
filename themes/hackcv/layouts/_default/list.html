@@ -1,0 +1,62 @@
+{{ define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end }}
+{{ define "main" }}
+{{ partial "hero" . }}
+<section class="list">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">{{ .Title }}</h2>
+      <span style="font-size:.85rem;color:var(--text-muted)">{{ printf (i18n "total_posts") (len .Pages) | safeHTML }}</span>
+    </div>
+
+    {{ range .Paginator.Pages }}
+    <div class="list-item">
+      {{- $cover := partial "cover.html" (dict "page" .) -}}
+      <img src="{{ $cover }}" alt="{{ .Title }}" class="list-thumb" loading="lazy">
+      <div class="list-body">
+        <h3 class="list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ if .Description }}
+        <p class="list-summary">{{ .Description }}</p>
+        {{ end }}
+        <div class="card-meta">
+          {{ with .Params.author }}<span>👤 {{ . }}</span>{{ end }}
+          <span>📅 {{ .Date.Format "2006-01-02" }}</span>
+          {{ with .Params.categories }}
+          <span>📂 {{ delimit . ", " }}</span>
+          {{ end }}
+          {{ with .Params.tags }}
+          <span>🏷️ {{ delimit . ", " }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    {{ end }}
+
+    {{ if gt .Paginator.TotalPages 1 }}
+    <div class="pagination">
+      {{ if .Paginator.HasPrev }}
+      <a href="{{ .Paginator.Prev.URL }}" class="pg">← {{ i18n "prev_page" }}</a>
+      {{ else }}
+      <span class="pg disabled">← {{ i18n "prev_page" }}</span>
+      {{ end }}
+
+      {{ $paginator := .Paginator }}
+      {{ range $p := (seq $paginator.TotalPages) }}
+        {{ $pageNum := int $p }}
+        {{ if eq $pageNum $paginator.PageNumber }}
+        <span class="pg current">{{ $pageNum }}</span>
+        {{ else }}
+        {{ $pager := index $paginator.Pagers (sub $pageNum 1) }}
+        <a href="{{ $pager.URL }}" class="pg">{{ $pageNum }}</a>
+        {{ end }}
+      {{ end }}
+
+      {{ if .Paginator.HasNext }}
+      <a href="{{ .Paginator.Next.URL }}" class="pg">{{ i18n "next_page" }} →</a>
+      {{ else }}
+      <span class="pg disabled">{{ i18n "next_page" }} →</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

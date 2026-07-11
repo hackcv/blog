@@ -1,0 +1,16 @@
+{
+  "title": {{ .Title | jsonify }},
+  "url": {{ .RelPermalink | jsonify }},
+  "permalink": {{ .Permalink | jsonify }},
+  "date": {{ .Date.Format "2006-01-02" | jsonify }},
+  "lastmod": {{ .Lastmod.Format "2006-01-02" | jsonify }},
+  "author": {{ .Params.author | default "" | jsonify }},
+  "description": {{ .Description | default "" | jsonify }},
+  "categories": {{ .Params.categories | jsonify }},
+  "tags": {{ .Params.tags | jsonify }},
+  "cover": {{ partial "cover.html" (dict "page" .) | jsonify }},
+  "readingTime": {{ math.Ceil (div (float .WordCount) 300.0) }},
+  "wordCount": {{ .WordCount }},
+  "content": {{ .Content | jsonify }},
+  "summary": {{ .Summary | plainify | jsonify }}
+}
