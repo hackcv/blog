@@ -1,0 +1,50 @@
+baseURL = 'https://YOUR-DOMAIN.example/'  # TODO: 替换为你的自有域名
+languageCode = 'zh-cn'
+title = '我的博客'
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+enableEmoji = true
+
+defaultContentLanguage = 'zh-cn'
+
+[params]
+  env = 'production'
+  title = '我的博客'
+  description = '个人博客 - 记录技术、生活与思考'
+  author = 'Your Name'
+  DateFormat = '2006-01-02'
+  defaultTheme = 'auto'
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  comments = true                # PaperMod 评论开关（配合 layouts/partials/comments.html）
+
+  fuseOpts = { isCaseSensitive = false, shouldSort = true, location = 0, distance = 1000, threshold = 0.4, minMatchCharLength = 0, keys = ['title', 'permalink', 'summary', 'content'] }
+
+# 菜单（搜索页入口）
+[[menu.main]]
+  identifier = 'search'
+  name = '搜索'
+  url = '/search/'
+  weight = 10
+
+[[menu.main]]
+  identifier = 'archives'
+  name = '归档'
+  url = '/archives/'
+  weight = 20
+
+[[menu.main]]
+  identifier = 'tags'
+  name = '标签'
+  url = '/tags/'
+  weight = 30
+
+# 主页输出 JSON：供 PaperMod 内置 fuse.js 搜索索引
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
