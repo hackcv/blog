@@ -16,18 +16,26 @@
   {{- if eq $m.section "deep" -}}{{- $deepN = add $deepN 1 -}}{{- end -}}
   {{- if eq $m.section "practice" -}}{{- $practiceN = add $practiceN 1 -}}{{- end -}}
 {{- end -}}
-{{- /* ---------- Token 消耗统计（从简报正文"总消耗约 N tokens"行解析） ---------- */ -}}
+{{- /* ---------- Token 消耗统计：优先读 data/token-stats.json（scripts/update-token-stats.py 生成） ---------- */ -}}
 {{- $totalTok := 0 -}}{{- $tokCount := 0 -}}
-{{- range where .Site.RegularPages "Section" "posts" -}}
-  {{- $mm := findRE "总消耗约 [0-9,]+k? tokens" .Content -}}
-  {{- if $mm -}}
-    {{- $raw := index (findRE "[0-9,]+k?" (index $mm 0)) 0 -}}
-    {{- if strings.HasSuffix $raw "k" -}}
-      {{- $totalTok = add $totalTok (mul (int (strings.Replace (strings.TrimSuffix "k" $raw) "," "")) 1000) -}}
-    {{- else -}}
-      {{- $totalTok = add $totalTok (int (strings.Replace $raw "," "")) -}}
+{{- with .Site.Data.token_stats -}}
+  {{- if and .total .count -}}
+    {{- $totalTok = .total -}}{{- $tokCount = .count -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $totalTok 0 -}}
+  {{- /* 回退：全站扫描简报正文"总消耗约 N tokens"行 */ -}}
+  {{- range where .Site.RegularPages "Section" "posts" -}}
+    {{- $mm := findRE "总消耗约 [0-9,]+k? tokens" .Content -}}
+    {{- if $mm -}}
+      {{- $raw := index (findRE "[0-9,]+k?" (index $mm 0)) 0 -}}
+      {{- if strings.HasSuffix $raw "k" -}}
+        {{- $totalTok = add $totalTok (mul (int (strings.Replace (strings.TrimSuffix "k" $raw) "," "")) 1000) -}}
+      {{- else -}}
+        {{- $totalTok = add $totalTok (int (strings.Replace $raw "," "")) -}}
+      {{- end -}}
+      {{- $tokCount = add $tokCount 1 -}}
     {{- end -}}
-    {{- $tokCount = add $tokCount 1 -}}
   {{- end -}}
 {{- end -}}
 {{- $avgTok := 0 -}}
