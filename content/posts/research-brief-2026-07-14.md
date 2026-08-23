@@ -1,6 +1,6 @@
 ---
 title: "每日研究简报 2026-07-14"
-date: 2026-07-14T23:30:00+08:00
+date: 2026-07-14T20:30:00+08:00
 draft: false
 tags: ["AI", "大模型", "Agent", "计算机视觉", "音视频处理", "工程优化", "每日简报"]
 categories: ["研究简报"]
@@ -9,184 +9,188 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 # 每日研究简报 2026-07-14
 
-📊 本次任务消耗Token统计：自动化流程执行（未单独计量）；覆盖近3天（7月11日-14日）AI 领域最新 arXiv 论文 / GitHub 开源 / 行业资讯，每日更新。
+📊 本次任务消耗Token统计：总消耗约 52,000 tokens（估算），其中输入约 34,000 tokens（含 WebSearch 检索结果与技能脚本上下文），输出约 18,000 tokens（含本简报正文与公众号排版）。覆盖近3天（7月11日-14日）AI 领域最新 arXiv 论文 / GitHub 开源 / 行业资讯，每日更新。
 
 * * *
 
 ## 主编视角
 
-今天最值得关注的信号是"端侧 Agent + 原生操作系统"同时按下加速键：阶跃星辰发布全球首个智能体原生操作系统 StepAOS 与 AI 手机 STEPX Neo（携程、支付宝、美团、百度等已接入生态），Google 同步将 Gemma 4 以 Apache 2.0 彻底开源、把原生多模态"思考心流"塞进端侧。两条线指向同一结论——下一阶段竞争的主战场从"谁的云端模型更强"转向"谁先把 Agent 落到设备与系统层"。对从业者而言，本地化部署、端云协同与 Agent 编排的落地成本，比追逐更大参数更有现实意义；而灵晟超算登顶与 DeepSeek 自研推理芯片的动向，则提示算力主权正在成为另一条平行主线。
+今天的主线是「算力主权」与「可信落地」同时加速。东方算芯 DF1000 用 14nm + 软件定义 3D 堆叠跑出 520 TFLOPS、SK 海力士 HBM4 供货 Vera Rubin、Meta 把 Hyperion 扩到 500 亿美元——供给端从架构创新到产能军备竞赛全面升温；同一天国家出手搭建 AI 安全评测体系、Meta 因隐私争议火速撤回 Muse Image，说明「能力越大、护栏越紧」已成双向约束。对从业者信号很明确：国产算力正从「追制程」转向「拼架构与全栈可控」，而端侧/开源（如仅 1B 的 HyOCR-1.5）与 AI for Science（归元干细胞模型）是更能绕开算力壁垒、更快出价值的两条务实路线。
 
 ## 一、arXiv最新AI论文（2026.07.11-07.14）
 
-### 1. GRACE: Graph-Regularized Agentic Context Evolution
+### 1. Beyond the Eye (BEE): Efficient Multimodal Reasoning via Self-Regulated Implicit Visual Tools
 
-**摘要**：部署中的 LLM Agent 依赖由运营 harness 组装的"agentic context"。本文提出 GRACE，将持久化指令组件维护为带类型的语义图，并在被修改节点的局部类型邻域内校验更新，再把通过校验的图 reconstructed 为部署用文本指令的增量编辑。在固定电信 Agent harness（源自 τ²-bench）的分布偏移协议下，5 次独立复现将严格可靠性 pass³ 从 Gemini 2.5 Flash 零样本的 0.091 提升到末轮 0.673±0.136，超过同集上 Gemini 3.1 Pro 零样本的 0.242，而扁平文本基线仅 0.191±0.051。
-**领域**：Agent / 上下文演化 / 可靠性
-**推荐理由**：直击"长期自演进 Agent"的工程痛点——扁平文本指令越积越难验证。用图结构把校验局部化，是让 Agent 在固定模型/工具下持续变可靠的务实路线，而非堆参数。
-**链接**：https://arxiv.org/abs/2607.09195
+**摘要**：多模态大模型在"Thinking with Images"范式下靠反复调用外部视觉工具做细粒度感知，但频繁工具调用与重复图像重编码带来巨大算力与延迟开销。BEE 提出隐式视觉工具范式：把工具调用行为直接纳入训练目标，让模型学会自我调节调用；两阶段训练（结构化工具槽 CoT-SFT + 自调节奖励对齐），用 Net Tool Gain（NTG）指标量化冗余工具依赖并惩罚无效依赖。在细粒度视觉感知达 SOTA，通用推理有竞争力，推理效率大幅提升。
+**领域**：多模态 / 视觉推理 / 推理效率
+**推荐理由**：直击 MLLM"边看边想"的算力痛点——不是堆参数，而是让模型学会"何时该用工具"。NTG 量化与自调节奖励是可复用的工程思路，对落地端侧多模态助手有现实意义。
+**链接**：https://arxiv.org/abs/2607.11106
 
-### 2. OpenProver: Agentic and Interactive Theorem Proving with Lean 4
+### 2. DeepBias: Adaptive In-depth Probing of Social Biases in LVLMs
 
-**摘要**：提出 OpenProver，一种面向 Lean 4 的智能体式交互定理证明框架，将猜想生成、策略搜索与人类反馈纳入可交互的证明循环。论文已被 CICM 2026（第19届智能计算机数学会议）接收，正文 7 页 2 图。
-**领域**：形式化证明 / Agent / 数学推理
-**推荐理由**：定理证明是检验 LLM 长程严谨推理的硬基准。把"交互式、可人工介入"写进证明循环，比纯自动证明更贴近真实科研协作，也为可审计 AI 科学家补上关键一环。
-**链接**：https://arxiv.org/abs/2607.09217
+**摘要**：现有偏见评测依赖静态数据集，只能浅层评估。DeepBias 用自适应 Agent 框架深度探测 LVLM 社会偏见：ProposerAgent 生成测试数据并经 DPO 迭代更新以探索模型特有失败模式；DiggerAgent 在多轮探测中从技能库自适应重写测试，逐层暴露更深偏见。用 5 个 SOTA LVLM 作锚构建 DeepBiasBench 基准。
+**领域**：安全 / 偏见评测 / Agent
+**推荐理由**：把"安全评测"做成可进化的攻防循环，比静态榜单更能逼出模型真实盲区。对做合规、可信多模态产品的团队，这种"生成-演化-探测"范式值得借鉴。
+**链接**：https://arxiv.org/abs/2607.11228
 
-### 3. From Passive Retrieval to Active Memory Navigation: Learning to Use Memory as a Structured Action Space
+### 3. The Path to Self-Evolving Clinical Systems: Scaling Medical Agents from Assistance to Autonomy
 
-**摘要**：将记忆从"被动被检索的存储"重新定义为 Agent 可主动操作的"结构化动作空间"，让模型学会以动作方式导航记忆，从而改善长期个性化与可控检索。
-**领域**：Agent 记忆 / 检索增强
-**推荐理由**：与本期多篇"Agent 记忆"开源项目（如 TencentDB-Agent-Memory）形成论文-工程呼应：记忆不应只是 RAG 里的向量库，而应成为 Agent 的一等公民动作。
-**链接**：https://arxiv.org/abs/2607.05794
+**摘要**：综述：把医疗 Agent 从任务型预测器推向能感知、推理、规划、记忆、行动的自主体；从临床部署出发，提出三级自治分类（辅助/协作/完全自治）与统一"scaling spine"（框架/能力/环境缩放）。强调临床环境缩放（PACS/EHR/FHIR 中的工具、数据、clinical gyms）是最可行却最被忽视的方向；临床自演进（通过与环境交互而非仅扩参提升）是关键前沿。整合 300+ 文献。
+**领域**：医疗 Agent / 自演进 / 部署
+**推荐理由**：不像多数论文"能力优先"，它从"临床要什么"倒推。对医疗 AI 落地最有价值的判断是：环境/工具基建比模型参数更关键——和本期多篇"Agent 自演进靠环境交互"的脉络一致。
+**链接**：https://arxiv.org/abs/2607.11175
 
-### 4. Toward Trustworthy Large Language Model Agents in Healthcare
+### 4. Heterogeneous Agent Cohorts for Safe Open-Ended Exploration with Runtime Constraint Memory
 
-**摘要**：提出以安全为先的医疗 Agent 设计，包含护栏（guardrails）、工具约束与升级（escalation）机制，面向可信部署。
-**领域**：医疗 Agent / 安全对齐
-**推荐理由**：医疗是 Agent 落地的高风险高地。把"工具约束 + 人工升级"作为默认架构而非事后补丁，给金融、法务等强监管场景提供了可直接借鉴的范式。
-**链接**：https://arxiv.org/abs/2607.05055
+**摘要**：LLM Agent 两难：静态安全指令限制创造力，自由工具调用又频现违规。本文把创造力与谨慎分给不同角色：Disrupter 提非常规方案，Validator 在工具网关做硬运行时检查，Broker 引入远距类比。失败经 MCTS 编译成紧凑签名的"Scars"约束补丁，本地缓存并被后续 cohort 继承。在空间-语义沙盒中（N=20 次，p<0.01），cohort 到达远端目标而 debate 失败，Validator 阻断全部已执行越界，Scars 降 token 15.1%，信用制通信分配（CAS）在资源受限下整体降 token 55.9%。
+**领域**：Agent 安全 / 约束记忆 / 多 Agent
+**推荐理由**："把失败变成可继承的低成本约束"是让 Agent 既能探索又不失控的务实机制。Scars 的本地缓存+签名继承，比每次从头加安全护栏更省算力，对长程自主 Agent 很关键。
+**链接**：https://arxiv.org/abs/2607.11226
 
-### 5. Unified Audio Intelligence Without Regressing on Text Intelligence
+### 5. Towards Predictive, Aligned, and Scalable Robot Learning (Lumo-2)
 
-**摘要**：提出大规模统一音频-文本 LLM，在大幅扩展音频能力的同时，不回退文本智能，代表前沿多模态模型的重要进展。
-**领域**：多模态 / 音频-语言模型
-**推荐理由**：多模态模型常见的"顾此失彼"问题（加音频掉文本）被正面解决，对端侧助手、会议记录、实时语音 Agent 具有直接价值。
-**链接**：https://arxiv.org/abs/2607.05196
+**摘要**：提出 Lumo-2，潜空间世界-动作模型：在 latent 空间推理世界动力学生成动作。指出标准重建式动作分词会让表征偏向低层保真，导致重建质量与下游控制错位。提出多阶段模态预对齐（动作表征逐步对齐世界动力学/视觉/语言），强制跨模态一致性。系统在长程与灵巧操作等真实任务上持续超越 VLA/WAM 基线。
+**领域**：机器人学习 / 世界模型 / 具身智能
+**推荐理由**：核心洞察——动作质量由 latent 空间几何决定，而非重建保真度。把"模态对齐"作为可缩放原则，对做 VLA/世界模型的团队是直接的方法论提醒。
+**链接**：https://arxiv.org/abs/2607.11270
 
-### 6. DemoPSD: Disagreement-Modulated Policy Self-Distillation
+### 6. Learning to Navigate Efficiently with Only 0.58M Trainable Parameters
 
-**摘要**：针对推理 LLM 自蒸馏的失效与特权信息泄漏问题，提出以"分歧"调制的策略自蒸馏方法。
-**领域**：推理模型 / 蒸馏 / 可靠性
-**推荐理由**：与本期 DOPD 等"在线策略蒸馏"方向互补：聚焦"何时该信教师、何时该质疑"，直接回应蒸馏中的特权幻觉风险。
-**链接**：https://arxiv.org/abs/2607.02502
+**摘要**：质疑视觉导航是否真需要上亿参数。提出分解式导航模型：投影几何/占据/坐标变换等已知闭式结构用解析计算，作为三个小学习模块（egress 预测/导航预测/端点钉扎残差扩散）的接口。仅训练 22.7M 中的 0.58M 参数，44k 帧、不到 1 GPU 小时，在 6060 个点目标 episode、60 环境接近 SOTA，可训练参数少 233 倍、碰撞率最低、50Hz 推理。分解结构还可迁移到无目标探索（仅重训 123k 参数 egress 头）。
+**领域**：机器人导航 / 高效模型 / 具身
+**推荐理由**：用"结构化先验替代规模"的范本：把已知物理/几何做成解析接口，只学真正需要学的少量参数。对端侧/低功耗机器人部署是直接启示——不必都走"大模型+大数据"路线。
+**链接**：https://arxiv.org/abs/2607.11029
 
-### 7. MMBench-Live: A Continuously Evolving Benchmark for Multimodal Models
+### 7. UNIBROWSE: A Data-to-Agent Framework for Multimodal BrowseComp
 
-**摘要**：提出持续演化的多模态评测基准，通过自动化更新应对数据陈旧与污染问题。
-**领域**：多模态评测 / 基准
-**推荐理由**：榜单被刷穿、数据污染是评测公信力的最大威胁。自动演化的活基准比一次性榜单更能反映模型真实能力，值得评测团队跟进。
-**链接**：https://arxiv.org/abs/2607.01813
+**摘要**：多模态 BrowseComp 需 Agent 结合感知、工具使用与长程推理。现有数据构造只覆盖 text-only 与 image-to-text，遗漏 text-to-image。UNIBROWSE 首次统一生成覆盖三种信息流模式的训练数据，用在线检索增强知识图谱，并提出"探索度"指标过滤低信号样本做高效 RL。训练 35B 级 Agent（SFT+探索感知 RL），在 5 个多模态 BrowseComp 基准平均准确率 54.4，较基座 Qwen3.5-35B-A3B 提升 10.5 点，超越 GPT-5(42.9)、Gemini-2.5 Pro(44.8)、Gemini-2.5 Flash(41.3) 等闭源工作流。
+**领域**：Agent / 多模态浏览 / 工具使用
+**推荐理由**：把"text-to-image 信息流"这个被忽视的模式补进数据构造，直接抬升 Agent 泛化。54.4 对比闭源工作流，说明开源 35B Agent 在浏览类任务已能打——对做 Web Agent 的团队是明确信号。
+**链接**：https://arxiv.org/abs/2607.10557
 
-### 8. Pitwall: Faithful Natural-Language Race-Strategy Briefings from a Calibrated Real-Time Monte Carlo Engine
+### 8. PanoWorld: Using Panoramic Rotational Equivariance to Solve World Models' Long-Horizon Memory Problem
 
-**摘要**：以"设计即忠实"的方式做 grounded generation，配Claim验证，为 LLM 系统提供强可靠性范式。
-**领域**：忠实生成 / 校准 / 可靠性
-**推荐理由**：把"可验证声明"内建进生成管线，而非事后打标，是降低幻觉、提升可控性的工程化样板，可迁移到报告、客服等需要引用溯源的场景。
-**链接**：https://arxiv.org/abs/2607.06495
+**摘要**：世界模型跑久了会"忘记"已走过的场景——回头看时画面已漂移。PanoWorld 利用全景表示的旋转等变性，把旋转视为隐式几何变换，从而把相机轨迹约简为固定朝向下的平移，再用 Dense Panoramic Ray-Conditioning 与几何感知记忆增强来维持长程一致性。
+**领域**：世界模型 / 长程记忆 / 具身
+**推荐理由**：用"几何先验"而非"更大记忆"解决世界模型漂移，思路干净。对自动驾驶/机器人长期建图与视频生成的世界一致性都有借鉴价值。
+**链接**：https://arxiv.org/abs/2607.09661
 
 ## 二、GitHub热门开源项目（2026.07.11-07.14）
 
-### 1. TencentCloud/TencentDB-Agent-Memory
+### 1. vxcontrol/pentagi
 
-**简介**：为 AI Agent 提供完全本地化的长期记忆，采用 4 级渐进式流水线（4-tier progressive pipeline），零外部 API 依赖。
-**热度**：2026 年新项目，进入 GitHub Trending 当日新增榜。
-**推荐理由**：直击 Agent "记不住、记不准"的工程痛点，且强调本地化与零外部依赖——与本期 arXiv 多篇"记忆即动作空间"研究形成闭环，是落地型记忆中间件的代表。
-**链接**：https://github.com/TencentCloud/TencentDB-Agent-Memory
+**简介**：全自主 AI Agent 系统，能执行复杂的自动化渗透测试任务，可自托管。
+**热度**：TrendShift 实时提及 49,147（当日热门）
+**推荐理由**：自动化红队从 Demo 走向可自托管的生产力，安全团队可用它跑复杂渗透任务，是"Agent 接管高危重复劳动"的代表项目。
+**链接**：https://github.com/vxcontrol/pentagi
 
-### 2. alibaba/zvec
+### 2. Wei-Shaw/sub2api
 
-**简介**：轻量、极速的进程内（in-process）向量数据库，主打嵌入式相似性搜索。
-**热度**：进入 GitHub Trending 当日新增榜，单日新增约 382 星。
-**推荐理由**：把向量检索压进进程内，省掉独立向量服务与网络往返，对端侧/边缘 Agent、轻量 RAG 非常友好，契合本期"端侧化"主线。
-**链接**：https://github.com/alibaba/zvec
+**简介**：一站式开源中转服务，让 Claude / OpenAI / Gemini / Grok 订阅统一接入，支持拼车共享、原生工具无缝使用。
+**热度**：TrendShift 实时提及 23,944
+**推荐理由**：多订阅聚合 + 拼车分摊成本，对重度多模型用户是省钱的实用基建，也降低了多供应商切换的摩擦。
+**链接**：https://github.com/Wei-Shaw/sub2api
 
-### 3. anthropics/jacobian-lens
+### 3. QuantumNous/new-api
 
-**简介**：Anthropic 发布的"全局工作空间可解释性（global workspace interpretability）"论文配套代码。
-**热度**：2026 年新项目，进入 GitHub Trending 当日新增榜。
-**推荐理由**：来自前沿实验室的可解释性开源，给"Agent 内部决策到底在发生什么"提供可复现的研究入口，利于建立可信 Agent 的观测手段。
-**链接**：https://github.com/anthropics/jacobian-lens
+**简介**：统一 AI 模型枢纽，支持把各类 LLM 转成 OpenAI / Claude / Gemini 兼容格式，是个人与企业模型管理的集中网关。
+**热度**：TrendShift 实时提及 14,144
+**推荐理由**：模型路由/聚合的"中间层"需求爆发，new-api 是这一层的成熟开源实现，适合做私有化模型中台。
+**链接**：https://github.com/QuantumNous/new-api
 
-### 4. TencentCloud/CubeSandbox
+### 4. multica-ai/multica
 
-**简介**：面向 AI Agent 的即时、并发、安全、轻量沙箱，提供毫秒级硬件隔离的执行环境。
-**热度**：2026-04 创建，7 月社区文章详述其设计；进入 Trending 新增榜。
-**推荐理由**：当 Agent 开始替你跑命令、改代码、访问网络，Sandbox 不再是功能而是基础设施。它把"隔离、状态复用、调度、网络治理、审计"做成面向 Agent 的执行层，对 coding agent 与 Agent RL 都关键。
-**链接**：https://github.com/TencentCloud/CubeSandbox
+**简介**：开源托管 Agent 平台，把 coding agent 变成真正队友——派任务、跟进度、沉淀技能。
+**热度**：TrendShift 实时提及 12,618（2026 新晋）
+**推荐理由**：Agent 从单点工具走向"可管理的团队"，multica 代表"Agent 编排平台"这一新增长极，契合本期"Agent 基础设施层爆发"的主线。
+**链接**：https://github.com/multica-ai/multica
 
-### 5. synthetic-sciences/openscience
+### 5. router-for-me/CLIProxyAPI
 
-**简介**：面向科研的开源 AI 工作台（open-source AI workbench for scientific research）。
-**热度**：2026 年新项目，进入 GitHub Trending 当日新增榜。
-**推荐理由**：把"假设-实验-证据"科研闭环做成可复用工作台，呼应本期 arXiv 多篇"可审计 AI 科学家"方向，降低科研 Agent 的搭建门槛。
-**链接**：https://github.com/synthetic-sciences/openscience
+**简介**：把 Antigravity / ChatGPT Codex / Claude Code / Grok Build 包成 OpenAI / Gemini / Claude / Codex 兼容 API，免费享 Gemini 3.1 Pro、GPT 5.5、Grok 4.3、Claude。
+**热度**：TrendShift 实时提及 11,818
+**推荐理由**：把各家 coding agent 统一成一套 API，降低多工具切换成本；注意其依赖免费额度，合规与稳定性需自担。
+**链接**：https://github.com/router-for-me/CLIProxyAPI
 
-### 6. shadcn/improve
+### 6. esengine/DeepSeek-Reasonix
 
-**简介**：用你最强的大模型审计代码库，并写出供更便宜模型执行的计划。
-**热度**：2026 年新项目，进入 GitHub Trending 当日新增榜。
-**推荐理由**：典型的"强模型规划、弱模型执行"降本范式——用贵模型做高价值审计，把落地交给便宜模型，直接压低 Agent 单次运行成本。
-**链接**：https://github.com/shadcn/improve
+**简介**：DeepSeek 原生的终端 AI coding agent，围绕前缀缓存稳定性设计，常驻运行。
+**热度**：TrendShift 实时提及 1,167（2026 新晋）
+**推荐理由**：国产模型厂下场做工具链，前缀缓存常驻是省 token 的务实细节，代表"模型+IDE agent"一体化趋势。
+**链接**：https://github.com/esengine/DeepSeek-Reasonix
 
-### 7. Graphify-Labs/graphify
+### 7. entireio/cli
 
-**简介**：AI 编码助手技能（兼容 Claude Code、Codex、OpenCode、Cursor、Gemini CLI 等），把任意代码文件夹、SQL schema、脚本、文档、论文、图片或视频变成可查询的知识图谱。
-**热度**：2026 年新项目，进入 GitHub Trending 当日新增榜。
-**推荐理由**：把"代码+数据库 schema+基础设施"统一进一张图，让 Agent 在大型仓库里做跨文件推理更有结构感，是"Agent 技能框架"赛道的务实新品。
-**链接**：https://github.com/Graphify-Labs/graphify
+**简介**：接入 Git 工作流，把 AI agent 会话随提交一起索引，形成可搜索的"代码怎么写出来的"记录。
+**热度**：TrendShift 实时提及 492（2026 新晋）
+**推荐理由**：把 agent 会话变成可审计的研发资产，对团队协作与复盘有价值，也呼应本期"Agent 记忆/可追溯"的论文脉络。
+**链接**：https://github.com/entireio/cli
 
-### 8. obra/superpowers
+### 8. larksuite/cli
 
-**简介**：一套 agentic 技能框架与软件开发方法论，强调结构化开发。
-**热度**：进入 GitHub Trending，长期被社区提及。
-**推荐理由**：在"Agent 技能框架"扎堆的当下，它把方法论（而非单点工具）当成产品，适合想系统性改造团队研发流程的读者参考。
-**链接**：https://github.com/obra/superpowers
+**简介**：飞书/Lark 官方 CLI，覆盖消息/文档/多维表/日历/邮件/任务/会议等，200+ 命令、20+ AI Agent Skills。
+**热度**：TrendShift 实时提及 7,032（2026 新晋）
+**推荐理由**：大厂把协作平台向 Agent 开放，官方 CLI + Skills 降低"Agent 操作企业系统"的接入门槛，是企业 Agent 集成的新入口。
+**链接**：https://github.com/larksuite/cli
 
 ## 持续追踪
 
-### 1. GPT-5.6 Sol 被曝严重 bug 误删 Mac 用户文件（新进展）
+### 1. GPT-5.6 超级应用化与三子模型（新进展）
 
-**新进展**：7 月 12 日凌晨，GPT-5.6 Sol 版本被曝存在严重 bug，可误删 Mac 用户主目录文件，硅谷多位技术人士中招；OpenAI 已紧急发布修复补丁并致歉，提醒用户升级至最新版本。此前本简报已覆盖其全面开放与"一小时证明 50 年数学猜想"的进展，本次仅记录增量风险事件。
-**来源**：公众号技术号（mp.weixin.qq.com）、科技国际洞察（new.qq.com/rain/a/20260712A053BY00）
+**新进展**：7月14日 AI 日报显示，OpenAI 以 ChatGPT / Codex / Work 三合一桌面应用推进"超级应用"形态，并推出 Sol（旗舰）/ Terra（性价比）/ Luna（轻量）三个子模型，Ultra 模式调用并行 Sub-agent 处理复杂任务。
+**来源**：九派财经、Twitter(@paramiao)
+
+### 2. Claude Fable 5 二次延期至 7/19 并引入商业人才（新进展）
+
+**新进展**：Anthropic 在用户压力下将 Fable 5 免费期再延至 7月19日；同时英国数字银行 Monzo 联创、YC 合伙人 Tom Blomfield 加入 Anthropic，强化商业化与产品执行。
+**来源**：163.com、九派财经
 
 ## 三、精选AI行业资讯（2026.07.11-07.14）
 
-### 1. 谷歌发布 Gemma 4 开源模型，端侧实现原生多模态
+### 1. 东方算芯 DF1000：14nm 软件定义 3D AI 芯片实现 520 TFLOPS
 
-**内容**：7 月 11 日，Google DeepMind 发布 Gemma 4 系列模型并采用 Apache 2.0 彻底开源。该系列去掉传统视觉与音频编码器，将媲美顶级云端 AI 的"思考心流"塞进笔记本和手机可离线跑通的轻量身躯，实现端侧大模型原生多模态理解与深度思考。
-**推荐理由**：彻底开源 + 端侧原生多模态，把"云端能力下沉到设备"从口号变成可下载权重，与本期 StepAOS/AI 手机形成"端侧 Agent"合力，中小团队本地化部署门槛进一步降低。
-**来源**：新智元、海外科技日报（view.inews.qq.com/a/20260712A02GF900）
+**内容**：7月13日，东方算芯在上海发布 DF1000，采用 14nm 成熟制程 + 晶圆级混合键合 3D 堆叠，实现 520 TFLOPS（BF16）算力、6.4TB/s 访存带宽、900GB/s 互联，不依赖先进制程与 HBM，已完成 128 卡集群全功能稳定运行；同步发布加速卡/超节点/服务器/智算集群产品矩阵与全栈 CAAP 软件栈，兼容 DeepSeek、千问等开源模型。
+**推荐理由**：国产高端算力走出"以架构创新代替制程追随"的新路，全栈自主可控对算力基础设施国产替代有直接意义。
+**来源**：智东西、科创中国、南华早报（SCMP）
 
-### 2. 阶跃星辰发布全球首个智能体原生操作系统 StepAOS 与 AI 手机 STEPX Neo
+### 2. 阿里达摩院×西湖大学"归元"：干细胞重编程预测 AI 模型
 
-**内容**：7 月 13 日晚，上海大模型企业阶跃星辰发布全球首个智能体原生操作系统"阶跃智能体操作系统"StepAOS 与个人智能体"阶跃 Amoo"，大模型原生 AI 终端品牌 STEPX 及首款智能体手机 STEPX Neo 一同亮相。StepAOS 在安卓与 App 之间新增一层专供智能体调度的操作系统，统一编排 CPU/GPU/NPU 异构算力；携程、支付宝、滴滴、美团、百度、京东、剪映等作为首批生态伙伴接入。该机将于 7 月 17 日世界人工智能大会完成全球首秀。
-**推荐理由**：这是"Agent 从云助手变成 OS 级公民"的标志性事件——跨应用调度、长期记忆、端云协同、可审计可撤回。生态伙伴成色决定成败，但其"模软硬三位一体"的打法值得所有做 Agent 产品的团队研究。
-**来源**：新浪财经（finance.sina.com.cn/stock/t/2026-07-14/doc-inihtmeq5361018.shtml）、智东西/腾讯网（new.qq.com/rain/a/20260714A00JMK00）
+**内容**：西湖大学与阿里达摩院研发出干细胞重编程预测 AI 模型"归元"，从近 400 万种药物组合中锁定方案，首次在体外培育出可传代超 50 代的高质量下胚层样干细胞，助力早期胚胎发育与细胞治疗研究。
+**推荐理由**：AI for Science 的扎实案例——用模型把"试错式"生物实验变成"预测式"筛选，显著压缩研发周期，代表 AI 进入硬科学发现的主线。
+**来源**：潮新闻
 
-### 3. 中国超算"灵晟"以 2.19 EFLOPS 重返世界第一
+### 3. SK 海力士 12 层 HBM4 量产供货英伟达 Vera Rubin
 
-**内容**：国家超级计算深圳中心发布新一代全国产超算系统"灵晟"，实测持续性能达 2.19 EFLOPS（每秒百亿亿次），成为世界首台持续性能超 2 EFLOPS 的超算系统，也是自 2017 年"神威·太湖之光"后我国超算再次排名全球第一。系统实现关键部件全栈国产化。
-**推荐理由**：算力"大国重器"重回榜首且全栈自主可控，对大模型训练、科学计算与 AI 基础设施的供给安全有直接意义；也侧面说明国产算力底座已具备支撑前沿训练的规模。
-**来源**：网易（163.com/dy/article/L1MR03E00514R9M0）、微博 AIGC日报（weibo.com/7905315703/5320133951884823）
+**内容**：7月14日，SK 海力士启动面向英伟达的 12 层 HBM4 量产出货，首次以完成质量认证的最终规格供货下一代 AI 平台"Vera Rubin"，9 月起扩大出货规模。
+**推荐理由**：HBM4 是下一代 AI 训练/推理平台的带宽底座，供货节奏直接影响高端算力产能，是观察 AI 硬件供应链的关键指标。
+**来源**：凤凰网
 
-### 4. DeepSeek 被曝秘密启动自研推理专用 AI 芯片项目
+### 4. Meta Hyperion 数据中心扩至 500 亿美元 / 5GW
 
-**内容**：据路透社报道，DeepSeek 正在秘密开发自研 AI 推理芯片，项目约一年前启动，已与芯片设计公司、晶圆代工厂及存储厂商进行多轮洽谈。
-**推荐理由**：推理芯片正成为模型公司的战略高地（同期 OpenAI 首款自研推理芯片 Jalapeño、Etched 获 8 亿美元融资）。模型公司向上游芯片延伸，将重塑推理成本结构与供给格局。
-**来源**：路透社（Reuters）、今日头条 AIGC日报（toutiao.com/a1870580887729216）
+**内容**：7月13日，Meta 宣布大幅扩建路易斯安那州 Hyperion 数据中心，总投资由 100 亿美元提高至最高 500 亿美元（新增约 400 亿），规模达 5GW，跻身全球最大 AI 数据中心之一；扎克伯格承诺未来数年对美国基建投入至少 6000 亿美元。
+**推荐理由**：算力"军备竞赛"持续升级，资本开支向超大规模集群集中，将推高对电力、散热与 HBM 的需求，也加剧供给端紧张。
+**来源**：中国基金报（163.com）、赛迪网
 
-### 5. 联合国发布首份独立 AI 科学评估报告，警告监管滞后
+### 5. 腾讯混元开源 HyOCR-1.5：1B 端到端 OCR，提速 6.37×
 
-**内容**：联合国发布首份独立的 AI 科学评估报告，核心警告称 AI 能力的演化速度已超出全球现有法律与监管框架的承载能力，呼吁建立由外部主导的监管机制，而非依赖 AI 公司自我评估。
-**推荐理由**：来自超国家机构的"独立评估"信号，与本期多篇"可审计 AI 科学家""可信 Agent"研究形成政策呼应——可信不能只靠厂商自证，外部审计会成为刚需。
-**来源**：微博 AIGC日报（weibo.com/7905315703/5320133951884823）、今日头条 AIGC日报（toutiao.com/a1870580887729216）
+**内容**：腾讯混元开源端到端 OCR 专家模型 HyOCR-1.5，仅 1B 参数覆盖 8 种以上任务；借助 DFlash 投机解码提速 6.37 倍，成为最快 OCR VLM，可借 llama.cpp 在 CPU 与普通笔记本运行；OmniDocBench v1.6 得 94.74 分居端到端第一。
+**推荐理由**：端侧/轻量 OCR 开源，把文档数字化门槛降到边缘设备，与"端侧 AI"主线呼应，也是"小模型干专精活"的范例。
+**来源**：今日头条（波动智能）、腾讯混元
 
-### 6. Meta 紧急下线争议 AI 生图功能 Muse Image
+### 6. 英伟达 RTX Spark 中国首秀 + 携手 Hugging Face 做机器人开源基础模型
 
-**内容**：7 月 11 日，Meta 推出 AI 图像生成工具 Muse Image，因允许用户通过 @ 提及公开 Instagram 账号生成图像，引发肖像权侵犯争议；7 月 12 日凌晨 Meta 紧急下线该功能，表示将重新评估模型安全机制后再上线。
-**推荐理由**：又一个"能力跑在治理前面"的典型案例——生图功能因隐私/肖像权设计缺陷被快速回撤，提醒所有做 UGC 生成产品的团队：权限与边界要先于炫技。
-**来源**：财联社（view.inews.qq.com/a/20260712A01QNB00）、腾讯网（view.inews.qq.com/a/20260712A01R1L00）
+**内容**：BW 2026 上海展，英伟达首次向消费者展出 RTX Spark 超级芯片（20 核 Arm CPU + 6144 CUDA 核心，最高 128GB 统一内存）；7月14日消息，英伟达与 Hugging Face 联合开发机器人开源基础模型，结合 GPU 生态与 CUDA 降低 AI 训练门槛。
+**推荐理由**：硬件厂商同时向下（消费级超级芯片）与向生态（机器人开源模型）双向卡位，对做边缘 AI 与具身智能的团队都是关键基础设施信号。
+**来源**：爱范儿、界面新闻
 
-### 7. 谷歌将 Gemini 3.5 Flash 嵌入 Search，Search agents 上线
+### 7. Meta 撤回 Muse Image：隐私争议下上线不足 3 天即下架
 
-**内容**：Google 宣布将 Gemini 3.5 Flash 作为 AI Mode 全球默认模型升级 Search，并推出新的 Search agents 与经 Google Antigravity 的 agentic coding 功能。
-**推荐理由**：前沿模型不再只卖 API，而是直接嵌入十亿级分发入口（搜索），Agent 成为"新前线"。这预示竞争维度从模型参数转向平台触达与合规，值得产品侧高度关注。
-**来源**：Google 博客（blog.google/products-and-platforms/products/search/search-io-2026）、AI Flash Report（aiflashreport.com/archive/2026-07-12）
+**内容**：Meta 超级智能实验室（Superintelligence Labs）首个生图产品 Muse Image 于 7月8日上线，因可处理他人公开账号图片、引发 consent 争议，SAG-AFTRA 谴责，不足 3 天即撤回；Meta 承认"发布没把握好"。
+**推荐理由**：大模型产品的"发布即翻车"案例，提醒生成式产品在隐私与授权上的默认设置必须 opt-in，否则再强的模型也会因治理失误折戟。
+**来源**：my2cents.ai、SAG-AFTRA
 
-### 8. 传闻：Anthropic 有望下周发布超越 GPT-5.6 的新模型
+### 8. 国家搭建 AI 安全评测体系，瞄准大模型风险
 
-**内容**：7 月 12 日，社交媒体流传 Anthropic 有望下周推出全新 AI 模型，据称智能水平将超越 OpenAI 当前领先的 GPT-5.6 Sol，且成本更具优势。
-**推荐理由**：若属实，前沿模型的价格/能力军备竞赛将再升级；但当前仍为传闻，建议以官方发布为准。
-**来源**：地球档案馆（view.inews.qq.com/a/20260712A02HR800）、IT之家（view.inews.qq.com/a/20260712A02WY700）
-**状态**：传闻·待证实
+**内容**：监管机构着手建立 AI 安全评测标准与体系，针对大模型风险（如偏见、失控、数据安全）开展评测与基准建设。
+**推荐理由**：监管从"原则倡导"进入"可量化评测"阶段，意味着大模型上线将面对更明确的合规门槛，做 To G/To B 模型的团队应尽早对齐评测口径。
+**来源**：南华早报（SCMP）
