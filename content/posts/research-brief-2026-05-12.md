@@ -1,8 +1,9 @@
 ---
 title: "每日研究简报 2026-05-12"
+author: "hackcv"
 date: 2026-05-12T22:46:00+08:00
 draft: false
-tags: ["AI", "大模型", "Agent", "多模态", "推理优化", "金融AI", "每日简报"]
+tags: ["AI", "大模型", "Agent", "每日简报", "多模态", "推理优化", "金融AI"]
 categories: ["研究简报"]
 description: "AI / 大模型 / Agent / 多模态 / 推理优化 / 金融AI 领域每日研究简报"
 ---

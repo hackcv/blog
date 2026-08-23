@@ -1,8 +1,9 @@
 ---
 title: "每日研究简报 2026-08-13"
+author: "hackcv"
 date: 2026-08-13T20:30:00+08:00
 draft: false
-tags: ["AI", "大模型", "Agent", "多模态", "强化学习", "开源", "每日简报"]
+tags: ["AI", "大模型", "Agent", "每日简报", "多模态", "强化学习", "开源"]
 categories: ["研究简报"]
 description: "AI / 大模型 / Agent / 多模态 / 强化学习 / 开源 领域每日研究简报"
 ---

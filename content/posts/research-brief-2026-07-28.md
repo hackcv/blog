@@ -1,266 +1,197 @@
 ---
 title: "每日研究简报 2026-07-28"
-date: 2026-07-28T23:30:00+08:00
+author: "hackcv"
+date: 2026-07-28T20:30:00+08:00
 draft: false
-tags: ["AI", "大模型", "Agent", "计算机视觉", "音视频处理", "工程优化", "每日简报"]
+tags: ["AI", "大模型", "Agent", "每日简报", "计算机视觉", "音视频处理", "工程优化"]
 categories: ["研究简报"]
 description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 / 工程优化 领域每日研究简报"
 ---
+# 每日研究简报 2026-07-28
 
-> 📅 生成时间：2026-07-28 21:21 (Asia/Shanghai) | 数据来源：arXiv · GitHub · HackerNews · 科技媒体 · 大厂博客
+📊 本次任务消耗Token统计：总消耗约 68,000 tokens，其中输入约 58,000 tokens，输出约 10,000 tokens
+涵盖近 3 天（07-25–07-28）AI 领域最新动态，三栏各 8 条 + 持续追踪 2 条，全部为真实素材、链接真实可溯。
 
----
+* * *
 
-## 📄 一、arXiv 最新论文
+## 主编视角
 
-### 1. A Replay-Constrained Simulation Framework for Personalization of Powered Knee--Ankle Prosthesis Controllers
-- **方向**：arXiv/机器人学
-- **摘要**：arXiv:2607.22858v1 Announce Type: new Abstract: Personalization of impedance controllers for powered prosthetic legs is critical to accommodating individual gait biomechanics but remains challenging. Existing methods rely on time-intensive human-in-the-loop exploration and/or constrain optimization to low-dimensional, single-joint parameter subspaces. Sim-to-real transfer has enabled high-dimensio...
-- **推荐原因**：工程优化类工作往往直接决定技术能否真正落地，值得重点关注。
-- **链接**：https://arxiv.org/abs/2607.22858
+今天的信号很集中：Agent 时代真正进入「纠偏与可追溯」阶段，扩散模型也正式下场抢 Agent 的活。一边，arXiv 上 SIREN、Self-Authored Verification（SEAL）、Looping Is Not Reliability 三篇把「长程 Agent 如何不跑偏、不自我欺骗、改完能留证」做成可验证课题——本质都在补 agent 工程的可靠性底座；另一边，蚂蚁开源的 LLaDA 2.2 把扩散语言模型首次推进到「边行动边纠错」的 Agent 工作流（SWE-bench 49.28%、τ²-Bench 反超两倍），与自回归路线形成双轨。产业侧则更「硬」：谷歌 capex 提到 1950–2050 亿美元、自由现金流上市来首度转负，英伟达为 OpenAI 担保 2500 亿美元致市值单日蒸发 2500 亿——市场开始给 AI 循环融资的偿付能力定价。对小团队的建议：与其追参数，不如把「状态外化（如 SearchOS 的 SOCM）+ 自纠错 + 证据留痕」当成 agent 落地的标配。
 
-### 2. Pose-Aware Modeling to Mitigate Pose-Related Artifacts in Tactile Gloves
-- **方向**：arXiv/机器人学
-- **摘要**：arXiv:2607.22964v1 Announce Type: new Abstract: Tactile gloves digitize contact and force during hand-object interactions, enabling robotics applications in dexterous manipulation, teleoperation, and learning from demonstration. To preserve hand dexterity and capture the nuances of natural interactions, these gloves and the integrated tactile sensors are designed to be soft, flexible, and comforta...
-- **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://arxiv.org/abs/2607.22964
+## 一、arXiv最新AI论文（2026.07.25-07.28）
 
-### 3. FedTaste: Topology-Aware Structural Transfer for Multimodal Federated Learning with Missing Modalities
-- **方向**：arXiv/多媒体
-- **摘要**：arXiv:2607.23245v1 Announce Type: new Abstract: Multimodal Federated Learning is often challenged by arbitrary modality missingness and Non-IID data distributions, which lead to severe representation drift and hinder effective collaboration across clients. Existing methods typically rely on generative imputation, external auxiliary data, or isolated unimodal training to bridge modality gaps, often...
-- **推荐原因**：视觉-语言模型（VLM）弥合了感知与理解之间的鸿沟，是当前最活跃的研究方向之一。
-- **链接**：https://arxiv.org/abs/2607.23245
+### 1. SIREN: Towards End-to-End Extreme-Weather Early Warning with Experience-Grounded LLM Agents
 
-### 4. Child-Oriented AIGC Video Risk Reviewing: A Benchmark and Knowledge-Supported Iterative Reasoning Framework
-- **方向**：arXiv/多媒体
-- **摘要**：arXiv:2607.22715v1 Announce Type: cross Abstract: The rapid growth of Artificial Intelligence-generated content (AIGC) is reshaping video production and circulation, exposing children to an increasing volume of AIGC videos. Unlike traditionally produced videos, AIGC videos often exhibit greater uncertainty in visual details, narrative coherence, and content expression, which may introduce developm...
-- **推荐原因**：视频 AI 处理（生成、压缩、增强）是下一个 AIGC 增长点。
-- **链接**：https://arxiv.org/abs/2607.22715
+**摘要**：极端天气预警长期依赖专家、成本高且难规模化。作者先建 SIREN-Bench（600 QA、19 任务、覆盖 4 个独立预警环节与端到端链路），暴露现有天气 agent 框架的能力缺口；再提出 SIREN——受专家使用历史案例启发，将异构天气证据与工具集成进 agentic 执行环境，并用检索 / 技能蒸馏 / 预测建模利用历史案例的经验驱动 harness。实验显示 SIREN 在单环节与端到端链路上均优于天气 agent 基线。
+**领域**：LLM 智能体 / 气候 / 防灾减灾
+**推荐理由**：把 LLM agent 从「孤立科学任务」推进到「端到端业务闭环」，且用「历史案例经验」做 grounding，是 agent 落地高可靠场景（预警、应急）的扎实范本。
+**链接**：https://arxiv.org/abs/2607.24588
 
-### 5. pyALDIC: A Python Implementation of Augmented Lagrangian Digital Image Correlation with a GUI, Adaptive Meshing, and Mask-Aware Subset Splitting
-- **方向**：arXiv/图像/视频处理
-- **摘要**：arXiv:2607.22755v1 Announce Type: new Abstract: pyALDIC is an open-source Python implementation of augmented Lagrangian digital image correlation (AL-DIC) for full-field displacement and strain measurement. The software combines a graphical user interface with a scriptable Python API and supports adaptive quadtree meshing, mask-aware subset splitting near cracks and holes, and selectable Local DIC...
-- **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://arxiv.org/abs/2607.22755
+### 2. Self-Authored Verification Is Unreliable in Heuristic Self-Improving Agents
 
-### 6. Frequency-Aware Dual-Stream Learning for Balanced Realism and Fidelity in Electron Microscopy Imaging
-- **方向**：arXiv/图像/视频处理
-- **摘要**：arXiv:2607.22765v1 Announce Type: new Abstract: Electron microscopy enables nanoscale cellular visualization but faces a trade-off between imaging resolution and acquisition speed. Existing learning-based methods rely on single-stream architectures that struggle to balance perceptual realism and quantitative fidelity, either over-smoothing details or generating unrealistic hallucinations. This wor...
-- **推荐原因**：工程优化类工作往往直接决定技术能否真正落地，值得重点关注。
-- **链接**：https://arxiv.org/abs/2607.22765
+**摘要**：自改进 agent 反复重写策略 / 启发式规则，通常靠自写测试或指标决定接受哪次编辑——agent 同时控制「被优化对象」与「验证器」，导致自评分长期接近满分、真实部署性能却退化。作者提出 SEAL（Sealed Exogenous Acceptance Loop）：保留自写测试，但用固定的 harness 侧审计对比候选与 incumbent，agent 无法撰写或查看审计、只收到接受 / 拒绝，并在出现明显回退时保留 incumbent 状态。6 个模型 × 3 随机种子的实验显示 SEAL 稳定优于无保护基线。
+**领域**：智能体自改进 / 对齐 / 可靠性
+**推荐理由**：直击「agent 自己给自己打分」的结构性陷阱，给出「至少一个在 agent 控制之外的部署验收信号」的简洁解法，对自演化 / 自编程 agent 是必读的安全基线。
+**链接**：https://arxiv.org/abs/2607.24300
 
+### 3. Looping Is Not Reliability: State-Bound Evidence and Typed Revision Contracts for Agentic Code Repair
 
-## 🌟 二、GitHub 热门项目
+**摘要**：generate-test-revise 循环在 coding agent 中很常见，但重复本身不保证可靠。作者研究「找到正确补丁」与「保留、验证、提交它」之间的落差：30 个 HumanEval 修复、900 条三修订轨迹的密封五种子实验显示，强制修订下当前轨迹正确率从一次修订后的 0.820 跌到两次后的 0.673，而 ever-correct 升至 0.847；14B 复现中陈旧轨迹伤害 34/135 个正确起点（对比当前轨迹仅 4/135）。据此拆分准入 / 保留 / 认证 / 能力 / 活性，并给出把验证证据绑定到确切代码状态、保留已验证检查点、输出可审计准入回执的参考实现。
+**领域**：智能体代码修复 / 软件工程 / 可靠性
+**推荐理由**：把「循环 ≠ 可靠」用证据绑定与类型化修订合约量化出来，给出可机械执行的参考实现，对做 coding agent 的团队是「如何证明改对了」的硬通货。
+**链接**：https://arxiv.org/abs/2607.24604
 
-### 1. slvDev/esp32-ai
-- **Stars**：⭐ 1,955 · Python
-- **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://github.com/slvDev/esp32-ai
+### 4. The Visual Bottleneck: Sparse-Frame Adaptation of MLLMs for Joint Spatial-Temporal Video Grounding
 
-### 2. kvcache-ai/AgentENV
-- **Stars**：⭐ 1,299 · Rust
-- **简介**：AgentENV (AENV) is a distributed platform for running agent environments at scale.
-- **推荐原因**：多 Agent 协作是今年最活跃的研究方向之一，展示了 AI 系统自动化的新可能。
-- **链接**：https://github.com/kvcache-ai/AgentENV
+**摘要**：大规模视频平台每小时处理百万级上传，审核需定位违规「何时 + 何地」，但逐帧处理不可行，系统只能取 8–16 帧稀疏输入；而 SOTA 多模态大模型（MLLM）在数百帧稠密序列上预训练，部署条件与训练严重错配——Qwen3-VL 8B 在帧数降到 16 时时间 mIoU 从 56.0% 崩到 22.3%（相对降 60.2%）。系统研究表明视觉特征提取才是稀疏帧瓶颈：仅适配最后 3 层 ViT（4% 参数）即达 68.8% 时间 mIoU，反超稠密输入的零样本 8B 模型 12.8 点；语言模型微调收益可忽略甚至为负；知边界的 Hybrid16 采样再提 26 点。结论：稀疏帧视频定位中，训练策略 > 模型规模。
+**领域**：多模态大模型 / 视频理解 / 内容审核
+**推荐理由**：用极低成本（4% 参数）解决「训练稠密、部署稀疏」的致命错配，且证明 2B 微调模型稳定优于 8B 零样本——对短视频 / 直播审核的落地成本有直接指导意义。
+**链接**：https://arxiv.org/abs/2607.24570
 
-### 3. Jakubantalik/thinking-orbs
-- **Stars**：⭐ 1,191 · TypeScript
-- **简介**：Dotted thought-orb loading indicators for AI & agent UIs — six tuned states, two sizes, auto dark/light
-- **推荐原因**：Agent 是当前 AI 工程化的核心方向，代表了大模型从「对话」到「执行」的关键跃迁。
-- **链接**：https://github.com/Jakubantalik/thinking-orbs
+### 5. The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation
 
-### 4. mikiarlo3/ai-copywriter
-- **Stars**：⭐ 970 · Python
-- **简介**：An AI copywriter that uses real copywriting skills + real marketing knowledge with human tone.
-- **推荐原因**：检索增强的持续优化让大模型更好地融入真实业务场景。
-- **链接**：https://github.com/mikiarlo3/ai-copywriter
+**摘要**：从预训练到后训练统一刻画多轮长程规划，提出单 / 多教师 on-policy 的 agentic 蒸馏框架，把长程规划能力从强教师蒸馏进学生模型，覆盖规划的前 / 后训练阶段，系统分析多轮 agent 规划中的信用分配与策略迁移。
+**领域**：LLM 后训练 / 长程规划 / 智能体蒸馏
+**推荐理由**：把「多轮长程规划」当成可蒸馏的能力而非只靠 prompt，给小模型获得复杂规划力提供 on-policy 蒸馏路径，契合端侧 / 低成本 agent 趋势。
+**链接**：https://arxiv.org/abs/2607.24720
 
-### 5. makecindy/cindy
-- **Stars**：⭐ 957 · TypeScript
-- **简介**：Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。
-- **推荐原因**：多 Agent 协作是今年最活跃的研究方向之一，展示了 AI 系统自动化的新可能。
-- **链接**：https://github.com/makecindy/cindy
+### 6. DataOrchestra: Learning to Orchestrate Per-Example Curation of Pretraining Data
 
-### 6. VictorTaelin/OptMem
-- **Stars**：⭐ 696 · Python
-- **简介**：Permanent memory for AI agents. A 426-token prompt, a script, plug and play.
-- **推荐原因**：检索增强的持续优化让大模型更好地融入真实业务场景。
-- **链接**：https://github.com/VictorTaelin/OptMem
+**摘要**：提出 DataOrchestra，学习对预训练数据做「逐样本」的策展编排——为每个训练样本动态决定其清洗 / 混合 / 采样策略，而非全局统一规则，36 页系统研究覆盖数据策展的学习化与可扩展编排。
+**领域**：预训练数据 / 数据策展 /  scaling
+**推荐理由**：数据质量决定上限，但「逐样本策展」长期靠人工启发式；把它变成可学习问题，是对「数据飞轮」效率的源头优化，值得预训练团队关注。
+**链接**：https://arxiv.org/abs/2607.24717
 
-### 7. gnipbao/story-to-handdrawn-video
-- **Stars**：⭐ 683 · JavaScript
-- **简介**：Agent skill: convert Chinese story copy or ordered images into a hand-drawn diary-comic animation (silent MP4 picture track).
-- **推荐原因**：多 Agent 协作是今年最活跃的研究方向之一，展示了 AI 系统自动化的新可能。
-- **链接**：https://github.com/gnipbao/story-to-handdrawn-video
+### 7. DreamStyle3D: Efficient 3D Stylized Asset Generation via Dual-Attention Disentanglement
 
-### 8. hahhforest/pi-textbook
-- **Stars**：⭐ 625 · TypeScript
-- **简介**：《动手学 Pi》：沿 15 个真实 checkpoint 从零构建 Pi-style Agent
-- **推荐原因**：多 Agent 协作是今年最活跃的研究方向之一，展示了 AI 系统自动化的新可能。
-- **链接**：https://github.com/hahhforest/pi-textbook
+**摘要**：提出 DreamStyle3D，通过双注意力解耦（dual-attention disentanglement）高效生成风格化 3D 资产，在 ACM MM 2026 发表，旨在在不牺牲几何质量的前提下分离「内容」与「风格」，降低风格化 3D 资产生成成本。
+**领域**：3D 生成 / 计算机视觉 / 创意工具
+**推荐理由**：把「风格」与「内容」解耦生成 3D 资产，对游戏 / 电商 / 影视的批量风格化资产生产有直接提效价值。
+**链接**：https://arxiv.org/abs/2607.24721
 
+### 8. KANEx: Translating Kolmogorov-Arnold Networks' Interpretability to Medical Explainability
 
-## 📰 三、AI 科技媒体 & 大厂博客
+**摘要**：提出 KANEx，将 Kolmogorov-Arnold Networks（KAN）的可解释性翻译到医学可解释性场景，发表于 MICCAI 2026，面向临床决策中对「模型为什么这么判断」的可审计需求，用 KAN 的局部可解释基函数增强医学影像 / 诊断的可解释性。
+**领域**：医学 AI / 可解释性 / 计算机视觉
+**推荐理由**：把 KAN 的可解释性落到高风险的医学诊断，呼应监管对「AI 决策可追溯」的硬性要求，是可信医疗 AI 的方向性工作。
+**链接**：https://arxiv.org/abs/2607.24730
 
-### 1. Cursor makes its biggest India push yet ahead of SpaceX acquisition with localized pricing
-- **来源**：TechCrunch AI · AI 媒体
-- **摘要**：Cursor says India is now its third-largest market globally and plans to expand local hiring and enterprise sales.
-- **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://techcrunch.com/2026/07/27/cursor-makes-its-biggest-india-push-yet-ahead-of-spacex-acquisition-with-localized-pricing/
+## 二、GitHub热门AI开源项目（2026.07.25-07.28）
 
-### 2. Anthropic’s Dario Amodei responds: doesn’t oppose open-weight models, but fears Chinese AI
-- **来源**：TechCrunch AI · AI 媒体
-- **摘要**：Anthropic founder and CEO Dario Amodei made his views clear about open-weight models and China's growing AI capabilities.
-- **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/
+### 1. inclusionAI/LLaDA2.X
 
-### 3. Satya Nadella says companies that trust one AI for everything may not survive
-- **来源**：TechCrunch AI · AI 媒体
-- **摘要**：Companies without their own models — or without a layer of AI infrastructure known as AI gateways to separate their prompts from the model itself — will be in trouble, Nadella says.
-- **推荐原因**：AI 安全和对齐问题日益突出，评估体系和防护手段是重要研究方向。
-- **链接**：https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/
+**简介**：蚂蚁 inclusionAI 团队开源的 LLaDA 2.2——全球首个大规模 Agentic 扩散语言模型（100B MoE，Apache-2.0），引入 Levenshtein 编辑（增 / 删 / 改）与 L-EBPO 强化学习，原生支持 128K 上下文，可「边行动边纠错」。SWE-bench Verified 49.28%，τ²-Bench 592.80（fast mode 705.30，超参考模型两倍以上），BF16 吞吐达对照 1.64 倍、FP8 再 +18.6%。
+**热度**：7-28 发布即登顶开源热点，技术报告 + 权重 + 代码全开放（HF / GitHub）。
+**推荐理由**：扩散路线首次在长程 Agent 任务上逼近并局部反超自回归，标志「自回归 + 扩散」双轨并行的 Agent 架构成为可能，工程与研究方向都该跟进。
+**链接**：https://github.com/inclusionAI/LLaDA2.X
 
-### 4. Can the New York Times Save Journalism From Our AI Overlords?
-- **来源**：Wired AI · AI 媒体
-- **摘要**：In 2023, the Times sued OpenAI and Microsoft for copyright infringement. They’ve since spent more than $20 million on the case, and publisher A.G. Sulzberger has no plans to stop fighting it.
-- **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://www.wired.com/story/the-big-interview-podcast-a-g-sulzberger-new-york-times/
+### 2. antins-labs/SearchOS
 
-### 5. Silicon Valley’s Next IPO Billionaires Are Coming. Nonprofits Are Ready for Them
-- **来源**：Wired AI · AI 媒体
-- **摘要**：Anthropic and OpenAI employees are expected to give generously after their companies go public. “It’s going to be a wild ride,” says one nonprofit leader.
-- **推荐原因**：从社区反馈来看有一定价值，可以快速浏览。
-- **链接**：https://www.wired.com/story/nonprofits-are-getting-ready-for-the-funding-anthropalypse/
+**简介**：人大与蚂蚁联合开源的多智能体搜索协作框架（MIT），把长程开放域信息搜寻建模为「带证据锚定的关系模式补全」，用 Search-Oriented Context Management（SOCM）把搜索进度外化为 Frontier Task / Evidence Graph / Coverage Map / Failure Memory 四类共享状态，配流水线并行调度与约 280 个预置技能。WideSearch Item F1 80.3、GISA Set F1 76.5，全面领先基线。
+**热度**：7-28 机器之心报道，GitHub 当日开源即上榜。
+**推荐理由**：把「搜索智能体也需要操作系统」做成可复用底座，直接解决 agent 长程调研的「失忆 / 重复 / 补漏」，做竞品 / 投研 / 文献综述的团队值得部署。
+**链接**：https://github.com/antins-labs/SearchOS
 
-### 6. Hugging Face Has a Deepfake Nudes Problem
-- **来源**：Wired AI · AI 媒体
-- **摘要**：Researchers tested top image editing models on Hugging Face and found they could easily create explicit deepfakes—and 1,000 image editing prompts show how people use the software.
-- **推荐原因**：内容偏向工程实践，对实际项目有一定帮助。
-- **链接**：https://www.wired.com/story/hugging-face-has-a-nonconsensual-deepfakes-problem/
+### 3. garrytan/gstack
 
-### 7. Microsoft unveils AI security tools it says outperform competing platforms
-- **来源**：Ars Technica · AI 媒体
-- **摘要**：Microsoft says tools cost less than competing ones and outperform them, too.
-- **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://arstechnica.com/security/2026/07/microsoft-unveils-ai-security-tools-it-says-outperform-competing-platforms/
+**简介**：YC 总裁 Garry Tan 开源的个人 Claude Code 配置（MIT），23 个专家角色技能 + 8 个 power tool，封装成 CEO / Designer / Eng Manager / QA / CSO / Release 等角色 slash 命令，覆盖 think→plan→build→review→test→ship→reflect 全 sprint；支持 Claude Code、Codex、Cursor 等 8 个 host，含 /qa 真实浏览器测试、/codex 跨模型评审、/guard 安全护栏。
+**热度**：3 月开源后数月内冲到约 12 万 Star，Claude Code 配置类第一。
+**推荐理由**：把「整个开发生命周期」编码成可复用 agent 技能、且内置评审与安全闸门，是 AI 时代软件开发方法论的范本，比单条 prompt 更可工程化。
+**链接**：https://github.com/garrytan/gstack
 
-### 8. TreeSize won't renew perpetual-license support unless users subscribe
-- **来源**：Ars Technica · AI 媒体
-- **摘要**："Current economic conditions" have shifted TreeSize's business model.
-- **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://arstechnica.com/gadgets/2026/07/treesize-wont-renew-perpetual-license-support-unless-users-subscribe/
+### 4. pipilot-dev/anyclaude-sdk
 
-### 9. HP fined 1.4 billion rupees for “cartelization” of ink cartridges, toner, PCs
-- **来源**：Ars Technica · AI 媒体
-- **摘要**：Resellers threatened to ditch HP printing supplies for counterfeits.
-- **推荐原因**：技术实现有一定参考价值，可借鉴到类似项目中。
-- **链接**：https://arstechnica.com/gadgets/2026/07/hp-fined-1-4-billion-rupees-for-cartelization-of-ink-cartridges-toner-pcs/
+**简介**：Claude Code 风格的 TypeScript SDK，为 OpenAI / Anthropic 端点提供统一开发体验，支持流式响应、工具调用、多模态输入与类型安全封装，解决不同厂商 API 接口不一致的痛点。
+**热度**：7-28 AI 技术日报收录的新开源项目。
+**推荐理由**：在多家模型间切换 / 构建跨平台 AI 应用的开发者，可用熟悉的 Claude Code 范式统一调用，显著降低多模型适配成本。
+**链接**：https://github.com/pipilot-dev/anyclaude-sdk
 
-### 10. The Download: OpenAI’s predictable hack, and an AI stock sell-off
-- **来源**：MIT Tech Review · AI 媒体
-- **摘要**：This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. OpenAI called the Hugging Face attack unprecedented. But we’ve
-- **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://www.technologyreview.com/2026/07/28/1140868/the-download-openai-hack-ai-stock-sell-off/
+### 5. hertz-ai/HARTOS
 
-### 11. Samsung’s chip workers are jumping ship to rival SK Hynix
-- **来源**：MIT Tech Review · AI 媒体
-- **摘要**：Lee, an engineer at Samsung’s semiconductor division, clocks out when his shift ends. He used to work longer hours, going the extra mile to excel at his projects. But lately, he’s been coming straight
-- **推荐原因**：是近期技术趋势的典型案例，有一定代表性。
-- **链接**：https://www.technologyreview.com/2026/07/28/1140853/samsung-chip-workers-exodus-sk-hynix/
+**简介**：开源 AI 原生操作系统，核心理念是「让模型能力自动匹配任务难度」——检测到当前模型解不了问题时自动把任务升级到更强模型，无需人工干预；采用分布式架构，支持边缘设备与数据中心间灵活调度 AI 任务。
+**热度**：7-28 技术日报收录的新开源项目。
+**推荐理由**：把「动态模型路由」做成 OS 级基础设施，是降低推理成本、保证任务完成质量的底层范式，对构建高效 AI 应用有参考价值。
+**链接**：https://github.com/hertz-ai/HARTOS
 
-### 12. OpenAI called the Hugging Face attack unprecedented. But we’ve been here before.
-- **来源**：MIT Tech Review · AI 媒体
-- **摘要**：This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Reading OpenAI’s account last week of how some of its models b
-- **推荐原因**：从社区反馈来看有一定价值，可以快速浏览。
-- **链接**：https://www.technologyreview.com/2026/07/27/1140836/openai-hugging-face-attack-precedent/
+### 6. yuyuanweb/ai-passage-creator
 
+**简介**：程序员鱼皮团队开源的 AI 爆款文章创作平台（Spring Boot3 + Spring AI Alibaba + Vue3），基于 5 智能体协作创作，覆盖多智能体编排、7 种配图与 Stripe 支付，面向内容创作自动化。
+**热度**：7-28 腾讯新闻报道的开源项目。
+**推荐理由**：把「选题 → 写作 → 配图 → 支付」做成多 agent 协作的可运行产品，是「AI 内容工厂」落地的中文开源参考实现。
+**链接**：https://github.com/yuyuanweb/ai-passage-creator
 
-## 🔥 四、HackerNews 近 48h 热门
+### 7. coreyhaines31/marketingskills
 
-### 1. US citizen charged after GrapheneOS phone wipes during airport search
-- **热度**：1295 points · 💬 1044 comments
-- **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html
-- **HN 讨论**：https://news.ycombinator.com/item?id=49063022
-- **高赞评论（原文+中文）**：
-  · **schoen** ：I co-wrote a border search guide for EFF some years ago. I was very interested in finding clever technical approaches but I later ended up feeling that I hadn't given enough thought to the overall threat model questions (even though the guide did address them, perhaps even somewhat usefully). The…
-    → 几年前，我为EFF共同撰写了一份边境搜索指南。我对寻找聪明的技术方法非常感兴趣，但后来我觉得我没有充分考虑到整体威胁模型问题（尽管指南确实解决了这些问题，甚至可能有些有用）。
-  · **cameldrv** ：I’ve seen a lot of people on the internet over the years say things like “the government can’t make x illegal, it’s just y.” For example, the government can’t make wiping your phone at the border illegal, it’s just punching four numbers into your phone, just like a pin, only a different four…
-    → 多年来，我在互联网上看到很多人说“政府不能把x定为非法，只是y。“例如，政府不能把在边境擦手机定为非法，它只是在你的手机上输入四个数字，就像一个PIN码，只是不同的四个……
-  · **sfRattan** ：Ultimately, when you choose to enter a duress PIN that will wipe your device, you have to recognize that choice may have legal consequences. I don't like the amount of power our government has at the national border when it comes to detaining and pressuring citizens, but our Constitution explicitly…
-    → 最终，当您选择输入将擦拭设备的强制PIN时，您必须认识到这种选择可能会产生法律后果。我不喜欢我们的政府在拘留和向公民施加压力方面在国家边境拥有的权力，但我们的宪法明确……
+**简介**：面向 Claude Code 与 AI agent 的营销技能集，覆盖 CRO、文案、SEO、分析与增长工程，把营销工作流封装成可复用 skills。
+**热度**：2026 新开源，GitHub Trending 上榜。
+**推荐理由**：营销是 agent 最容易兑现价值的职能之一，把 CRO / SEO / 增长做成技能库，非营销背景的开发者也能快速拼出增长工作流。
+**链接**：https://github.com/coreyhaines31/marketingskills
 
-### 2. Our position on open-weights models
-- **热度**：1003 points · 💬 1473 comments
-- **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://www.anthropic.com/news/position-open-weights-models
-- **HN 讨论**：https://news.ycombinator.com/item?id=49076057
-- **高赞评论（原文+中文）**：
-  · **vhantz** ：Schrödinger's China at once is an evil entity looking to use AI for their own nefarious purposes yet also willing to cooperate with their main competitor to prevent other actors (who??) from achieving similar goals (all while under a chip embargo too!!) The reality is much less confusing: Anthropic…
-    → 薛定谔的中国是一个邪恶的实体，希望将人工智能用于自己的邪恶目的，但也愿意与他们的主要竞争对手合作，以阻止其他参与者（谁？ ？ ）实现类似的目标（所有这些都处于芯片禁运之下！ ！ ）现实不那么令人困惑：人类……
-  · **m3h** ：Someone who until yesterday did not seem bothered by his technology being possibly used to bomb elementary girls school in another country seems to suddenly care about the repression of citizens in yet another country. No, we don't buy your virtue signaling. And we certainly don't need your…
-    → 直到昨天，似乎并不担心他的技术可能被用来轰炸另一个国家的女子小学的人似乎突然关心另一个国家对公民的镇压。不，我们不买你的美德信号。我们当然不需要你的……
-  · **GodelNumbering** ：In the first paragraph, > Anyone who has read my past writing should know that I don’t regard such bans as a useful measure, Later (on banning chip sales to china) > we should crack down on the rampant smuggling and workarounds used to obtain access to such chips. If you truly believe that bans…
-    → 在第一段中， >任何读过我过去写作的人都应该知道，我不认为这样的禁令是一项有用的措施，稍后（禁止向中国销售芯片） >我们应该打击猖獗的走私和用于获取此类芯片的解决方案。如果你真的相信禁令……
+### 8. cobusgreyling/loop-engineering
 
-### 3. French firefighters face 'pyrocumulonimbus' for first time
-- **热度**：456 points · 💬 362 comments
-- **推荐原因**：HN 讨论热烈（362 条评论），社区关注度高。
-- **链接**：https://www.france24.com/en/live-news/20260726-french-firefighters-face-pyrocumulonimbus-for-first-time
-- **HN 讨论**：https://news.ycombinator.com/item?id=49060495
-- **高赞评论（原文+中文）**：
-  · **wosk** ：Le Monde, very reputed French newspaper (NYtimes equivalent for France perhaps) says that it’s not the first time this cloud is seen in France [1]: (translation mine) > “What is happening right now is extremely, extremely unusual. Seeing a cloud this massive and reaching such an altitude above a…
-    → 非常有名的法国报纸《世界报》（ NYtimes可能与法国相当）表示，这不是第一次在法国看到这种云[1] ： （翻译我的） > “现在发生的事情非常非常不寻常。看到如此庞大的云层，达到如此高的海拔……
-  · **Dibby053** ：For context on why this region is burning so easily: the Landes and Médoc are huge, artificial pine forests created in the 19th century under Napoleon III to drain and reclaim what was considered an inhospitable wetland, where shepherds famously walked around on stilts. Pine resin and needle litter…
-    → 关于为什么这个地区如此容易燃烧的背景： Landes和Médoc是19世纪拿破仑三世时期创建的巨大人造松树林，用于排水和开垦被认为是荒凉的湿地，牧羊人在那里踩着高跷走来走去。松树脂和针状宠物砂……
-  · **verzali** ：The situation in Bordeaux right now feels close to apocalyptic. I left yesterday. Two hundred thousand people are evacuated, hundreds of homes destroyed, and the fire about 10 miles from the edge of the city.
-    → 波尔多的情况现在感觉接近世界末日。我昨天离开了，二十万人被疏散，数百所房屋被摧毁，距离城市边缘约10英里的大火。
+**简介**：关于「loop engineering」的实用参考与模式合集，系统化讲解如何设计与编排 AI coding agent 的提示与循环（prompt + orchestrate），灵感来自 Addy Osmani 与 Anthropic 的 Boris Cherny。
+**热度**：2026 新开源，GitHub Trending 上榜。
+**推荐理由**：把「如何让 coding agent 的循环更可靠」沉淀成可复用的工程模式，弥补「会写 prompt」与「会搭 agent 工作流」之间的断层。
+**链接**：https://github.com/cobusgreyling/loop-engineering
 
-### 4. 7.1 Earthquake in Japan
-- **热度**：383 points · 💬 76 comments
-- **推荐原因**：HN 获得较多关注，质量和讨论度不错。
-- **链接**：https://www.data.jma.go.jp/multi/quake/quake_detail.html?eventID=20260728163528&lang=en
-- **HN 讨论**：https://news.ycombinator.com/item?id=49080664
+## 持续追踪
 
-### 5. Decker, a platform that builds on the legacy of Hypercard and classic macOS
-- **热度**：374 points · 💬 99 comments
-- **推荐原因**：HN 获得较多关注，质量和讨论度不错。
-- **链接**：https://beyondloom.com/decker/
-- **HN 讨论**：https://news.ycombinator.com/item?id=49060856
+### 1. Claude Opus 5 发布细节与评测出炉（追踪 7-25 发布）
 
-### 6. Netflix employee fired for sharing personal details in retreat trust exercise
-- **热度**：366 points · 💬 385 comments
-- **推荐原因**：HN 讨论热烈（385 条评论），社区关注度高。
-- **链接**：https://nypost.com/2026/07/26/us-news/netflix-exec-goes-ballistic-after-being-fired-for-stunning-trust-exercise-confession-at-retreat-suit/
-- **HN 讨论**：https://news.ycombinator.com/item?id=49076923
+**新进展**：7-25 Anthropic 正式推出 Claude Opus 5，价格仅为同代 Claude Fable 5 的一半（输入 $5 / 百万 token、输出 $25 / 百万 token），与上代 Opus 4.8 持平；引入快速模式与 Effort 调节，Frontier-Bench v0.1 编码得分 43.3%（vs Opus 4.8 的 18.7%）、ARC-AGI 3 领先第二名 3 倍，且是非对齐行为得分最低（2.3）的主流模型。
+**来源**：华鑫证券计算机行业研报（新浪财经）、VentureBeat
 
-### 7. A missing underscore sent innocent man to prison for 18 months
-- **热度**：344 points · 💬 199 comments
-- **推荐原因**：HN 讨论热烈（199 条评论），社区关注度高。
-- **链接**：https://arstechnica.com/tech-policy/2026/07/police-missed-one-underscore-and-sent-the-wrong-man-to-prison/
-- **HN 讨论**：https://news.ycombinator.com/item?id=49076116
+### 2. 谷歌资本开支上调 + Gemini 4 确认训练中（追踪 7-26 Alphabet Q2）
 
-### 8. Decathlon Germany adds Wero payment option to decathlon.de website
-- **热度**：330 points · 💬 220 comments
-- **推荐原因**：HN 讨论热烈（220 条评论），社区关注度高。
-- **链接**：https://www.sgieurope.com/e-commerce/decathlon-germany-launches-wero-payment-on-its-website/122397.article
-- **HN 讨论**：https://news.ycombinator.com/item?id=49072310
+**新进展**：7-27 谷歌 Q2 财报细化：2026 年资本支出指引上调至 1950–2050 亿美元（2027 继续扩张），云营收同比 +82% 至 248 亿美元但自由现金流上市来首度转负、股价跌超 7%；CEO 皮查伊在财报会确认 Gemini 4 已大规模训练、分配巨量算力，预计 11 或 12 月发布（因 3.5 Pro 逊于对手而战略转向）。
+**来源**：界面新闻、IT之家、腾讯新闻
 
+## 三、精选AI行业资讯（2026.07.25-07.28）
 
-## 📚 深读推荐
+### 1. Anthropic 发布 Claude Opus 5，半价叫板旗舰
 
-| 类型 | 标题 | 方向 | 备注 | 链接 |
-|------|------|------|------|------|
-| 📄 论文 | A Replay-Constrained Simulation Framew… | 机器人学 |  | [arXiv](https://arxiv.org/abs/2607.22858) |
-| 📄 论文 | Pose-Aware Modeling to Mitigate Pose-R… | 机器人学 |  | [arXiv](https://arxiv.org/abs/2607.22964) |
-| 📄 论文 | FedTaste: Topology-Aware Structural Tr… | 多媒体 |  | [arXiv](https://arxiv.org/abs/2607.23245) |
-| 📄 论文 | Child-Oriented AIGC Video Risk Reviewi… | 多媒体 |  | [arXiv](https://arxiv.org/abs/2607.22715) |
-| 📄 论文 | pyALDIC: A Python Implementation of Au… | 图像/视频处理 |  | [arXiv](https://arxiv.org/abs/2607.22755) |
-| 🌟 项目 | slvDev/esp32-ai | GitHub | Python | [GitHub](https://github.com/slvDev/esp32-ai) |
-| 🌟 项目 | kvcache-ai/AgentENV | GitHub | Rust | [GitHub](https://github.com/kvcache-ai/AgentENV) |
-| 🌟 项目 | Jakubantalik/thinking-orbs | GitHub | TypeScript | [GitHub](https://github.com/Jakubantalik/thinking-orbs) |
-| 🔥 热帖 | US citizen charged after GrapheneOS ph… | HN | 1295 pts | [HN](https://news.ycombinator.com/item?id=49063022) |
-| 🔥 热帖 | Our position on open-weights models | HN | 1003 pts | [HN](https://news.ycombinator.com/item?id=49076057) |
-| 🔥 热帖 | French firefighters face 'pyrocumuloni… | HN | 456 pts | [HN](https://news.ycombinator.com/item?id=49060495) |
-| 🔥 热帖 | 7.1 Earthquake in Japan | HN | 383 pts | [HN](https://news.ycombinator.com/item?id=49080664) |
-| 🔥 热帖 | Decker, a platform that builds on the … | HN | 374 pts | [HN](https://news.ycombinator.com/item?id=49060856) |
+**内容**：7-25 Anthropic 推出新一代旗舰 Claude Opus 5，性能接近 Claude Fable 5 但价格仅其一半；引入快速模式与 Effort 调节，在 Frontier-Bench v0.1、ARC-AGI 3 等多项评测登顶，生命科学任务较前代明显提升，且为迄今对齐程度最高的模型（非对齐行为得分 2.3，近期主流最低）。
+**推荐理由**：在「性能逼近 + 价格腰斩」下重新定义旗舰性价比，叠加高对齐，可能改变企业级大模型采购与 API 调用结构。
+**来源**：华鑫证券研报（新浪财经）、VentureBeat
+
+### 2. 谷歌连发 Gemini 3.6 Flash / 3.5 Flash-Lite / 3.5 Flash-Cyber
+
+**内容**：7-22 宣布、7-28 再推 Gemini 3.6 Flash 与 3.5 Flash-Lite 等新型号，重心转向提升 Agent 工作流中的 Token 效率、响应速度与运行可靠性：3.6 Flash 强化编程与多模态，3.5 Flash-Lite 专攻低延迟高吞吐。
+**推荐理由**：谷歌把「Agent 时代的推理性价比」当成主战场，Flash 系列直接对标高频 agent 调用场景，影响开发者的模型选型与成本结构。
+**来源**：至顶科技、新浪财经
+
+### 3. 谷歌 capex 提至 1950–2050 亿美元，自由现金流首度转负
+
+**内容**：7-27 谷歌 Q2 财报将 2026 年资本支出指引上调至 1950–2050 亿美元、2027 继续扩张；云营收同比 +82% 至 248 亿美元，但自由现金流上市来首次转负，股价跌超 7%。
+**推荐理由**：巨头 AI 基建进入「烧钱换份额」深水区，自由现金流转负是算力供需与回报周期的明确信号，影响整条 AI 硬件 / 云产业链估值。
+**来源**：界面新闻、腾讯新闻
+
+### 4. 英伟达拟为 OpenAI 担保 2500 亿美元，市值单日蒸发 2500 亿
+
+**内容**：据《华尔街日报》7-27 报道，英伟达正就为 OpenAI 位于俄亥俄州的数据中心项目提供约 2500 亿美元财务担保谈判，并可能额外提供 3500 亿美元融资专用于 OpenAI 采购英伟达芯片；消息公布后英伟达股价重挫约 5%、单日市值蒸发约 2500 亿美元，CDS 价差单日飙升 14 个基点。
+**推荐理由**：AI 循环融资规模触顶引发市场「偿付能力」焦虑，是 AI 资本开支叙事从「扩张」转向「兑现」的转折点，高盛亦提示头部企业未履行财务承诺已超 1.5 万亿美元。
+**来源**：华尔街见闻、网易
+
+### 5. 谷歌确认 Gemini 4 已大规模训练，预计 11/12 月发布
+
+**内容**：7-27 财报会上 CEO 皮查伊确认 Gemini 4 正大规模训练、分配巨量算力，预计 11 或 12 月发布；因 3.5 Pro 表现逊于对手，战略从「堆参数」转向「重训练 + 重 Agent 效率」。
+**推荐理由**：Gemini 4 的时间表与战略转向，决定下半年大模型竞争格局，也关系到谷歌能否靠下一代模型挽回 capex 引发的估值压力。
+**来源**：IT之家、腾讯新闻
+
+### 6. 英伟达成立开放安全 AI 联盟（OSAA），并重大投资 SSI
+
+**内容**：英伟达宣布成立开放安全 AI 联盟（OSAA），联合微软、SpaceX、Adobe、戴尔、CrowdStrike、Hugging Face 等数十家企业共建并共享 AI 安全 / 网络安全工具；同时宣布对 Ilya Sutskever 创立的 Safe Superintelligence（SSI）进行「重大」投资并达成长期合作，将其算力提升一个数量级。
+**推荐理由**：英伟达从「卖算力」延伸到「定义 AI 安全生态」，叠加对超级对齐路线的重注，是其巩固平台地位、对冲监管风险的关键一步。
+**来源**：陆家嘴财经早餐（网易）、华尔街见闻
+
+### 7. Anthropic 澄清：从未主张禁止开放权重模型
+
+**内容**：7-28 财联社电，Anthropic 表示从未倡导禁止开放权重 AI 模型；CEO Dario Amodei 称公司不同意「开放权重模型天然更利于 AI 安全防护」的观点，回应近期相关说法。
+**推荐理由**：在开源 vs 闭源激烈交锋的当下，Anthropic 主动划清立场，既避免被贴上「反开源」标签，也把安全叙事从「禁不禁」拉回「怎么管」，影响行业与监管走向。
+**来源**：财联社
+
+### 8. Claude Cowork 爆出沙箱逃逸漏洞，影响约 50 万本地会话用户
+
+**内容**：7-28 IT之家报道，Anthropic 的 Claude Cowork 智能体工具存在沙箱逃逸漏洞，攻击者可借 Linux 内核漏洞（CVE-2026-46331）从虚拟机逃逸并读写 Mac 任意文件，影响约 50 万本地会话用户；新版本默认转云端执行。
+**推荐理由**：本地 agent 工具的安全边界再亮红灯，提示「agent 跑在本机」的真实攻击面，做本地 agent 产品的团队必须把沙箱隔离与内核补丁当成一等公民。
+**来源**：IT之家

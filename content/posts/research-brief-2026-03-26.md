@@ -1,8 +1,9 @@
 ---
 title: "每日研究简报 2026-03-26"
+author: "hackcv"
 date: 2026-03-26
 draft: false
-tags: ["AI", "大模型", "论文", "GitHub", "HackerNews"]
+tags: ["AI", "大模型", "Agent", "每日简报", "论文", "GitHub", "HackerNews"]
 categories: ["研究简报"]
 ---
 

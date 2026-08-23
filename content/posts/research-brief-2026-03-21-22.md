@@ -1,10 +1,10 @@
 ---
 title: "📊 每日研究简报 · 2026年3月21-22日"
 date: 2026-03-20
-author: "小麦"
+author: "hackcv"
 description: "梳理近期 AI 领域的重要进展，包括模型更新、开源项目和行业应用。"
-categories: ["AI"]
-tags: ["人工智能", "大模型", "开源"]
+categories: ["研究简报"]
+tags: ["AI", "大模型", "Agent", "每日简报", "开源"]
 cover: ""
 draft: false
 ---

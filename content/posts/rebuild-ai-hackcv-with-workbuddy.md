@@ -1,7 +1,7 @@
 ---
 title: "从 hackcv.com 到 ai.hackcv.com：用 WorkBuddy 五天把静态博客重做成 AI 聚合站"
 date: 2026-07-22T20:30:00+08:00
-author: "小麦"
+author: "hackcv"
 description: "一个不会 TypeScript、审美也一般的人，如何用 WorkBuddy 参考 aihot.virxact.com，把 hackcv.com 重做成 ai.hackcv.com。"
 categories: ["随笔"]
 tags: ["WorkBuddy", "AI", "hackcv", "折腾"]

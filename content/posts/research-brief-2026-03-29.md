@@ -1,9 +1,10 @@
 ---
 title: "每日研究简报｜2026-03-29"
+author: "hackcv"
 date: 2026-03-29
 draft: false
-tags: ["AI", "LLM", "Agent", "计算机视觉", "音视频", "工程优化", "研究简报"]
-categories: ["Research Brief"]
+tags: ["AI", "大模型", "Agent", "每日简报", "计算机视觉", "音视频处理", "工程优化"]
+categories: ["研究简报"]
 description: "每日技术研究简报，涵盖 AI / 大模型 / Agent / 计算机视觉 / 音视频处理 / 工程优化领域最新动态。"
 ---
 

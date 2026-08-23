@@ -1,8 +1,9 @@
 ---
 title: "AI研究简报 2026-06-14"
+author: "hackcv"
 date: 2026-06-14T21:30:00+08:00
 draft: false
-tags: ["AI", "大模型", "Agent", "计算机视觉", "网络安全", "工业AI", "每日简报"]
+tags: ["AI", "大模型", "Agent", "每日简报", "计算机视觉", "网络安全", "工业AI"]
 categories: ["研究简报"]
 description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI 领域每日研究简报"
 ---

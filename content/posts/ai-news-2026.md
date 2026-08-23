@@ -1,7 +1,7 @@
 ---
 title: "AI 领域近期动态汇总"
 date: 2026-03-20
-author: "小麦"
+author: "hackcv"
 description: "梳理近期 AI 领域的重要进展，包括模型更新、开源项目和行业应用。"
 categories: ["AI"]
 tags: ["人工智能", "大模型", "开源"]

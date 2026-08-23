@@ -23,7 +23,8 @@
 {{- /* 推断 subtype */ -}}
 {{- if eq $subtype "" -}}
   {{- if eq $section "news" -}}
-    {{- if or (strings.Contains $title "每周") (strings.Contains $title "周总结") (strings.Contains $catStr "每周") -}}
+    {{- $fname := "" -}}{{- with .File -}}{{- $fname = .BaseFileName -}}{{- end -}}
+    {{- if or (strings.Contains $title "每周") (strings.Contains $title "周总结") (strings.Contains $title "周报") (strings.Contains $fname "week") -}}
       {{- $subtype = "weekly" -}}
     {{- else -}}
       {{- $subtype = "daily" -}}
