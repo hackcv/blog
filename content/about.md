@@ -2,6 +2,7 @@
 title: "关于"
 date: 2026-03-21
 description: "关于 hackcv"
+layout: "about"
 ---
 
 # 关于 hackcv

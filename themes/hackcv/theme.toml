@@ -1,6 +1,15 @@
 name = "hackcv"
 license = "MIT"
-licenselink = "https://github.com/yourname/clearnews/blob/master/LICENSE"
-description = "一个简洁现代的资讯网站 Hugo 主题"
+licenselink = "https://github.com/hackcv/hackcv.com/blob/master/themes/hackcv/LICENSE"
+description = "陶土叙事风格的 AI 资讯站点 Hugo 主题（三栏目：资讯 / 精读 / 实践），内置栏目推断、Fuse.js 搜索、giscus 评论"
+homepage = "https://hackcv.com"
+demosite = "https://hackcv.com"
+tags = ["news", "blog", "ai", "terracotta", "search", "comments", "responsive", "multilingual"]
+features = [
+  "三栏目内容模型（news / deep / practice）+ 自动栏目推断",
+  "Fuse.js 全站搜索（index.json）",
+  "giscus 评论（GitHub Discussions）",
+  "陶土叙事配色 · 移动优先 · WCAG AA",
+]
 min_version = "0.110.0"
 origin = "internal"

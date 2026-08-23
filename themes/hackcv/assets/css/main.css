@@ -899,6 +899,7 @@ img { max-width: 100%; display: block; }
 /* ---------- 文章页 ---------- */
 .article-header { padding: 24px 0 20px; }
 .article-header .container { max-width: 760px; }
+.article-body { max-width: 760px; }
 .article-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -922,11 +923,20 @@ img { max-width: 100%; display: block; }
   margin-bottom: 24px;
   background-color: var(--bg-secondary);
 }
-.article-content { max-width: 42rem; }
+.article-content { max-width: 42rem; margin: 0 auto; }
 .article-content p {
   margin-bottom: 18px;
   font-size: 1rem;
   line-height: 1.85;
+}
+.article-content h1 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin: 28px 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
 }
 .article-content h2, .article-content h3 {
   font-weight: 600;
@@ -939,7 +949,22 @@ img { max-width: 100%; display: block; }
   padding-left: 12px;
   border-left: 3px solid var(--primary-500);
 }
-.article-content h3 { font-size: 1.0625rem; margin: 24px 0 10px; }
+.article-content h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+}
+.article-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 22px 0 8px;
+}
+.article-content hr {
+  border: none;
+  height: 2px;
+  margin: 32px 0;
+  background: linear-gradient(90deg, transparent, var(--border-strong) 50%, transparent);
+}
 .article-content ul, .article-content ol { padding-left: 24px; margin-bottom: 18px; }
 .article-content li { margin-bottom: 6px; }
 .article-content blockquote {
@@ -1252,6 +1277,27 @@ img { max-width: 100%; display: block; }
 }
 .team-card h3 { font-size: .9375rem; font-weight: 600; }
 .team-card .role { font-size: .75rem; color: var(--text-muted); margin-bottom: 6px; }
+
+/* ---------- 关于我（个人介绍 + Token 统计 组合框） ---------- */
+.about-me {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--bg);
+  padding: 24px;
+  display: grid;
+  gap: 24px;
+}
+.about-me-intro .team-avatar {
+  width: 56px;
+  height: 56px;
+  font-size: 1.25rem;
+}
+.about-me-intro h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; }
+.about-me-intro .role { color: var(--primary-600); font-size: .8125rem; font-weight: 600; margin-bottom: 10px; }
+.about-me-intro p { font-size: .9375rem; line-height: 1.75; color: var(--text-muted); margin-bottom: 8px; }
+.about-me-intro p:last-child { margin-bottom: 0; }
+.about-me-intro strong { color: var(--text); font-weight: 600; }
+.about-me-stats { display: grid; gap: 12px; }
 .team-card p { font-size: .8125rem; color: var(--text-muted); line-height: 1.6; }
 
 /* ---------- CTA 区块 ---------- */
@@ -1643,6 +1689,7 @@ img { max-width: 100%; display: block; }
   .page-title { font-size: 2.5rem; }
   .page-lead { font-size: 1.0625rem; }
   .about-cols { grid-template-columns: 1fr 1fr; }
+  .principle-list { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(3, 1fr); }
   .about-section { padding: 56px 0; }
   .stats-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1676,6 +1723,7 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 @media (min-width: 992px) {
   .type-nav { grid-template-columns: repeat(3, 1fr); }
+  .about-me { grid-template-columns: 3fr 2fr; align-items: center; }
   .layout-with-sidebar {
     grid-template-columns: 1fr 280px;
     gap: 40px;

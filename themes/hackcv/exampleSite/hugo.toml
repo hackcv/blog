@@ -22,6 +22,7 @@ coverService = "picsum"
 github = "https://github.com"
 email = "hello@hackcv.com"
 twitter = "hackcv"
+comments = true
 
 [params.analytics]
 umamiWebsiteId = "cb8c433a-10c8-4ecc-a259-fd8c6c974b92"
