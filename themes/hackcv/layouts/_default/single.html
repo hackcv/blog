@@ -25,6 +25,14 @@
   </header>
 
   <div class="container article-body">
+    <!-- ============ 目录（正文前） ============ -->
+    {{ if .TableOfContents }}
+    <details class="toc" style="margin:0 0 24px">
+      <summary>📑 {{ i18n "toc" | default "目录" }}</summary>
+      {{ .TableOfContents }}
+    </details>
+    {{ end }}
+
     <!-- ============ 正文 ============ -->
     <div class="article-content">
       {{ .Content }}
@@ -37,13 +45,6 @@
       <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag"># {{ . }}</a>
       {{ end }}
     </div>
-    {{ end }}
-
-    {{ if .TableOfContents }}
-    <details class="toc" style="margin:24px 0">
-      <summary>📑 {{ i18n "toc" | default "目录" }}</summary>
-      {{ .TableOfContents }}
-    </details>
     {{ end }}
 
     <!-- ============ 上一篇 / 下一篇 ============ -->
