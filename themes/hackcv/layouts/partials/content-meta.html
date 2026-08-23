@@ -1,0 +1,62 @@
+{{- /* 内容栏目推断 helper
+  从 front matter section/subtype 或标题/分类推断栏目与子类。
+  优先级：显式 section/subtype > 标题关键词 > 分类关键词 > 默认资讯/daily
+  返回 dict: section / sectionLabel / subtype / subtypeLabel / cssClass / badgeClass / icon / colorVars
+  */ -}}
+{{- $section := .Params.section | default "" -}}
+{{- $subtype := .Params.subtype | default "" -}}
+{{- $title := .Title -}}
+{{- $cats := .Params.categories | default slice -}}
+{{- $catStr := delimit $cats " " -}}
+
+{{- /* 推断 section */ -}}
+{{- if eq $section "" -}}
+  {{- if or (strings.Contains $title "精读") (strings.Contains $title "论文") (strings.Contains $title "算法") (strings.Contains $title "SPADE") (strings.Contains $catStr "精读") -}}
+    {{- $section = "deep" -}}
+  {{- else if or (strings.Contains $title "实践") (strings.Contains $title "复现") (strings.Contains $title "验证") (strings.Contains $title "性能") (strings.Contains $title "ONNX") (strings.Contains $catStr "实践") -}}
+    {{- $section = "practice" -}}
+  {{- else -}}
+    {{- $section = "news" -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* 推断 subtype */ -}}
+{{- if eq $subtype "" -}}
+  {{- if eq $section "news" -}}
+    {{- if or (strings.Contains $title "每周") (strings.Contains $title "周总结") (strings.Contains $catStr "每周") -}}
+      {{- $subtype = "weekly" -}}
+    {{- else -}}
+      {{- $subtype = "daily" -}}
+    {{- end -}}
+  {{- else if eq $section "deep" -}}
+    {{- if or (strings.Contains $title "算法") (strings.Contains $catStr "算法") -}}
+      {{- $subtype = "code" -}}
+    {{- else -}}
+      {{- $subtype = "paper" -}}
+    {{- end -}}
+  {{- else -}}
+    {{- if or (strings.Contains $title "性能") (strings.Contains $title "优化") (strings.Contains $catStr "性能") -}}
+      {{- $subtype = "optimize" -}}
+    {{- else -}}
+      {{- $subtype = "verify" -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* 标签映射 */ -}}
+{{- $sectionLabel := cond (eq $section "deep") "精读" (cond (eq $section "practice") "实践" "资讯") -}}
+{{- $subtypeLabel := dict "daily" "每日简报" "weekly" "每周总结" "paper" "论文精读" "code" "算法解读" "verify" "代码验证" "optimize" "性能优化" -}}
+{{- $subtypeName := index $subtypeLabel $subtype | default $subtype -}}
+{{- $badgeClass := cond (eq $section "deep") "type-badge--deep" (cond (eq $section "practice") "type-badge--practice" "type-badge--news") -}}
+
+{{- /* 栏目图标（内联 SVG path） */ -}}
+{{- $icon := cond (eq $section "deep") `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 1.8h5.5L13 5.2v9H4z"/><path d="M9.5 1.8v3.4H13M6 8.5h4M6 11h4"/></svg>` (cond (eq $section "practice") `<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10.8 2.2a3.4 3.4 0 0 0-4.5 4.5L2.2 10.8a1.4 1.4 0 0 0 2 2l4.1-4.1a3.4 3.4 0 0 0 4.5-4.5l-2 2-1.9-.5-.5-1.9 2-2Z"/></svg>` `<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.8 1.2 3.2 9h3.1l-1.1 5.8L10.8 7H7.7l1.1-5.8Z"/></svg>`) -}}
+
+{{- return (dict
+  "section" $section
+  "sectionLabel" $sectionLabel
+  "subtype" $subtype
+  "subtypeLabel" $subtypeName
+  "badgeClass" $badgeClass
+  "icon" ($icon | safeHTML)
+) -}}

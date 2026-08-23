@@ -1,0 +1,24 @@
+# hackcv robots.txt（hackcv.com 主域 / Hugo 静态站）
+# 守规 AI 检索 bot 放行公开 API
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /api/public/
+
+# 商业 SEO 爬虫禁止
+User-agent: SemrushBot
+User-agent: AhrefsBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: PetalBot
+User-agent: Bytespider
+Disallow: /
+
+# 通用规则
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Allow: /opengraph-image-*
+Sitemap: https://hackcv.com/sitemap.xml

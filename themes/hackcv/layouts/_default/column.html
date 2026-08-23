@@ -1,18 +1,34 @@
 {{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
 {{ define "main" }}
-<section class="page-hero" style="--ph-50:var(--primary-50);--ph-100:var(--primary-100);--ph-600:var(--primary-600)">
+
+{{- $sec := .Params.section | default .Section -}}
+{{- $posts := where .Site.RegularPages "Section" "posts" -}}
+{{- $pages := slice -}}
+{{- range $posts -}}
+  {{- $m := partial "content-meta.html" . -}}
+  {{- if eq $m.section $sec }}{{ $pages = $pages | append . }}{{ end -}}
+{{- end -}}
+{{- if eq (len $pages) 0 }}{{ $pages = $posts }}{{ end -}}
+
+{{- $ph50 := cond (eq $sec "deep") "var(--deep-50)" (cond (eq $sec "practice") "var(--practice-50)" "var(--primary-50)") -}}
+{{- $ph100 := cond (eq $sec "deep") "var(--deep-100)" (cond (eq $sec "practice") "var(--practice-100)" "var(--primary-100)") -}}
+{{- $ph600 := cond (eq $sec "deep") "var(--deep-600)" (cond (eq $sec "practice") "var(--practice-600)" "var(--primary-600)") -}}
+{{- $kicker := cond (eq $sec "deep") "DEEP · 精读" (cond (eq $sec "practice") "LAB · 实践" "NEWS · 资讯") -}}
+{{- $today := now.Format "01-02" -}}
+
+<section class="page-hero" style="--ph-50:{{ $ph50 }};--ph-100:{{ $ph100 }};--ph-600:{{ $ph600 }}">
   <div class="container">
-    <span class="page-kicker">{{ upper .Kind }} · {{ .Title }}</span>
+    <span class="page-kicker">{{ $kicker }}</span>
     <h1 class="page-title">{{ .Title }}</h1>
-    {{ with .Description }}<p class="page-lead">{{ . }}</p>{{ end }}
-    <div class="page-meta"><span>{{ len .Pages }} 篇</span></div>
+    <p class="page-lead">{{ .Description }}</p>
+    <div class="page-meta"><span>{{ len $pages }} 篇</span><span>更新至 {{ $today }}</span></div>
   </div>
 </section>
 
 <section class="list">
   <div class="container">
     <div class="list">
-      {{ range .Pages }}
+      {{ range $pages }}
       {{- $m := partial "content-meta.html" . -}}
       <article class="list-item">
         <div class="list-date" aria-hidden="true"><span class="d">{{ .Date.Format "02" }}</span><span class="m">{{ .Date.Format "01-06" }}</span></div>
@@ -30,4 +46,5 @@
     </div>
   </div>
 </section>
+
 {{ end }}

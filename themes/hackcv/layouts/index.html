@@ -1,87 +1,141 @@
-{{ define "title" }}{{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ .Site.Title }} · {{ .Site.Params.description }}{{ end }}
 {{ define "main" }}
 
-<!-- Hero -->
+{{- $posts := where .Site.RegularPages "Section" "posts" -}}
+
+<!-- ============ Hero（P0） ============ -->
 <section class="hero">
   <div class="container">
-    <h1>{{ .Site.Title }}</h1>
-    <p>{{ .Site.Params.description | default (i18n "latest_posts") }}</p>
+    <h1>hack<span>cv</span></h1>
+    <p>{{ .Site.Params.description }}</p>
+    <div class="hero-badges">
+      <span class="hero-badge"><span class="dot-new" aria-hidden="true"></span>今日已更新</span>
+      <span class="hero-badge hero-badge--muted">已发布 {{ len $posts }} 篇</span>
+    </div>
   </div>
 </section>
 
-<!-- Latest Posts Grid -->
-<section class="featured">
+{{- /* 按栏目/子类聚合统计 */ -}}
+{{- $newsCount := 0 }}{{ $deepCount := 0 }}{{ $practiceCount := 0 -}}
+{{- $dailyCount := 0 }}{{ $weeklyCount := 0 }}{{ $paperCount := 0 }}{{ $codeCount := 0 }}{{ $verifyCount := 0 }}{{ $optimizeCount := 0 -}}
+{{- range $posts -}}
+  {{- $m := partial "content-meta.html" . -}}
+  {{- if eq $m.section "news" }}{{ $newsCount = add $newsCount 1 }}{{ if eq $m.subtype "daily" }}{{ $dailyCount = add $dailyCount 1 }}{{ else }}{{ $weeklyCount = add $weeklyCount 1 }}{{ end -}}
+  {{- else if eq $m.section "deep" }}{{ $deepCount = add $deepCount 1 }}{{ if eq $m.subtype "paper" }}{{ $paperCount = add $paperCount 1 }}{{ else }}{{ $codeCount = add $codeCount 1 }}{{ end -}}
+  {{- else }}{{ $practiceCount = add $practiceCount 1 }}{{ if eq $m.subtype "verify" }}{{ $verifyCount = add $verifyCount 1 }}{{ else }}{{ $optimizeCount = add $optimizeCount 1 }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+
+<!-- ============ 内容总览（统计 × 入口） ============ -->
+<section class="stats" aria-labelledby="overview-title-h">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">{{ i18n "latest_posts" }}</h2>
-      <a href="{{ .Site.BaseURL }}posts" style="font-size:.85rem;color:var(--accent)">{{ i18n "all_posts" }} →</a>
+      <h2 class="section-title" id="overview-title-h">内容总览</h2>
+      <span class="section-note">共发布 <b>{{ len $posts }}</b> 篇 · 3 大栏目 6 个子类</span>
     </div>
-    <div class="grid">
-      {{ range first 6 (where $.Site.RegularPages "Section" "posts") }}
-      <article class="card">
-        {{- $cover := partial "cover.html" (dict "page" . "keyword" "tech") -}}
-        <img src="{{ $cover }}" alt="{{ .Title }}" class="card-thumb" loading="lazy">
-        <div class="card-body">
-          {{ with .Params.categories }}
-          <span class="card-tag">{{ index . 0 }}</span>
-          {{ end }}
-          <h3 class="card-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <div class="stats-grid">
+      <a href="{{ .Site.BaseURL }}news/" class="stat-card" style="--s50:var(--primary-50);--s600:var(--primary-700);--sc:var(--primary-300)">
+        <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.8 1.2 3.2 9h3.1l-1.1 5.8L10.8 7H7.7l1.1-5.8Z"/></svg></span>
+        <span class="stat-info">
+          <span class="stat-top"><span class="stat-num">{{ $newsCount }}<small>篇</small></span><span class="stat-label">资讯</span></span>
+          <span class="stat-sub">每日简报 <b>{{ $dailyCount }}</b> · 每周总结 <b>{{ $weeklyCount }}</b></span>
+          <span class="stat-desc">论文、开源与行业动态的每日速览，3 分钟了解今天发生了什么</span>
+          <span class="stat-go">进入栏目 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </span>
+      </a>
+      <a href="{{ .Site.BaseURL }}deep/" class="stat-card" style="--s50:var(--deep-50);--s600:var(--deep-600);--sc:var(--deep-border)">
+        <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 1.8h5.5L13 5.2v9H4z"/><path d="M9.5 1.8v3.4H13M6 8.5h4M6 11h4"/></svg></span>
+        <span class="stat-info">
+          <span class="stat-top"><span class="stat-num">{{ $deepCount }}<small>篇</small></span><span class="stat-label">精读</span></span>
+          <span class="stat-sub">论文精读 <b>{{ $paperCount }}</b> · 算法解读 <b>{{ $codeCount }}</b></span>
+          <span class="stat-desc">重要论文与开源代码的深度拆解，读懂方法与架构取舍</span>
+          <span class="stat-go">进入栏目 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </span>
+      </a>
+      <a href="{{ .Site.BaseURL }}practice/" class="stat-card" style="--s50:var(--practice-50);--s600:var(--practice-600);--sc:var(--practice-border)">
+        <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10.8 2.2a3.4 3.4 0 0 0-4.5 4.5L2.2 10.8a1.4 1.4 0 0 0 2 2l4.1-4.1a3.4 3.4 0 0 0 4.5-4.5l-2 2-1.9-.5-.5-1.9 2-2Z"/></svg></span>
+        <span class="stat-info">
+          <span class="stat-top"><span class="stat-num">{{ $practiceCount }}<small>篇</small></span><span class="stat-label">实践</span></span>
+          <span class="stat-sub">代码验证 <b>{{ $verifyCount }}</b> · 性能优化 <b>{{ $optimizeCount }}</b></span>
+          <span class="stat-desc">代码验证与性能优化的一手实测，含数据、环境与结论</span>
+          <span class="stat-go">进入栏目 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 热门精选（三卡横排） ============ -->
+{{- $featured := where $posts "Params.featured" true -}}
+{{- if lt (len $featured) 3 }}{{ $featured = first 3 $posts }}{{ end -}}
+{{- if $featured }}
+<section class="hot" aria-labelledby="hot-title-h">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title" id="hot-title-h">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.2C8.7 3.5 5.8 4.8 5.8 7.1a2.7 2.7 0 0 0 5.4 0c0-.9-.6-1.7-.6-1.7 1.4.6 2.5 1.9 2.5 3.7a5.1 5.1 0 0 1-10.2 0C2.9 5.3 6.7 4.2 8 1.2Z"/></svg>
+        热门精选
+      </h2>
+      <span class="section-sub">最近更新 · 编辑部甄选</span>
+    </div>
+    <div class="hot-grid">
+      {{- range $i, $p := $featured }}
+      {{- $m := partial "content-meta.html" $p -}}
+      {{- $n := printf "%02d" (add $i 1) -}}
+      <article class="hot-card">
+        <div class="hot-cover" aria-hidden="true" style="--hc-200:{{ if eq $m.section "deep" }}var(--deep-100){{ else if eq $m.section "practice" }}var(--practice-100){{ else }}var(--primary-200){{ end }};--hc-50:{{ if eq $m.section "deep" }}var(--deep-50){{ else if eq $m.section "practice" }}var(--practice-50){{ else }}var(--primary-50){{ end }};--hc-700:{{ if eq $m.section "deep" }}var(--deep-600){{ else if eq $m.section "practice" }}var(--practice-600){{ else }}var(--primary-700){{ end }}">
+          <span class="hot-pill"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.2C8.7 3.5 5.8 4.8 5.8 7.1a2.7 2.7 0 0 0 5.4 0c0-.9-.6-1.7-.6-1.7 1.4.6 2.5 1.9 2.5 3.7a5.1 5.1 0 0 1-10.2 0C2.9 5.3 6.7 4.2 8 1.2Z"/></svg>Hot</span>
+          <span class="hot-rank">{{ $n }}</span>
+        </div>
+        <div class="hot-card-body">
+          <span class="type-badge {{ $m.badgeClass }}">{{ $m.icon }}{{ $m.subtypeLabel }}</span>
+          <h3 class="hot-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+          <p class="hot-summary">{{ $p.Description | default ($p.Summary | plainify | truncate 90) }}</p>
           <div class="card-meta">
-            <span>📅 {{ .Date.Format "01-02" }}</span>
-            <span>⏱️ {{ $min := 1 }}{{ $time := int (math.Ceil (div (float .WordCount) 300.0)) }}{{ if lt $time $min }}{{ $min }}{{ else }}{{ $time }}{{ end }} 分钟阅读</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>{{ math.Ceil (div (float $p.WordCount) 300.0) }} 分钟</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/></svg>{{ $p.Date.Format "01-02" }}</span>
           </div>
         </div>
       </article>
-      {{ end }}
+      {{- end }}
     </div>
   </div>
 </section>
+{{- end }}
 
-<!-- Categories Section -->
-{{ range first 3 (.Site.Home.Sections) }}
-{{ end }}
-
-{{ $cats := slice }}
-{{ range $k, $v := .Site.Taxonomies.categories }}
-{{ $cats = $cats | append (dict "name" $k "count" (len $v)) }}
-{{ end }}
-
-{{ if $cats }}
-<section style="padding:0 0 48px">
+<!-- ============ 最新内容（全栏目混合流） ============ -->
+<section class="featured" aria-labelledby="feed-title-h">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title">{{ i18n "categories" }}</h2>
+      <h2 class="section-title" id="feed-title-h">最新内容</h2>
+      <span class="section-sub">资讯 · 精读 · 实践 全栏目时间倒序</span>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:12px">
-      {{ range $cats }}
-      <a href="{{ $.Site.BaseURL }}categories/{{ .name | urlize }}" style="
-        display:inline-flex;align-items:center;gap:8px;
-        background:var(--bg-secondary);border:1px solid var(--border);
-        padding:8px 16px;border-radius:8px;
-        font-size:.875rem;font-weight:500;color:var(--text);
-        transition:all .15s;
-      " onmouseover="this.style.background='var(--accent)',this.style.color='#fff',this.style.borderColor='var(--accent)'" onmouseout="this.style.background='var(--bg-secondary)',this.style.color='var(--text)',this.style.borderColor='var(--border)'">
-        📂 {{ .name }}
-        <span style="font-size:.75rem;opacity:.6">({{ .count }})</span>
-      </a>
-      {{ end }}
+    <div class="list">
+      {{- range $i, $p := first 10 $posts }}
+      {{- $m := partial "content-meta.html" $p -}}
+      <article class="list-item{{ if and (eq $i 0) (lt (now.Sub $p.Date) (mul 24 (mul 60 (mul 60 (mul 1000 1000000))))) }} list-item--today{{ end }}">
+        <div class="list-date" aria-hidden="true"><span class="d">{{ $p.Date.Format "02" }}</span><span class="m">{{ $p.Date.Format "01-06" }}</span></div>
+        <div class="list-body">
+          {{- if eq $i 0 }}<span class="today-flag"><span class="dot-new" aria-hidden="true"></span>最新 · P0</span>{{ end }}
+          <span class="type-badge {{ $m.badgeClass }}" style="margin-bottom:6px">{{ $m.icon }}{{ $m.subtypeLabel }}</span>
+          <h3 class="list-title"><a href="{{ $p.RelPermalink }}" class="link-draw">{{ $p.Title }}</a></h3>
+          <p class="list-summary">{{ $p.Description | default ($p.Summary | plainify | truncate 90) }}</p>
+          <div class="card-meta">
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>{{ math.Ceil (div (float $p.WordCount) 300.0) }} 分钟</span>
+            {{- with $p.Params.tags }}{{ range first 2 . }}<span class="chip-sm">{{ . }}</span>{{ end }}{{ end }}
+          </div>
+        </div>
+      </article>
+      {{- end }}
     </div>
   </div>
 </section>
-{{ end }}
 
-<!-- About teaser -->
-<section style="background:var(--bg-secondary);border-top:1px solid var(--border);padding:40px 0">
-  <div class="container" style="text-align:center">
-    <h2 style="font-size:1.3rem;font-weight:600;margin-bottom:10px">{{ i18n "about" }} hackcv</h2>
-    <p style="color:var(--text-muted);max-width:500px;margin:0 auto 20px;font-size:.95rem">
-      {{ i18n "about_tagline" | default "AI 资讯聚合与摘要站点" }}
-    </p>
-    <a href="{{ .Site.BaseURL }}about" style="
-      display:inline-flex;align-items:center;gap:6px;
-      background:var(--accent);color:#fff;
-      padding:10px 22px;border-radius:8px;font-size:.875rem;font-weight:500;
-    ">{{ i18n "read_more" }} →</a>
+<section class="cta-section">
+  <div class="container">
+    <h2>关于 hackcv</h2>
+    <p>AI 资讯聚合与深度解读站点 · 每日简报速览 × 论文算法精读 × 代码性能实测，一条主线：让你跟得上、读得懂、做得出</p>
+    <a href="{{ .Site.BaseURL }}about/" class="btn">了解更多 →</a>
   </div>
 </section>
 

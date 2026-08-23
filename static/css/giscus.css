@@ -1,0 +1,69 @@
+/* ============================================================
+   giscus 自定义主题 · hackcv 陶土橙（对齐 main.optimized.css token）
+   使用方式：data-theme="https://hackcv.com/css/giscus.css"
+   主色 #a8502f（文字/强调） · 浅底 #fbf3ef · 中性 #292524/#6d6058
+   ============================================================ */
+main {
+  /* --- 语法高亮（prettylights） --- */
+  --color-prettylights-syntax-comment: #6d6058;
+  --color-prettylights-syntax-constant: #1d6a73;
+  --color-prettylights-syntax-entity: #8a6412;
+  --color-prettylights-syntax-storage-modifier-import: #292524;
+  --color-prettylights-syntax-entity-tag: #4f6b3a;
+  --color-prettylights-syntax-keyword: #a8502f;
+  --color-prettylights-syntax-string: #4f6b3a;
+  --color-prettylights-syntax-variable: #8f4226;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #b3261e;
+
+  /* --- 画布与文字 --- */
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f8f5f1;
+  --color-canvas-inset: #fbf3ef;
+  --color-canvas-overlay: #ffffff;
+
+  /* --- 边框 --- */
+  --color-border-default: #e7ddd3;
+  --color-border-muted: #f0e8e0;
+
+  /* --- 前景色 --- */
+  --color-fg-default: #292524;
+  --color-fg-muted: #6d6058;
+  --color-fg-subtle: #8a7a6e;
+  --color-fg-on-emphasis: #ffffff;
+
+  /* --- 强调（accent）陶土橙 --- */
+  --color-accent-fg: #a8502f;
+  --color-accent-emphasis: #a8502f;
+  --color-accent-muted: rgba(168, 80, 47, .12);
+  --color-accent-subtle: #fbf3ef;
+
+  /* --- 成功 / 危险（语义色） --- */
+  --color-success-fg: #2f7d4f;
+  --color-success-emphasis: #2f7d4f;
+  --color-success-muted: rgba(47, 125, 79, .12);
+  --color-success-subtle: #eaf4ec;
+  --color-danger-fg: #b3261e;
+  --color-danger-emphasis: #b3261e;
+  --color-danger-muted: rgba(179, 38, 30, .12);
+  --color-danger-subtle: #fbeceb;
+
+  /* --- 链接 --- */
+  --color-link-fg: #a8502f;
+  --color-link-hover-fg: #8f4226;
+
+  /* --- 按钮（提交评论主按钮） --- */
+  --color-btn-primary-bg: #a8502f;
+  --color-btn-primary-hover-bg: #8f4226;
+  --color-btn-primary-disabled-bg: rgba(168, 80, 47, .5);
+  --color-btn-primary-selected-bg: #8f4226;
+  --color-btn-bg: #fbf3ef;
+  --color-btn-hover-bg: #f5e6dc;
+  --color-btn-border: #e7ddd3;
+  --color-btn-hover-border: #d6c7b8;
+
+  /* --- 头像与分割 --- */
+  --color-avatar-border: rgba(41, 37, 36, .08);
+  --color-shadow-small: 0 1px 0 rgba(41, 37, 36, .04);
+  --color-shadow-medium: 0 3px 6px rgba(41, 37, 36, .08);
+  --color-focus-ring: rgba(168, 80, 47, .3);
+}

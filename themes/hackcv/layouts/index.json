@@ -1,4 +1,4 @@
-{{- $pages := where .Site.RegularPages "Section" "posts" | first 20 -}}
+{{- $pages := where .Site.RegularPages "Section" "posts" -}}
 {
   "total": {{ len $pages }},
   "posts": [
@@ -10,9 +10,11 @@
       "date": {{ $p.Date.Format "2006-01-02" | jsonify }},
       "author": {{ $p.Params.author | default "" | jsonify }},
       "description": {{ $p.Description | default "" | jsonify }},
+      "summary": {{ $p.Summary | plainify | jsonify }},
+      "section": {{ (partial "content-meta.html" $p).section | jsonify }},
+      "subtype": {{ (partial "content-meta.html" $p).subtype | jsonify }},
       "categories": {{ $p.Params.categories | jsonify }},
       "tags": {{ $p.Params.tags | jsonify }},
-      "cover": {{ partial "cover.html" (dict "page" $p) | jsonify }},
       "readingTime": {{ math.Ceil (div (float $p.WordCount) 300.0) }},
       "wordCount": {{ $p.WordCount }}
     }
