@@ -1,6 +1,6 @@
-baseURL = 'https://YOUR-DOMAIN.example/'  # TODO: 替换为你的自有域名
+baseURL = 'https://www.hackcv.com/'
 languageCode = 'zh-cn'
-title = '我的博客'
+title = 'HackCV 博客'
 theme = 'PaperMod'
 
 enableRobotsTXT = true
@@ -10,9 +10,9 @@ defaultContentLanguage = 'zh-cn'
 
 [params]
   env = 'production'
-  title = '我的博客'
-  description = '个人博客 - 记录技术、生活与思考'
-  author = 'Your Name'
+  title = 'HackCV 博客'
+  description = 'HackCV 个人博客 - 记录技术、生活与思考'
+  author = 'HackCV'
   DateFormat = '2006-01-02'
   defaultTheme = 'auto'
   disableThemeToggle = false
