@@ -1,19 +1,8 @@
 {{ define "title" }}{{ .Site.Title }} · {{ .Site.Params.description }}{{ end }}
 {{ define "main" }}
+<h1 class="visually-hidden">{{ .Site.Title }}</h1>
 
 {{- $posts := where .Site.RegularPages "Section" "posts" -}}
-
-<!-- ============ Hero（P0） ============ -->
-<section class="hero">
-  <div class="container">
-    <h1>hack<span>cv</span></h1>
-    <p>{{ .Site.Params.description }}</p>
-    <div class="hero-badges">
-      <span class="hero-badge"><span class="dot-new" aria-hidden="true"></span>今日已更新</span>
-      <span class="hero-badge hero-badge--muted">已发布 {{ len $posts }} 篇</span>
-    </div>
-  </div>
-</section>
 
 {{- /* 按栏目/子类聚合统计 */ -}}
 {{- $newsCount := 0 }}{{ $deepCount := 0 }}{{ $practiceCount := 0 -}}
@@ -65,8 +54,16 @@
   </div>
 </section>
 
-<!-- ============ 热门精选（三卡横排） ============ -->
-{{- $featured := where $posts "Params.featured" true -}}
+<!-- ============ 热门精选（三卡横排 · 热度×时效） ============ -->
+{{- /* 优先用 data/hot.json（scripts/update-hot.py 生成：Umami PV × 时效衰减） */ -}}
+{{- $featured := slice -}}
+{{- $hot := site.Data.hot -}}
+{{- if and $hot $hot.items -}}
+  {{- range $hot.items -}}
+    {{- $pg := $.Site.GetPage (strings.TrimSuffix "/" .path) -}}
+    {{- if $pg }}{{ $featured = $featured | append $pg }}{{ end -}}
+  {{- end -}}
+{{- end -}}
 {{- if lt (len $featured) 3 }}{{ $featured = first 3 $posts }}{{ end -}}
 {{- if $featured }}
 <section class="hot" aria-labelledby="hot-title-h">
@@ -111,7 +108,7 @@
       <span class="section-sub">资讯 · 精读 · 实践 全栏目时间倒序</span>
     </div>
     <div class="list">
-      {{- range $i, $p := first 10 $posts }}
+      {{- range $i, $p := first 5 $posts }}
       {{- $m := partial "content-meta.html" $p -}}
       <article class="list-item{{ if and (eq $i 0) (lt (now.Sub $p.Date) (mul 24 (mul 60 (mul 60 (mul 1000 1000000))))) }} list-item--today{{ end }}">
         <div class="list-date" aria-hidden="true"><span class="d">{{ $p.Date.Format "02" }}</span><span class="m">{{ $p.Date.Format "01-06" }}</span></div>

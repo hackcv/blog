@@ -1,6 +1,9 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="{{ .Site.BaseURL }}" class="site-logo">hack<span>cv</span></a>
+    <a href="{{ .Site.BaseURL }}" class="site-logo">
+      <img src="{{ "images/logo-mark.png" | relURL }}" alt="" class="site-logo-img" width="82" height="53">
+      <span>hack<span>cv</span></span>
+    </a>
     <nav class="nav" aria-label="主导航">
       {{- $current := .RelPermalink }}
       <a href="{{ .Site.BaseURL }}"{{ if eq $current "/" }} aria-current="page"{{ end }}>首页</a>

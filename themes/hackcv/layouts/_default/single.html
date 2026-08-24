@@ -25,6 +25,15 @@
   </header>
 
   <div class="container article-body">
+    <!-- ============ 标签（正文前） ============ -->
+    {{ if .Params.tags }}
+    <div class="tag-list" style="margin:0 0 20px">
+      {{ range .Params.tags }}
+      <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag"># {{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+
     <!-- ============ 目录（正文前） ============ -->
     {{ if .TableOfContents }}
     <details class="toc" style="margin:0 0 24px">
@@ -37,15 +46,6 @@
     <div class="article-content">
       {{ .Content }}
     </div>
-
-    <!-- ============ 标签 ============ -->
-    {{ if .Params.tags }}
-    <div class="tag-list">
-      {{ range .Params.tags }}
-      <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag"># {{ . }}</a>
-      {{ end }}
-    </div>
-    {{ end }}
 
     <!-- ============ 上一篇 / 下一篇 ============ -->
     {{ if or .PrevInSection .NextInSection }}
