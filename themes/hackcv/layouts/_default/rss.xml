@@ -20,7 +20,7 @@
     <managingEditor>{{ with .Site.Params.email }}{{ . }}{{ end }} ({{ .Site.Title }})</managingEditor>
     <webMaster>{{ with .Site.Params.email }}{{ . }}{{ end }} ({{ .Site.Title }})</webMaster>
     {{ with .Site.Params.twitter }}
-    <atom:link href="{{ $.Permalink }}feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ $.Permalink }}index.xml" rel="self" type="application/rss+xml" />
     {{ end }}
     {{ range $pages }}
     <item>
@@ -35,7 +35,7 @@
       <category>{{ . }}</category>
       {{ end }}
       {{ end }}
-      <content:encoded><![CDATA[{{ .Content }}]]></content:encoded>
+      <content:encoded>{{ printf "<![CDATA[%s]]>" .Content | safeHTML }}</content:encoded>
     </item>
     {{ end }}
   </channel>
