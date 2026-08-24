@@ -151,7 +151,7 @@ img { max-width: 100%; display: block; }
   gap: 8px;
   min-height: 44px;
 }
-.site-logo-img { display: block; height: 28px; width: auto; }
+.site-logo-img { display: block; width: 28px; height: 28px; object-fit: contain; }
 .site-logo > span { color: var(--text); }               /* hack 黑色 */
 .site-logo > span > span { color: var(--primary-500); } /* cv 陶土橙 */
 
