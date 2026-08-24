@@ -36,15 +36,21 @@ LOG_RE = re.compile(
 def fetch_logs(local: bool) -> str:
     files = [LOG_NAME, LOG_NAME + ".1"] + [f"{LOG_NAME}.{i}.gz" for i in range(2, 20)]
     if local:
+        import gzip
         data = []
         for f in files:
             path = os.path.join(LOG_DIR, f)
-            if os.path.exists(path):
-                try:
+            if not os.path.exists(path):
+                continue
+            try:
+                if f.endswith(".gz"):
+                    with gzip.open(path, "rb") as fh:
+                        data.append(fh.read())
+                else:
                     with open(path, "rb") as fh:
                         data.append(fh.read())
-                except OSError:
-                    continue
+            except OSError:
+                continue
         return b"".join(data).decode("utf-8", errors="replace")
     cmd = f"cd {LOG_DIR} && zcat -f {' '.join(files)} 2>/dev/null; true"
     out = subprocess.run(
