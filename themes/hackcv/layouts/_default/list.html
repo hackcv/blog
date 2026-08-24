@@ -22,6 +22,7 @@
           <p class="list-summary">{{ .Description | default (.Summary | plainify | truncate 90) }}</p>
           <div class="card-meta">
             <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>{{ math.Ceil (div (float .WordCount) 300.0) }} 分钟</span>
+            {{ partial "views.html" . }}
             {{- with .Params.tags }}{{ range first 2 . }}<span class="chip-sm">{{ . }}</span>{{ end }}{{ end }}
           </div>
         </div>

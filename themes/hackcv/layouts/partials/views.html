@@ -1,0 +1,3 @@
+{{- /* 浏览量：读 data/views.json 按路径显示，无数据显示 0 */ -}}
+{{- $views := index (site.Data.views.views | default dict) .RelPermalink | default 0 -}}
+<span class="meta-views">👁 {{ $views }}</span>
