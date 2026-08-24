@@ -19,6 +19,7 @@
         {{ with .Params.author }}<span>{{ . }}</span>{{ end }}
         <span>{{ .Date.Format "2006-01-02" }}</span>
         <span>约 {{ $min := 1 }}{{ $time := int (math.Ceil (div (float .WordCount) 300.0)) }}{{ if lt $time $min }}{{ $min }}{{ else }}{{ $time }}{{ end }} 分钟</span>
+        <span>👁 {{ with index (site.Data.views.views | default dict) .RelPermalink }}{{ . }}{{ else }}0{{ end }} 次浏览</span>
         {{ with .Params.tags }}{{ range first 1 . }}<span class="chip-sm">{{ . }}</span>{{ end }}{{ end }}
       </div>
     </div>
