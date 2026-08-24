@@ -40,9 +40,20 @@ BOT_RE = re.compile(r"bot|crawl|spider|slurp|curl|wget|python-requests|headless|
 DATE_RE = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
 
 
-def fetch_logs(days: int) -> str:
-    """ssh 拉取 qq_claw 近 N 天的 nginx 日志（含 gz 轮转，zcat -f 统一解压）。"""
+def fetch_logs(days: int, local: bool = False) -> str:
+    """拉取近 N 天 nginx 日志。local=True 时直接读本机日志目录（部署在 qq_claw 时用）。"""
     files = [LOG_NAME, LOG_NAME + ".1"] + [f"{LOG_NAME}.{i}.gz" for i in range(2, days + 2)]
+    if local:
+        data = []
+        for f in files:
+            path = os.path.join(LOG_DIR, f)
+            if os.path.exists(path):
+                try:
+                    with open(path, "rb") as fh:
+                        data.append(fh.read())
+                except OSError:
+                    continue
+        return b"".join(data).decode("utf-8", errors="replace")
     cmd = f"cd {LOG_DIR} && zcat -f {' '.join(files)} 2>/dev/null"
     try:
         out = subprocess.run(
@@ -93,10 +104,11 @@ def main() -> int:
     ap.add_argument("--days", type=int, default=7, help="统计最近 N 天 PV（默认 7）")
     ap.add_argument("--half-life", type=float, default=7.0, help="时效半衰期（天，默认 7）")
     ap.add_argument("--top", type=int, default=3, help="输出 Top N（默认 3）")
+    ap.add_argument("--local", action="store_true", help="直接读本机 nginx 日志（部署机/qq_claw 上使用）")
     args = ap.parse_args()
 
     print(f"拉取 qq_claw nginx 日志（近 {args.days} 天）...")
-    text = fetch_logs(args.days)
+    text = fetch_logs(args.days, local=args.local)
     now = dt.datetime.now(dt.timezone.utc)
     pv_map = parse_logs(text, args.days, now)
     if not pv_map:
