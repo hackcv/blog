@@ -68,6 +68,8 @@
   var count = document.getElementById('search-count');
   var filters = document.querySelectorAll('.search-filters .tab');
   var activeFilter = 'all';
+  var initialQuery = new URLSearchParams(window.location.search).get('q') || '';
+  if (initialQuery) input.value = initialQuery;
 
   var ICON_CLOCK = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>';
   var ICON_DATE = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/></svg>';
@@ -149,7 +151,7 @@
         ignoreLocation: true,
         minMatchCharLength: 1
       });
-      render(ALL);
+      apply();
     })
     .catch(function () { render(ALL); });
 })();
