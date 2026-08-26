@@ -27,6 +27,7 @@ comments = true
 [params.analytics]
 umamiWebsiteId = "cb8c433a-10c8-4ecc-a259-fd8c6c974b92"
 umamiSource = "https://cloud.umami.is/script.js"
+ga4MeasurementId = "G-473TJH28NM"
 
 [sitemap]
 changefreq = "weekly"
