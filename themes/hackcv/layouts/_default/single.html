@@ -18,7 +18,7 @@
       <div class="article-meta">
         {{ with .Params.author }}<span>{{ . }}</span>{{ end }}
         <span>{{ .Date.Format "2006-01-02" }}</span>
-        <span>{{ i18n "min_read" (math.Max 1 (int (math.Ceil (div (float .WordCount) 300.0)))) }}</span>
+        <span>{{ printf (i18n "min_read") (int (math.Max 1 (int (math.Ceil (div (float .WordCount) 300.0))))) }}</span>
         <span>{{ partial "views.html" . }}</span>
         {{ with .Params.tags }}{{ range first 1 . }}<span class="chip-sm">{{ . }}</span>{{ end }}{{ end }}
       </div>
