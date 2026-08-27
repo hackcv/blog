@@ -40,3 +40,54 @@ col_practice: LAB
 lang_zh: 中文
 lang_en: EN
 updated_to: "Updated to"
+overview_title: Content Overview
+overview_note: "%d posts · 3 columns 6 categories"
+hot_title: Hot Picks
+hot_sub: "Freshness-weighted · Editor's choice"
+latest_title: Latest
+view_all: View All
+stat_news: News
+stat_deep: Deep
+stat_practice: Practice
+stat_news_desc: "Daily briefs & weekly digests — AI research in 3 minutes"
+stat_deep_desc: "Paper reviews & algorithm deep-dives — methods and trade-offs"
+stat_practice_desc: "Hands-on verification with real environments and real numbers"
+views_count: "%d views"
+min_read: "%d min read"
+search_title: Search hackcv
+search_lead: "Find anything across %d posts — title, summary, tags all match."
+search_placeholder: "Search articles, papers, projects…"
+filter_all: All
+filter_news: News
+filter_deep: Deep
+filter_practice: Practice
+search_results: "%d results"
+search_match: "matching"
+empty_title: "No results"
+empty_hint: "Try another keyword, or browse the hot tags below."
+no_content: "Nothing here yet"
+404_title: "404 — Page Not Found"
+404_hint: "The page may have moved or never existed."
+footer_about: "AI news aggregation & digest — paper, open source and industry moves."
+unit_posts: posts
+stat_news_sub: "Daily <b>0</b> · Weekly <b>0</b>"
+stat_deep_sub: "Paper <b>0</b> · Code <b>0</b>"
+stat_practice_sub: "Verified <b>0</b> · Performance <b>0</b>"
+enter_column: Enter
+prev_post: "← "
+next_post: " →"
+article_nav: Article navigation
+hot_tags: "Hot tags"
+search_keyword: Search keyword
+filter_label: Filter by column
+min_read_unit: min read
+latest_sub: "All columns, newest first"
+today_flag: "New · P0"
+skip_main: Skip to content
+main_nav: Main navigation
+cta_title: "About hackcv"
+cta_desc: "AI news aggregation & digest — daily briefs, deep reads and hands-on practice. One thread: keep up, understand, deliver."
+discuss: "Join the discussion"
+discuss_note: "Comments powered by GitHub Discussions, stored in the hackcv/blog repo; sign in with a GitHub account to join. Markdown and emoji supported."
+hot_search: "Hot searches: "
+no_results: "No results for"

@@ -15,6 +15,9 @@ defaultContentLanguageInSubdir = false
     locale = 'en-US'
     label = 'English'
     weight = 2
+    [languages.en.params]
+    description = "AI news aggregation & digest site"
+    tagline = "Research briefs, deep reads and hands-on practice"
 
 [params]
 description = "AI 资讯聚合与摘要站点"

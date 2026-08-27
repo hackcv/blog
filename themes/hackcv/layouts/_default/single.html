@@ -18,8 +18,8 @@
       <div class="article-meta">
         {{ with .Params.author }}<span>{{ . }}</span>{{ end }}
         <span>{{ .Date.Format "2006-01-02" }}</span>
-        <span>约 {{ $min := 1 }}{{ $time := int (math.Ceil (div (float .WordCount) 300.0)) }}{{ if lt $time $min }}{{ $min }}{{ else }}{{ $time }}{{ end }} 分钟</span>
-        <span>👁 {{ with index (site.Data.views.views | default dict) .RelPermalink }}{{ . }}{{ else }}0{{ end }} 次浏览</span>
+        <span>{{ i18n "min_read" (math.Max 1 (int (math.Ceil (div (float .WordCount) 300.0)))) }}</span>
+        <span>{{ partial "views.html" . }}</span>
         {{ with .Params.tags }}{{ range first 1 . }}<span class="chip-sm">{{ . }}</span>{{ end }}{{ end }}
       </div>
     </div>
@@ -50,16 +50,16 @@
 
     <!-- ============ 上一篇 / 下一篇 ============ -->
     {{ if or .PrevInSection .NextInSection }}
-    <nav class="prevnext" aria-label="文章导航">
+    <nav class="prevnext" aria-label="{{ i18n "article_nav" }}">
       {{ with .PrevInSection }}
       <a href="{{ .RelPermalink }}">
-        <span class="pn-label">← 上一篇</span>
+        <span class="pn-label">{{ i18n "prev_post" }}</span>
         <span class="pn-title">{{ .Title }}</span>
       </a>
       {{ end }}
       {{ with .NextInSection }}
       <a href="{{ .RelPermalink }}">
-        <span class="pn-label">下一篇 →</span>
+        <span class="pn-label">{{ i18n "next_post" }}</span>
         <span class="pn-title">{{ .Title }}</span>
       </a>
       {{ end }}
@@ -72,9 +72,9 @@
       <div class="comments-header">
         <h2 class="comments-title" id="comments-h">
           <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 1.8C4.7 1.8 2 4 2 6.9c0 1.7 1 3.2 2.6 4.2L4 14l2.9-1.5c.36.06.73.09 1.1.09 3.3 0 6-2.2 6-5.1S11.3 1.8 8 1.8Z"/></svg>
-          参与讨论
+          {{ i18n "discuss" }}
         </h2>
-        <span class="comments-note">GitHub Discussions 驱动</span>
+        <span class="comments-note">{{ i18n "discuss_note" }}</span>
       </div>
       <div class="comments-box">
         <script src="https://giscus.app/client.js"
@@ -95,7 +95,7 @@
       </div>
       <p class="comments-tip">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v3M8 4.9v.2"/></svg>
-        评论由 GitHub Discussions 驱动，数据存储于 hackcv/blog 仓库；需要 GitHub 账号登录后参与，支持 Markdown 与表情回应。
+        {{ i18n "discuss_note" }}
       </p>
     </section>
     {{ end }}

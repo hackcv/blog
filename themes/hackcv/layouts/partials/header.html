@@ -4,7 +4,7 @@
       <img src="{{ "images/logo-mark.png" | relURL }}" alt="" class="site-logo-img" width="107" height="107">
       <span>hack<span>cv</span></span>
     </a>
-    <nav class="nav" aria-label="主导航">
+    <nav class="nav" aria-label="{{ i18n "main_nav" }}">
       {{- $current := .RelPermalink }}
       <a href="{{ relLangURL "/" }}"{{ if eq $current "/" }} aria-current="page"{{ end }}>{{ i18n "nav_home" }}</a>
       <a href="{{ relLangURL "news/" }}"{{ if eq $current "/news/" }} aria-current="page"{{ end }}>{{ i18n "nav_news" }}</a>
@@ -18,7 +18,7 @@
       <a href="{{ .RelPermalink }}" class="lang-switch">{{ i18n (cond (eq .Language.Lang "zh-cn") "lang_zh" "lang_en") }}</a>
       {{- end }}
       {{- end }}
-      <a href="{{ relLangURL "search/" }}" class="header-search" aria-label="搜索"{{ if eq $current "/search/" }} aria-current="page"{{ end }}>
+      <a href="{{ relLangURL "search/" }}" class="header-search" aria-label="{{ i18n "search_keyword" }}"{{ if eq $current "/search/" }} aria-current="page"{{ end }}>
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M10.8 10.8 14.5 14.5"/></svg>
       </a>
     </div>

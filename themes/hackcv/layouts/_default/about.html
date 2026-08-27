@@ -1,6 +1,6 @@
-{{ define "title" }}关于 hackcv · {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
 {{ define "meta" }}
-<meta name="description" content="hackcv 是 AI 领域的资讯聚合与深度解读站点：资讯让你跟得上，精读让你读得懂，实践让你做得出。">
+<meta name="description" content="{{ .Description }}">
 <meta name="keywords" content="hackcv, AI, 资讯, 论文精读, 算法解读">
 <meta name="author" content="{{ .Site.Title }}">
 <link rel="canonical" href="{{ .Permalink }}">

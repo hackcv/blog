@@ -40,3 +40,54 @@ col_practice: LAB · 实践
 lang_zh: 中文
 lang_en: EN
 updated_to: "更新至"
+overview_title: 内容总览
+overview_note: 共发布 %d 篇 · 3 大栏目 6 个子类
+hot_title: 热门精选
+hot_sub: 最近更新 · 编辑部甄选
+latest_title: 最新内容
+view_all: 查看全部
+stat_news: 资讯
+stat_deep: 精读
+stat_practice: 实践
+stat_news_desc: 论文、开源与行业动态的每日速览，3 分钟了解今天发生了什么
+stat_deep_desc: 论文精读与算法解读，读懂方法与架构取舍
+stat_practice_desc: 真实环境下的验证与性能实践
+views_count: "%d 次浏览"
+min_read: "约 %d 分钟"
+search_title: 搜索 hackcv
+search_lead: "在 %d 篇内容里找你要的东西——标题、摘要、标签都能命中。"
+search_placeholder: 搜索文章、论文、项目…
+filter_all: 全部
+filter_news: 资讯
+filter_deep: 精读
+filter_practice: 实践
+search_results: "共 %d 条内容"
+search_match: 匹配
+empty_title: 未找到相关结果
+empty_hint: 换个关键词，或从下方热门标签开始。
+no_content: 这里还没有内容
+404_title: 404 — 页面不存在
+404_hint: 页面可能已移动或从未存在。
+footer_about: AI 资讯聚合与摘要站点——论文、开源与行业动态。
+unit_posts: 篇
+stat_news_sub: "每日简报 <b>0</b> · 每周总结 <b>0</b>"
+stat_deep_sub: "论文精读 <b>0</b> · 算法解读 <b>0</b>"
+stat_practice_sub: "代码验证 <b>0</b> · 性能优化 <b>0</b>"
+enter_column: 进入栏目
+prev_post: "← "
+next_post: " →"
+article_nav: 文章导航
+hot_tags: 热门标签
+search_keyword: 搜索关键词
+filter_label: 按栏目过滤
+min_read_unit: 分钟
+latest_sub: 资讯 · 精读 · 实践 全栏目时间倒序
+today_flag: 最新 · P0
+skip_main: 跳到主内容
+main_nav: 主导航
+cta_title: 关于 hackcv
+cta_desc: "AI 资讯聚合与深度解读站点 · 每日简报速览 × 论文算法精读 × 代码性能实测，一条主线：让你跟得上、读得懂、做得出"
+discuss: 参与讨论
+discuss_note: "评论由 GitHub Discussions 驱动，数据存储于 hackcv/blog 仓库；需要 GitHub 账号登录后参与，支持 Markdown 与表情回应。"
+hot_search: 热门搜索：
+no_results: 没有找到「

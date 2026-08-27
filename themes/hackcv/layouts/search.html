@@ -1,12 +1,12 @@
-{{ define "title" }}搜索 · {{ .Site.Title }}{{ end }}
+{{ define "title" }}{{ i18n "search_title" }} · {{ .Site.Title }}{{ end }}
 {{ define "main" }}
 {{- $total := len (where .Site.RegularPages "Section" "posts") -}}
 
 <section class="page-hero" style="--ph-50:var(--primary-50);--ph-100:var(--primary-100);--ph-600:var(--primary-600)">
   <div class="container">
-    <span class="page-kicker">Search · 搜索</span>
-    <h1 class="page-title">搜索 hackcv</h1>
-    <p class="page-lead">在 {{ $total }} 篇内容里找你要的东西——标题、摘要、标签都能命中。</p>
+    <span class="page-kicker">{{ i18n "search_title" }}</span>
+    <h1 class="page-title">{{ i18n "search_title" }}</h1>
+    <p class="page-lead">{{ i18n "search_lead" $total }}</p>
   </div>
 </section>
 
@@ -14,20 +14,20 @@
   <div class="container">
 
     <form class="search-form" role="search" id="search-form">
-      <input class="search-input" type="search" id="search-input" placeholder="搜索文章、论文、项目…" autocomplete="off" aria-label="搜索关键词">
+      <input class="search-input" type="search" id="search-input" placeholder="{{ i18n "search_placeholder" }}" autocomplete="off" aria-label="{{ i18n "search_keyword" }}">
       <span class="search-ico" aria-hidden="true">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="7" cy="7" r="5"/><path d="M10.8 10.8 14.5 14.5"/></svg>
       </span>
     </form>
 
-    <div class="tabs search-filters" role="tablist" aria-label="按栏目过滤" style="--tc:var(--primary-600)">
-      <button class="tab" role="tab" data-filter="all" aria-selected="true">全部</button>
-      <button class="tab" role="tab" data-filter="news" aria-selected="false"><span class="tab-dot"></span>资讯</button>
-      <button class="tab" role="tab" data-filter="deep" aria-selected="false"><span class="tab-dot"></span>精读</button>
-      <button class="tab" role="tab" data-filter="practice" aria-selected="false"><span class="tab-dot"></span>实践</button>
+    <div class="tabs search-filters" role="tablist" aria-label="{{ i18n "filter_label" }}" style="--tc:var(--primary-600)">
+      <button class="tab" role="tab" data-filter="all" aria-selected="true">{{ i18n "filter_all" }}</button>
+      <button class="tab" role="tab" data-filter="news" aria-selected="false"><span class="tab-dot"></span>{{ i18n "filter_news" }}</button>
+      <button class="tab" role="tab" data-filter="deep" aria-selected="false"><span class="tab-dot"></span>{{ i18n "filter_deep" }}</button>
+      <button class="tab" role="tab" data-filter="practice" aria-selected="false"><span class="tab-dot"></span>{{ i18n "filter_practice" }}</button>
     </div>
 
-    <p class="search-count" id="search-count">共 <b>{{ $total }}</b> 条内容</p>
+    <p class="search-count" id="search-count">{{ i18n "search_results" $total }}</p>
 
     <div class="list" id="search-results" role="tabpanel" aria-live="polite"></div>
 
@@ -35,12 +35,12 @@
       <div class="se-ico" aria-hidden="true">
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M10.8 10.8 14.5 14.5M5.5 7h3"/></svg>
       </div>
-      <h3>没有找到「<span id="empty-query"></span>」</h3>
-      <p>换个关键词试试，或清空栏目过滤后浏览全部内容。</p>
+      <h3>{{ i18n "no_results" }}<span id="empty-query"></span>」</h3>
+      <p>{{ i18n "empty_hint" }}</p>
     </div>
 
     <div class="hot-tags">
-      <span class="ht-label">热门搜索：</span>
+      <span class="ht-label">{{ i18n "hot_search" }}</span>
       {{- $tagCount := dict -}}
       {{- range where .Site.RegularPages "Section" "posts" -}}
         {{- range .Params.tags -}}
@@ -76,19 +76,19 @@
 
   function badge(doc) {
     var map = {
-      'daily': ['type-badge--news', '每日简报'],
-      'weekly': ['type-badge--news', '每周总结'],
-      'paper': ['type-badge--deep', '论文精读'],
-      'code': ['type-badge--deep', '算法解读'],
-      'verify': ['type-badge--practice', '代码验证'],
-      'optimize': ['type-badge--practice', '性能优化']
+      'daily': ['type-badge--news', '{{ i18n "subtype_daily" }}'],
+      'weekly': ['type-badge--news', '{{ i18n "subtype_weekly" }}'],
+      'paper': ['type-badge--deep', '{{ i18n "subtype_paper" }}'],
+      'code': ['type-badge--deep', '{{ i18n "subtype_code" }}'],
+      'verify': ['type-badge--practice', '{{ i18n "subtype_verify" }}'],
+      'optimize': ['type-badge--practice', '{{ i18n "subtype_optimize" }}']
     };
     var m = map[doc.subtype] || map['daily'];
     return '<span class="type-badge ' + m[0] + '" style="margin-bottom:6px">' + m[1] + '</span>';
   }
 
   function render(list) {
-    count.innerHTML = '共 <b>' + list.length + '</b> 条内容' + (input.value ? '，匹配「' + input.value + '」' : '');
+    count.innerHTML = '{{ i18n "search_results" }}'.replace('%d', list.length) + (input.value ? ' {{ i18n "search_match" }}「' + input.value + '」' : '');
     empty.hidden = list.length > 0;
     if (list.length === 0) {
       document.getElementById('empty-query').textContent = input.value || '';
@@ -102,7 +102,7 @@
         '<div class="list-body">' + badge(d) +
         '<h3 class="list-title"><a href="' + d.url + '" class="link-draw">' + d.title + '</a></h3>' +
         '<p class="list-summary">' + (d.description || (d.summary || '').slice(0, 90)) + '</p>' +
-        '<div class="card-meta"><span>' + ICON_CLOCK + (d.readingTime || 1) + ' 分钟</span>' +
+        '<div class="card-meta"><span>' + ICON_CLOCK + (d.readingTime || 1) + ' {{ i18n "min_read_unit" }}</span>' +
         (d.tags && d.tags.length ? '<span class="chip-sm">' + d.tags.slice(0, 2).join('</span><span class="chip-sm">') + '</span>' : '') +
         '</div></div></article>';
     }).join('');

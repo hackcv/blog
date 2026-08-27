@@ -19,35 +19,35 @@
 <section class="stats" aria-labelledby="overview-title-h">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title" id="overview-title-h">内容总览</h2>
-      <span class="section-note">共发布 <b>{{ len $posts }}</b> 篇 · 3 大栏目 6 个子类</span>
+      <h2 class="section-title" id="overview-title-h">{{ i18n "overview_title" }}</h2>
+      <span class="section-note">{{ i18n "overview_note" (len $posts) }}</span>
     </div>
     <div class="stats-grid">
       <a href="{{ .Site.BaseURL }}news/" class="stat-card" style="--s50:var(--primary-50);--s600:var(--primary-700);--sc:var(--primary-300)">
         <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.8 1.2 3.2 9h3.1l-1.1 5.8L10.8 7H7.7l1.1-5.8Z"/></svg></span>
         <span class="stat-info">
-          <span class="stat-top"><span class="stat-num">{{ $newsCount }}<small>篇</small></span><span class="stat-label">资讯</span></span>
-          <span class="stat-sub">每日简报 <b>{{ $dailyCount }}</b> · 每周总结 <b>{{ $weeklyCount }}</b></span>
-          <span class="stat-desc">论文、开源与行业动态的每日速览，3 分钟了解今天发生了什么</span>
-          <span class="stat-go">进入栏目 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          <span class="stat-top"><span class="stat-num">{{ $newsCount }}<small>{{ i18n "unit_posts" }}</small></span><span class="stat-label">{{ i18n "stat_news" }}</span></span>
+          <span class="stat-sub">{{ printf (i18n "stat_news_sub") $dailyCount $weeklyCount | safeHTML }}</span>
+          <span class="stat-desc">{{ i18n "stat_news_desc" }}</span>
+          <span class="stat-go">{{ i18n "enter_column" }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </span>
       </a>
       <a href="{{ .Site.BaseURL }}deep/" class="stat-card" style="--s50:var(--deep-50);--s600:var(--deep-600);--sc:var(--deep-border)">
         <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 1.8h5.5L13 5.2v9H4z"/><path d="M9.5 1.8v3.4H13M6 8.5h4M6 11h4"/></svg></span>
         <span class="stat-info">
-          <span class="stat-top"><span class="stat-num">{{ $deepCount }}<small>篇</small></span><span class="stat-label">精读</span></span>
-          <span class="stat-sub">论文精读 <b>{{ $paperCount }}</b> · 算法解读 <b>{{ $codeCount }}</b></span>
-          <span class="stat-desc">重要论文与开源代码的深度拆解，读懂方法与架构取舍</span>
-          <span class="stat-go">进入栏目 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          <span class="stat-top"><span class="stat-num">{{ $deepCount }}<small>篇</small></span><span class="stat-label">{{ i18n "stat_deep" }}</span></span>
+          <span class="stat-sub">{{ printf (i18n "stat_deep_sub") $paperCount $codeCount | safeHTML }}</span>
+          <span class="stat-desc">{{ i18n "stat_deep_desc" }}</span>
+          <span class="stat-go">{{ i18n "enter_column" }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </span>
       </a>
       <a href="{{ .Site.BaseURL }}practice/" class="stat-card" style="--s50:var(--practice-50);--s600:var(--practice-600);--sc:var(--practice-border)">
         <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10.8 2.2a3.4 3.4 0 0 0-4.5 4.5L2.2 10.8a1.4 1.4 0 0 0 2 2l4.1-4.1a3.4 3.4 0 0 0 4.5-4.5l-2 2-1.9-.5-.5-1.9 2-2Z"/></svg></span>
         <span class="stat-info">
-          <span class="stat-top"><span class="stat-num">{{ $practiceCount }}<small>篇</small></span><span class="stat-label">实践</span></span>
-          <span class="stat-sub">代码验证 <b>{{ $verifyCount }}</b> · 性能优化 <b>{{ $optimizeCount }}</b></span>
-          <span class="stat-desc">代码验证与性能优化的一手实测，含数据、环境与结论</span>
-          <span class="stat-go">进入栏目 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+          <span class="stat-top"><span class="stat-num">{{ $practiceCount }}<small>篇</small></span><span class="stat-label">{{ i18n "stat_practice" }}</span></span>
+          <span class="stat-sub">{{ printf (i18n "stat_practice_sub") $verifyCount $optimizeCount | safeHTML }}</span>
+          <span class="stat-desc">{{ i18n "stat_practice_desc" }}</span>
+          <span class="stat-go">{{ i18n "enter_column" }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </span>
       </a>
     </div>
@@ -71,9 +71,9 @@
     <div class="section-header">
       <h2 class="section-title" id="hot-title-h">
         <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.2C8.7 3.5 5.8 4.8 5.8 7.1a2.7 2.7 0 0 0 5.4 0c0-.9-.6-1.7-.6-1.7 1.4.6 2.5 1.9 2.5 3.7a5.1 5.1 0 0 1-10.2 0C2.9 5.3 6.7 4.2 8 1.2Z"/></svg>
-        热门精选
+        {{ i18n "hot_title" }}
       </h2>
-      <span class="section-sub">最近更新 · 编辑部甄选</span>
+      <span class="section-sub">{{ i18n "hot_sub" }}</span>
     </div>
     <div class="hot-grid">
       {{- range $i, $p := $featured }}
@@ -89,7 +89,7 @@
           <h3 class="hot-title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
           <p class="hot-summary">{{ $p.Description | default ($p.Summary | plainify | truncate 90) }}</p>
           <div class="card-meta">
-            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>{{ math.Ceil (div (float $p.WordCount) 300.0) }} 分钟</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>{{ i18n "min_read" (math.Ceil (div (float $p.WordCount) 300.0)) }}</span>
             {{ partial "views.html" $p }}
             <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="3.5" width="11" height="10" rx="1.5"/><path d="M2.5 6.5h11M5.5 2v3M10.5 2v3"/></svg>{{ $p.Date.Format "01-02" }}</span>
           </div>
@@ -105,8 +105,8 @@
 <section class="featured" aria-labelledby="feed-title-h">
   <div class="container">
     <div class="section-header">
-      <h2 class="section-title" id="feed-title-h">最新内容</h2>
-      <span class="section-sub">资讯 · 精读 · 实践 全栏目时间倒序</span>
+      <h2 class="section-title" id="feed-title-h">{{ i18n "latest_title" }}</h2>
+      <span class="section-sub">{{ i18n "latest_sub" }}</span>
     </div>
     <div class="list">
       {{- range $i, $p := first 5 $posts }}
@@ -114,12 +114,12 @@
       <article class="list-item{{ if and (eq $i 0) (lt (now.Sub $p.Date) (mul 24 (mul 60 (mul 60 (mul 1000 1000000))))) }} list-item--today{{ end }}">
         <div class="list-date" aria-hidden="true"><span class="d">{{ $p.Date.Format "02" }}</span><span class="m">{{ $p.Date.Format "01-06" }}</span></div>
         <div class="list-body">
-          {{- if eq $i 0 }}<span class="today-flag"><span class="dot-new" aria-hidden="true"></span>最新 · P0</span>{{ end }}
+          {{- if eq $i 0 }}<span class="today-flag"><span class="dot-new" aria-hidden="true"></span>{{ i18n "today_flag" }}</span>{{ end }}
           <span class="type-badge {{ $m.badgeClass }}" style="margin-bottom:6px">{{ $m.icon }}{{ $m.subtypeLabel }}</span>
           <h3 class="list-title"><a href="{{ $p.RelPermalink }}" class="link-draw">{{ $p.Title }}</a></h3>
           <p class="list-summary">{{ $p.Description | default ($p.Summary | plainify | truncate 90) }}</p>
           <div class="card-meta">
-            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>{{ math.Ceil (div (float $p.WordCount) 300.0) }} 分钟</span>
+            <span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg>{{ i18n "min_read" (math.Ceil (div (float $p.WordCount) 300.0)) }}</span>
             {{ partial "views.html" $p }}
             {{- with $p.Params.tags }}{{ range first 2 . }}<span class="chip-sm">{{ . }}</span>{{ end }}{{ end }}
           </div>
@@ -132,9 +132,9 @@
 
 <section class="cta-section">
   <div class="container">
-    <h2>关于 hackcv</h2>
-    <p>AI 资讯聚合与深度解读站点 · 每日简报速览 × 论文算法精读 × 代码性能实测，一条主线：让你跟得上、读得懂、做得出</p>
-    <a href="{{ .Site.BaseURL }}about/" class="btn">了解更多 →</a>
+    <h2>{{ i18n "cta_title" }}</h2>
+    <p>{{ i18n "cta_desc" }}</p>
+    <a href="{{ relLangURL "about/" }}" class="btn">{{ i18n "view_all" }} →</a>
   </div>
 </section>
 

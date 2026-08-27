@@ -2,10 +2,10 @@
   <div class="container footer-inner">
     <p class="footer-copy">&copy; {{ now.Year }} {{ .Site.Title }}. {{ i18n "copyright" | default "版权所有." }}</p>
     <div class="footer-links">
-      <a href="{{ .Site.BaseURL }}about/">关于</a>
-      {{ with .Site.GetPage "section" "categories" }}<a href="{{ .RelPermalink }}">分类</a>{{ end }}
-      {{ with .Site.GetPage "section" "tags" }}<a href="{{ .RelPermalink }}">标签</a>{{ end }}
-      <a href="{{ .Site.BaseURL }}privacy/">隐私政策</a>
+      <a href="{{ relLangURL "about/" }}">{{ i18n "nav_about" }}</a>
+      {{ with .Site.GetPage "section" "categories" }}<a href="{{ .RelPermalink }}">{{ i18n "categories" }}</a>{{ end }}
+      {{ with .Site.GetPage "section" "tags" }}<a href="{{ .RelPermalink }}">{{ i18n "tags" }}</a>{{ end }}
+      <a href="{{ relLangURL "privacy/" }}">{{ i18n "privacy" }}</a>
       {{ with .Site.Params.github }}
       <a href="{{ . }}" target="_blank" rel="noopener">GitHub</a>
       {{ end }}
