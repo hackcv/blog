@@ -1,7 +1,7 @@
 {{ define "title" }}{{ .Title }} · {{ .Site.Title }}{{ end }}
 {{ define "meta" }}
 <meta name="description" content="{{ .Description }}">
-<meta name="keywords" content="hackcv, AI, 资讯, 论文精读, 算法解读">
+<meta name="keywords" content="hackcv, AI, {{ if eq .Language.Lang "en" }}news, paper review, algorithm deep-dive{{ else }}资讯, 论文精读, 算法解读{{ end }}">
 <meta name="author" content="{{ .Site.Title }}">
 <link rel="canonical" href="{{ .Permalink }}">
 {{ end }}
@@ -44,53 +44,53 @@
 <!-- ============ 页头（关于 · 品牌陶土橙） ============ -->
 <section class="page-hero" style="--ph-50:var(--primary-50);--ph-100:var(--primary-100);--ph-600:var(--primary-600)">
   <div class="container">
-    <span class="page-kicker">About · 关于</span>
-    <h1 class="page-title">关于 hackcv</h1>
-    <p class="page-lead">一条主线：让你跟得上、读得懂、做得出。</p>
+    <span class="page-kicker">{{ i18n "about_kicker" }}</span>
+    <h1 class="page-title">{{ i18n "about_title" }}</h1>
+    <p class="page-lead">{{ i18n "about_lead" }}</p>
   </div>
 </section>
 
 <!-- ============ 使命 ============ -->
 <section class="about-section" aria-labelledby="mission-h">
   <div class="container">
-    <h2 class="about-h" id="mission-h">我们做什么</h2>
-    <p class="about-mission">hackcv 是 AI 领域的资讯聚合与深度解读站点。<strong>资讯</strong>让你跟得上，<strong>精读</strong>让你读得懂，<strong>实践</strong>让你做得出——三个栏目，一个目标：把噪音筛掉，把方法留下。</p>
+    <h2 class="about-h" id="mission-h">{{ i18n "about_mission_h" }}</h2>
+    <p class="about-mission">{{ i18n "about_mission" | safeHTML }}</p>
   </div>
 </section>
 
 <!-- ============ 栏目体系 ============ -->
 <section class="about-section" aria-labelledby="types-h">
   <div class="container">
-    <h2 class="about-h" id="types-h">三大栏目</h2>
+    <h2 class="about-h" id="types-h">{{ i18n "about_types_h" }}</h2>
     <div class="type-nav">
       <a href="/news/" class="type-card" style="--t50:var(--primary-50);--t600:var(--primary-700)">
         <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.8 1.2 3.2 9h3.1l-1.1 5.8L10.8 7H7.7l1.1-5.8Z"/></svg></span>
         <span class="type-card-info">
-          <h3>资讯</h3>
-          <p>每日简报 × 每周总结，3 分钟跟上 AI 每天发生什么</p>
+          <h3>{{ i18n "stat_news" }}</h3>
+          <p>{{ i18n "about_news_desc" }}</p>
           <span class="type-chips">
-            {{- if gt $dailyN 0 }}<span class="type-chip">每日简报 <b>{{ $dailyN }}</b></span>{{ end }}
-            {{- if gt $weeklyN 0 }}<span class="type-chip">每周总结 <b>{{ $weeklyN }}</b></span>{{ end }}
+            {{- if gt $dailyN 0 }}<span class="type-chip">{{ printf (i18n "chip_daily") $dailyN | safeHTML }}</span>{{ end }}
+            {{- if gt $weeklyN 0 }}<span class="type-chip">{{ printf (i18n "chip_weekly") $weeklyN | safeHTML }}</span>{{ end }}
           </span>
         </span>
       </a>
       <a href="/deep/" class="type-card" style="--t50:var(--deep-50);--t600:var(--deep-600)">
         <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 1.8h5.5L13 5.2v9H4z"/><path d="M9.5 1.8v3.4H13M6 8.5h4M6 11h4"/></svg></span>
         <span class="type-card-info">
-          <h3>精读</h3>
-          <p>论文精读 × 算法解读，读懂方法与架构取舍</p>
+          <h3>{{ i18n "stat_deep" }}</h3>
+          <p>{{ i18n "about_deep_desc" }}</p>
           <span class="type-chips">
-            {{- if gt $deepN 0 }}<span class="type-chip">论文精读 <b>{{ $deepN }}</b></span>{{ end }}
+            {{- if gt $deepN 0 }}<span class="type-chip">{{ printf (i18n "chip_paper") $deepN | safeHTML }}</span>{{ end }}
           </span>
         </span>
       </a>
       <a href="/practice/" class="type-card" style="--t50:var(--practice-50);--t600:var(--practice-600)">
         <span class="type-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10.8 2.2a3.4 3.4 0 0 0-4.5 4.5L2.2 10.8a1.4 1.4 0 0 0 2 2l4.1-4.1a3.4 3.4 0 0 0 4.5-4.5l-2 2-1.9-.5-.5-1.9 2-2Z"/></svg></span>
         <span class="type-card-info">
-          <h3>实践</h3>
-          <p>代码验证 × 性能优化，一手实测、数据说话</p>
+          <h3>{{ i18n "stat_practice" }}</h3>
+          <p>{{ i18n "about_practice_desc" }}</p>
           <span class="type-chips">
-            {{- if gt $practiceN 0 }}<span class="type-chip">代码验证 <b>{{ $practiceN }}</b></span>{{ end }}
+            {{- if gt $practiceN 0 }}<span class="type-chip">{{ printf (i18n "chip_verify") $practiceN | safeHTML }}</span>{{ end }}
           </span>
         </span>
       </a>
@@ -101,34 +101,34 @@
 <!-- ============ 内容原则 ============ -->
 <section class="about-section" aria-labelledby="principles-h">
   <div class="container">
-    <h2 class="about-h" id="principles-h">内容原则</h2>
+    <h2 class="about-h" id="principles-h">{{ i18n "about_principles_h" }}</h2>
     <div class="principle-list">
       <div class="principle">
         <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1.6 8s2.2-4 6.4-4 6.4 4 6.4 4-2.2 4-6.4 4S1.6 8 1.6 8Z"/><circle cx="8" cy="8" r="1.8"/></svg></span>
         <div>
-          <h3>一手信源</h3>
-          <p>只跟进论文原文、官方发布与代码仓库，不转述二手标题党。</p>
+          <h3>{{ i18n "about_p1_h" }}</h3>
+          <p>{{ i18n "about_p1" }}</p>
         </div>
       </div>
       <div class="principle">
         <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 8.5 6.5 12 13 4.5"/></svg></span>
         <div>
-          <h3>可复现</h3>
-          <p>实践栏目每个结论都给出环境、参数与数据，你可以照着跑一遍。</p>
+          <h3>{{ i18n "about_p2_h" }}</h3>
+          <p>{{ i18n "about_p2" }}</p>
         </div>
       </div>
       <div class="principle">
         <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2.5v11M5 5l3-2.5L11 5M3 11.5h10"/></svg></span>
         <div>
-          <h3>带数据</h3>
-          <p>不谈"显著提升"这类空话，数字、对比与基准一应俱全。</p>
+          <h3>{{ i18n "about_p3_h" }}</h3>
+          <p>{{ i18n "about_p3" }}</p>
         </div>
       </div>
       <div class="principle">
         <span class="p-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.8V8l2.2 1.6"/></svg></span>
         <div>
-          <h3>标注局限</h3>
-          <p>复现打折、收益缩水、条件不成立——结论的反面同样写清楚。</p>
+          <h3>{{ i18n "about_p4_h" }}</h3>
+          <p>{{ i18n "about_p4" }}</p>
         </div>
       </div>
     </div>
@@ -138,27 +138,27 @@
 <!-- ============ 更新节奏 ============ -->
 <section class="about-section" aria-labelledby="cadence-h">
   <div class="container">
-    <h2 class="about-h" id="cadence-h">更新节奏</h2>
+    <h2 class="about-h" id="cadence-h">{{ i18n "about_cadence_h" }}</h2>
     <div class="cadence-list">
       <div class="cadence-row">
         <span class="c-dot" aria-hidden="true"></span>
-        <span class="c-name">每日简报</span>
-        <span class="c-time">工作日 · 早 8:00</span>
+        <span class="c-name">{{ i18n "about_cadence_daily" }}</span>
+        <span class="c-time">{{ i18n "about_cadence_daily_t" }}</span>
       </div>
       <div class="cadence-row">
         <span class="c-dot" aria-hidden="true"></span>
-        <span class="c-name">每周总结</span>
-        <span class="c-time">每周五 · 18:00</span>
+        <span class="c-name">{{ i18n "about_cadence_weekly" }}</span>
+        <span class="c-time">{{ i18n "about_cadence_weekly_t" }}</span>
       </div>
       <div class="cadence-row">
         <span class="c-dot" aria-hidden="true"></span>
-        <span class="c-name">热门精选</span>
-        <span class="c-time">每周五 · 随周总结</span>
+        <span class="c-name">{{ i18n "about_cadence_hot" }}</span>
+        <span class="c-time">{{ i18n "about_cadence_hot_t" }}</span>
       </div>
       <div class="cadence-row">
         <span class="c-dot" aria-hidden="true"></span>
-        <span class="c-name">精读 / 实践</span>
-        <span class="c-time">不定期 · 精读优先</span>
+        <span class="c-name">{{ i18n "about_cadence_deep" }}</span>
+        <span class="c-time">{{ i18n "about_cadence_deep_t" }}</span>
       </div>
     </div>
   </div>
@@ -167,26 +167,26 @@
 <!-- ============ 关于我 ============ -->
 <section class="about-section" aria-labelledby="me-h">
   <div class="container">
-    <h2 class="about-h" id="me-h">关于我</h2>
+    <h2 class="about-h" id="me-h">{{ i18n "about_me_h" }}</h2>
     <div class="about-me">
       <div class="about-me-intro">
-        <div class="role">主理人 · 10 年互联网大厂老兵</div>
-        <p>AI 技术爱好者和实践者，关注大模型、智能体与工程落地。</p>
-        <p>本站内容主要由 <strong>Agent 维护更新</strong>——每日简报、每周总结均由 AI 流水线自动采集、摘要与排版，人工负责选题、基调与最终把关。</p>
+        <div class="role">{{ i18n "about_me_role" }}</div>
+        <p>{{ i18n "about_me_p1" }}</p>
+        <p>{{ i18n "about_me_p2" | safeHTML }}</p>
       </div>
       <div class="about-me-stats">
         <div class="stat-card" style="--s50:var(--primary-50);--s600:var(--primary-700);--sc:var(--primary-300)">
           <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1.5 5.5 8 9l6.5-3.5M1.5 8 8 11.5 14.5 8"/></svg></span>
           <span class="stat-info">
-            <span class="stat-top"><span class="stat-num">{{ lang.FormatNumber 0 $totalTok }}<small>tokens</small></span><span class="stat-label">累计 Token 消耗</span></span>
-            <span class="stat-sub">已统计 {{ $tokCount }} 篇简报</span>
+            <span class="stat-top"><span class="stat-num">{{ lang.FormatNumber 0 $totalTok }}<small>tokens</small></span><span class="stat-label">{{ i18n "about_stat_total_l" }}</span></span>
+            <span class="stat-sub">{{ printf (i18n "about_stat_total_s") $tokCount }}</span>
           </span>
         </div>
         <div class="stat-card" style="--s50:var(--deep-50);--s600:var(--deep-600);--sc:var(--deep-border)">
           <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 1.8h5.5L13 5.2v9H4z"/><path d="M9.5 1.8v3.4H13M6 8.5h4M6 11h4"/></svg></span>
           <span class="stat-info">
-            <span class="stat-top"><span class="stat-num">{{ lang.FormatNumber 0 $avgTok }}<small>tokens</small></span><span class="stat-label">平均每篇 Token</span></span>
-            <span class="stat-sub">总消耗 ÷ 统计篇数</span>
+            <span class="stat-top"><span class="stat-num">{{ lang.FormatNumber 0 $avgTok }}<small>tokens</small></span><span class="stat-label">{{ i18n "about_stat_avg_l" }}</span></span>
+            <span class="stat-sub">{{ i18n "about_stat_avg_s" }}</span>
           </span>
         </div>
       </div>
@@ -197,12 +197,12 @@
 <!-- ============ 订阅 CTA ============ -->
 <section class="cta-section">
   <div class="container">
-    <h2>订阅 hackcv</h2>
-    <p>每日简报 RSS · 微信公众号「hackcv」· GitHub Discussions——三种方式，任选其一，内容都不重样。</p>
+    <h2>{{ i18n "about_cta_h" }}</h2>
+    <p>{{ i18n "about_cta" }}</p>
     <div class="cta-actions">
-      <a href="{{ .Site.BaseURL }}index.xml" class="btn">订阅 RSS</a>
-      <a href="#" class="btn btn-secondary">关注公众号</a>
-      <a href="{{ .Site.Params.github }}" class="btn btn-secondary" rel="noopener" target="_blank">加入 GitHub</a>
+      <a href="{{ .Site.BaseURL }}index.xml" class="btn">{{ i18n "about_cta_rss" }}</a>
+      <a href="#" class="btn btn-secondary">{{ i18n "about_cta_wx" }}</a>
+      <a href="{{ .Site.Params.github }}" class="btn btn-secondary" rel="noopener" target="_blank">{{ i18n "about_cta_gh" }}</a>
     </div>
   </div>
 </section>

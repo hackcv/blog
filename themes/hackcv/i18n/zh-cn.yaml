@@ -91,3 +91,48 @@ discuss: 参与讨论
 discuss_note: "评论由 GitHub Discussions 驱动，数据存储于 hackcv/blog 仓库；需要 GitHub 账号登录后参与，支持 Markdown 与表情回应。"
 hot_search: 热门搜索：
 no_results: 没有找到「
+about_kicker: About · 关于
+about_title: 关于 hackcv
+about_lead: 一条主线：让你跟得上、读得懂、做得出。
+about_mission_h: 我们做什么
+about_mission: "hackcv 是 AI 领域的资讯聚合与深度解读站点。<strong>资讯</strong>让你跟得上，<strong>精读</strong>让你读得懂，<strong>实践</strong>让你做得出——三个栏目，一个目标：把噪音筛掉，把方法留下。"
+about_types_h: 三大栏目
+about_news_desc: 每日简报 × 每周总结，3 分钟跟上 AI 每天发生什么
+about_deep_desc: 论文精读 × 算法解读，读懂方法与架构取舍
+about_practice_desc: 代码验证 × 性能优化，一手实测、数据说话
+chip_daily: "每日简报 <b>%d</b>"
+chip_weekly: "每周总结 <b>%d</b>"
+chip_paper: "论文精读 <b>%d</b>"
+chip_verify: "代码验证 <b>%d</b>"
+chip_optimize: "性能优化 <b>%d</b>"
+about_principles_h: 内容原则
+about_p1_h: 一手信源
+about_p1: 只跟进论文原文、官方发布与代码仓库，不转述二手标题党。
+about_p2_h: 可复现
+about_p2: 实践栏目每个结论都给出环境、参数与数据，你可以照着跑一遍。
+about_p3_h: 带数据
+about_p3: 不谈"显著提升"这类空话，数字、对比与基准一应俱全。
+about_p4_h: 标注局限
+about_p4: 复现打折、收益缩水、条件不成立——结论的反面同样写清楚。
+about_cadence_h: 更新节奏
+about_cadence_daily: 每日简报
+about_cadence_daily_t: 工作日 · 早 8:00
+about_cadence_weekly: 每周总结
+about_cadence_weekly_t: 每周五 · 18:00
+about_cadence_hot: 热门精选
+about_cadence_hot_t: 每周五 · 随周总结
+about_cadence_deep: 精读 / 实践
+about_cadence_deep_t: 不定期 · 精读优先
+about_me_h: 关于我
+about_me_role: 主理人 · 10 年互联网大厂老兵
+about_me_p1: AI 技术爱好者和实践者，关注大模型、智能体与工程落地。
+about_me_p2: "本站内容主要由 <strong>Agent 维护更新</strong>——每日简报、每周总结均由 AI 流水线自动采集、摘要与排版，人工负责选题、基调与最终把关。"
+about_stat_total_l: 累计 Token 消耗
+about_stat_total_s: 已统计 %d 篇简报
+about_stat_avg_l: 平均每篇 Token
+about_stat_avg_s: 总消耗 ÷ 统计篇数
+about_cta_h: 订阅 hackcv
+about_cta: "每日简报 RSS · 微信公众号「hackcv」· GitHub Discussions——三种方式，任选其一，内容都不重样。"
+about_cta_rss: 订阅 RSS
+about_cta_wx: 关注公众号
+about_cta_gh: 加入 GitHub

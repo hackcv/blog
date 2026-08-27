@@ -91,3 +91,48 @@ discuss: "Join the discussion"
 discuss_note: "Comments powered by GitHub Discussions, stored in the hackcv/blog repo; sign in with a GitHub account to join. Markdown and emoji supported."
 hot_search: "Hot searches: "
 no_results: "No results for"
+about_kicker: About
+about_title: About hackcv
+about_lead: "One thread: keep up, understand, deliver."
+about_mission_h: What We Do
+about_mission: "hackcv is an AI news aggregation and deep-dive site. <strong>News</strong> keeps you up to date, <strong>Deep</strong> helps you understand, <strong>Practice</strong> lets you build — three columns, one goal: filter out the noise, keep the method."
+about_types_h: Three Columns
+about_news_desc: "Daily briefs × weekly digests — keep up with AI in 3 minutes"
+about_deep_desc: "Paper reviews × algorithm deep-dives — understand methods and trade-offs"
+about_practice_desc: "Code verified × performance work — real numbers from real environments"
+chip_daily: "Daily <b>%d</b>"
+chip_weekly: "Weekly <b>%d</b>"
+chip_paper: "Paper <b>%d</b>"
+chip_verify: "Verified <b>%d</b>"
+chip_optimize: "Performance <b>%d</b>"
+about_principles_h: Content Principles
+about_p1_h: Primary Sources
+about_p1: "We only follow paper originals, official releases and code repos — no second-hand clickbait."
+about_p2_h: Reproducible
+about_p2: "Every conclusion in Practice comes with environment, parameters and data — you can run it yourself."
+about_p3_h: Data-Driven
+about_p3: "No empty 'significant improvement' talk — numbers, comparisons and benchmarks included."
+about_p4_h: Limitations Stated
+about_p4: "When reproduction falls short, gains shrink or conditions break — the downside is written down too."
+about_cadence_h: Update Cadence
+about_cadence_daily: Daily Brief
+about_cadence_daily_t: "Weekdays · 8:00 AM"
+about_cadence_weekly: Weekly Digest
+about_cadence_weekly_t: "Friday · 6:00 PM"
+about_cadence_hot: Hot Picks
+about_cadence_hot_t: "Friday · with weekly digest"
+about_cadence_deep: Deep / Practice
+about_cadence_deep_t: "Irregular · deep reads first"
+about_me_h: About Me
+about_me_role: "Founder · 10-year internet veteran"
+about_me_p1: "AI enthusiast and practitioner, focused on LLMs, agents and engineering."
+about_me_p2: "This site is maintained by an <strong>agent pipeline</strong> — daily briefs and weekly digests are collected, summarized and formatted automatically, with a human curating topics, tone and final review."
+about_stat_total_l: Total Tokens
+about_stat_total_s: "%d briefs counted"
+about_stat_avg_l: "Avg Tokens / Brief"
+about_stat_avg_s: "total ÷ briefs"
+about_cta_h: Subscribe to hackcv
+about_cta: "RSS feed · WeChat official account 'hackcv' · GitHub Discussions — pick any one, content never repeats."
+about_cta_rss: Subscribe RSS
+about_cta_wx: Follow WeChat
+about_cta_gh: Join GitHub
