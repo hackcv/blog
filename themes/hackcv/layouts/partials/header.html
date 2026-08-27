@@ -1,19 +1,24 @@
 <header class="site-header">
   <div class="container header-inner">
-    <a href="{{ .Site.BaseURL }}" class="site-logo">
+    <a href="{{ relLangURL "/" }}" class="site-logo">
       <img src="{{ "images/logo-mark.png" | relURL }}" alt="" class="site-logo-img" width="107" height="107">
       <span>hack<span>cv</span></span>
     </a>
     <nav class="nav" aria-label="主导航">
       {{- $current := .RelPermalink }}
-      <a href="{{ .Site.BaseURL }}"{{ if eq $current "/" }} aria-current="page"{{ end }}>首页</a>
-      <a href="{{ .Site.BaseURL }}news/"{{ if eq $current "/news/" }} aria-current="page"{{ end }}>资讯</a>
-      <a href="{{ .Site.BaseURL }}deep/"{{ if eq $current "/deep/" }} aria-current="page"{{ end }}>精读</a>
-      <a href="{{ .Site.BaseURL }}practice/"{{ if eq $current "/practice/" }} aria-current="page"{{ end }}>实践</a>
-      <a href="{{ .Site.BaseURL }}about/"{{ if eq $current "/about/" }} aria-current="page"{{ end }}>关于</a>
+      <a href="{{ relLangURL "/" }}"{{ if eq $current "/" }} aria-current="page"{{ end }}>{{ i18n "nav_home" }}</a>
+      <a href="{{ relLangURL "news/" }}"{{ if eq $current "/news/" }} aria-current="page"{{ end }}>{{ i18n "nav_news" }}</a>
+      <a href="{{ relLangURL "deep/" }}"{{ if eq $current "/deep/" }} aria-current="page"{{ end }}>{{ i18n "nav_deep" }}</a>
+      <a href="{{ relLangURL "practice/" }}"{{ if eq $current "/practice/" }} aria-current="page"{{ end }}>{{ i18n "nav_practice" }}</a>
+      <a href="{{ relLangURL "about/" }}"{{ if eq $current "/about/" }} aria-current="page"{{ end }}>{{ i18n "nav_about" }}</a>
     </nav>
     <div class="header-tools">
-      <a href="{{ .Site.BaseURL }}search/" class="header-search" aria-label="搜索"{{ if eq $current "/search/" }} aria-current="page"{{ end }}>
+      {{- if gt (len site.Languages) 1 }}
+      {{- range .Translations }}
+      <a href="{{ .RelPermalink }}" class="lang-switch">{{ i18n (cond (eq .Language.Lang "zh-cn") "lang_zh" "lang_en") }}</a>
+      {{- end }}
+      {{- end }}
+      <a href="{{ relLangURL "search/" }}" class="header-search" aria-label="搜索"{{ if eq $current "/search/" }} aria-current="page"{{ end }}>
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="M10.8 10.8 14.5 14.5"/></svg>
       </a>
     </div>

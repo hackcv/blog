@@ -23,3 +23,20 @@ page_not_found: 页面未找到
 page_not_found_desc: 抱歉，你访问的页面不存在或已移动。
 copyright: 版权所有
 about_tagline: AI 资讯聚合与摘要站点
+nav_home: 首页
+nav_news: 资讯
+nav_deep: 精读
+nav_practice: 实践
+nav_about: 关于
+subtype_daily: 每日简报
+subtype_weekly: 每周总结
+subtype_paper: 论文精读
+subtype_code: 算法解读
+subtype_verify: 代码验证
+subtype_optimize: 性能优化
+col_news: NEWS · 资讯
+col_deep: DEEP · 精读
+col_practice: LAB · 实践
+lang_zh: 中文
+lang_en: EN
+updated_to: "更新至"

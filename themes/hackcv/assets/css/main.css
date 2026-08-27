@@ -276,6 +276,18 @@ img { max-width: 100%; display: block; }
 
 /* ---------- 搜索 ---------- */
 .header-tools { display: flex; align-items: center; gap: 4px; }
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 10px;
+  font-size: .8125rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: color .15s var(--ease), background-color .15s var(--ease);
+}
+.lang-switch:hover { color: var(--primary-700); background-color: var(--primary-50); }
 .header-search {
   display: inline-flex;
   align-items: center;

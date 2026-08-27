@@ -44,9 +44,9 @@
   {{- end -}}
 {{- end -}}
 
-{{- /* 标签映射 */ -}}
-{{- $sectionLabel := cond (eq $section "deep") "精读" (cond (eq $section "practice") "实践" "资讯") -}}
-{{- $subtypeLabel := dict "daily" "每日简报" "weekly" "每周总结" "paper" "论文精读" "code" "算法解读" "verify" "代码验证" "optimize" "性能优化" -}}
+{{- /* 标签映射（i18n） */ -}}
+{{- $sectionLabel := cond (eq $section "deep") (i18n "col_deep") (cond (eq $section "practice") (i18n "col_practice") (i18n "col_news")) -}}
+{{- $subtypeLabel := dict "daily" (i18n "subtype_daily") "weekly" (i18n "subtype_weekly") "paper" (i18n "subtype_paper") "code" (i18n "subtype_code") "verify" (i18n "subtype_verify") "optimize" (i18n "subtype_optimize") -}}
 {{- $subtypeName := index $subtypeLabel $subtype | default $subtype -}}
 {{- $badgeClass := cond (eq $section "deep") "type-badge--deep" (cond (eq $section "practice") "type-badge--practice" "type-badge--news") -}}
 

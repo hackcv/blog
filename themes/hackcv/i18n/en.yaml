@@ -23,3 +23,20 @@ page_not_found: Page Not Found
 page_not_found_desc: Sorry, the page you are looking for does not exist or has been moved.
 copyright: All rights reserved
 about_tagline: AI News Aggregator & Summarizer
+nav_home: Home
+nav_news: News
+nav_deep: Deep
+nav_practice: Practice
+nav_about: About
+subtype_daily: Daily Brief
+subtype_weekly: Weekly Digest
+subtype_paper: Paper Review
+subtype_code: Algorithm Deep-Dive
+subtype_verify: Code Verified
+subtype_optimize: Performance
+col_news: NEWS
+col_deep: DEEP
+col_practice: LAB
+lang_zh: 中文
+lang_en: EN
+updated_to: "Updated to"
