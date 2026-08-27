@@ -4,6 +4,7 @@ date: 2026-08-09T20:30:00+08:00
 draft: false
 tags: ["AI", "LLM", "Agent", "Computer Vision", "Audio-Video", "Engineering", "Daily Brief"]
 categories: ["Research Brief"]
+subtype: "daily"
 description: "Daily research brief — AI / LLM / Agent / Computer Vision / Audio-Video / Engineering"
 ---
 

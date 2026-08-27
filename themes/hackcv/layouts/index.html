@@ -20,10 +20,10 @@
   <div class="container">
     <div class="section-header">
       <h2 class="section-title" id="overview-title-h">{{ i18n "overview_title" }}</h2>
-      <span class="section-note">{{ i18n "overview_note" (len $posts) }}</span>
+      <span class="section-note">{{ printf (i18n "overview_note") (len $posts) }}</span>
     </div>
     <div class="stats-grid">
-      <a href="{{ .Site.BaseURL }}news/" class="stat-card" style="--s50:var(--primary-50);--s600:var(--primary-700);--sc:var(--primary-300)">
+      <a href="{{ relLangURL "news/" }}" class="stat-card" style="--s50:var(--primary-50);--s600:var(--primary-700);--sc:var(--primary-300)">
         <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8.8 1.2 3.2 9h3.1l-1.1 5.8L10.8 7H7.7l1.1-5.8Z"/></svg></span>
         <span class="stat-info">
           <span class="stat-top"><span class="stat-num">{{ $newsCount }}<small>{{ i18n "unit_posts" }}</small></span><span class="stat-label">{{ i18n "stat_news" }}</span></span>
@@ -32,19 +32,19 @@
           <span class="stat-go">{{ i18n "enter_column" }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </span>
       </a>
-      <a href="{{ .Site.BaseURL }}deep/" class="stat-card" style="--s50:var(--deep-50);--s600:var(--deep-600);--sc:var(--deep-border)">
+      <a href="{{ relLangURL "deep/" }}" class="stat-card" style="--s50:var(--deep-50);--s600:var(--deep-600);--sc:var(--deep-border)">
         <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 1.8h5.5L13 5.2v9H4z"/><path d="M9.5 1.8v3.4H13M6 8.5h4M6 11h4"/></svg></span>
         <span class="stat-info">
-          <span class="stat-top"><span class="stat-num">{{ $deepCount }}<small>篇</small></span><span class="stat-label">{{ i18n "stat_deep" }}</span></span>
+          <span class="stat-top"><span class="stat-num">{{ $deepCount }}<small>{{ i18n "unit_posts" }}</small></span><span class="stat-label">{{ i18n "stat_deep" }}</span></span>
           <span class="stat-sub">{{ printf (i18n "stat_deep_sub") $paperCount $codeCount | safeHTML }}</span>
           <span class="stat-desc">{{ i18n "stat_deep_desc" }}</span>
           <span class="stat-go">{{ i18n "enter_column" }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </span>
       </a>
-      <a href="{{ .Site.BaseURL }}practice/" class="stat-card" style="--s50:var(--practice-50);--s600:var(--practice-600);--sc:var(--practice-border)">
+      <a href="{{ relLangURL "practice/" }}" class="stat-card" style="--s50:var(--practice-50);--s600:var(--practice-600);--sc:var(--practice-border)">
         <span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10.8 2.2a3.4 3.4 0 0 0-4.5 4.5L2.2 10.8a1.4 1.4 0 0 0 2 2l4.1-4.1a3.4 3.4 0 0 0 4.5-4.5l-2 2-1.9-.5-.5-1.9 2-2Z"/></svg></span>
         <span class="stat-info">
-          <span class="stat-top"><span class="stat-num">{{ $practiceCount }}<small>篇</small></span><span class="stat-label">{{ i18n "stat_practice" }}</span></span>
+          <span class="stat-top"><span class="stat-num">{{ $practiceCount }}<small>{{ i18n "unit_posts" }}</small></span><span class="stat-label">{{ i18n "stat_practice" }}</span></span>
           <span class="stat-sub">{{ printf (i18n "stat_practice_sub") $verifyCount $optimizeCount | safeHTML }}</span>
           <span class="stat-desc">{{ i18n "stat_practice_desc" }}</span>
           <span class="stat-go">{{ i18n "enter_column" }} <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>

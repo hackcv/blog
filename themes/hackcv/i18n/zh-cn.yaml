@@ -70,12 +70,12 @@ no_content: 这里还没有内容
 404_hint: 页面可能已移动或从未存在。
 footer_about: AI 资讯聚合与摘要站点——论文、开源与行业动态。
 unit_posts: 篇
-stat_news_sub: "每日简报 <b>0</b> · 每周总结 <b>0</b>"
-stat_deep_sub: "论文精读 <b>0</b> · 算法解读 <b>0</b>"
-stat_practice_sub: "代码验证 <b>0</b> · 性能优化 <b>0</b>"
+stat_news_sub: "每日简报 <b>%d</b> · 每周总结 <b>%d</b>"
+stat_deep_sub: "论文精读 <b>%d</b> · 算法解读 <b>%d</b>"
+stat_practice_sub: "代码验证 <b>%d</b> · 性能优化 <b>%d</b>"
 enter_column: 进入栏目
-prev_post: "← "
-next_post: " →"
+prev_post: "← 上一篇"
+next_post: "下一篇 →"
 article_nav: 文章导航
 hot_tags: 热门标签
 search_keyword: 搜索关键词

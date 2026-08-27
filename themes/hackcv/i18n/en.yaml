@@ -70,12 +70,12 @@ no_content: "Nothing here yet"
 404_hint: "The page may have moved or never existed."
 footer_about: "AI news aggregation & digest — paper, open source and industry moves."
 unit_posts: posts
-stat_news_sub: "Daily <b>0</b> · Weekly <b>0</b>"
-stat_deep_sub: "Paper <b>0</b> · Code <b>0</b>"
-stat_practice_sub: "Verified <b>0</b> · Performance <b>0</b>"
+stat_news_sub: "Daily <b>%d</b> · Weekly <b>%d</b>"
+stat_deep_sub: "Paper <b>%d</b> · Code <b>%d</b>"
+stat_practice_sub: "Verified <b>%d</b> · Performance <b>%d</b>"
 enter_column: Enter
-prev_post: "← "
-next_post: " →"
+prev_post: "← Previous"
+next_post: "Next →"
 article_nav: Article navigation
 hot_tags: "Hot tags"
 search_keyword: Search keyword
