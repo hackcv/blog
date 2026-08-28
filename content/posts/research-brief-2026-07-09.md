@@ -20,49 +20,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **摘要**：提出可交互长时序视频世界生成模型，突破传统游戏手工制作流水线痛点，模型基于游戏录制和真实世界视频训练，可根据当前世界状态和用户交互实时生成后续环境，支持完整可玩虚拟世界在线生成，准确捕捉视觉效果和物理动力学规律。
 **领域**：生成式AI、虚拟环境、游戏AI
 **推荐理由**：游戏内容生成的颠覆性突破，将大幅降低元宇宙、游戏开发的成本和周期，实现按需生成可交互虚拟世界，代表下一代内容生产范式。
-**链接**：https://arxiv.org/abs/2607.06291
+**链接**： <https://arxiv.org/abs/2607.06291>
 
 ### 2. Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops
 **摘要**：调研2024-2026年1250篇AI自改进相关论文，建立首个统一分类体系，沿"改进对象"和"闭环程度"两个维度，明确区分已工业落地的有边界自优化（如代码自修复、提示自调整）和仍处研究阶段的开放式递归自改进，厘清不同自改进模式的能力边界和风险等级。
 **领域**：AI安全、AGI研究、大模型训练
 **推荐理由**：AI自进化领域的里程碑综述，为相关研究提供统一框架和术语体系，对评估自改进系统能力、管控相关风险具有重要指导意义。
-**链接**：https://arxiv.org/abs/2607.07663
+**链接**： <https://arxiv.org/abs/2607.07663>
 
 ### 3. VASP Agent: An Agentic Framework for Autonomous First-Principles Calculations
 **摘要**：上海AI实验室与清华大学联合开发的第一性原理计算智能体框架，实现材料科学计算全流程自动化，支持自主完成参数设置、计算执行、结果分析、错误修正，大幅降低量子化学计算的使用门槛，材料科研效率提升5倍以上。
 **领域**：AI for Science、材料科学、智能体应用
 **推荐理由**：科研AI落地的标杆成果，将专业领域计算能力封装为可自动执行的智能体，让非专业科研人员也能完成高精度量子化学计算，加速材料创新。
-**链接**：https://arxiv.org/html/2512.19458v2
+**链接**： <https://arxiv.org/html/2512.19458v2>
 
 ### 4. Beyond Static Evaluation: Building Simulation Environments for Scalable Agentic Reinforcement Learning
 **摘要**：提出AgenticAI-Supervisor智能体强化学习仿真环境，解耦环境创建与规模化执行，支持可验证执行结果输出和多维度奖励塑造，通过严格的内部状态校验解决奖励破解问题，在客服智能体场景验证下实现稳定的闭环反馈提升。
 **领域**：强化学习、智能体训练、仿真环境
 **推荐理由**：解决智能体训练中静态评估与真实场景差距大、奖励破解频发的行业痛点，为规模化训练可靠的企业级智能体提供标准化仿真环境。
-**链接**：https://arxiv.org/abs/2607.05773
+**链接**： <https://arxiv.org/abs/2607.05773>
 
 ### 5. VaseMuseum: Digital Intelligent Museum for Ancient Greek Pottery
 **摘要**：面向文化遗产领域的多模态智能体框架，解决大模型在专业文博场景下的幻觉和知识不可追溯问题，基于2D/3D实物证据和专业策展知识，实现可靠的文物解读，支持不确定性校准，避免无依据的猜测性输出。
 **领域**：多模态大模型、文化科技、专业领域AI
 **推荐理由**：专业领域大模型落地的典型案例，提出的证据绑定、不确定性校准机制可推广到医疗、法律等对输出可靠性要求高的领域。
-**链接**：https://arxiv.org/abs/2607.06374
+**链接**： <https://arxiv.org/abs/2607.06374>
 
 ### 6. Physics-Audited Agentic Discovery in Scientific Machine Learning
 **摘要**：提出物理审计机制，解决科学机器学习中仅靠误差指标无法保证模型符合物理规律的问题，通过内置边界条件、叠加原理、因果性等物理规则校验，确保AI发现的科学模型满足基本物理定律，相关方法已在力学、流体动力学场景验证有效。
 **领域**：AI for Science、科学发现、物理约束学习
 **推荐理由**：科学AI可靠性的重要保障，弥补纯数据驱动AI研究的缺陷，大幅提升AI发现科学规律的可信度，加速科学发现进程。
-**链接**：https://arxiv.org/abs/2607.07379
+**链接**： <https://arxiv.org/abs/2607.07379>
 
 ### 7. Driving the Wrong Way: Leveraging Interpretability in End-to-End Autonomous Driving Models
 **摘要**：将无监督字典学习作为可解释模块集成到端到端自动驾驶模型中，将复杂驾驶行为分解为可解释的语义概念，能够定位模型错误行为的根源并针对性优化，最终实现驾驶性能的可量化提升，解决端到端自动驾驶黑盒不可控问题。
 **领域**：自动驾驶、AI可解释性、机器人学
 **推荐理由**：自动驾驶安全落地的关键突破，通过可解释性技术打开端到端模型黑盒，实现错误可追溯、性能可优化，为高可靠自动驾驶落地提供技术路径。
-**链接**：https://arxiv.org/abs/2607.06328
+**链接**： <https://arxiv.org/abs/2607.06328>
 
 ### 8. Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF
 **摘要**：针对扩散模型RLHF训练样本效率低的问题，提出选择性时间步加权和基于优势的重放机制，训练效率提升3倍，生成质量同时提高，相关方法已在多模态生成场景验证有效，论文被CVPR 2026 Workshop收录。
 **领域**：大模型对齐、扩散模型、强化学习
 **推荐理由**：扩散模型对齐技术的重要优化，大幅降低RLHF训练成本，提升生成质量，可直接应用于文本、图像、视频等各类生成式AI模型的对齐流程。
-**链接**：https://arxiv.org/abs/2607.07693
+**链接**： <https://arxiv.org/abs/2607.07693>
 
 ---
 
@@ -71,49 +71,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **简介**：单二进制文件实现Office文档读写能力，无需安装微软Office，让AI Agent可以直接操作Word、Excel、PPT等格式文档，支持复杂表格计算、格式调整、内容生成等功能，完全开源免费，专为自动化办公和RPA场景优化。
 **热度**：单日涨星1717，登顶GitHub Trending总榜第一
 **推荐理由**：解决AI Agent无法直接操作Office文档的行业痛点，是办公自动化、智能报表生成等场景的必备工具，大幅降低企业办公流程自动化的门槛。
-**链接**：https://github.com/iOfficeAI/OfficeCLI
+**链接**： <https://github.com/iOfficeAI/OfficeCLI>
 
 ### 2. TencentDB-Agent-Memory: AI Agent 本地长期记忆存储系统
 **简介**：腾讯云开源的AI Agent记忆管理系统，采用四层语义金字塔架构，从原始对话（L0）逐级提炼为原子事实（L1）、场景块（L2）和用户画像（L3），创新符号化记忆机制，用Mermaid图语法压缩工具日志，需要时可追溯细节。官方测试显示接入后PersonaMem任务准确率从48%提升到76%，WideSearch场景Token消耗降低61%，默认本地SQLite运行，零外部API依赖。
 **热度**：首次上榜即冲进前三，单日涨星318，MIT协议开源
 **推荐理由**：企业级AI Agent记忆管理的标准化解决方案，解决长期记忆混乱、检索不准确、Token消耗高的痛点，支持本地部署保障数据安全，适配主流Agent开发框架。
-**链接**：https://github.com/TencentCloud/TencentDB-Agent-Memory
+**链接**： <https://github.com/TencentCloud/TencentDB-Agent-Memory>
 
 ### 3. RuView: WiFi 信号空间感知与生命体征检测方案
 **简介**：Rust实现的纯WiFi信号感知系统，无需额外传感器，仅通过普通WiFi信号即可实现空间感知、人员存在检测、呼吸心跳监测、跌倒检测等功能，全栈覆盖固件、Rust引擎、Python桥接、HomeKit集成，支持家庭安防、健康监测等场景。
 **热度**：7.91万星，单日涨幅799，持续位列热榜前二
 **推荐理由**：低成本智能感知的突破性方案，仅用现有WiFi设备即可实现传统传感器的功能，成本降低90%，为智能家居、养老健康、安防等领域带来全新技术路径。
-**链接**：https://github.com/ruvnet/RuView
+**链接**： <https://github.com/ruvnet/RuView>
 
 ### 4. T3MP3ST: 多 Agent 红队安全元框架
 **简介**：自主可控的AI渗透测试框架，接入本地大模型后可自主完成完整网络杀伤链：侦查→漏洞利用→权限提升→横向移动→报告生成，支持浏览器指挥室或CLI操控，在XBOW安全挑战中准确率达90.1%，超越现有商用工具，完全自托管离线可用，所有结果支持可复现验证。
 **热度**：2.5万星，单日涨星1600，安全领域热门项目
 **推荐理由**：AI安全领域的杀手级应用，大幅降低渗透测试的技术门槛，同时也让安全从业者可以提前应对AI驱动的网络攻击，对提升整体网络安全防护水平具有重要意义。
-**链接**：https://github.com/elder-plinius/T3MP3ST
+**链接**： <https://github.com/elder-plinius/T3MP3ST>
 
 ### 5. Ponytail: AI 工程师思维训练库
 **简介**：训练AI Agent遵循YAGNI（You Aren't Gonna Need It）原则的JavaScript库，让Agent像资深工程师一样只写必要的代码，避免过度工程、无用抽象和冗余功能，大幅提升AI生成代码的实用性和可维护性，降低后期维护成本。
 **热度**：7.59万星，本周热门项目
 **推荐理由**：解决AI生成代码华而不实、过度设计的痛点，让AI输出更贴近工业级实际需求，是AI辅助编程场景的必备增强工具。
-**链接**：https://github.com/DietrichGebert/ponytail
+**链接**： <https://github.com/DietrichGebert/ponytail>
 
 ### 6. last30days-skill: AI Agent 话题研究技能
 **简介**：可集成到各类Agent的研究技能，支持跨平台收集特定话题近30天的全网信息，自动整理结构化研究报告，包含新闻、论文、观点、数据等多维度信息，支持自定义研究维度和输出格式。
 **热度**：1.44万星，单日涨星352
 **推荐理由**：大幅提升AI信息收集和研究效率，是情报分析、市场调研、趋势追踪等场景的通用组件，可直接集成到各类Agent系统中。
-**链接**：https://github.com/mvanhorn/last30days-skill
+**链接**： <https://github.com/mvanhorn/last30days-skill>
 
 ### 7. OpenClaw: AI Agent 全栈开发框架
 **简介**：被开发者称为"龙虾"的AI Agent开发框架，近期以35.5万星标超越React，登顶GitHub开源项目历史第一，标志AI Agent时代全面到来。框架提供从开发、调试到部署的全流程工具链，支持多模态、多角色、复杂工作流编排，适配各类部署环境。
 **热度**：35.5万星，GitHub历史星标最高项目
 **推荐理由**：AI Agent开发的事实标准框架，生态最完善、社区最活跃，是企业级Agent开发的首选框架，大幅降低智能体应用的开发门槛。
-**链接**：https://github.com/openclaw/openclaw
+**链接**： <https://github.com/openclaw/openclaw>
 
 ### 8. OmniRoute: 智能体模型路由网关
 **简介**：专为AI Agent设计的多模型路由网关，支持无缝接入OpenAI、Anthropic、DeepSeek、智谱等主流模型供应商，内置模型自动降级、Token压缩、MCP集成、用量统计等功能，统一管理多模型API密钥，解决企业多模型接入管理的痛点。
 **热度**：1.3万星，本周增长2300星
 **推荐理由**：企业级AI应用的必备基础设施，解决多模型接入和管理的复杂性，降低切换模型的成本，提升AI系统的稳定性和可靠性。
-**链接**：https://github.com/DiegoSouzaPw/OmniRoute
+**链接**： <https://github.com/DiegoSouzaPw/OmniRoute>
 
 ---
 

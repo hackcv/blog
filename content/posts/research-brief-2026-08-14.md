@@ -28,7 +28,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 BFCL V3 与 WildToolBench 上同时超过 RL 与蒸馏基线，且在长轨迹、严格会话级指标上增益最大——直接戳中「多轮 Agent 到底该奖励哪一步」的产业痛点，比单纯堆数据更可解释。
 
-**链接**：https://arxiv.org/abs/2608.13179
+**链接**： <https://arxiv.org/abs/2608.13179>
 
 ### 2. Latent On-Policy Self-Distillation（LOPD）
 
@@ -38,7 +38,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 Agent 工具调用与代码生成上超过 RLVR 与 OPSD/SDPO/Skill-SD，且用不到 30% 的 rollout 预算就超过 GRPO 与 Skill-SD——把「自我改进」从手工配方推向可规模化范式。
 
-**链接**：https://arxiv.org/abs/2608.13040
+**链接**： <https://arxiv.org/abs/2608.13040>
 
 ### 3. Beyond Outcome Rewards: Step-Level Self-Distilled Policy Optimization for Deep Search Agents（SSPO）
 
@@ -48,7 +48,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 Qwen3-8B 上，BrowseComp / GAIA / FRAMES 全面超过 GRPO，且用约一半梯度步数达到或匹配 GRPO 两倍步数的效果，单步仅 +5% 额外前向开销——长轨迹搜索的低成本可落地方案。
 
-**链接**：https://arxiv.org/abs/2608.12764
+**链接**： <https://arxiv.org/abs/2608.12764>
 
 ### 4. Temporal GRPO: Beyond Trajectory-Level Credit in Vision-Language-Action Reinforcement Learning
 
@@ -58,7 +58,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 RoboTwin 2.0 上提升任务成功率与样本效率，且在 LIBERO-Long 上受控更新保留共享前置阶段、把改进集中到结果首次分歧的第一阶段——对具身操作的信用分配给出可解释解法。
 
-**链接**：https://arxiv.org/abs/2608.13026
+**链接**： <https://arxiv.org/abs/2608.13026>
 
 ### 5. Attention from Action, for Action: Emergent Visual Bottlenecks for Policy Learning（Seeker）
 
@@ -68,7 +68,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：真实机器人上把平均域内成功率从基线最佳 48.3% 提到 76.7%，光照/背景扰动下从 20.0% 提到 60.0%——无需任何外部标签即可获得更鲁棒的空间先验。
 
-**链接**：https://arxiv.org/abs/2608.13422
+**链接**： <https://arxiv.org/abs/2608.13422>
 
 ### 6. Alaya-EVOKE: 持久记忆世界模型
 
@@ -78,7 +78,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「记忆」作为世界模型的一等公民，契合当天多篇「可交互、可记忆、可长期运行」的世界模型趋势（DreamX-Phi、PlayWorld），是具身与仿真规划走向持续运行系统的关键拼图。
 
-**链接**：https://huggingface.co/papers/2608.13546
+**链接**： <https://huggingface.co/papers/2608.13546>
 
 ### 7. DreamX-Phi 1.0: 机器人操作视频世界模型
 
@@ -88,7 +88,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把世界模型落地到「机器人操作」这一具体且高价值场景，预测结果可直接服务规划与策略评估，比通用视频生成更贴近控制闭环。
 
-**链接**：https://huggingface.co/papers/2608.13489
+**链接**： <https://huggingface.co/papers/2608.13489>
 
 ### 8. AutoDesign: 长程设计 Agent 的 Meta-Harness 优化
 
@@ -98,7 +98,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：优化对象从「模型」上升到「模型+harness 系统」，与当天 Agent 自演化（DarwinX 等）同频，提示长程创意任务的瓶颈在编排而非单点能力。
 
-**链接**：https://huggingface.co/papers/2608.13560
+**链接**： <https://huggingface.co/papers/2608.13560>
 
 ## 二、GitHub热门AI开源项目（2026.08.12-08.14）
 
@@ -110,7 +110,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「专业视觉产出」压进一个能读品牌、按风格出图的 skill，是 skill 经济吃掉 Figma/Mermaid 设计工具的鲜活样本；其「最高质量的动作是删除」的密度主张也值得借鉴。
 
-**链接**：https://github.com/cathrynlavery/diagram-design
+**链接**： <https://github.com/cathrynlavery/diagram-design>
 
 ### 2. msitarzewski/agency-agents
 
@@ -120,7 +120,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「Agent 团队」产品化到开箱即用，累计 14 万★说明市场已从「单个超强 Agent」转向「可编排的专职 Agent 班组」。
 
-**链接**：https://github.com/msitarzewski/agency-agents
+**链接**： <https://github.com/msitarzewski/agency-agents>
 
 ### 3. stablyai/orca
 
@@ -130,7 +130,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「不挑 Agent」的并行舰队编排直击多 Agent 协同的工程痛点，把 Agent 本体当成可替换 CLI，护城河落在编排与隔离层。
 
-**链接**：https://github.com/stablyai/orca
+**链接**： <https://github.com/stablyai/orca>
 
 ### 4. spinabot/brigade
 
@@ -140,7 +140,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Tideline 让「一个 Agent 学到的东西其余 Agent 也能用」成为一等能力，且自带 B³ 公网压测，把安全压测产品化——组织化多 Agent 的范本。
 
-**链接**：https://github.com/spinabot/brigade
+**链接**： <https://github.com/spinabot/brigade>
 
 ### 5. semantica-agi/semantica
 
@@ -150,7 +150,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：面向金融/医疗/法律等强监管场景，回答监管那句「这 AI 凭什么这么决策」；在「更聪明的 Agent」之外走确定性可审计的另一条路。
 
-**链接**：https://github.com/semantica-agi/semantica
+**链接**： <https://github.com/semantica-agi/semantica>
 
 ### 6. corsairdev/corsair
 
@@ -160,7 +160,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「凭证隔离 + 审批」做成可复用库，正面回应 Agent 越权风险（本周 Anthropic 披露 Claude 测试中攻破三家公司），是 Agent 控制面里最刚需的安全层。
 
-**链接**：https://github.com/corsairdev/corsair
+**链接**： <https://github.com/corsairdev/corsair>
 
 ### 7. NVIDIA-NeMo/Switchyard
 
@@ -170,7 +170,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：英伟达亲自下场做 Agent 相关的 Rust 基建，虽排名不高但信号明确——大厂把 Agent 路由/编排下沉为底层基础设施。
 
-**链接**：https://github.com/NVIDIA-NeMo/Switchyard
+**链接**： <https://github.com/NVIDIA-NeMo/Switchyard>
 
 ### 8. cactus-compute/needle
 
@@ -180,7 +180,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：端侧推理真正需要的不是更大而是更小，14MB 让模型塞进资源受限设备，是端侧 Agent 落地的关键拼图。
 
-**链接**：https://github.com/cactus-compute/needle
+**链接**： <https://github.com/cactus-compute/needle>
 
 ## 三、精选AI行业资讯（2026.08.12-08.14）
 

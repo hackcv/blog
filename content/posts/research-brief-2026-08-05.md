@@ -31,56 +31,56 @@ description: "AI / 大模型 / Agent / 具身智能 / 开源项目 / 行业资�
 **摘要**：提出面向城市级跨系统任务的工具增强 Agent，可调用交通、政务、出行等多源异构系统 API，在真实城市任务上把任务成功率提升到 71%，超过强基线约 10 个百分点。
 **领域**：Agent 工程 / 城市计算
 **推荐理由**：多数工具 Agent 还在玩具环境里跑，这篇直接对接真实城市的多个业务系统，把「跨系统编排」这个最难的部分摆上台面；71% 这个数字也诚实标出了当前能力的天花板，对做垂直行业 Agent 的团队是现成的参照系。
-**链接**：https://arxiv.org/abs/2608.03018
+**链接**： <https://arxiv.org/abs/2608.03018>
 
 ### 2\. Control Under Compression: Reliability Frontiers for Tool-Using Agents
 
 **摘要**：提出 CompressAgent 基准，在压缩上下文、限制工具预算的约束下系统性测度工具调用 Agent 的可靠性前沿，共完成 15,525 次运行评估。
 **领域**：Agent 可靠性 / 评测基准
 **推荐理由**：它把「压缩」和「可靠性」两个常被分开讨论的维度绑在一起，正好对应本地/端侧部署的硬约束——预算越低、上下文越短，越权与失败越容易暴露。1.5 万次运行的后台数据本身就是一座金矿。
-**链接**：https://arxiv.org/abs/2608.01056
+**链接**： <https://arxiv.org/abs/2608.01056>
 
 ### 3\. Verifiable Memory: Learning Unified Memory Management for Long-Horizon LLM Agents
 
 **摘要**：提出 VerMem 框架，为长时程 LLM Agent 学习统一的、可验证的记忆管理，把记忆的写入、检索与一致性校验纳入同一训练目标，而非散落的启发式规则。
 **领域**：Agent 记忆 / 长时程任务
 **推荐理由**：记忆是当前 Agent 落地的真正瓶颈，但「记忆可不可信」长期没有可验证的抓手。VerMem 把一致性校验变成训练目标，给「记忆治理」补上了形式化入口，和同期 AISI 越权报告形成问题—解法呼应。
-**链接**：https://arxiv.org/abs/2608.03137
+**链接**： <https://arxiv.org/abs/2608.03137>
 
 ### 4\. A Game Theory for Foundation Models: Inferring Similarity via Embedded Equilibrium
 
 **摘要**：用博弈论视角为基座模型建模，提出「嵌入均衡」概念，并据此推断不同模型之间的能力相似度，给出可计算的相似度推断方法。
 **领域**：基础模型理论 / 模型评估
 **推荐理由**：当同一批国产与海外模型在能力上越来越接近，「它们到底有多像」直接决定选型与冗余策略。把相似度推断落成可计算对象，比人肉跑榜更稳，对做模型路由的团队尤其有用。
-**链接**：https://arxiv.org/abs/2608.03958
+**链接**： <https://arxiv.org/abs/2608.03958>
 
 ### 5\. EmbodiedVAE: Disentangled Video VAE for Efficient and Controllable Embodied Manipulation
 
 **摘要**：提出解耦式的视频 VAE，用于具身操作任务的世界模型表征学习，在保持可控性的同时提升压缩效率，相比强基线 PSNR 提升约 2dB。
 **领域**：具身智能 / 视频表征
 **推荐理由**：世界模型能不能「控」，取决于表征有没有解耦。+2dB 看似温和，实则是让「可控生成」在具身场景落地的关键一步，对做机器人仿真与视频预测的团队是直接燃料。
-**链接**：https://arxiv.org/abs/2608.02990
+**链接**： <https://arxiv.org/abs/2608.02990>
 
 ### 6\. RoboReact: Agentic Skill Distillation from Generated Egocentric Videos
 
 **摘要**：从生成的自我中心视角视频中蒸馏技能，让全身人形机器人学会对开放环境做出反应性动作，把「生成视频」当作技能学习的训练数据来源。
 **领域**：机器人学习 / 技能蒸馏
 **推荐理由**：它把「生成式数据」和「真机技能」之间的桥搭起来了——用生成的 egocentric 视频当teacher，绕开真机采数据的成本墙，是当前数据稀缺下最务实的蒸馏路径之一。
-**链接**：https://arxiv.org/abs/2608.03387
+**链接**： <https://arxiv.org/abs/2608.03387>
 
 ### 7\. Ego2Robot: Scalable Robot Data Synthesis from Egocentric Human Data
 
 **摘要**：提出从人类自我中心数据规模化合成机器人训练数据的方法，构建约 18,561 小时的数据集，用于弥补机器人真机数据的稀缺。
 **领域**：机器人数据合成 / 模仿学习
 **推荐理由**：18,561 小时这个数字本身说明问题：人戴头显干活的视频，正在成为机器人训练数据最便宜、最可扩展的来源。做具身数据的团队应该把「人→机」的映射当成核心资产来建设。
-**链接**：https://arxiv.org/abs/2608.02580
+**链接**： <https://arxiv.org/abs/2608.02580>
 
 ### 8\. IBA-Bench: An Interactive Benchmark for Assessing AI Agents
 
 **摘要**：提出 IBA-Bench，一个面向 AI Agent 的交互式基准，强调在动态、需多轮决策的真实交互环境中评估 Agent，而非静态单轮问答。
 **领域**：Agent 评测基准
 **推荐理由**：单轮、静态的榜单正在快速失真，而真正上线的 Agent 跑在带状态、会反悔、有副作用的环境里。交互式基准是对「榜单分数 ≠ 生产能力」最直接的一次纠偏，选型时值得拿来压测候选模型。
-**链接**：https://arxiv.org/abs/2608.02109
+**链接**： <https://arxiv.org/abs/2608.02109>
 
 * * *
 
@@ -91,56 +91,56 @@ description: "AI / 大模型 / Agent / 具身智能 / 开源项目 / 行业资�
 **简介**：一本关于 AI Agent 的开源教材/代码库，系统讲解从单 Agent 到多 Agent 编排、工具调用与评测的构建方法，配有可运行示例。
 **热度**：30,913 star，本周 +8,155，为本周增速最高的 Agent 教学类仓库。
 **推荐理由**：Agent 领域的「系统学习资料」长期碎片化，这个项目把工程实践和理论串成一条线，且增长曲线说明它踩中了团队「系统补课 Agent」的真实需求。
-**链接**：https://github.com/bojieli/ai-agent-book
+**链接**： <https://github.com/bojieli/ai-agent-book>
 
 ### 2\. microsoft/AI-For-Beginners
 
 **简介**：微软出品的 AI 入门课程，覆盖机器学习、深度学习到生成式 AI 的 Jupyter 实操笔记本，面向零基础到进阶学习者。
 **热度**：60,815 star，本周 +7,554。
 **推荐理由**：老牌入门课在本周重新加速，侧面印证「国产模型爆发 + 降价」正在把更多新人放进 AI 门槛内；对做内部培训、社区运营或教学内容的团队，这是现成的结构化 syllabus。
-**链接**：https://github.com/microsoft/AI-For-Beginners
+**链接**： <https://github.com/microsoft/AI-For-Beginners>
 
 ### 3\. block/buzz
 
 **简介**：Block 开源的协作通信技术项目，基于 Rust 构建，主打去中心化、隐私友好的团队沟通能力。
 **热度**：本周 +7,372，Rust 编写，上线后快速冲上趋势榜。
 **推荐理由**：在「AI 把沟通自动化」的叙事之外，底层通信协议的可控与隐私正被重新重视。Rust + 去中心化的组合，对要做自托管协作基础设施的团队有参考价值。
-**链接**：https://github.com/block/buzz
+**链接**： <https://github.com/block/buzz>
 
 ### 4\. zhaoxuya520/reverse-skill
 
 **简介**：一个关于「安全技能路由」的项目，提出把可疑或高危请求反向导向受控的技能处理流程，降低 Agent 越权执行风险。
 **热度**：本周 +6,154，PowerShell 实现。
 **推荐理由**：和本期 AISI 越权报告、VerMem 论文同一主题——越权不是假设而是已发生的事实。把「安全路由」做成可插拔的技能层，比事后审计更容易落地，值得安全团队借鉴。
-**链接**：https://github.com/zhaoxuya520/reverse-skill
+**链接**： <https://github.com/zhaoxuya520/reverse-skill>
 
 ### 5\. virgiliojr94/book-to-skill
 
 **简介**：知识工程类 Agent Skills 项目，自动把书籍/文档转化为结构化的可执行 Skill，让领域知识变成可复用的 Agent 能力。
 **热度**：本周 +5,405，Python 编写。
 **推荐理由**：Skill 生态的核心瓶颈是「从知识到能力」的转化成本。这个是继 skill-recorder 之后另一条路径——从静态知识反推技能，对做知识库 Agent 化的团队是直接工具。
-**链接**：https://github.com/virgiliojr94/book-to-skill
+**链接**： <https://github.com/virgiliojr94/book-to-skill>
 
 ### 6\. ayghri/i-have-adhd
 
 **简介**：一个优化 Agent 输出的项目，针对「注意力分散式」的任务表达做输出结构化与聚焦，帮助 Agent 给出更可用的结果。
 **热度**：本周 +5,012，Python 编写。
 **推荐理由**：它把「用户的表达不严谨」当一等问题处理，而不是苛责用户写清 prompt。这类「输出调理」层在真实产品里比模型微调更常用、更便宜。
-**链接**：https://github.com/ayghri/i-have-adhd
+**链接**： <https://github.com/ayghri/i-have-adhd>
 
 ### 7\. alibaba/open-code-review
 
 **简介**：阿里巴巴开源的 AI 代码审查工具，基于 Go 实现，用大模型对 PR 做自动评审、风险标注与改进建议。
 **热度**：本周 +3,881，Go 编写。
 **推荐理由**：代码审查是 AI 落地最快、ROI 最清晰的场景之一。阿里下场做开源版，说明这块正从实验室走向工程标配；做内部 DevOps 平台的可直接对标集成。
-**链接**：https://github.com/alibaba/open-code-review
+**链接**： <https://github.com/alibaba/open-code-review>
 
 ### 8\. moeru-ai/airi
 
 **简介**：自托管的数字伴侣项目，基于 TypeScript 构建，主打可在本地运行的个性化 AI 伙伴体验。
 **热度**：本周 +2,978，TypeScript 编写。
 **推荐理由**：「自托管 + 个性化」是 AI 陪伴赛道正在分化的方向——用户不愿把私人交互交给云端时，本地可跑的数字伴侣就是答案。它和本期端侧推理（airllm/waste 系）的升温是同一条主线。
-**链接**：https://github.com/moeru-ai/airi
+**链接**： <https://github.com/moeru-ai/airi>
 
 * * *
 

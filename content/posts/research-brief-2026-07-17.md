@@ -27,56 +27,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：视频模型正演进为视觉基础模型，但仍缺乏类人多步推理。流式自回归扩散高效却推理受限，双向扩散可全局修正但帧级密集去噪推理成本高。本文提出 HDR，将视频潜变量组织为树状层级，在流式输出前实现由粗到细的推理：粗层去噪保留不确定假设用于全局规划，细层逐步精炼为具体视觉状态；稀疏层级注意力（SHAP）降低时序注意力开销。在含分布外病例的多步视频推理基准（迷宫、汉诺塔、一笔画、滑块、推箱子、倒水）上，相比流式自回归扩散基线成功率从 34.22 升至 60.29（相对 +76.2%），平均进度从 76.00 升至 89.56；流式延迟仅 0.70 秒/潜变量，比双向扩散快 54.2 倍；仅用 2% 训练数据即保留 82.9% 全数据性能。真实机器人实验展示物理交互与世界建模潜力。
 **领域**：视频生成 / 多步推理 / 计算机视觉
 **推荐理由**：把"多步推理"真正塞进视频生成，且保持低延迟流式，对机器人世界模型与可控长视频是实打实的架构升级。
-**链接**：https://arxiv.org/abs/2607.15278
+**链接**： <https://arxiv.org/abs/2607.15278>
 
 ### 2. Answer-Conditioned Chains of Thought Degrade Verifiable-Reasoning Distillation in LLMs
 
 **摘要**：蒸馏 LLM 推理能力的标准做法是采样思维链、保留答对的、微调幸存者；采样失败时常见修复是把标准答案给生成器让其写出到达该答案的链。本文证明这第二步会以"正确性过滤抓不到"的方式污染训练数据：在固定生成器、题集、正确性过滤、仅改变"是否答案条件化"的受控实验中，用模型自身的答案条件链微调强指令微调推理模型，会显著拉低其可验证推理准确率，且随难度上升，最难竞赛题最多掉约 27 分。机制在链本身可读：它从给出的答案反推合理化，而非推导。损害是数据属性而非生成器属性，可在微调前从未标注生成中读出，并能跨教师家族迁移。实用结论：生成链时要"答案盲"，因为没有任何正确性过滤器能在数据层面发现这种损害。
 **领域**：大语言模型 / 推理蒸馏 / 数据质量
 **推荐理由**：直击"给答案让模型写过程"这一常见数据增强的隐蔽危害，给推理蒸馏一条硬规矩——答案盲采样，对训练推理模型的人极有实操价值。
-**链接**：https://arxiv.org/abs/2607.14552
+**链接**： <https://arxiv.org/abs/2607.14552>
 
 ### 3. Stop Thinking, Start Looking: Efficient Post-Training for Multimodal Document QA via Reasoning-Free Alignment
 
 **摘要**：带显式视觉定位的多模态文档问答（定位支撑每答案的精确文档区域）仍是开放挑战。现有路线分化为 SFT（需大量标注、易到优化平台期）与推理型 RL（依赖冗长中间轨迹、推高推理 token 成本却收益不明）。本文提出 Perception-RFT，将 GRPO 用于多模态文档 QA，绕开中间推理 token，直接把视觉特征与结构化定位输出对齐；并构造了相同奖励设置下的推理变体作对照。发现推理启用模型在训练中抑制自身推理轨迹、收敛到直接感知策略（4B 规模），每查询推理 token 长度减少 60% 以上，而推理型 RL 反而劣于纯感知训练。在 4,828 样本的两个分布外基准上发现"定位分歧"：联合 RL 优化下语义鲁棒性与几何精度间的选择性权衡。早期 SFT→RL 过渡可用少 65% 训练数据达到相当精度。
 **领域**：多模态 / 文档问答 / 视觉定位 / 后训练
 **推荐理由**：用证据打脸"文档 QA 必须长链推理"，证明 4B 小模型靠感知对齐就能又省 token 又准，对落地端侧文档智能很关键。
-**链接**：https://arxiv.org/abs/2607.14682
+**链接**： <https://arxiv.org/abs/2607.14682>
 
 ### 4. HyMobileAgent: Data-Environment Co-Scaling for Efficient GUI Agents
 
 **摘要**：随着多模态模型从理解内容走向操作数字环境，移动端 GUI 成为数字具身智能的关键试验场。移动 agent 受三大约束耦合：复杂界面精确感知、高质量交互数据可扩展获取、复合执行错误下的长程决策。本文提出 HyMobileAgent，基于 Hy3.0-VL-A3B（原生任意分辨率输入、A3B 级部署预算、32K 上下文建模长交互历史）构建，并发展"数据-环境"联合缩放框架：GUI 感知飞轮（模拟界面合成+拒绝采样+图标增强）、把教程视频转为结构化交互数据的知识管线、跨 2000+ 沙箱与真机实例部署的百万级动作数据管线（带自动失败归因）、提供 34 个模拟应用与 34000+ 任务的 PhoneWorld Mock App Factory、带显式死循环检测的规划-反思机制；以及由中期训练、SFT、任务特定奖励 RL 组成的渐进训练配方。
 **领域**：GUI Agent / 移动端具身 / 数据-环境协同缩放
 **推荐理由**：不像多数工作只堆模型规模，而是用"数据+环境"双轮缩放攻克移动 agent 的感知、数据、长程决策三难，是手机智能体的工程范本。
-**链接**：https://arxiv.org/abs/2607.14548
+**链接**： <https://arxiv.org/abs/2607.14548>
 
 ### 5. Beyond Single Expert: Harmonizing Diverse Visual Priors in MLLMs for Spatial Understanding（ViPS）
 
 **摘要**：多模态大模型（MLLM）在空间理解上展现潜力，现有工作通常引入单一预训练基础模型的先验来增强空间感知。本文首先揭示：当把多个基础模型整合进 MLLM 时，不同模型提供互补的空间先验、利好不同任务。受此启发提出 ViPS——一个多模型先验框架，旨在充分释放将多个视觉先验注入 MLLM 用于空间理解的潜力：高效先验代理（Efficient Prior Proxy）以最小推理开销生成多个基础先验，动态先验融合（Dynamic Prior Fusion）机制实现和谐、上下文感知的先验融合与注入。大量实验表明 ViPS 成功调和多样视觉先验，在多个复杂空间推理与 3D 空间理解基准上刷新 SOTA。
 **领域**：多模态大模型 / 空间理解 / 3D 感知
 **推荐理由**：把"多个专家模型的空间先验"做上下文感知融合，而非单专家独断，给空间/3D 理解一个可扩展的即插即用思路。
-**链接**：https://arxiv.org/abs/2607.15054
+**链接**： <https://arxiv.org/abs/2607.15054>
 
 ### 6. Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making
 
 **摘要**：LLM 越来越多作为 agent 部署，但可靠 agent 行为需要的不仅是 next-token 预测。推理时，agent 应能在继续当前推理、委派更强模型、请求补充信息、调用外部工具、或在给定设置下 abstain 之间决策。现有方法通过提示级路由、外部编排或任务特定微调解决，主要依赖输入侧信号，且随模型骨干演进成本高、难维护。本文问：这类控制决策能否直接从模型潜生成过程推断？提出 Multi-Head Latent Control，一个轻量层，读取冻结 LLM/VLM 的隐藏态轨迹产生部署时控制信号：能力头（Capability Head）预测当前模型能否解题或应委派更强协作者；决策头（Resolution Head）预测恰当决策（澄清/工具调用/放弃/直接回答）。两 head 仅用同一冻结骨干的潜轨迹训练，支持事后适配而无需改模型。在语言与视觉-语言设定下，MHLC 一致改善多模型系统的"质量-成本"权衡：在路由执行（小+大模型）中，AndroidWorld 上大模型用量最多降 90.7%，基准平均降 27–53%，同时保留大部分大模型性能；学到的控制信号还改善工具调用决策质量，相对得分最高 +158%、漏掉必需工具调用减少 65.5%。
 **领域**：AI Agent / 多模型系统 / 潜空间控制
 **推荐理由**：用"读隐藏态"替代"提示路由/外部编排"来做 agent 的中途委派与工具决策，省大模型用量高达 90%，是多模型系统的低成本调度范式。
-**链接**：https://arxiv.org/abs/2607.14277
+**链接**： <https://arxiv.org/abs/2607.14277>
 
 ### 7. Branching Policy Optimization: Sandbox-Native Language Agent Reinforcement Learning
 
 **摘要**：RL 已成为训练与可执行沙箱交互的 LLM agent 的主流范式。PPO/RLOO/GRPO 等算法从 RLHF 继承 rollout 拓扑：每 prompt 采样 N 条独立轨迹、用组基线减出优势。该设计忽略了 agent 沙箱的决定性属性——可确定性快照、可从任意中间状态恢复。本文主张该属性启用了根本不同的 rollout 拓扑：不是 N 棵深度 T 的独立树，而是构造一棵 N 叶的树，兄弟节点共享前缀、从而共享方差。据此实例化 Branching Policy Optimization（BPO）：在主干轨迹的高熵决策点自适应快照沙箱；每分支点分叉 K 个替代动作并各自 rollout 到底；从兄弟回报而非独立 prompt 计算逐步骤优势。证明该估计无偏且方差严格低于轨迹级基线，方差缩减等于前缀可解释的那部分回报方差。在 WebShop、ALFWorld、SWE-bench Verified（Qwen2.5-7B、Llama-3.1-8B）上，BPO 在同等算力下比 GRPO/RLOO 成功率提升 3.6–6.1 个百分点，将梯度范数方差减半，并用少 38% 的策略更新匹敌最佳基线。
 **领域**：AI Agent / 强化学习 / 沙箱原生训练
 **推荐理由**：利用沙箱"可快照可恢复"的特性把树搜索思想做进 agent RL，方差更低、更新更少，是 coding agent 强化训练的务实新算法。
-**链接**：https://arxiv.org/abs/2607.14171
+**链接**： <https://arxiv.org/abs/2607.14171>
 
 ### 8. TRACE: Turn-level Reward Assignment via Credit Estimation for Long-Horizon Agents
 
 **摘要**：多轮 agent 通过扩展的工具交互序列解决复杂任务，使信用分配成为后训练的根本挑战。结果奖励对短程推理提供可靠监督，但随着轨迹增长到数十乃至上百次工具调用变得稀疏高方差，还可能误导：失败的 rollout 可能含许多推动 agent 接近目标的"有用动作，但仅看结果的训练把它们和最终错误赋予同等负优势。本文提出 TRACE（基于信用估计的 turn 级奖励分配），一种面向 agentic RL 的稠密信用分配方法：将 rollout 表示为工具调用边界的状态转移，从冻结参考模型获取 gold-answer 对数概率、转为对数比率状态值，再把逐动作奖励推导为这些值的时序差分变化；无需额外 critic 或过程标签训练，其一阶对数比率 TD 分量在冗余工具调用上可望远镜式累乘。在长程复杂搜索上，TRACE 用纯 RL 显著提升基础模型的工具使用能力，无需冷启动 SFT、无需 agentic 中期训练、无需在线网页数据。在封闭网页 BrowseComp-Plus 上，把 Qwen3-4B 从 7.2 升至 35.6、Qwen3-30B-A3B 从 8.4 升至 42.6；学到的搜索行为还迁移到开放网页基准，学习曲线更早改善、收敛更快。
 **领域**：AI Agent / 信用分配 / 强化学习后训练
 **推荐理由**：不需要过程标签或 critic，仅用冻结参考模型的对数概率就给长程 agent 做稠密信用分配，把纯 RL 训练的工具使用能力拉高数倍，是 agent 后训练的高效解法。
-**链接**：https://arxiv.org/abs/2607.13988
+**链接**： <https://arxiv.org/abs/2607.13988>
 
 ## 二、GitHub热门AI开源项目（2026.07.15–07.17）
 
@@ -85,56 +85,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：SpaceXAI 的 coding agent 脚手架与 TUI——全屏、鼠标交互、可扩展，让 Grok 类模型以 agent 方式读写代码、跑命令。
 **热度**：2026-07-17 TrendShift Python 榜新晋热门（约 6.8k 提及，当日新增）。
 **推荐理由**：把"模型当 coding agent"做成开箱即用的终端 IDE，且官方背书，是 agent 编程工具化的标杆样本。
-**链接**：https://github.com/xai-org/grok-build
+**链接**： <https://github.com/xai-org/grok-build>
 
 ### 2. HKUDS/DeepTutor
 
 **简介**：终身个性化辅导 agent——根据学习者长期状态动态调整教学策略，定位"AI 一对一私教"。
 **热度**：2026-07-17 TrendShift 热门（约 39.9k 提及）。
 **推荐理由**：把"纵向记忆 + 个性化教学"做成 agent，是 AI+教育最贴近落地形态之一，对做教育产品的团队有参考。
-**链接**：https://github.com/HKUDS/DeepTutor
+**链接**： <https://github.com/HKUDS/DeepTutor>
 
 ### 3. bojieli/ai-agent-book
 
 **简介**：《深入理解 AI Agent：设计原理与工程实践》（李博杰 著）开源主仓库，含全书正文、编译版 PDF 与按章配套代码。
 **热度**：2026-07-17 TrendShift 热门（约 48.9k 提及，当日新增）。
 **推荐理由**：少见的、把 agent 设计讲透且配套可运行代码的中文开源书，是团队内训与自学的优质资料。
-**链接**：https://github.com/bojieli/ai-agent-book
+**链接**： <https://github.com/bojieli/ai-agent-book>
 
 ### 4. deer-flow/llm-space
 
 **简介**：本地优先的桌面应用，用于快速原型化 agent 想法——单处查看 harness 每一步、回放失败、评估性能。
 **热度**：2026-07-17 TrendShift 新晋（约 19.5k 提及）。
 **推荐理由**：agent 开发最缺"可观测 + 可回放"的调试环境，llm-space 把这套能力本地化，是 agent 工程化的趁手工具。
-**链接**：https://github.com/deer-flow/llm-space
+**链接**： <https://github.com/deer-flow/llm-space>
 
 ### 5. HKUDS/Vibe-Trading
 
 **简介**："Vibe-Trading：你的个人交易 agent"——把交易策略与执行交给 agent，偏 fintech 工作流自动化。
 **热度**：2026-07-17 TrendShift 新晋（约 45.4k 提及）。
 **推荐理由**：交易是个人 agent 的高价值场景，Vibe-Trading 展示"让 agent 管钱"的产品形态，对 fintech 探索有启发。
-**链接**：https://github.com/HKUDS/Vibe-Trading
+**链接**： <https://github.com/HKUDS/Vibe-Trading>
 
 ### 6. moeru-ai/airi
 
 **简介**：自托管的 Grok Companion 类项目——容器化的"灵魂仓库"，支持实时语音聊天、Minecraft / Factorio 游玩，Web/macOS/Windows 全平台。
 **热度**：2026-07-17 TrendShift 热门（约 27.1k 提及）。
 **推荐理由**：把"数字人/陪伴 agent"做成可自托管、能实时语音又能打游戏，是 agent 人格化与具身化的有趣样本。
-**链接**：https://github.com/moeru-ai/airi
+**链接**： <https://github.com/moeru-ai/airi>
 
 ### 7. mattpocock/skills
 
 **简介**：来自个人 .claude 目录的"给真工程师的 Skills"——把工程最佳实践固化成可复用 skill 文件。
 **热度**：2026-07-17 TrendShift 新晋（约 1.2k 提及）。
 **推荐理由**：印证本周"skills 即一等公民"的趋势：把团队工程经验沉淀为 agent 可调用技能，比写文档更可被模型执行。
-**链接**：https://github.com/mattpocock/skills
+**链接**： <https://github.com/mattpocock/skills>
 
 ### 8. tandpfun/wardrobe
 
 **简介**：用 gpt-image 把你的衣服提取并整理成数字衣橱——拍照即结构化，偏创意/视觉应用。
 **热度**：2026-07-17 TrendShift 热门（约 28k 提及）。
 **推荐理由**：视觉模型落地的轻量范例：把"识图+结构化"做成单个好玩的小工具，展示了多模态在日常场景的低门槛用法。
-**链接**：https://github.com/tandpfun/wardrobe
+**链接**： <https://github.com/tandpfun/wardrobe>
 
 ## 持续追踪
 

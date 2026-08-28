@@ -30,7 +30,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"发现—验证"的不对称性转化为递归自改进范式，4B 小模型靠 RSI 就能逼近更大激活参数模型，对长程自主研究的可靠性提升有直接的工程价值，而非又一篇"更长上下文"的故事。
 
-**链接**：https://arxiv.org/abs/2607.21461
+**链接**： <https://arxiv.org/abs/2607.21461>
 
 ### 2. OpenForgeRL: Train Harness-native Agents in Any Environment
 
@@ -40,7 +40,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：破解了"复杂 harness 难端到端训练"的硬骨头，让研究者直接在真实部署的 harness 与环境里训 agent，GUI 场景甚至追平更大模型——把训练与推理解耦的思路值得所有做 agent 的团队借鉴。
 
-**链接**：https://arxiv.org/abs/2607.21557
+**链接**： <https://arxiv.org/abs/2607.21557>
 
 ### 3. PerfAgent: Profiler-Guided Iterative Refinement for Repository-Level Code Optimization
 
@@ -50,7 +50,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：点出 coding agent 在"保行为+提性能"上远弱于"修 bug"——靠更好的反馈（profiler 证据）而非更多采样取胜，对仓库级性能优化落地非常实用。
 
-**链接**：https://arxiv.org/abs/2607.19653
+**链接**： <https://arxiv.org/abs/2607.19653>
 
 ### 4. DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations
 
@@ -60,7 +60,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"agent 操作文档"的可信边界量化出来，3 类失败模式对设计非破坏式、长程一致的 workspace agent 就是一份现成的 roadmap。
 
-**链接**：https://arxiv.org/abs/2607.19865
+**链接**： <https://arxiv.org/abs/2607.19865>
 
 ### 5. Defense Against LLM Backdoors using Critical Neuron Isolation Pruning (DeCNIP)
 
@@ -70,7 +70,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：首次把模型编辑型后门与开放生成统一覆盖，仅靠 0.1% 神经元干预即大幅降毒，给实际部署的"机理级"防御提供了可扩展方案，而非又一层启发式补丁。
 
-**链接**：https://arxiv.org/abs/2607.19894
+**链接**： <https://arxiv.org/abs/2607.19894>
 
 ### 6. Notes to Self: Can LLMs Benefit from Experiential Abstractions?
 
@@ -80,7 +80,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：直击长程 agent 的记忆瓶颈——如何把经验压缩成可复用抽象、而不是无脑堆上下文。对 agent 持续学习与样本效率的关系是底层启发，值得在自家 agent 里做对照实验。
 
-**链接**：https://arxiv.org/abs/2607.20372
+**链接**： <https://arxiv.org/abs/2607.20372>
 
 ### 7. Efficient Clustering with Provable Guardrails for LLM Inference at Scale
 
@@ -90,7 +90,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"安全输出共享"做成可证明而非启发式，对多租户、大规模推理服务的护栏设计有参考价值，尤其适合要做内容审核中间件的团队。
 
-**链接**：https://arxiv.org/abs/2607.19704
+**链接**： <https://arxiv.org/abs/2607.19704>
 
 ### 8. When Shippers Become Algorithms: Candidate Exposure, Information Design, and the Concentration of LLM-Mediated Freight Markets
 
@@ -100,7 +100,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把 agent 部署风险从单模型扩展到"由 LLM 中介的市场结构"，提示从业者关注算法化市场中的权力集中与信息设计，而不仅是模型本身的公平性与安全。
 
-**链接**：https://arxiv.org/abs/2607.19967
+**链接**： <https://arxiv.org/abs/2607.19967>
 
 ## 二、GitHub热门AI开源项目（2026.07.22-07.25）
 
@@ -112,7 +112,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 生产落地的头号安全痛点就是密钥泄露，onecli 把"凭证网关"做成轻量开源件，是 agent 基础设施的刚需组件，值得在 MCP/工具调用场景直接试用。
 
-**链接**：https://github.com/onecli/onecli
+**链接**： <https://github.com/onecli/onecli>
 
 ### 2. Lordog/dive-into-llms
 
@@ -122,7 +122,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：系统化、可运行的大模型教程，适合从入门到进阶，能直接降低团队内部培训与上手成本，比散落博客更易体系化吸收。
 
-**链接**：https://github.com/Lordog/dive-into-llms
+**链接**： <https://github.com/Lordog/dive-into-llms>
 
 ### 3. shiyu-coder/Kronos
 
@@ -132,7 +132,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"基础模型"范式引入量化金融时序，给研究者一个可直接用的基座，可能成为金融多模态预测与因子挖掘的新起点。
 
-**链接**：https://github.com/shiyu-coder/Kronos
+**链接**： <https://github.com/shiyu-coder/Kronos>
 
 ### 4. Automattic/harper
 
@@ -142,7 +142,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"本地优先 + 隐私"做到开发工具链，对重视数据主权与 AI 写作场景的团队很有意义，是隐私计算方向可复制的工程范本。
 
-**链接**：https://github.com/Automattic/harper
+**链接**： <https://github.com/Automattic/harper>
 
 ### 5. TencentCloud/CubeSandbox
 
@@ -152,7 +152,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：解决 agent 跑本地工作流时的隔离与权限问题，是 agent 安全落地的关键基础设施——想让 agent 动终端/文件系统的团队绕不开。
 
-**链接**：https://github.com/TencentCloud/CubeSandbox
+**链接**： <https://github.com/TencentCloud/CubeSandbox>
 
 ### 6. langchain-ai/harbor
 
@@ -162,7 +162,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：agent 评测从"单元测试"走向"端到端任务"，给长程自主 agent 提供可复用的基准与快速迭代通道，比自建 eval 省事得多。
 
-**链接**：https://github.com/langchain-ai/harbor
+**链接**： <https://github.com/langchain-ai/harbor>
 
 ### 7. obra/superpowers
 
@@ -172,7 +172,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**："技能化"已成为 agent 工程的主流组织方式，该框架把方法论与代码结合，适合想系统化沉淀 agent 能力的团队参考其技能抽象。
 
-**链接**：https://github.com/obra/superpowers
+**链接**： <https://github.com/obra/superpowers>
 
 ### 8. Sahir619/fable-method
 
@@ -182,7 +182,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把顶级模型的"工作方式"开源成可迁移技能，降低中小团队复用前沿工作流的门槛，是"模型能力 → 可复用方法论"的一次具体落地。
 
-**链接**：https://github.com/Sahir619/fable-method
+**链接**： <https://github.com/Sahir619/fable-method>
 
 ## 三、精选AI行业资讯（2026.07.22-07.25）
 

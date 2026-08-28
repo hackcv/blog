@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：提出 OmniAssistBench，评测全模态大模型作为实时视频助手的交互能力，通过逆向工程网络视频构建多轮交互数据集。Gemini-3-Pro 得 66.4/100，Qwen3-Omni 得 51.2，现有模型在视觉提示与多轮上下文维护上仍显不足。
 **领域**：多模态大模型 / 智能体评测
 **推荐理由**：把「助手式交互」而非单轮 VQA 作为评测目标，更贴近真实视频助手场景；66 分的天花板说明全模态实时交互仍是明显短板，对产品选型有参考。
-**链接**：https://arxiv.org/abs/2608.21360
+**链接**： <https://arxiv.org/abs/2608.21360>
 
 ### 2. AI with Authority, from Application to Silicon
 
 **摘要**：作者展示用生成式 AI 加验证内核（Salt 方法）在五周内从应用代码经「经验证编译器」到 RISC-V 流片，全程无需人工审阅证明。所有数学声明以内核检查工件传递，错误账本记录至 #256 但无错误证明进入记录。
 **领域**：AI 辅助系统 / 形式化验证 / 芯片
 **推荐理由**：把 LLM 生成 + 机器验证闭环直接推到硅片流片，是「AI 写硬件」少见的端到端实证；五周周期与零人工审阅证明，值得关注其对 EDA 工作流的冲击。
-**链接**：https://arxiv.org/abs/2608.21356
+**链接**： <https://arxiv.org/abs/2608.21356>
 
 ### 3. Asymmetric Capacity Allocation in Self-Refinement Pipelines
 
 **摘要**：首次对「生成—批评—修订」自精炼流水线的阶段级模型尺寸做系统研究，发现生成与修订阶段需要较大模型，而批评者尺寸不敏感。结果表明容量不应均匀分配。
 **领域**：LLM 系统工程 / 推理优化
 **推荐理由**：给出可落地的多阶段 LLM 系统算力分配建议（批评者可用小模型），对降低自精炼成本有直接指导，避免「每个阶段都用最大模型」的浪费。
-**链接**：https://arxiv.org/abs/2608.21345
+**链接**： <https://arxiv.org/abs/2608.21345>
 
 ### 4. Move by Move: Measuring and Steering How LLMs Conduct Psychotherapy
 
 **摘要**：引入十类治疗动作本体比较前沿模型与人类的心理咨询分布，发现模型过度询问、少做心理教育。将本体作为工具无需微调即可使偏离降低一半、对齐提升 7–9 点。
 **领域**：LLM 对齐 / 安全 / 应用
 **推荐理由**：用细粒度行为本体而非总分来度量 LLM 在敏感场景的表现，方法可迁移到客服、教育等「对话姿态」敏感领域；零微调即可纠偏，工程成本低。
-**链接**：https://arxiv.org/abs/2608.21325
+**链接**： <https://arxiv.org/abs/2608.21325>
 
 ### 5. From Regulation to Implementation: A Critical Evaluation of LLM-Assisted Regulatory Compliance in Industry
 
 **摘要**：评估 LLM 生成 ESPR 数字护照与 GDPR 影响评估的质量，发现宽松指南需高上下文提示保持一致，严规则易致幻觉。揭示数据提取指令与监管模糊对合规工件的影响。
 **领域**：LLM 产业落地 / 合规 / 治理
 **推荐理由**：把「AI 写合规文档」从口号拉到实测，量化了不同监管严格度下的幻觉差异；对金融、医疗等强监管行业部署 LLM 是直接的风险清单。
-**链接**：https://arxiv.org/abs/2608.21317
+**链接**： <https://arxiv.org/abs/2608.21317>
 
 ### 6. Rethinking Expressivity and Efficiency in Test-Time Training
 
 **摘要**：提出 E²-TTT，用闭式状态转移精确复现逐令牌递归的块端快权重，兼顾表达力与硬件效率。1.3B 模型在语言建模与长上下文检索优于基线，8× 外推保 90% 准确率。
 **领域**：高效推理 / 长上下文 / 测试时训练
 **推荐理由**：在 1.3B 小模型上实现长上下文外推且硬件友好，对端侧/低成本长文本场景有现实价值；「快权重」思路绕开了标准 TTT 的算力瓶颈。
-**链接**：https://arxiv.org/abs/2608.21308
+**链接**： <https://arxiv.org/abs/2608.21308>
 
 ### 7. When Adaptation Hurts: Connecting Representational Drift to OOD Failures in MedSAM Fine-Tuning
 
 **摘要**：系统评估 MedSAM 六种适配策略，发现全微调提升域内但损害远 OOD，编码器 LoRA 鲁棒性最强。CKA 显示解码器表示漂移关联远 OOD 退化。
 **领域**：计算机视觉 / 医学影像 / 迁移学习
 **推荐理由**：戳破「微调一定更好」的直觉，给出医学分割落地时的 OOD 风险与 LoRA 编码器的稳健选择，对医疗 AI 部署是直接警示。
-**链接**：https://arxiv.org/abs/2608.21300
+**链接**： <https://arxiv.org/abs/2608.21300>
 
 ### 8. Level-k Distinguishable Mechanisms for Evaluating Bounded Rationality in LLMs
 
 **摘要**：形式化 level-K 可区分条件并构造新博弈以评 LLM 战略推理深度，发现错误来自推理步数误用而非最佳响应算错。显式思维链心理化可显著提升归纳对手博弈准确率。
 **领域**：多智能体 / 博弈 / 战略推理
 **推荐理由**：为「LLM 到底有没有真正博弈推理」提供了可证伪的评测构件，区分了「算错」与「步数用错」，对多智能体协作/谈判系统设计有方法论价值。
-**链接**：https://arxiv.org/abs/2608.21296
+**链接**： <https://arxiv.org/abs/2608.21296>
 
 ## 持续追踪
 
@@ -91,56 +91,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：OpenAI 官方在终端运行的轻量级编码智能体，支持 Mac/Linux/Windows，并带 IDE 集成、桌面端与云端 Web 版。
 **热度**：116,594★，当日 +2,715（今日 Trending 第一 AI 仓库）
 **推荐理由**：Codex 从云端 API 走向本地终端，直接对标 Claude Code，标志「终端优先」的 Agent 编码范式成为大厂标配。
-**链接**：https://github.com/openai/codex
+**链接**： <https://github.com/openai/codex>
 
 ### 2. NousResearch/hermes-agent
 
 **简介**：NousResearch 推出的「与你共同成长的智能体」，定位长期记忆与个性化协作。
 **热度**：235,416★，当日 +454
 **推荐理由**：继 hermes 系列模型后 Nous 把重心放到「会成长」的 Agent 形态，反映社区从「模型权重」向「持续陪伴型智能体」的迁移。
-**链接**：https://github.com/NousResearch/hermes-agent
+**链接**： <https://github.com/NousResearch/hermes-agent>
 
 ### 3. Alishahryar1/free-claude-code
 
 **简介**：免费使用 Claude Code、Codex、Pi 与 OpenCode（号称 13 亿+ 免费令牌），覆盖终端/应用/IDE/手机（含语音）。
 **热度**：48,394★，当日 +1,081
 **推荐理由**：把多家编码 Agent 的免费额度聚合打包，显著降低个人开发者试错成本，也折射出各家「免费层」争夺终端入口的白热化。
-**链接**：https://github.com/Alishahryar1/free-claude-code
+**链接**： <https://github.com/Alishahryar1/free-claude-code>
 
 ### 4. multica-ai/andrej-karpathy-skills
 
 **简介**：单个 CLAUDE.md 文件，依据 Karpathy 对 LLM 编码陷阱的观察改进 Claude Code 行为。
 **热度**：206,096★，当日 +491
 **推荐理由**：「一份 CLAUDE.md 收获 20 万星」说明开发者对「可复用编码 SOP/技能」的需求远超单一工具，是 Skill/Prompt 工程商品化的信号。
-**链接**：https://github.com/multica-ai/andrej-karpathy-skills
+**链接**： <https://github.com/multica-ai/andrej-karpathy-skills>
 
 ### 5. anthropics/claude-plugins-community
 
 **简介**：Claude Cowork 与 Claude Code 的社区插件市场（只读镜像），集中分发插件。
 **热度**：1,179★，当日 +225
 **推荐理由**：Anthropic 亲自下场维护插件分发渠道，意味着 Claude Code 生态开始从「个人 CLAUDE.md」走向「可发现、可共享的插件市场」，对标 IDE 扩展生态。
-**链接**：https://github.com/anthropics/claude-plugins-community
+**链接**： <https://github.com/anthropics/claude-plugins-community>
 
 ### 6. apache/maka
 
 **简介**：Apache 孵化器中的本地优先 AI 智能体工作区，以追加日志记录消息与工具调用。
 **热度**：2,545★，当日 +51
 **推荐理由**：由 Apache 孵化、强调「本地优先 + 日志可追溯」，把企业级 Agent 工作区拉向开源中性底座，对合规与数据驻留敏感的场景有吸引力。
-**链接**：https://github.com/apache/maka
+**链接**： <https://github.com/apache/maka>
 
 ### 7. AgriciDaniel/claude-obsidian
 
 **简介**：Obsidian + Claude Code 的自组织 AI 第二大脑，构建可拥有的 Markdown 知识图谱。
 **热度**：11,463★，当日 +272
 **推荐理由**：把笔记软件变成可对话、自组织的知识层，反映「个人知识管理 + Agent」的融合趋势，且数据完全本地 Markdown 可移植。
-**链接**：https://github.com/AgriciDaniel/claude-obsidian
+**链接**： <https://github.com/AgriciDaniel/claude-obsidian>
 
 ### 8. tashfeenahmed/freellmapi
 
 **简介**：OpenAI 兼容代理，将 28 家 LLM 提供商的免费额度堆叠在一个 /v1 端点后。
 **热度**：19,574★，当日 +153
 **推荐理由**：统一聚合多家免费额度，降低原型期成本，也侧面说明「多供应商路由 + 免费层套利」正在成为独立开发者的常见架构。
-**链接**：https://github.com/tashfeenahmed/freellmapi
+**链接**： <https://github.com/tashfeenahmed/freellmapi>
 
 ## 三、精选AI行业资讯（2026.08.21-08.24）
 

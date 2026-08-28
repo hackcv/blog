@@ -18,49 +18,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/计算机视觉/医学AI
 - **摘要**：提出SCOUT多模态Transformer架构，专门用于病理报告生成任务，通过引入语义上下文感知的模态融合机制，在公开医学影像数据集上超越现有SOTA模型12.7%。
 - **推荐原因**：医学AI是AI落地的高价值垂直场景，多模态融合思路可直接复用至其他跨模态理解任务。
-- **链接**：https://arxiv.org/abs/2605.01144
+- **链接**： <https://arxiv.org/abs/2605.01144>
 
 ### 2. A Low-Latency Fraud Detection Layer for Detecting Adversarial Interaction Patterns in LLM-Powered Agents
 - **方向**：arXiv/AI安全/Agent
 - **摘要**：针对LLM Agent面临的对抗交互攻击，提出轻量级低延迟欺诈检测层，可实时识别恶意输入模式，系统整体开销仅增加12%，攻击检测准确率达94%。
 - **推荐原因**：Agent安全是当前AI落地的核心痛点，该方案轻量化易部署，可直接集成到现有Agent系统中。
-- **链接**：https://arxiv.org/abs/2605.01143
+- **链接**： <https://arxiv.org/abs/2605.01143>
 
 ### 3. Introspection Adapters: Training LLMs to Report Their Learned Behaviors
 - **方向**：arXiv/AI对齐/安全
 - **摘要**：Anthropic联合剑桥大学提出「内省适配器」技术，通过极轻量的LoRA插件即可让大模型主动报告自身学到的隐藏行为，包括加密植入的后门、潜在偏见和恶意指令响应规则，准确率达92%。
 - **推荐原因**：AI安全审计领域的突破性进展，解决了黑盒模型行为不可观测的核心难题，为大模型对齐研究提供了全新路径。
-- **链接**：https://arxiv.org/html/2604.16812v2
+- **链接**： <https://arxiv.org/html/2604.16812v2>
 
 ### 4. TOC-SR: Task-Optimal Compact diffusion for Image Super Resolution
 - **方向**：arXiv/计算机视觉/图像生成
 - **摘要**：提出TOC-SR轻量扩散模型，实现一步式图像超分辨率，参数仅为传统扩散模型的1/20，推理速度提升8倍，画质损失小于5%，可直接部署在端侧设备。
 - **推荐原因**：端侧AI图像应用的关键技术突破，完美兼顾性能与效率，适合移动设备、IoT等资源受限场景。
-- **链接**：https://arxiv.org/abs/2605.02767
+- **链接**： <https://arxiv.org/abs/2605.02767>
 
 ### 5. Motion-Aware Caching for Efficient Autoregressive Video Generation
 - **方向**：arXiv/视频生成/多模态
 - **摘要**：提出MotionCache运动感知缓存框架，根据像素运动动态调整自回归视频生成的去噪步骤，静态区域跳过冗余计算，视频生成速度整体提升3-5倍，长视频画质稳定性显著提升。
 - **推荐原因**：长视频生成的核心优化方案，大幅降低推理成本，为分钟级视频生成落地提供了可能。
-- **链接**：https://arxiv.org/abs/2605.01725
+- **链接**： <https://arxiv.org/abs/2605.01725>
 
 ### 6. RouteMoA：无需预推理的动态路由，实现高效多智能体混合
 - **方向**：arXiv/多Agent/系统优化
 - **摘要**：上海交通大学团队提出RouteMoA动态路由机制，无需对所有模型进行全量预推理即可动态选择最优模型参与协作，MoA系统整体成本降低60%，延迟下降45%，性能仅下降1.2%。
 - **推荐原因**：多Agent协作落地的关键效率优化方案，可大幅降低多模型系统的运行成本，适合大规模Agent集群部署。
-- **链接**：https://arxiv.org/abs/2601.18130
+- **链接**： <https://arxiv.org/abs/2601.18130>
 
 ### 7. LongVie 2：可生成3-5分钟高保真可控视频的世界模型
 - **方向**：arXiv/视频生成/世界模型
 - **摘要**：上海人工智能实验室联合复旦大学、南京大学等团队提出LongVie 2视频世界模型，可自回归生成3-5分钟高保真可控视频，长时间尺度下仍保持物理一致性与画面质量，无明显语义漂移。
 - **推荐原因**：长视频生成的重大突破，为影视制作、数字人、虚拟仿真等场景提供了技术底座。
-- **链接**：https://arxiv.org/pdf/2512.13604
+- **链接**： <https://arxiv.org/pdf/2512.13604>
 
 ### 8. TransVLM: A Vision-Language Framework and Benchmark for Detecting Any Shot Transitions
 - **方向**：arXiv/多模态/视频理解
 - **摘要**：HeyGen团队提出TransVLM视觉语言框架，实现任意镜头转换检测，已落地生产环境，在影视剪辑自动化场景准确率达98%，可替代90%的人工剪辑工作。
 - **推荐原因**：视频内容理解的实用型技术，可直接应用于音视频生产工作流，大幅提升内容生产效率。
-- **链接**：https://arxiv.org/abs/2604.27975
+- **链接**： <https://arxiv.org/abs/2604.27975>
 
 
 ## 🌟 二、GitHub 热门项目

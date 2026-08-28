@@ -16,42 +16,42 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 ### 1. 《The Confidence Trap: Calibration Attacks for Graph Neural Networks》
 **摘要**：针对图神经网络的校准攻击研究，揭示了模型置信度评估的安全漏洞，提出了针对性的防御方法。
 **推荐理由**：为图神经网络的鲁棒性提升提供了新的研究方向，对于金融、社交网络等敏感场景的AI应用安全具有重要参考价值。
-**链接**：https://arxiv.org/abs/2606.08467
+**链接**： <https://arxiv.org/abs/2606.08467>
 
 ### 2. 《ToolRec: Calibrated Preference Alignment for Query Recommendation in On-Device Assistants》
 **摘要**：端侧助手查询推荐的校准偏好对齐方法，在提升推荐准确率15%的同时，降低了30%的隐私数据泄露风险。
 **推荐理由**：解决了端侧AI的隐私与效果平衡难题，适合在手机、IoT设备等端侧场景落地。
-**链接**：https://arxiv.org/abs/2606.08466
+**链接**： <https://arxiv.org/abs/2606.08466>
 
 ### 3. 《An Empirical Comparison of General Context-Free Parsers》
 **摘要**：对主流通用上下文无关解析器进行了全面的实证对比，提供了不同场景下的性能基准数据。
 **推荐理由**：为自然语言处理底层工具选型提供了详实的参考数据，可大幅降低NLP系统的研发选型成本。
-**链接**：https://arxiv.org/abs/2606.08465
+**链接**： <https://arxiv.org/abs/2606.08465>
 
 ### 4. 《TVI-CoT: Text-Visual Interleaved Chain-of-Thought》
 **摘要**：提出文本视觉 interleaved 思维链推理方法，在多模态复杂推理任务上准确率提升22%。
 **推荐理由**：突破了传统多模态思维链的模态隔离限制，大幅提升了多模态大模型的复杂问题解决能力。
-**链接**：https://arxiv.org/abs/2606.08464
+**链接**： <https://arxiv.org/abs/2606.08464>
 
 ### 5. 《Iterating Toward Better Search: A Two-Agent Simulation Framework for Evaluating Agentic Search Architectures in E-Commerce》
 **摘要**：提出电商领域智能体搜索架构的双智能体模拟评估框架，可高效测试不同搜索架构的真实场景表现。
 **推荐理由**：为智能体搜索系统的优化提供了低成本的测试方法，将搜索系统迭代效率提升40%以上。
-**链接**：https://arxiv.org/abs/2606.12924
+**链接**： <https://arxiv.org/abs/2606.12924>
 
 ### 6. 《MDForge: Agentic Molecular Dynamics Pipeline Design under Sparse Simulator Feedback》
 **摘要**：稀疏模拟器反馈下的智能体分子动力学流程设计，将药物分子研发的模拟效率提升8倍。
 **推荐理由**：AI与分子动力学的结合取得重要突破，将大幅加速新药研发的速度，降低研发成本。
-**链接**：https://arxiv.org/abs/2606.12916
+**链接**： <https://arxiv.org/abs/2606.12916>
 
 ### 7. 《Zero-source LLM Hallucination Detection with Human-like Criteria Probing》
 **摘要**：提出零源大模型幻觉检测方法，无需外部知识库即可实现92%准确率的幻觉识别。
 **推荐理由**：适合端侧和离线场景部署，解决了离线大模型的幻觉识别难题，提升了大模型输出的可信度。
-**链接**：https://arxiv.org/abs/2606.12900
+**链接**： <https://arxiv.org/abs/2606.12900>
 
 ### 8. 《Efficient Transfer Learning for Low-Resource NLP Tasks》
 **摘要**：针对低资源NLP任务的高效迁移学习方法，在小语种任务上的效果提升35%，训练成本降低60%。
 **推荐理由**：大幅降低了小语种和垂直领域NLP应用的落地门槛，有利于AI技术在更多小众场景的普及。
-**链接**：https://arxiv.org/list/cs.AI/recent
+**链接**： <https://arxiv.org/list/cs.AI/recent>
 
 ## 二、GitHub热门AI项目
 ---
@@ -59,49 +59,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **项目介绍**：本地运行的AI全能管家，支持25+聊天平台桥接、持久记忆、浏览器控制、Shell执行等功能，MIT协议开源。
 **数据**：302k Star，近3天新增12k Star
 **推荐理由**：本地优先的AI助手架构，数据不出本地，兼顾功能丰富度与隐私安全，是个人AI助手的首选方案。
-**链接**：https://github.com/openclaw/openclaw
+**链接**： <https://github.com/openclaw/openclaw>
 
 ### 2. addyosmani/agent-skills
 **项目介绍**：Google开源的AI Agent工程化技能套件，内置21项生产级开发能力，无缝对接Cursor、GitHub Copilot等主流AI编程工具。
 **数据**：54.6k Star，日增3.2k Star
 **推荐理由**：把Google内部数十年软件工程规范封装为可复用技能，解决了AI生成代码落地的标准化难题，提升AI编程的生产级可用性。
-**链接**：https://github.com/addyosmani/agent-skills
+**链接**： <https://github.com/addyosmani/agent-skills>
 
 ### 3. mvanhorn/last30days-skill
 **项目介绍**：AI智能体技能包，可跨Reddit、X、YouTube、HN、Polymarket等平台深度调研任意话题并生成结构化总结。
 **数据**：41.2k Star，日增12.6k Star
 **推荐理由**：大幅降低跨平台信息收集和调研的门槛，适合内容创作者、研究人员和市场分析人员使用。
-**链接**：https://github.com/mvanhorn/last30days-skill
+**链接**： <https://github.com/mvanhorn/last30days-skill>
 
 ### 4. shadcn/improve
 **项目介绍**：AI时代编程经济学框架，采用"思考与执行"解耦架构，用强模型做规划、弱模型做执行，API成本降低60-80%。
 **数据**：1.7k Star，上线仅2天
 **推荐理由**：重新定义了大模型驱动开发的成本结构，大幅降低AI编程的落地成本，是中小团队AI开发的理想工具。
-**链接**：https://github.com/shadcn/improve
+**链接**： <https://github.com/shadcn/improve>
 
 ### 5. phuryn/pm-skills
 **项目介绍**：AI产品经理教练，内置成熟的产品方法论，可辅助需求梳理、优先级排序、Roadmap规划、用户研究等工作。
 **数据**：16.1k Star，日增1.2k Star
 **推荐理由**：填补了AI在产品管理领域的工具空白，大幅提升产品经理的工作效率，降低了产品研发的需求返工率。
-**链接**：https://github.com/phuryn/pm-skills
+**链接**： <https://github.com/phuryn/pm-skills>
 
 ### 6. chopratejas/headroom
 **项目介绍**：RAG压缩优化工具，通过智能日志和压缩算法将token消耗降低60%-95%，同时保持检索准确率几乎不变。
 **数据**：8.7k Star，日增2.3k Star
 **推荐理由**：大幅降低大模型RAG应用的运行成本，是大模型应用规模化落地的重要基础设施工具。
-**链接**：https://github.com/chopratejas/headroom
+**链接**： <https://github.com/chopratejas/headroom>
 
 ### 7. microsoft/markitdown
 **项目介绍**：文档到知识库的自动化转换工具，支持Word、PDF、PPT、网页等多种格式文档的结构化提取和标准化转换。
 **数据**：12.3k Star，日增1.8k Star
 **推荐理由**：是RAG系统的重要前置处理组件，大幅降低知识库构建的人力成本，提升知识库质量。
-**链接**：https://github.com/microsoft/markitdown
+**链接**： <https://github.com/microsoft/markitdown>
 
 ### 8. Panniantong/Agent-Reach
 **项目介绍**：智能体可达性评估框架，可测试AI Agent在复杂场景下的任务完成边界，识别Agent的能力短板。
 **数据**：3.2k Star，日增800 Star
 **推荐理由**：是AI Agent研发阶段的重要调试和评估工具，可大幅提升智能体系统的交付质量。
-**链接**：https://github.com/Panniantong/Agent-Reach
+**链接**： <https://github.com/Panniantong/Agent-Reach>
 
 ## 三、HackerNews精选AI资讯
 ---

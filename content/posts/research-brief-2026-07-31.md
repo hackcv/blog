@@ -28,56 +28,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：针对 LLM Agent 后训练 RL 多依赖稀疏任务奖励、未充分利用交互中"环境反馈"这一密集信号的问题，TAPO 在策略优化与转移监督之间交替：复用 rollout 数据，在共享骨干上施加"动作条件下一观测预测"监督，增强模型对环境转移动态与动作后果的敏感度。它是轻量、即插即用的增强模块，无需额外专家数据、采样或推理开销，在 WebShop 与 ALFWorld 上稳定优于纯策略优化基线。
 **领域**：Agent 强化学习
 **推荐理由**：用"环境转移预测"这一天然密集信号替代稀疏任务奖励，无需额外采样/推理即可提升 Agent 任务表现，是 Agent RL 的轻量增强范式，工程可直接套用。
-**链接**：https://arxiv.org/abs/2607.27973
+**链接**： <https://arxiv.org/abs/2607.27973>
 
 ### 2. AgentRadio: Passive Awareness for Long-Horizon Multi-Agent Collaboration
 
 **摘要**：理解大型代码库对 LLM Agent 是长程任务（单 Claude Code Opus 4.6 在 SWE-Atlas QnA 仅解 32.3%）。AgentRadio 提出异步消息传递层，提供 threads、messages、等待提及三个原语；"等待提及"作为后台任务在不打断前台工作的前提下让 Agent 被动感知队友进展。在五阶段分工+协商协议下，4 个 Agent 解析率达 62.1%（+29.8pp），高于更新的 Opus 4.8（57.2%），且增益随任务难度增大。
 **领域**：多智能体协作 / 代码
 **推荐理由**：突破"仅在阶段边界通信"的瓶颈，让编码 Agent 在执行中被动感知队友进展，长程代码任务增益随难度放大，是 Multi-Agent 编码基建的实用范式。
-**链接**：https://arxiv.org/abs/2607.28430
+**链接**： <https://arxiv.org/abs/2607.28430>
 
 ### 3. Scaling LLM-Driven Multi-Agent Systems: Design Principles and Architectural Scalability Analysis
 
 **摘要**：从既有工作结构化提炼出四条可扩展 MAS 设计原则——简洁性、弹性反馈、带可选环的顺序工作流、基于摘要的通信；并将其形式化为约束有向工作流图的参考架构，在终端系统工程基准上评估四种递增复杂度配置。发现扩展带来近似线性的成本增长与可度量的准确率提升，但仅当底层 LLM 超过能力阈值；性能在中等复杂度达峰后下降（超时与评测限制），一致性问题贯穿所有层级。
 **领域**：多智能体系统架构
 **推荐理由**：首次把 MAS 架构空间系统化提炼为可操作设计原则与约束工作流图，给出"能力阈值/一致性"等落地红线，对实践者有直接指导意义。
-**链接**：https://arxiv.org/abs/2607.27942
+**链接**： <https://arxiv.org/abs/2607.27942>
 
 ### 4. Meta-Task: Turning Terminal Task Synthesis into a Terminal Task for Scalable Agent Training
 
 **摘要**：训练终端 Agent 需多样可验证任务与高质量轨迹，现有合成法存在"生成与执行脱节导致不可靠"与"依赖既有仓库导致多样性不足"两局限。Meta-Task 把终端任务合成本身重定义为 Terminal-Bench 格式任务：Agent 在真实容器内迭代生成、执行、验证任务，合成组件在生成循环内自检验一致性与可执行性；再沿多维解耦任务需求、多阶段动态设计新规范。Terminal-Bench 2.0 上仅用 3,221 条合成轨迹微调，Qwen3-14B / 32B 分别达 22.5% / 31.8% Avg Pass@1，以更少数据优于同期方法。
 **领域**：终端 Agent 训练数据
 **推荐理由**：把"造任务"也变成可验证任务，在生成循环中自检验一致性/可执行性，用极少数据撬动终端 Agent 训练，降低对私有数据的依赖。
-**链接**：https://arxiv.org/abs/2607.27929
+**链接**： <https://arxiv.org/abs/2607.27929>
 
 ### 5. FaithEyes: Towards Faithful Tool Use via Multi-Agent Process-Image Verification
 
 **摘要**：Agentic VLM 交错文本推理与显式工具调用（裁剪、代码图像操作），但近期研究发现模型常"不忠实地"使用工具——过程图像与问题无关却仍得分、模型仍答对，浪费算力且暴露其依赖先验/原图而非检索证据。FaithEyes 用 VLM 判断每张过程图像是否有助于作答，将判断注入推理上下文并用以按"有用工具比"缩放工具奖励以抑制奖励黑客；多智能体框架让主 Agent 自身作子 Agent 评判工具调用，推理时无需外部模型。两阶段 SFT+RL 后在视觉感知与推理基准上取得竞争性或更优准确率，并显著提升工具忠实性。
 **领域**：多模态 / Agent 工具调用忠实性
 **推荐理由**：直击 Agentic VLM"装饰性工具调用"痛点，用过程图像有用性作为奖励信号抑制奖励黑客，提升可解释推理，对可信多模态 Agent 关键。
-**链接**：https://arxiv.org/abs/2607.28225
+**链接**： <https://arxiv.org/abs/2607.28225>
 
 ### 6. TREK: A Travel Reasoning and Evaluation Kit for LLM Agents in Complex Trip Planning
 
 **摘要**：面向复杂旅行规划的 LLM Agent 评测套件，强调可执行、无幻觉、带硬约束的行程推理，提供可审计的基准以衡量 Agent 在真实约束下的规划可靠性。
 **领域**：Agent 基准 / 旅行规划
 **推荐理由**：把幻觉与约束违背从黑盒变成可审计指标，针对"带硬约束的可执行规划"这一高频真实场景，是 Agent 评测工程化的重要补齐。
-**链接**：https://arxiv.org/abs/2607.26977
+**链接**： <https://arxiv.org/abs/2607.26977>
 
 ### 7. See2Think: Do Multimodal Models Really Use Intermediate Visual States?
 
 **摘要**：评估多模态大模型是否真正利用了中间视觉状态，而非仅依赖最终答案"作弊"，对视觉推理的诚实性设立更严格的评测标尺。
 **领域**：多模态可解释性
 **推荐理由**：质疑多模态模型是否真用中间视觉状态而非只靠最终答案偷懒，为视觉推理评测设立更严格的诚实性标尺，关乎模型可信度。
-**链接**：https://arxiv.org/abs/2607.26769
+**链接**： <https://arxiv.org/abs/2607.26769>
 
 ### 8. MindForge: Teaching Small Language Models Whole-Life-Cycle Software Engineering via Source-Free Program Synthesis
 
 **摘要**：通过"无源程序合成"构造可扩展训练环境，让小模型也能学习覆盖完整软件生命周期的工程能力，面向 coding-agent 的全周期训练。
 **领域**：代码 Agent 训练
 **推荐理由**：用无源程序合成降低 coding-agent 训练对私有数据的依赖，让小模型也能学全软件生命周期工程能力，利于降本与本地化部署。
-**链接**：https://arxiv.org/abs/2607.27146
+**链接**： <https://arxiv.org/abs/2607.27146>
 
 * * *
 
@@ -88,56 +88,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：开源 AI 渗透测试工具，像真实安全研究员一样动态测试应用、用 PoC 漏洞利用验证，含 HTTP 代理、浏览器利用、Python 沙箱与 CI/CD 集成。
 **热度**：约 42K★，周增约 7K
 **推荐理由**：安全团队持续采用而非单纯追星，代表 agentic 进攻安全（offensive security）的真实落地，是 2026 年 7 月增长最快的安全类 Agent 之一。
-**链接**：https://github.com/usestrix/strix
+**链接**： <https://github.com/usestrix/strix>
 
 ### 2. topoteretes/cognee
 
 **简介**：基于知识图谱的 Agent 持久化记忆引擎，作为传统向量 RAG 的替代方案，统一记忆的存储、检索与演化。
 **热度**：约 26.1K★
 **推荐理由**：用知识图谱替代向量 RAG 做 Agent 长期记忆，缓解"记忆漂移/检索噪声"，是当前 Agent 记忆层的主流候选方案。
-**链接**：https://github.com/topoteretes/cognee
+**链接**： <https://github.com/topoteretes/cognee>
 
 ### 3. infiniflow/ragflow
 
 **简介**：领先的开源 RAG 引擎，融合深度文档理解，面向企业私域知识问答与文档密集型工作流。
 **热度**：约 86K★
 **推荐理由**：RAG 工程化标杆，深度文档解析能力成熟，是企业私域知识问答首选底座之一，社区活跃度高。
-**链接**：https://github.com/infiniflow/ragflow
+**链接**： <https://github.com/infiniflow/ragflow>
 
 ### 4. langchain-ai/langgraph
 
 **简介**：构建有状态、可循环、支持人在环的弹性 Agent，把"可恢复/可中断/人在环"工程化。
 **热度**：约 38K★（周增约 +576）
 **推荐理由**：Agent 编排事实标准之一，生态成熟，把复杂 Agent 控制流（循环、分支、人工审核）标准化，适合生产级 Agent 系统。
-**链接**：https://github.com/langchain-ai/langgraph
+**链接**： <https://github.com/langchain-ai/langgraph>
 
 ### 5. JuliusBrussee/caveman
 
 **简介**：Claude Code Skill，通过系统级 Prompt 注入强制 Agent 用极简"穴居人式"英语输出，压缩 Token 消耗最高 65%。
 **热度**：约 9.1 万★（7 月热榜）
 **推荐理由**：反直觉但有效——在按 Token 计费时代直接砍掉最高 65% 成本，信息密度反而更高，是省钱二人组代表。
-**链接**：https://github.com/JuliusBrussee/caveman
+**链接**： <https://github.com/JuliusBrussee/caveman>
 
 ### 6. OpenCut-app/OpenCut
 
 **简介**：开源版 CapCut（剪映），提供多轨道时间轴、滤镜/转场/特效、字幕自动生成与素材库管理，所有代码可审计可修改。
 **热度**：约 75K★（单周涨星最快之一）
 **推荐理由**：直击订阅制视频工具痛点，"可审计可修改"号召力强，对 80% 普通视频创作者已够用，开源替代运动代表。
-**链接**：https://github.com/OpenCut-app/OpenCut
+**链接**： <https://github.com/OpenCut-app/OpenCut>
 
 ### 7. google-labs-code/design.md
 
 **简介**：Google Labs 出品的规范格式，把 YAML 设计 Token 与 Markdown 说明合并为统一 spec 文件，让 AI Agent 读取、验证、对比设计规范并据此生成一致的 UI。
 **热度**：约 25K★
 **推荐理由**：解决 AI 生成前端"每次配色间距都不一样"的视觉一致性顽疾，把设计系统变成 Agent 可读 spec，是 AI 前端工程化关键拼图。
-**链接**：https://github.com/google-labs-code/design.md
+**链接**： <https://github.com/google-labs-code/design.md>
 
 ### 8. TencentCloud/TencentDB-Agent-Memory
 
 **简介**：腾讯云开源的 4 层渐进式 Agent 长期记忆方案，覆盖记忆的写入、检索、压缩与演化。
 **热度**：约 75K★
 **推荐理由**：大厂把 Agent 长期记忆做成标准化开源组件，4 层渐进式设计可直接接入生产 Agent，降低记忆层自研成本。
-**链接**：https://github.com/TencentCloud/TencentDB-Agent-Memory
+**链接**： <https://github.com/TencentCloud/TencentDB-Agent-Memory>
 
 * * *
 

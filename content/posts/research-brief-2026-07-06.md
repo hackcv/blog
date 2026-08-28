@@ -22,35 +22,35 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **作者**：清华大学、阿里巴巴团队
 **领域**：大模型架构、扩散语言模型、推理优化
 **推荐理由**：ICML 2026杰出论文，颠覆性揭示扩散语言模型的核心缺陷，为下一代非自回归大模型的研发指明了方向，相关结论已被行业多家大模型厂商采纳优化现有模型。
-**链接**：https://arxiv.org/abs/2601.15165
+**链接**： <https://arxiv.org/abs/2601.15165>
 
 ### 2. T*: Progressive Block Scaling for Masked Diffusion Language Models Through Trajectory Aware Reinforcement Learning
 **摘要**：上海科学智能研究院团队提出T*渐进式块缩放训练策略，解决扩散语言模型块越大推理越差的核心矛盾：先在小块上学稳去噪轨迹，再逐级扩展到大块，4B模型在MATH500数据集准确率从60.73提升到76.00，同时保留高并行度优势，推理速度提升2.3倍。
 **作者**：上海科学智能研究院、复旦大学团队
 **领域**：扩散语言模型、强化学习、训练优化
 **推荐理由**：破解了扩散语言模型并行度与推理能力无法兼得的行业难题，大幅提升扩散模型的落地可行性，为下一代高吞吐大模型架构提供了技术路线。
-**链接**：https://arxiv.org/pdf/2602.09375
+**链接**： <https://arxiv.org/pdf/2602.09375>
 
 ### 3. AgenticDataBench: A Comprehensive Benchmark for Data Intelligence Agents
 **摘要**：首个面向数据智能体的综合基准测试，覆盖15个垂直领域真实数据集和任务，通过Stack Overflow技能层次聚类量化技能覆盖度，提供技能级细粒度评估。测试显示当前主流数据智能体仅能完成38%的企业级真实任务，尤其在数据清洗、特征工程等环节存在明显短板。
 **作者**：数据智能研究团队
 **领域**：智能体评估、数据科学、基准测试
 **推荐理由**：填补了数据智能体系统评估的空白，为数据科学AI的研发和落地提供了统一标尺，帮助企业评估AI在数据分析场景的真实能力。
-**链接**：https://arxiv.org/abs/2607.01647
+**链接**： <https://arxiv.org/abs/2607.01647>
 
 ### 4. Gradient Testing and Estimation by Comparisons
 **摘要**：北京大学与斯坦福大学合作研究，在仅能获取两点函数值大小比较（无法获得具体数值和梯度）的弱信息场景下，提出经典与量子两类算法，经典梯度测试只需常数次比较查询，梯度估计复杂度达理论最优下界，量子方案可进一步降低查询复杂度。
 **作者**：北京大学、斯坦福大学团队
 **领域**：优化理论、零阶优化、量子算法
 **推荐理由**：解决了黑盒优化、强化学习等场景梯度难以获取的痛点，尤其适合无法获取模型细节的专有系统、对抗训练等特殊场景的优化问题，大幅拓展了优化算法的适用边界。
-**链接**：http://arxiv.org/abs/2405.11454
+**链接**： <http://arxiv.org/abs/2405.11454>
 
 ### 5. TopoGPT: Generative Lane Topology Reasoning with Autoregressive Models and Geometric Priors
 **摘要**：提出TopoGPT生成式车道拓扑推理框架，将车道图构建转化为自回归序列建模问题，通过330万场景预训练学习几何先验，在OpenLane-V2数据集上车道级精度+6.4、点级+11.6，超越现有方法，解决了传统检测-关联范式导致的几何不一致和遮挡区域信息丢失问题。
 **作者**：自动驾驶研究团队
 **领域**：自动驾驶、计算机视觉、拓扑推理
 **推荐理由**：突破了高精地图自动构建的技术瓶颈，大幅提升车道拓扑识别的精度和鲁棒性，推动高阶自动驾驶的落地进程。
-**链接**：https://arxiv.org/abs/2606.31814
+**链接**： <https://arxiv.org/abs/2606.31814>
 
 ### 6. 阿里达摩院AI新材料发现论文
 **摘要**：阿里达摩院AI科学发现智能体仅用28小时就发现了4种全新超导材料，相关成果将在ICML 2026大会分享。该系统通过强化学习引导材料探索方向，结合第一性原理计算验证，将新材料发现周期从数年压缩到数小时。
@@ -64,7 +64,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **作者**：上海人工智能实验室
 **领域**：大模型架构、智能体
 **推荐理由**：打破了智能体性能必须依赖大参数规模的认知，证明通过架构创新中小模型也能达到顶级大模型的智能体能力，大幅降低智能体落地的硬件门槛，为边缘端智能体部署提供了可能。
-**链接**：https://arxiv.org/abs/2606.30616
+**链接**： <https://arxiv.org/abs/2606.30616>
 
 ### 8. ReContext: Evidence Replay as LLM Harness for Long-Context Reasoning
 **摘要**：提出ReContext递归证据回放机制，在长文本推理最终生成前重新组织相关证据，大幅提升证据利用率，在128K上下文长度的8个数据集上平均准确率提升27%，解决了大模型长上下文"看不全、记不住"的痛点。
@@ -80,49 +80,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **简介**：首创开源AI渗透测试工具，由多AI代理协作完成全流程安全测试，能像真实黑客一样动态运行代码、发现漏洞、生成可验证的PoC概念验证，支持本地代码库、GitHub仓库、线上应用三种目标模式，可直接接入GitHub Code Scanning流水线，将数周的渗透测试压缩至几小时内完成，误报率远低于传统静态扫描工具。
 **热度**：总Star 34.7k，日增2800+，连续多日登顶GitHub热榜
 **推荐理由**：DevSecOps的革命性工具，将AI的强大分析能力应用到安全测试领域，大幅提升安全测试效率和覆盖率，降低安全测试的专业门槛，帮助企业提前发现并修复安全漏洞。
-**链接**：https://github.com/usestrix/strix
+**链接**： <https://github.com/usestrix/strix>
 
 ### 2. xbtlin/ai-berkshire: AI时代的价值投资研究框架
 **简介**：基于Claude Code/Codex构建的价值投资研究框架，融合巴菲特、芒格、段永平、李录四大投资大师方法论，通过多智能体并行研究和对抗式分析，覆盖公司基本面分析、估值建模、风险评估等投资全流程，支持接入自定义数据源和投研规则。
 **热度**：总Star 9.2k，周增6230+
 **推荐理由**：AI+金融的标杆项目，将成熟的投资方法论和AI的强大分析能力结合，大幅提升投研效率，适合机构投资者和专业个人投资者参考使用。
-**链接**：https://github.com/xbtlin/ai-berkshire
+**链接**： <https://github.com/xbtlin/ai-berkshire>
 
 ### 3. cobusgreyling/loop: Loop Engineering自动化工作流框架
 **简介**：将AI任务执行模式从传统的"提示词驱动"升级为"自主循环"，设定目标后系统自动完成指令生成、执行验证、错误修正的全流程。包含七套即用型工作流模板，覆盖每日巡检、代码审查、依赖管理等高频场景，支持成本估算、运行审计等配套工具，提供三级成熟度配置选项，适配不同自动化需求。
 **热度**：总Star 4.5k，上线数日获得广泛关注，吴恩达等技术领袖公开推荐
 **推荐理由**：AI开发范式的重大革新，将AI从单次任务执行者升级为全流程自动化处理系统，大幅降低AI工作流的开发门槛，推动AI自动化的大规模落地。
-**链接**：https://github.com/cobusgreyling/loop
+**链接**： <https://github.com/cobusgreyling/loop>
 
 ### 4. openai/codex-plugin-cc: Claude Code Codex官方插件
 **简介**：OpenAI官方推出的Claude Code插件，让用户可以不离开Claude Code就能调用Codex做代码审查和Bug修复，提供review（只读审查）、adversarial-review（对抗性质疑）、rescue（Bug修复）、transfer（任务委派）等核心命令，支持双引擎协同工作，大幅提升代码审查和修复效率。
 **热度**：总Star 25.5k，日增1500+
 **推荐理由**：官方支持的双AI编程协同方案，标志着头部AI编程工具从竞争走向互操作，为开发者提供了更强大的AI编程辅助能力，提升代码质量和开发效率。
-**链接**：https://github.com/openai/codex-plugin-cc
+**链接**： <https://github.com/openai/codex-plugin-cc>
 
 ### 5. JuliusBrussee/caveman: 极简输出AI助手技能
 **简介**：Claude Code和Cursor等AI编程助手的增强技能，通过优化提示词引导AI用简洁、无冗余的方式输出，可减少65%-87%的Token消耗，保持技术准确性不变，支持lite/full/ultra三种压缩强度，已适配Claude Code、Codex、Copilot等主流AI编程工具。
 **热度**：总Star 83k，日增2800+
 **推荐理由**：简单高效的AI使用成本优化方案，无需改变现有工作流即可大幅降低Token消耗，提升响应速度，几乎所有使用AI编程助手的开发者都能直接受益。
-**链接**：https://github.com/JuliusBrussee/caveman
+**链接**： <https://github.com/JuliusBrussee/caveman>
 
 ### 6. alibaba/page-agent: 页内GUI代理
 **简介**：页内GUI自动化代理，通过自然语言就能驱动浏览器操作，支持点击、填表、数据提取、流程自动化等常见网页操作，无需编写复杂的自动化脚本，为Web自动化测试、无障碍应用、数据爬取等场景提供了多模态交互新入口。
 **热度**：总Star 7.2k，日增742+
 **推荐理由**：大幅降低网页自动化的技术门槛，普通用户也可以通过自然语言完成复杂的网页操作流程，推动RPA、数据采集等场景的普惠化。
-**链接**：https://github.com/alibaba/page-agent
+**链接**： <https://github.com/alibaba/page-agent>
 
 ### 7. asgeirtj/system_prompts_leaks: 主流AI系统提示词集合
 **简介**：收集了几乎所有主流AI产品的系统提示词，包括Anthropic、OpenAI、Google、xAI、Cursor等，通过模型"重复上面所有内容"的方式提取，更新频率紧跟模型发布节奏，方便开发者学习顶级AI产品的系统提示词设计思路，优化自己的AI应用。
 **热度**：总Star 50k，日增981+
 **推荐理由**：AI提示词工程的绝佳学习资料，汇集了行业顶尖AI产品的系统提示词设计经验，帮助开发者理解大模型的引导方法，提升自己开发的AI应用效果。
-**链接**：https://github.com/asgeirtj/system_prompts_leaks
+**链接**： <https://github.com/asgeirtj/system_prompts_leaks>
 
 ### 8. agentskills/agentskills: AI智能体技能扩展开放标准
 **简介**：提出Agent技能标准化规范，试图定义通用能力接口，解决多Agent系统互操作性问题。若成为事实标准，开发者可像调用API一样组合Agent技能，大幅简化多智能体系统开发，支持自定义技能开发和跨平台兼容。
 **热度**：总Star 12.3k，日增351+
 **推荐理由**：AI智能体领域的基础设施级项目，统一的技能标准将大幅降低多智能体系统的开发门槛，推动智能体技术的规模化落地，相关规范可能成为未来行业标准。
-**链接**：https://github.com/agentskills/agentskills
+**链接**： <https://github.com/agentskills/agentskills>
 
 ---
 

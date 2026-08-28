@@ -25,56 +25,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：提出具身认知基础模型 Hy-Embodied-RxBrain，用统一的「规划序列」把语言（任务分解、时序、决策逻辑）与视觉想象（世界状态预测、子目标规划）耦合；统一多模态 Mixture-of-Transformers 架构支持语言/图像/视频理解生成一体；自动流水线把具身视频转为联合文本-视觉规划监督，并构建 RxBrain-Bench；扩展到连续机器人动作生成，无需大规模动作数据预训练即有真实机器人表现。
 **领域**：具身智能 / 多模态 / 世界模型
 **推荐理由**：把「规划」从纯文本或纯生成拆成「语言结构 + 视觉想象」双通道，比单一 VLM/世界模型更贴近真实机器人决策；零动作预训练即上真机这点对具身落地很有吸引力。
-**链接**：https://arxiv.org/abs/2607.14187
+**链接**： <https://arxiv.org/abs/2607.14187>
 
 ### 2. Think at 5 Hz, Act at 20 Hz: Asynchronous Fast-Slow Vision-Language-Action Inference for Closed-Loop Driving
 
 **摘要**：提出快慢架构解决 VLM 推理延迟与车辆控制率冲突：冻结 7B VLM 作慢系统低频消化指令与历史并暴露 KV 缓存；轻量动作专家作快系统每 tick attend 缓存与当前帧回归航点。CARLA 上每 50ms 产出新鲜控制，路线完成率从 37.0 升至 94.0；单镇训练零样本迁移两未知镇保 84–94%。
 **领域**：自动驾驶 / VLA / 异步推理
 **推荐理由**：用「缓存复用 + 异步执行」而非帧跳过，把快系统成本压到单 tick 32ms 且与历史长度无关，是端到端驾驶把 VLM 推理对齐到控制率的可复现范式。
-**链接**：https://arxiv.org/abs/2607.15621
+**链接**： <https://arxiv.org/abs/2607.15621>
 
 ### 3. S-squared-VLA: Decoupling Semantic and Spatial Streams in Vision-Language-Action Models for Autonomous Driving
 
 **摘要**：指出标准 VLA 因自回归语言瓶颈导致「空间表征坍塌」，损害几何先验。S-squared-VLA 显式解耦语义流（分层桥接提取多尺度 VLM 特征做意图推理）与独立空间流（绕过自回归、直接保留视觉编码器未压缩空间特征 + 辅助感知监督）；双流规划适配器级联注意力融合。NAVSIM 闭环 PDMS 87.1（SFT 设定 SOTA），No Collision 98.4%。
 **领域**：自动驾驶 / VLA / 表征学习
 **推荐理由**：直接诊断并修复 VLA「语义-物理鸿沟」，用双流解耦保留空间几何先验，NAVSIM 87.1 的纯 SFT SOTA 对做驾驶 VLA 的团队是清晰架构处方。
-**链接**：https://arxiv.org/abs/2607.13926
+**链接**： <https://arxiv.org/abs/2607.13926>
 
 ### 4. Scaling Behavior Foundation Model for Humanoid Robots
 
 **摘要**：重新审视人形机器人行为基础模型（BFM）的 scaling recipe：把多样控制问题重构为全局坐标系下的整体行为复现（运动追踪范式）；在线 rollout 数量与参考动作多样性协同；提出 Humanoid Transformer 架构。仿真+实机部署显示测试集 MPKPE 降低超 10%（local）/82%（global），显著优于现有控制器。
 **领域**：机器人 / 人形控制 / 基础模型
 **推荐理由**：首次系统给出 BFM 的 scaling 配方（学习范式×数据×架构三方协同），实机 MPKPE 降 82% 说明「行为基础模型」是可规模化、通用的控制底座，而非单任务策略。
-**链接**：https://arxiv.org/abs/2607.15163
+**链接**： <https://arxiv.org/abs/2607.15163>
 
 ### 5. FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation
 
 **摘要**：提出免训练稀疏注意力系统，改善多 GPU 序列并行下自适应 Top-p 路由造成的不均匀负载（rank 级掉队）。Top-p 路由 + Top-k 安全底 + 视频感知块组织作前端，运行时迁移少量重头（P2P 通信）做负载均衡，余闲填充高价值块。Wan2.2 I2V 上负载不均 1.34→1.08，注意力 4.41× 加速，DiT 推理 2.02–2.11× 提速且画质有竞争力。
 **领域**：视频生成 / 注意力 / 系统优化
 **推荐理由**：把「稀疏注意力」从单卡技巧推进到多卡序列并行的工程现实，4.41× 注意力加速且画质不崩，对高分辨率视频 DiT 推理降本直接可用。
-**链接**：https://arxiv.org/abs/2607.16190
+**链接**： <https://arxiv.org/abs/2607.16190>
 
 ### 6. MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction
 
 **摘要**：研究从单目人-物交互视频预测被操作物体未来 3D 轨迹（物体中心 3D 运动预测）。关键洞察：视频预测模型已编码丰富「物体如何运动」先验，将其从像素预测重定向到未来 3D 场景流；基于预训练视频模型建稠密 3D tracker，用完整片段生成伪真值轨迹，仅用观测帧训练轻量 adapter（冻结大模型）。仅 40k 人视频、无语言/无辅助输入，跨 OOD 物体/环境/视角泛化，且优于用超百万视频训练的更大模型。
 **领域**：3D 视觉 / 视频模型复用 / 具身预测
 **推荐理由**：证明「视频先验可直接转 3D 几何预测」，仅 40k 视频即超百万级训练的大模型，对数据稀缺的具身交互预测是极省资源的范式。
-**链接**：https://arxiv.org/abs/2607.16192
+**链接**： <https://arxiv.org/abs/2607.16192>
 
 ### 7. ReBind: Multi-Reference Video Editing via Structured Instructions with Explicit Reference Relationships
 
 **摘要**：指出多参考图像条件视频编辑的缺陷：编辑指令缺乏显式参考关系，多数 MLLM 也无法可靠生成。ReBind 引入内嵌参考 token 的语义指令作中间表示；ReBind-Instruct 专用 MLLM 两阶段渐进建立属性-源显式绑定；ReBind-Edit 轻量适配 T2V 模型按指定源协调多参考。在参考图像条件视频编辑开源方法中达 SOTA。
 **领域**：视频编辑 / 多参考生成 / MLLM
 **推荐理由**：用「参考 token 嵌入语义位置」消除多源属性绑定歧义，是多参考视频编辑从「凭感觉拼」到「可指定来源」的关键一步，对广告/电商换装换景很实用。
-**链接**：https://arxiv.org/abs/2607.14681
+**链接**： <https://arxiv.org/abs/2607.14681>
 
 ### 8. StructAgent: Harness Long-horizon Digital Agents with Unified Causal Structure
 
 **摘要**：指出现有数字 Agent 基于原始交互历史，长程任务进度难解释、验证与恢复。提出 state-centered 框架 StructAgent：统一状态维护紧凑可验证进度，结构化工作流以验证器支撑的状态转移调节进度；支持显式检查点、证据驱动完成、定向失败恢复、工具辅助执行。OSWorld-Verified 上 Qwen3.5-9B 27.0%→46.9%、Qwen3.5-27B 31.6%→62.2%，MiniMax-M3 达 78.9% 开源 SOTA，并泛化到 Minecraft。
 **领域**：Agent / 长程任务 / 可验证执行
 **推荐理由**：把「长程 Agent 怎么知道自己干到哪了、错了怎么回退」形式化为因果状态机，OSWorld 提分显著且泛化 Minecraft，是可靠 long-horizon Agent 的可复用骨架。
-**链接**：https://arxiv.org/abs/2607.11388
+**链接**： <https://arxiv.org/abs/2607.11388>
 
 ## 二、GitHub热门AI开源项目（2026.07.19–07.20）
 
@@ -83,56 +83,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：月之暗面把 Kimi CLI 转向 Kimi Code CLI，把编码 Agent 直接放进终端：可读写代码、执行命令、检索网页。7/19 单日涨 651 星（累计 9,484 星）。
 **热度**：GitHub日报 7/19 单日 +651 星；累计 9.8k
 **推荐理由**：Kimi K3 登顶前端代码榜后，月之暗面顺势把能力塞进终端 CLI，是「开源大模型→自带 coding agent 产品」的范本，对想基于 Kimi 做本地编码助手的团队是现成入口。
-**链接**：https://github.com/MoonshotAI/kimi-cli
+**链接**： <https://github.com/MoonshotAI/kimi-cli>
 
 ### 2. microsoft/agent-framework-go
 
 **简介**：微软 7 月 19 日开源的 Go 版 AI 智能体开发框架，支持图式编排、多模型接入与 MCP，面向 Go 生态的生产级 Agent 脚手架。
 **热度**：GitHub日报 7/19 开源首日涨 80 星；新晋热门
 **推荐理由**：大厂把 Agent 框架能力下沉到 Go 生态，图式编排 + MCP 开箱即用，对已在 Go 技术栈上的团队是把 Agent 编排标准化、避免重复造轮子的直接选择。
-**链接**：https://github.com/microsoft/agent-framework-go
+**链接**： <https://github.com/microsoft/agent-framework-go>
 
 ### 3. trycua/cua
 
 **简介**：开源 computer-use 2.0，提供跨 OS 驱动、跨机队管理与训练/评估/数据生成基准，把计算机操控 Agent 做成可规模化的基础设施。
 **热度**：GitHub Explore 趋势（2026-07-19），20.2k 星
 **推荐理由**：把「让 Agent 操作电脑」从单点 Demo 做成带驱动、机队、基准的完整栈，对要做桌面自动化/数字员工产品的团队是少有的全栈开源参考。
-**链接**：https://github.com/trycua/cua
+**链接**： <https://github.com/trycua/cua>
 
 ### 4. Fission-AI/OpenSpec
 
 **简介**：面向 AI Agent 互操作性的开源规范框架，让不同 Agent 之间用统一 spec 对接与协作。
 **热度**：TrendingRepo AI Agents 榜 #11（2026-07-19），61.5k 星
 **推荐理由**：Agent 生态碎片化严重，OpenSpec 试图用「规范」把多 Agent 协作标准化，对要搭跨厂商/跨框架 Agent 管线的团队是降低集成摩擦的关键原语。
-**链接**：https://github.com/Fission-AI/OpenSpec
+**链接**： <https://github.com/Fission-AI/OpenSpec>
 
 ### 5. Leonxlnx/taste-skill
 
 **简介**：专为 AI Agent 设计的前端技能集，用于生成高质量 UI 而非千篇一律的样板界面，提升 AI 生成界面的美学质量。
 **热度**：GitHub周趋势 2026W23 #3（2026-07-19），单周 +8.7k；累计 43k
 **推荐理由**：直击「AI 生成 UI 千篇一律」的痛点，把「审美」做成可复用的 skill，呼应社区正从「堆模型能力」转向「补齐 Agent 表现层」的趋势。
-**链接**：https://github.com/Leonxlnx/taste-skill
+**链接**： <https://github.com/Leonxlnx/taste-skill>
 
 ### 6. QwenLM/qwen-code
 
 **简介**：通义千问开源的终端 AI Agent，把 Qwen 模型的编码能力直接放进命令行，类似 Claude Code / Codex 的 Qwen 版实现。
 **热度**：TrendingRepo AI Agents 榜（2026-07-19），26.1k 星
 **推荐理由**：国产大模型把 coding agent 做成开源 CLI，与 Kimi CLI 形成「开源模型 + 自带编码助手」的合力，对偏好 Qwen 生态、关注自托管合规的团队是现成选项。
-**链接**：https://github.com/QwenLM/qwen-code
+**链接**： <https://github.com/QwenLM/qwen-code>
 
 ### 7. anomalyco/opencode
 
 **简介**：开源 coding agent，支持本地 LLM 执行，强调完全自托管、可离线运行。
 **热度**：TrendingRepo AI Agents 榜 #12（2026-07-19），187.2k 星
 **推荐理由**：187k 星说明「本地/自托管 coding agent」需求极大，对数据不出域、需私有化部署的企业场景，opencode 是少有的高星且支持本地模型的开源选择。
-**链接**：https://github.com/anomalyco/opencode
+**链接**： <https://github.com/anomalyco/opencode>
 
 ### 8. AstrBotDevs/AstrBot
 
 **简介**：AI Agent 助手与开发框架，集成大量 IM 平台、LLM、插件与 AI 功能，可对接 Telegram、Discord、QQ、微信等。
 **热度**：GitHub Explore 趋势（2026-07-19），36.6k 星
 **推荐理由**：把 Agent 能力下沉到「消息平台入口」，让一个 Agent 同时服务多 IM，对想做客服/社群/个人助理类 Agent 产品、又不想逐个平台对接的团队是现成底座。
-**链接**：https://github.com/AstrBotDevs/AstrBot
+**链接**： <https://github.com/AstrBotDevs/AstrBot>
 
 ## 三、精选AI行业资讯（2026.07.15–07.20）
 

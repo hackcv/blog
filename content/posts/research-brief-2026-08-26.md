@@ -29,7 +29,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用 49,327 条评分样本做了一次「方法级」统一对照，结论反直觉——不是路由不同算子，而是「反复分支」在抽象层一致占优；并直接把评测协议问题（配对打分）摆上台面，对做推理缩放的团队是必读的方法论校准。
 
-**链接**：https://arxiv.org/abs/2608.23956
+**链接**： <https://arxiv.org/abs/2608.23956>
 
 ### 2. Prime Agent: A Self-Improving RLM Harness
 
@@ -39,7 +39,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「harness 本身」当成可测量、可复用的研究对象——开源且把执行 / 恢复 / 验证 / 资源记账标准化，让模型能力不被脚手架故障污染。95.5% 的 ARC-AGI-3 跃升说明长程 agency 的瓶颈常在脚手架而非权重，对做 agent 基建的团队是直接可抄的范式。
 
-**链接**：https://arxiv.org/abs/2608.23552
+**链接**： <https://arxiv.org/abs/2608.23552>
 
 ### 3. SWE Refactor Bench: Can Coding Agents Complete a Long-Horizon, Whole-Repository Stack Migration?
 
@@ -49,7 +49,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：戳破「编码 agent 能修 bug 就能做迁移」的错觉——迁移完整性与行为正确性其实是两种能力。5.4% 的全通过率给行业泼了冷水，也给出了一个严肃的整库迁移测试床，比单文件 SWE 基准更接近真实技术债清理。
 
-**链接**：https://arxiv.org/abs/2608.23564
+**链接**： <https://arxiv.org/abs/2608.23564>
 
 ### 4. Beyond the Stability-Exploration Dilemma: Environmental Regularization for LLM Policy Optimization
 
@@ -59,7 +59,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：一个干净的「解耦」思路——把漂移控制放到查询分布而非回答分布，既控住训练发散又不牺牲探索预算。对正在用 GRPO 训小模型、被 KL 坍缩困扰的团队，是低成本的即插即用改进。
 
-**链接**：https://arxiv.org/abs/2608.23311
+**链接**： <https://arxiv.org/abs/2608.23311>
 
 ### 5. GameXpert-Bench: How Far Are Coding Agents from Expert Game Development?
 
@@ -69,7 +69,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「做游戏」拆成生成 / 修复 / 优化三段分别打分，比只看最终产物更贴近真实开发流；结论——agent 擅长交活但不擅长自查——对用 agent 做原型 / 内容生成的团队是清晰的短板地图。
 
-**链接**：https://arxiv.org/abs/2608.21833
+**链接**： <https://arxiv.org/abs/2608.21833>
 
 ### 6. WorldMind: Decoupled Game World Model for State-Aware NPC Behavior
 
@@ -79,7 +79,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把 NPC 行为从「和视频生成纠缠」里解耦出来，给出显式状态接口——这意味着世界模型能真正「懂规则」而非只「画得连贯」。70% 偏好 + 自带数据自动采集 agent，给游戏 / 仿真领域的可控 NPC 提供了可复现基线。
 
-**链接**：https://arxiv.org/abs/2608.21439
+**链接**： <https://arxiv.org/abs/2608.21439>
 
 ### 7. One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows
 
@@ -89,7 +89,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「一次性成功」和「可靠完成」的差距量化出来——pass@1 65% 但 pass^20 仅 25%，对要上生产的业务 agent 是清醒剂。MCP 兼容 + 状态级校验的沙盒设计，特别适合评估「动真钱 / 真数据」的 agent。
 
-**链接**：https://arxiv.org/abs/2608.19741
+**链接**： <https://arxiv.org/abs/2608.19741>
 
 ### 8. Quantization-Aware Healing: A Practical Recipe for Recovering Compressed, 4-Bit LLMs
 
@@ -99,7 +99,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：给「又压又量化」的落地部署一条不靠多周超参搜索的实用配方；开源 60B 权重可直接拿来比对。对想把大模型塞进低成本推理、又怕量化掉点的团队，是少见的「端到端可复现」案例。
 
-**链接**：https://arxiv.org/abs/2608.20953
+**链接**： <https://arxiv.org/abs/2608.20953>
 
 ## 二、GitHub热门AI开源项目（2026.08.24-08.26）
 
@@ -111,7 +111,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：头部实验室亲自下场把「agent harness」做成开源工件，和当天 Prime Agent 论文形成呼应——开源 harness 正在成为与模型权重同等重要的基础设施。
 
-**链接**：https://github.com/deepseek-ai/deepseek-harness
+**链接**： <https://github.com/deepseek-ai/deepseek-harness>
 
 ### 2. marin-community/marin
 
@@ -121,7 +121,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：基础模型训练长期被少数闭源框架把持，marin 把训练流水线串成可复现工程，降低了「自己训一个底座」的门槛，对学术 / 中小团队是稀缺资源。
 
-**链接**：https://github.com/marin-community/marin
+**链接**： <https://github.com/marin-community/marin>
 
 ### 3. anthropics/claude-plugins-official
 
@@ -131,7 +131,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：插件生态从「社区野蛮生长」走向「官方策展」，意味着 Claude Code 的工作流可组合性被正式产品化；对想把 agent 能力沉淀为可复用插件的团队是权威入口。
 
-**链接**：https://github.com/anthropics/claude-plugins-official
+**链接**： <https://github.com/anthropics/claude-plugins-official>
 
 ### 4. TauricResearch/TradingAgents
 
@@ -141,7 +141,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：多 agent 金融框架的代表作，把严肃决策场景里的角色显式拆分；在量化与 AI 交叉热度持续走高下，是了解 agent 编排在金融落地的一道窗口。
 
-**链接**：https://github.com/TauricResearch/TradingAgents
+**链接**： <https://github.com/TauricResearch/TradingAgents>
 
 ### 5. tinyhumansai/openhuman
 
@@ -151,7 +151,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「本地优先 + 个人记忆 + agent 编队」正切中隐私焦虑下的个人 AI 方向；把多个子 agent 当「车队」编排的思路，比单一聊天机器人更接近「个人操作系统」。
 
-**链接**：https://github.com/tinyhumansai/openhuman
+**链接**： <https://github.com/tinyhumansai/openhuman>
 
 ### 6. AgriciDaniel/claude-obsidian
 
@@ -161,7 +161,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「个人知识管理」和「agent 自动归档」结合，且数据完全本地（纯 Markdown 你拥有），在 AI 笔记赛道里是「可拥有、可迁移」的清晰定位。
 
-**链接**：https://github.com/AgriciDaniel/claude-obsidian
+**链接**： <https://github.com/AgriciDaniel/claude-obsidian>
 
 ### 7. basecamp/omarchy
 
@@ -171,7 +171,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：当 AI 开始「住进操作系统」，Omarchy 把桌面当成 agent 的可编程环境——这是端侧 AI 从「应用内助手」走向「系统级 agent」的信号，值得关注其开发者工作流影响。
 
-**链接**：https://github.com/basecamp/omarchy
+**链接**： <https://github.com/basecamp/omarchy>
 
 ### 8. freestylefly/awesome-gpt-image-2
 
@@ -181,7 +181,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：图像生成进入「提示词工程工业化」阶段，这个项目把经验沉淀成模板与 Skills，降低了把 GPT-Image-2 用进生产链路的门槛；对做 AIGC 工作流的团队是现成素材库。
 
-**链接**：https://github.com/freestylefly/awesome-gpt-image-2
+**链接**： <https://github.com/freestylefly/awesome-gpt-image-2>
 
 ## 三、精选AI行业资讯（2026.08.24-08.26）
 

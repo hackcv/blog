@@ -27,56 +27,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：LLM 驱动的 AI 智能体在自动化工程与信息工作流中日益普遍，却很少评估任务的实际工作量，常采取"最大上下文优先"策略——即使一行改动也可能演变成对整个代码库的全面审计。本文形式化"最低充分执行"与"智能体认知冗余比(ACRR)"，提出 E3（估计-执行-扩展）框架：先构建"初始运行点"，走最小可行路径，仅在验证失败时扩大范围。在确定性基准 MSE-Bench 上，E3 在保持 100% 成功率的同时将成本降低 85%、token 消耗减少 91%、文件检查量降低 92%。
 **领域**：AI Agent / 软件工程 / 推理效率
 **推荐理由**：直击 Agent"过度配置"痛点，借鉴电力系统"初始运行点"思路把成本砍掉九成，对长任务编码 Agent 的工程落地有立竿见影的参考价值。
-**链接**：https://arxiv.org/abs/2607.13034
+**链接**： <https://arxiv.org/abs/2607.13034>
 
 ### 2. Hy-Embodied-VLM-1.0: Efficient Physical-World Agents
 
 **摘要**：构建具备能力的具身智能体不仅需要多模态感知，还需要面向动作推理、适应演化环境与物理交互的 Agent 能力。本文提出 Hy-Embodied-VLM-1.0，一个面向物理世界具身智能体的高效强力基础模型。基于动作中心的能力分类法（动作相关状态理解、动作迁移推理、序列与自适应推理）构建系统数据管线，在 Hy3-A3B 语言主干与 Hy-ViT2 视觉编码器上采用高效 MoE 架构。在覆盖具身感知/物理世界理解/具身推理的 38 个基准中，19 个达到同规模最佳，平均性能较上一代提升 8.4%；仅激活 3B 参数即接近上一代 32B 激活参数的表现。
 **领域**：具身智能 / 多模态 / 机器人
 **推荐理由**：用 3B 激活参数逼近 32B 的老模型且面向延迟敏感部署，是"小参数大模型"在具身场景的务实路线，值得端侧/机器人团队关注。
-**链接**：https://arxiv.org/abs/2607.12894
+**链接**： <https://arxiv.org/abs/2607.12894>
 
 ### 3. Let RGB Be the Language of Vision (RINO)
 
 **摘要**：本文提出视觉模型的统一表述：将掩码、深度图等结构化视觉信号全部表示为 RGB 图像，把通用视觉任务转化为统一的"RGB 进、RGB 出"图像编辑问题（RINO）。不同视觉信息共享与自然图像相同的编解码架构与参数，使单一模型通过统一视觉接口跨任务迁移，类似语言模型处理文本的方式。基于通用图像编辑主干、无需任务专属微调，RINO 在分割、深度估计等密集理解任务与姿态到图像生成等密集条件生成任务上均展现稳健的零样本性能。
 **领域**：计算机视觉 / 统一视觉模型
 **推荐理由**：用"RGB 即视觉语言"的统一接口替代一堆任务专属头，思路类似 ViT 之于分类，对构建通用视觉底座有启发。
-**链接**：https://arxiv.org/abs/2607.12450
+**链接**： <https://arxiv.org/abs/2607.12450>
 
 ### 4. Contrastive-Augmented Flow Matching for Style-Content Disentanglement (CAtFM)
 
 **摘要**：学习分离内容与风格表征对可控生成与组合泛化至关重要，但主要用生成目标训练的扩散/流匹配模型常产生纠缠或错位的因子。本文提出 CAtFM，将对比正则化整合进可逆流匹配形式，对预测端点施加对比监督，在不假设纯内容/纯风格表征的前提下隐式促进解耦。在 CLIP 嵌入空间及冻结 DINO、ALIGN 编码器上验证，在 ImageNet、WikiArt、DomainNet、DTD 上提升内容与风格检索、增强聚类分离、获得更强的开集鲁棒性。
 **领域**：生成模型 / 表征解耦
 **推荐理由**：把"解耦"从中间隐变量约束改到端点对比，实现更简单、分布偏移下更鲁棒，对风格迁移/可控生成产品有直接价值。
-**链接**：https://arxiv.org/abs/2607.12404
+**链接**： <https://arxiv.org/abs/2607.12404>
 
 ### 5. How to Realize Recursively Self-Improving Agents and Personal Singularity
 
 **摘要**：LLM Agent 已能规划、用工具、维护记忆、执行长程任务，引发两个相关问题：如何让 Agent 改进其学习与行动的机制，又如何让这种改进增强用户（而非仅软件）的持久能力。本文提出受治理的多 Agent 架构，引入"个人奇点"作为有界的"人-AI 协同进化"目标；每个 Agent 由目标契约、受限范围、已验证工具注册表、工具级测试、端到端基准、所有者控制的自治策略等定义。文章提供安全不变量、基准设计与实现路线图，并明确这是立场与系统设计论文，并未声称无限制递归自改进已实现。
 **领域**：AI Agent / 系统设计 / 安全治理
 **推荐理由**：把"递归自改进"从科幻拉回可治理的架构设计，给出边界、路由与工具优先执行等具体不变量，对构建可信长期自治系统有框架价值。
-**链接**：https://arxiv.org/abs/2607.12254
+**链接**： <https://arxiv.org/abs/2607.12254>
 
 ### 6. Adaptive Cross-Modal Fusion with Sparse Attention for Pedestrian Crossing Intention Prediction (ADAPT)
 
 **摘要**：行人过街意图预测是自动驾驶安全关键任务。本文提出 ADAPT，一个联合建模局部/全局视觉上下文与时序运动动态的多模态框架，处理 RGB、局部深度、全局语义图、全局深度图四类空间对齐模态，以及自车速度、行人 bbox、骨架姿态。经五模块（共享权重 Swin V2 主干、跨模态引导注意力、Mamba 运动编码、稀疏跨模态注意力、ViT 时序融合），在 JAAD 与 PIE 基准上一致超越 SOTA，且单样本推理仅 17.23ms。JAAD 上 AUC 达 0.85，PIE 上准确率 0.92。
 **领域**：计算机视觉 / 自动驾驶 / 多模态融合
 **推荐理由**：稀疏跨模态注意力在保持精度的同时把推理压到 17ms 级，是"安全关键+实时"场景的实用范式，可直接借鉴到车载感知。
-**链接**：https://arxiv.org/abs/2607.12293
+**链接**： <https://arxiv.org/abs/2607.12293>
 
 ### 7. MM-ToolSandBox: A Unified Framework for Evaluating Visual Tool-Calling Agents
 
 **摘要**：本文提出 MM-ToolSandBox，一个面向视觉落地工具调用 Agent 的基准与评估框架，提供跨越 16 个应用领域、500+ 工具的"有状态"执行环境，支持多图、多轮任务，要求 Agent 把逐步到达的视觉输入接地为可执行工具调用，并处理目标修订、纠错、状态变更等真实对话现象。自动场景生成管线产出 258 个人工核验的场景与 50 个交互式 UI 变体。评测 12 个 SOTA 模型（4B 开源到前沿闭源），最佳模型成功率仍低于 50%；失败分析显示 53% 的失败源于"从图像中提取信息错误"而非规划错误——规模越大越卡在"感知"而非"决策"。
 **领域**：计算机视觉 / Agent 评测 / 工具调用
 **推荐理由**：用真实数据戳破"大模型工具调用已 ready"的幻觉——视觉精度才是瓶颈，对评测与训练多模态 Agent 都给出明确方向。
-**链接**：https://arxiv.org/abs/2607.11818
+**链接**： <https://arxiv.org/abs/2607.11818>
 
 ### 8. Agentic Routing: The Harness-Native Data Flywheel
 
 **摘要**：LLM Agent 越来越由"执行 harness"而非单次模型调用驱动，而前沿与开源模型在代码编辑、长上下文、工具使用、数学推理、低延迟等维度上各有所长，使"Agent 内模型选择"成为核心系统问题。本文提出 Harness-Native 智能体路由：在步级别根据完整 harness 状态选择最适配的单一模型（成本最优）或多个互补模型（集成精度）。关键洞见是每个路由决策天然产生结构化数据记录（查询、状态、模型选择、执行轨迹、结果、成本），其标签由环境而非路由器给出，这些记录构成"harness 原生数据飞轮"，用 OpenSquilla（四层路由栈 + LightGBM 冷启动排序器）实例化，并在 DRACO、PinchBench 上论证路由不仅是成本管控，更是 Agent 原生训练的数据引擎。
 **领域**：AI Agent / 系统 / 模型路由
 **推荐理由**：把"路由"从单轮成本-质量权衡升级为持续产生训练数据的飞轮，对多模型 Agent 基建是稀缺的系统级视角。
-**链接**：https://arxiv.org/abs/2607.11399
+**链接**： <https://arxiv.org/abs/2607.11399>
 
 ## 二、GitHub热门AI开源项目（2026.07.13-07.15）
 
@@ -85,56 +85,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：在你的机器上运行的 AI 求职框架，基于 Claude Code 自动搜索岗位、定制简历与投递。
 **热度**：⭐ 22k（近 7 天 +15k）· TypeScript
 **推荐理由**：把 Agent 落到"找工作"这种高频刚需，增速惊人是社区用脚投票的信号，适合想做个人自动化 Agent 的开发者参考。
-**链接**：https://github.com/MadsLorentzen/ai-job-search
+**链接**： <https://github.com/MadsLorentzen/ai-job-search>
 
 ### 2. asgeirtj/system_prompts_leaks
 
 **简介**：汇总从 Claude（Fable 5、Opus 4.8、Claude Code 等）与 ChatGPT 等助手中提取出的内部 system prompt。
 **热度**：⭐ 57k（近 7 天 +6.1k）· JavaScript
 **推荐理由**：系统提示词透明度成为开发者关注焦点，仓库本身也是研究"提示词泄露/对齐"的一手样本。
-**链接**：https://github.com/asgeirtj/system_prompts_leaks
+**链接**： <https://github.com/asgeirtj/system_prompts_leaks>
 
 ### 3. diegosouzapw/OmniRoute
 
 **简介**：免费 AI 网关：一个端点聚合 231+ 供应商（含 50+ 免费），把 Gemini/Claude/OpenAI/Codex 等统一为 OpenAI 兼容 API。
 **热度**：⭐ 17k（近 7 天 +4.4k）· TypeScript
 **推荐理由**：成本敏感时代"一个端点打天下"的网关需求旺盛，对想把多家模型混用的个人/小团队很实用。
-**链接**：https://github.com/diegosouzapw/OmniRoute
+**链接**： <https://github.com/diegosouzapw/OmniRoute>
 
 ### 4. ogulcancelik/herdr
 
 **简介**：活在终端里的 Agent 多路复用器（agent multiplexer），可在单终端内编排多个 Agent。
 **热度**：⭐ 16k（近 7 天 +3.4k）· Rust
 **推荐理由**：Agent 从"单线程对话"走向"多工并行"，herdr 用 Rust 实现轻量多路复用，契合终端工作流。
-**链接**：https://github.com/ogulcancelik/herdr
+**链接**： <https://github.com/ogulcancelik/herdr>
 
 ### 5. nexu-io/open-design
 
 **简介**：开源的 Claude Design 替代品，本地优先桌面应用，用 AI 做设计。
 **热度**：⭐ 78k（近 7 天 +2.3k）· TypeScript
 **推荐理由**：AI 创造力正从代码渗透设计，本地优先+开源替代闭源设计工具，是"AI 去软件订阅化"的代表。
-**链接**：https://github.com/nexu-io/open-design
+**链接**： <https://github.com/nexu-io/open-design>
 
 ### 6. JCodesMore/ai-website-cloner-template
 
 **简介**：用一条命令、借助 AI 编码 Agent 克隆任意网站。
 **热度**：⭐ 28k（近 7 天 +1.9k）· TypeScript
 **推荐理由**：把"仿站"模板化，降低了前端原型门槛，展示 AI 编码 Agent 在 Web 脚手架上的成熟度。
-**链接**：https://github.com/JCodesMore/ai-website-cloner-template
+**链接**： <https://github.com/JCodesMore/ai-website-cloner-template>
 
 ### 7. alibaba/page-agent
 
 **简介**：JavaScript 页面内 GUI Agent，用自然语言控制 Web 界面。
 **热度**：⭐ 26k（近 7 天 +1.9k）· JavaScript
 **推荐理由**：阿里把 GUI Agent 做到"页面内"粒度，对 RPA/自动化测试/浏览器助手场景是直接可用的能力。
-**链接**：https://github.com/alibaba/page-agent
+**链接**： <https://github.com/alibaba/page-agent>
 
 ### 8. open-multi-agent/open-multi-agent
 
 **简介**：TypeScript AI Agent 编排框架，支持动态工作流，用自然语言描述目标即可编排。
 **热度**：⭐ 6.6k（近 7 天 +56）· TypeScript
 **推荐理由**：轻量、面向"目标驱动"的多 Agent 编排，适合想自己搭 Agent 协作系统的团队做底座。
-**链接**：https://github.com/open-multi-agent/open-multi-agent
+**链接**： <https://github.com/open-multi-agent/open-multi-agent>
 
 ## 三、精选AI行业资讯（2026.07.13-07.15）
 

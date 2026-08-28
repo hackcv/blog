@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：将 agent harness 的自适应编排建模为因果学习问题，提出反事实干预学习，从置信度加权的执行证据中估计 workflow 优势，仅在预期优势充足时才做 workflow 调整，并引入「成功率保持」目标与优势边界授权约束。
 **领域**：AI Agent / 长程推理 / 强化学习
 **推荐理由**：在信息检索、软件工程、终端交互三类长程任务上，CHILL-Harness 在保持或提升任务成功率的同时显著降低 token 消耗与执行时间——直击「harness 写死导致算力浪费」的工程痛点。
-**链接**：https://arxiv.org/abs/2607.25825
+**链接**： <https://arxiv.org/abs/2607.25825>
 
 ### 2\. Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL
 
 **摘要**：提出 self-speculating agent——单个模型既在 agent 模式解题，又在 speculator 模式从部分轨迹预测下一步工具调用，充分复用前缀 KV cache；用联合 agent-speculator RL 交替更新，使投机目标来自 agent 自身 rollout。
 **领域**：AI Agent / 推理加速 / KV cache
 **推荐理由**：把「工具调用投机」从独立 draft 模型统一进主模型，Qwen3-4B 的 next-tool-call Hit@1 从 44.1 提升到 61.2，Qwen3.5-4B 从 48.9 到 66.3，且任务成功率不降——端到端复用 KV cache 的思路很实用。
-**链接**：https://arxiv.org/abs/2607.25816
+**链接**： <https://arxiv.org/abs/2607.25816>
 
 ### 3\. AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding
 
 **摘要**：统一 MTP 与 block-parallel 投机解码的训练框架，按数据分专长（MTP 训对话、block-diffusion 训代码/数学），并提出 DFly 混合 backbone；推理时把验证当作跨请求的批级共享资源在线调节。
 **领域**：LLM 推理加速 / 投机解码
 **推荐理由**：在 Hy3-A21B 上平均接受长度提升约 30%，4–64 并发下相对自回归提速 1.98–2.40x，且比 DFlash 高 10.5–11.8% 吞吐——覆盖真实负载异构性的投机解码实践。
-**链接**：https://arxiv.org/abs/2607.25852
+**链接**： <https://arxiv.org/abs/2607.25852>
 
 ### 4\. Are Prompt Optimizers Blind? Cross-Modal Visual Feedback for Automatic Prompt Optimization
 
 **摘要**：指出多模态任务上自动提示优化（APO）因「反馈通道盲」而受限——优化器只读问题/预测/答案，看不到模型失败的那张图；提出 CMVF，先用更强的 VLM 对每张失败图做视觉诊断，再压缩成可复用的视觉盲点模式驱动 prompt 改写。
 **领域**：多模态 / 视觉语言模型 / 提示优化
 **推荐理由**：在 12 个 VQA 数据集、4 个目标 VLM 上每项目标平均提升 2.4 点（最高 +6.5），且部署产物仍是普通文本 prompt、推理成本不变——零运行时开销的「看图改 prompt」很适合落地。
-**链接**：https://arxiv.org/abs/2607.24354
+**链接**： <https://arxiv.org/abs/2607.24354>
 
 ### 5\. Layered Scenario-Driven LLM Control
 
 **摘要**：提出用结构化提示在运行时控制 LLM agent 行为，把持久上下文与场景特定约束结合，无需微调即可在交互中修改 agent 行为；在实时多模态具身 agent ARDena（语音+视觉+工具+avatar）上验证控制有效性、延迟与稳定性。
 **领域**：具身智能 / LLM 行为控制
 **推荐理由**：仅用「场景定义」就能产生显著差异的交互行为且维持实时稳定，给不想重训模型的团队提供了一个轻量可控的 agent 行为编排范式。
-**链接**：https://arxiv.org/abs/2607.22651
+**链接**： <https://arxiv.org/abs/2607.22651>
 
 ### 6\. RP-OPSD: Resolution-Privileged On-Policy Self-Distillation for Multimodal Large Language Models
 
 **摘要**：利用同一图像高/低分辨率视图的信息差作为特权信号：学生在 1/4 分辨率图上生成 on-policy 轨迹，教师用原分辨率图提供监督，最小化两者沿学生轨迹的输出分布差异。
 **领域**：多模态大模型 / 知识蒸馏 / 训练加速
 **推荐理由**：无需额外人工标注或外部模型，在 Qwen3.5-9B 上原分辨率平均性能相对提升 5.45%、训练提速 1.78x——把「分辨率差」变成可扩展的特权信息，思路简洁可复用。
-**链接**：https://arxiv.org/abs/2607.24447
+**链接**： <https://arxiv.org/abs/2607.24447>
 
 ### 7\. Many-body Tipping Dynamics of ChatGPT-like AIs
 
 **摘要**：解释为何架构/训练差异巨大的类 ChatGPT AI 即使贪心解码也会「翻车」到有害/误导/重复内容：将 token 视为自旋，翻车是跨越有限层系统时竞争输出盆地之间的动力学首次穿越过程，注意力无序度控制着向边界的输运。
 **领域**：AI 安全 / 可解释性 / 复杂系统
 **推荐理由**：把一类广泛的 AI 失效归为「可预见的工程风险」而非不可预测行为，对法律与社会层面的 AI 危害评估有直接参考价值。
-**链接**：https://arxiv.org/abs/2607.25279
+**链接**： <https://arxiv.org/abs/2607.25279>
 
 ### 8\. Subspace-Aligned Rewiring (SAR): 0.58% 参数让推理能力不降反升
 
 **摘要**：清华 AIR 与字节跳动 Seed 发现 RL 提升推理时真正有用的改动早已藏在模型「记忆结构」里，提出后处理工具 SAR——训练完成后做一次数学重连线，无需重训即可让模型表现更好、用更少参数、跨任务配合更顺。
 **领域**：大模型推理 / 参数高效 / 强化学习后处理
 **推荐理由**：用「子空间对齐重连线」化解「推理饱和」与「跨领域干扰」两大困境，0.58% 参数级别的后处理即可见效——给已被 RL 训「练死板」的模型提供零重训救活方案。
-**链接**：https://arxiv.org/abs/2607.03065
+**链接**： <https://arxiv.org/abs/2607.03065>
 
 ## 二、GitHub热门AI开源项目（2026.07.26-07.29）
 
@@ -84,56 +84,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：Orca 是管理一队并行 coding agent 的 ADE（Agent Development Environment），用自己的订阅即可跑任意 coding agent，支持桌面与移动端，从 Slack / web / 桌面 / MCP 统一调度。
 **热度**：TrendShift 实时榜约 56.3k★（当日 New）
 **推荐理由**：把「多 agent 并行 fleet」做成可自托管的工作台，是企业内规模化使用 coding agent 的基础设施信号。
-**链接**：https://github.com/stablyai/orca
+**链接**： <https://github.com/stablyai/orca>
 
 ### 2\. kvcache-ai/ktransformers
 
 **简介**：清华 MADSys 出品的异构 MoE 推理与微调框架，CPU-GPU-NPU 混合部署，NUMA 感知、AMX/AVX 优化、DeepSeek-V3/R1 类超大模型可在 24GB 显存跑长上下文，并集成 LLaMA-Factory 做 LoRA SFT。
 **热度**：约 18.5k–22k★（07-29 当日 +360 to +7k 区间波动，TrendShift 在榜）
 **推荐理由**：把推理优化推进到 CPU 指令集 / MoE 路由 / 量化权重 / 服务调度这一层，本地跑超大 MoE 的性价比首选。
-**链接**：https://github.com/kvcache-ai/ktransformers
+**链接**： <https://github.com/kvcache-ai/ktransformers>
 
 ### 3\. jordan-gibbs/hyperresearch
 
 **简介**：Agent 驱动的研究知识库——agent 自动采集、检索并将 web 研究综合成持久、可搜索的 wiki。
 **热度**：TrendShift 实时榜约 21k★（当日 New）
 **推荐理由**：把「Agent 做研究」从一次性问答沉淀为可复用知识库，呼应长程 agent 工程化的趋势。
-**链接**：https://github.com/jordan-gibbs/hyperresearch
+**链接**： <https://github.com/jordan-gibbs/hyperresearch>
 
 ### 4\. KnockOutEZ/wigolo
 
 **简介**：面向 AI coding agent 的本地优先 web 搜索/抓取/爬取/研究工具，走 MCP 协议，无 API key、无云端、查询 $0 成本，公测中。
 **热度**：TrendShift 实时榜约 25.7k★（当日 New）
 **推荐理由**：把「agent 联网之眼」做成零成本、本地优先的 MCP 工具，规避第三方搜索 API 费用与合规顾虑。
-**链接**：https://github.com/KnockOutEZ/wigolo
+**链接**： <https://github.com/KnockOutEZ/wigolo>
 
 ### 5\. OpenMOSS/MOSS-Transcribe-Diarize
 
 **简介**：开源的语音转写 + 说话人分离工具，面向 NLP / 音频处理场景。
 **热度**：TrendShift 实时榜约 21.6k★（当日 New）
 **推荐理由**：会议/访谈类音频一键转写并区分说话人，是 AI 语音工作流的实用开源拼图。
-**链接**：https://github.com/OpenMOSS/MOSS-Transcribe-Diarize
+**链接**： <https://github.com/OpenMOSS/MOSS-Transcribe-Diarize>
 
 ### 6\. XiaoYouChR/Ghost-Downloader-3
 
 **简介**：AI 增强的跨平台、多协议、Fluent Design 并发下载器，基于 Python & Qt 构建。
 **热度**：TrendShift 实时榜约 25.6k★（当日）
 **推荐理由**：把 AI 能力塞进老牌「下载器」品类，跨平台 + 多协议 + 现代 UI 的实用工具。
-**链接**：https://github.com/XiaoYouChR/Ghost-Downloader-3
+**链接**： <https://github.com/XiaoYouChR/Ghost-Downloader-3>
 
 ### 7\. SigNoz/signoz
 
 **简介**：OpenTelemetry 原生的开源可观测平台，日志/指标/链路一体，配合 SigNoz MCP 与云端 AI teammate 帮团队构建更健壮的应用。
 **热度**：TrendShift 实时榜约 3.4k★（当日）
 **推荐理由**：AI agent 上生产后的可观测性刚需——分布式追踪 + APM 一体，且原生接 MCP。
-**链接**：https://github.com/SigNoz/signoz
+**链接**： <https://github.com/SigNoz/signoz>
 
 ### 8\. nethical6/conversation-steganography
 
 **简介**：用 LLM 把秘密信息藏进看起来正常的聊天文本中，本地 LLM 即可运行。
 **热度**：TrendShift 实时榜约 37.6k★（当日 New）
 **推荐理由**：把「语义隐蔽通信」做成一个轻量可玩的开源项目，对隐私/红队场景有启发，但注意合规边界。
-**链接**：https://github.com/nethical6/conversation-steganography
+**链接**： <https://github.com/nethical6/conversation-steganography>
 
 ## 三、精选AI行业资讯（2026.07.27-07.29）
 

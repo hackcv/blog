@@ -18,61 +18,61 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 - **方向**：arXiv/网络安全/AI Agent
 - **摘要**：提出了首个覆盖漏洞发现、POC生成、补丁生成全生命周期的AI Agent网络安全能力评测基准CyberGym-E2E，解决了现有安全评测规模和范围有限的问题。
 - **推荐原因**：填补了AI Agent网络安全能力全生命周期评测的空白，对安全领域智能体开发有极高参考价值。
-- **链接**：https://arxiv.org/abs/2606.04460
+- **链接**： <https://arxiv.org/abs/2606.04460>
 
 ### 2. AICompanionBench: Benchmarking LLMs-as-Judges for AI Companion Safety
 - **方向**：arXiv/AI安全/大模型评测
 - **摘要**：首个公开的AI陪伴场景安全评测数据集，包含2123条真实对话标注，覆盖9类安全风险类别，评测了20个主流大模型的安全检测能力。
 - **推荐原因**：首次公开了AI陪伴场景的安全评测数据集，为大模型安全对齐提供了重要基准。
-- **链接**：https://arxiv.org/abs/2606.04867
+- **链接**： <https://arxiv.org/abs/2606.04867>
 
 ### 3. The Meta-Agent Challenge: Are Current Agents Capable of Autonomous Agent Development?
 - **方向**：arXiv/多Agent/智能体开发
 - **摘要**：提出了Meta-Agent Challenge评测框架，测试大模型自主开发智能体系统的能力，发现当前前沿模型在该任务上仍有较大提升空间。
 - **推荐原因**：提出了智能体自主开发能力的评测框架，是迈向通用智能体的重要探索。
-- **链接**：https://arxiv.org/abs/2606.04455
+- **链接**： <https://arxiv.org/abs/2606.04455>
 
 ### 4. Plan First, Judge Later, Run Better: A DMAIC-Inspired Agentic System for Industrial Anomaly Detection
 - **方向**：arXiv/工业AI/异常检测
 - **摘要**：将经典DMAIC质量管理框架与大模型Agent结合，提出了面向工业异常检测的多Agent系统，解决了 heterogeneous 模态数据统一处理的问题。
 - **推荐原因**：将经典质量管理框架与大模型Agent结合，为高风险工业场景的AI落地提供了可复用范式。
-- **链接**：https://arxiv.org/abs/2606.04599
+- **链接**： <https://arxiv.org/abs/2606.04599>
 
 ### 5. SCI-PRM: A Tool Aware Process Reward Model for Scientific Reasoning Verification
 - **方向**：arXiv/AI4Science/科学推理
 - **摘要**：首次将过程奖励模型拓展到科学推理领域，提出的SCI-PRM支持测试时缩放和强化学习训练，大幅提升了科研场景下大模型回答的准确性。
 - **推荐原因**：首次将过程奖励模型拓展到科学推理领域，大幅提升了科研场景下大模型回答的准确性。
-- **链接**：https://arxiv.org/abs/2606.04579
+- **链接**： <https://arxiv.org/abs/2606.04579>
 
 ### 6. Does Artificial Intelligence Advance Science?
 - **方向**：arXiv/AI社会学/科研计量
 - **摘要**：基于百万级论文数据分析发现，AI相关论文的创新度比非AI论文高5.5-10.2个百分点，工具导向的AI研究对科研创新的推动作用最显著。
 - **推荐原因**：基于百万级论文数据量化分析了AI对科研创新的实际影响，为AI研发投入决策提供了实证依据。
-- **链接**：https://arxiv.org/abs/2606.05118
+- **链接**： <https://arxiv.org/abs/2606.05118>
 
 ### 7. Who Needs Labels? Adapting Vision Foundation Models with the Metadata You Already Have
 - **方向**：arXiv/计算机视觉/小样本学习
 - **摘要**：提出了无需人工标注的视觉基础模型适配方法，仅利用现有元数据即可实现模型在细分场景的微调，性能接近全监督训练水平。
 - **推荐原因**：提出了无需人工标注的视觉基础模型适配方法，大幅降低了CV模型在细分场景的落地成本。
-- **链接**：https://arxiv.org/abs/2606.05107
+- **链接**： <https://arxiv.org/abs/2606.05107>
 
 ### 8. LongDS-Bench: On the Failure of Long-Horizon Agentic Data Analysis
 - **方向**：arXiv/数据分析/智能体评测
 - **摘要**：提出了长周期数据分析智能体评测基准LongDS-Bench，发现当前最优模型在该任务上准确率不足50%，核心瓶颈是长周期状态管理能力不足。
 - **推荐原因**：揭示了当前大模型Agent在长周期数据分析任务中的核心瓶颈，为智能体能力迭代指明了方向。
-- **链接**：https://arxiv.org/abs/2605.30434
+- **链接**： <https://arxiv.org/abs/2605.30434>
 
 ### 9. The Digital Apprentice: A Framework for Human-Directed Agentic AI Development
 - **方向**：arXiv/人机协同/智能体开发
 - **摘要**：提出了渐进式放权的智能体开发框架，智能体在通过能力验证后逐步获得更高权限，很好平衡了AI自主性与人类可控性的矛盾。
 - **推荐原因**：提出了渐进式放权的智能体开发框架，很好平衡了AI自主性与人类可控性的矛盾。
-- **链接**：https://arxiv.org/abs/2606.04321
+- **链接**： <https://arxiv.org/abs/2606.04321>
 
 ### 10. Economy of Minds: Emerging Multi-Agent Intelligence with Economic Interactions
 - **方向**：arXiv/多Agent/经济学
 - **摘要**：将拍卖竞争和经济选择机制引入多Agent系统，实现了无需全局编排的智能涌现，在多步推理任务上性能超越单体模型基线。
 - **推荐原因**：将市场竞争机制引入多Agent系统，为大规模分布式AI系统设计提供了新思路。
-- **链接**：https://arxiv.org/abs/2606.02858
+- **链接**： <https://arxiv.org/abs/2606.02858>
 
 
 ## 🌟 二、GitHub 热门项目
@@ -144,61 +144,61 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 - **来源**：HackerNews/科技媒体
 - **摘要**：6月1日Anthropic向SEC秘密提交S-1招股书，启动上市流程，投后估值9650亿美元，超越OpenAI的8520亿美元，成为全球估值最高的AI创业公司。
 - **推荐原因**：标志着AI产业从技术竞赛进入资本兑现阶段，行业格局正在发生重大变化。
-- **链接**：https://news.ycombinator.com/item?id=41567892
+- **链接**： <https://news.ycombinator.com/item?id=41567892>
 
 ### 2. OpenAI发布Codex重大更新，周活用户突破500万
 - **来源**：HackerNews/OpenAI官方博客
 - **摘要**：OpenAI直播发布Codex三项更新：智能体插件、定点修改、文档一键生成交互式站点，同时宣布Codex周活达500万，较年初增长8倍，将整合进ChatGPT服务所有订阅用户。
 - **推荐原因**：AI编程助手进入普及阶段，未来软件开发的生产方式将发生根本性变革。
-- **链接**：https://news.ycombinator.com/item?id=41568214
+- **链接**： <https://news.ycombinator.com/item?id=41568214>
 
 ### 3. 微软Build大会发布7款自研AI模型，宣布Windows原生支持Agent
 - **来源**：HackerNews/微软官方博客
 - **摘要**：微软在Build 2026大会上一次性发布7款自研MAI系列AI模型，覆盖推理、编码、多模态等全栈能力，同时宣布Windows完成AI底层重构，16亿用户将原生获得Agent能力。
 - **推荐原因**：标志着Agent技术正式进入消费级市场，普通用户无需额外部署即可使用智能体服务。
-- **链接**：https://news.ycombinator.com/item?id=41568547
+- **链接**： <https://news.ycombinator.com/item?id=41568547>
 
 ### 4. DeepSeek启动首轮融资，估值达3500-4000亿元，腾讯、宁德时代参投
 - **来源**：HackerNews/财经媒体
 - **摘要**：国内大模型厂商DeepSeek正在进行首轮融资，目标募资500亿元，估值3500-4000亿元，领投方包括腾讯和宁德时代，有望成为国内估值最高的AI创业公司。
 - **推荐原因**：国产大模型获得资本高度认可，AI与新能源等实体产业的融合趋势正在加速。
-- **链接**：https://news.ycombinator.com/item?id=41569012
+- **链接**： <https://news.ycombinator.com/item?id=41569012>
 
 ### 5. 中国批准全球首个侵入式脑机接口产品上市
 - **来源**：HackerNews/科技媒体
 - **摘要**：中国国家药监局批准了全球首个侵入式脑机接口芯片产品上市，截瘫患者植入后可实现握笔写字、控制机械臂等功能，芯片信号分辨率超95%，延迟低于30毫秒。
 - **推荐原因**：脑机接口技术从实验室走向商业化应用的里程碑事件，人机交互领域的重大突破。
-- **链接**：https://news.ycombinator.com/item?id=41569328
+- **链接**： <https://news.ycombinator.com/item?id=41569328>
 
 ### 6. 阿里千问开放第三方Agent生态，肯德基、瑞幸等首批接入
 - **来源**：HackerNews/阿里官方公告
 - **摘要**：阿里千问宣布全面开放第三方Agent和Skill生态，企业可在千问平台构建品牌专属智能体，肯德基成为首个接入的餐饮品牌，用户可直接通过千问完成点餐全流程。
 - **推荐原因**：AI Agent从技术走向场景落地的重要信号，智能助手正在成为新一代服务入口。
-- **链接**：https://news.ycombinator.com/item?id=41569671
+- **链接**： <https://news.ycombinator.com/item?id=41569671>
 
 ### 7. 英伟达发布基于CPO技术的Spectrum-X以太网硅光方案
 - **来源**：HackerNews/英伟达官方公告
 - **摘要**：英伟达宣布基于共封装光学（CPO）技术的Spectrum-X以太网硅光方案全面量产，可将AI数据中心的网络带宽提升3倍，功耗降低40%，有效解决了大模型集群通信瓶颈问题。
 - **推荐原因**：解决了大模型训练集群的网络通信瓶颈，为万卡级AI集群的大规模部署扫清了技术障碍。
-- **链接**：https://news.ycombinator.com/item?id=41569943
+- **链接**： <https://news.ycombinator.com/item?id=41569943>
 
 ### 8. 美国颁布AI监管新规，高能力大模型上线前需提前30天报备
 - **来源**：HackerNews/白宫官方公告
 - **摘要**：美国总统签署行政命令，要求参数超过1万亿的大模型上线前必须提前30天向监管机构报备，并提交安全评估报告，明确了分级分类监管的具体标准。
 - **推荐原因**：全球首个国家级AI强监管政策落地，将对AI产业的发展方向产生深远影响。
-- **链接**：https://news.ycombinator.com/item?id=41570218
+- **链接**： <https://news.ycombinator.com/item?id=41570218>
 
 ### 9. OpenClaw百天内登顶GitHub星标历史第一，月活用户突破1000万
 - **来源**：HackerNews/GitHub官方数据
 - **摘要**：开源AI Agent框架OpenClaw发布仅102天，Star数突破120万，超越Linux成为GitHub历史上Star数最高的项目，月活跃用户突破1000万，腾讯、阿里云等云厂商已提供一键部署服务。
 - **推荐原因**：标志着AI Agent技术正式进入普及阶段，开源智能体生态正在加速形成。
-- **链接**：https://news.ycombinator.com/item?id=41570567
+- **链接**： <https://news.ycombinator.com/item?id=41570567>
 
 ### 10. 开发者吐槽Token成本过高，全栈AI项目平均每月消耗40万美元
 - **来源**：HackerNews/开发者社区
 - **摘要**：一位开发者在社区吐槽，公司全栈AI项目每月仅Token调用成本就高达40万美元，投入产出比严重失衡，引发大量开发者共鸣，各大厂商正在推出各种降本方案。
 - **推荐原因**：真实反映了AI落地过程中的核心痛点，Token成本已成为制约AI大规模应用的关键因素。
-- **链接**：https://news.ycombinator.com/item?id=41570892
+- **链接**： <https://news.ycombinator.com/item?id=41570892>
 
 
 ## 🛠️ 四、OpenClaw 热门Skill

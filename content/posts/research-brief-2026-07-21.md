@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：针对 LLM Agent 的长程规划、稀疏奖励归因与动态环境交互难题，提出融合 POMDP 路由与内置自校正奖励模型的智能体工作流：在执行前用奖励模型评估决策轨迹，结合多模态输入与 PPO 等强化学习维持长期结构记忆、动态适配推理路径以抑制错误累积。在 ALFWorld 与 WebShop 上任务成功率与轨迹效率较 ReAct 等基线绝对提升 24.5%，消融证实奖励驱动 critique 模块显著降低幻觉。
 **领域**：Agent / 强化学习 / 工作流
 **推荐理由**：把「奖励驱动的自我纠错」做成可插拔的 Agent 工作流骨架，24.5% 的绝对提升且开源，对做复杂多步自主系统的团队是直接可复用的参考架构。
-**链接**：https://arxiv.org/abs/2607.17038
+**链接**： <https://arxiv.org/abs/2607.17038>
 
 ### 2. Dynamic Agent Skills: A Lifecycle Survey and Taxonomy of Evolving Skill Libraries
 
 **摘要**：对 LLM Agent 把可复用流程（代码函数、NL 指令、SKILL.md 包、工作流图、学习适配器）称作「技能」的现象做分类驱动综述：基于 124 篇 2023–2026 文献，把动态技能系统归纳为「生命周期管理、经验证、可演化的工件库」，提出六类技能分类法、八阶段生命周期架构与轻量技能记录 schema / 十算子词汇表，并指出准入与修复反复关键、验证器质量显著影响技能感知 RL、扁平检索随库增长退化等 caveat。
 **领域**：Agent / 技能系统 / 综述
 **推荐理由**：首次把「技能库」当作会随时间演化的系统而非静态 prompt/工具集合来研究，给出统一术语与报告标准，对做长期运行 Agent、技能自进化产品的团队是方法论地基。
-**链接**：https://arxiv.org/abs/2607.10113
+**链接**： <https://arxiv.org/abs/2607.10113>
 
 ### 3. AgentAbstain: Do LLM Agents Know When Not to Act?
 
 **摘要**：指出现有 Agent 评测多关注任务成功率而忽略「何时该弃权」，在歧义、约束冲突或工具失效时代理可能执行不可逆动作。提出首个 Agent 弃权系统评测框架 AgentAbstain：基于 8 类弃权场景的分类法，构建含 263 对配对任务、覆盖 42 个可执行沙箱环境的基准（每对由受控扰动生成 should-act / should-abstain 变体），并给出全自动配对生成管线 AbstainGen。17 个前沿 LLM × 4 个 harness 中最佳仅 59.5% 配对准确率，且弃权能力与通用解题能力基本独立。
 **领域**：Agent 安全 / 评测 / 对齐
 **推荐理由**：戳中「Agent 该动手还是会乱动手」的真实风险，证明光堆解题能力补不上弃权缺口，对金融/医疗等不可逆操作场景的 Agent 部署是必须正视的评测维度。
-**链接**：https://arxiv.org/abs/2607.10059
+**链接**： <https://arxiv.org/abs/2607.10059>
 
 ### 4. Isolation as a First-Class Principle for LLM-Agent System Safety: Concepts, Taxonomy, Challenges and Future Directions
 
 **摘要**：论证随着 LLM Agent 成为系统「大脑」，安全不再只是输入输出对齐，还关乎系统行为与真实执行后果；但现有文献按攻击类型/应用/基准碎片化，难以解释 prompt 注入、工具滥用、记忆投毒为何同源。提出把「隔离」作为 Agent 系统安全首要原则，以五边界分类法（用户-代理、代理-工具、代理-执行、代理-代理、系统-环境）组织文献，定位隔离最先破裂处、损害跨边界传播路径，并给出「隔离即构造」的研究议程。
 **领域**：Agent 安全 / 系统安全 / 综述
 **推荐理由**：用一个统一视角串起各类 Agent 安全失效，给出可落地的边界防御清单，对做企业级 Agent 平台（最小权限、沙箱、工具隔离）的架构师是清晰的设计原则。
-**链接**：https://arxiv.org/abs/2607.12406
+**链接**： <https://arxiv.org/abs/2607.12406>
 
 ### 5. Critic Experience Bank: Self-Evolving Step-Level Confidence Estimation for LLM Agents
 
 **摘要**：指出 Agent 在外部环境逐步行动，单步错误会浪费交互预算或触发不可逆副作用，可靠部署需要「执行前」的步级置信估计。提出自演化批评框架 CEB：LLM 批评家从自身历史判断及其观测后果积累证据，每轮轨迹后由可见完整反馈的 hindsight LLM 投票该步是否 productive，伪标签存入记忆库，相似步骤复发时检索相关经验注入批评家提示；无需训练、无需真实步级标签。三基准 × 三批评主干上校准（ECE/Brier）与排序（AUC）全面最优，ECE 较最强免训练基线相对降 54%。
 **领域**：Agent / 置信估计 / 自演化
 **推荐理由**：用「经验记忆」给 Agent 的每一步动作做执行前风险打分，且免训练即可把校准误差砍掉过半，对长程自主 Agent 的「该不该这步走」是低成本高回报的护栏。
-**链接**：https://arxiv.org/abs/2607.12397
+**链接**： <https://arxiv.org/abs/2607.12397>
 
 ### 6. PM-Bench: Evaluating Prospective Memory in LLM Agents
 
 **摘要**：关注 Agent 的前瞻记忆（prospective memory）：在从事其他活动的同时，于特定未来线索/状态执行既定意图。受认知科学 Virtual Week 范式启发，提出文本基准 PM-Bench：在模拟的七天一周中，Agent 须持续推进进行中活动并判断延期任务是否到期。对比 8 个 SOTA LLM × 8 种 Agent 配置，最佳方法（GPT-5.4 Agent）F1 仅 65.1%，且不存在跨模型通用的提升策略。
 **领域**：Agent / 记忆评测 / 基准
 **推荐理由**：把「Agent 会不会忘记该在未来做的事」量化成可诊断基准，最佳也才 65% F1，提醒做日程/工作流类 Agent 的产品：长期意图保持是当前模型的普遍短板。
-**链接**：https://arxiv.org/abs/2607.12385
+**链接**： <https://arxiv.org/abs/2607.12385>
 
 ### 7. On-Device Deep Research at 4B: Exposure Bounds Faithfulness, Retrieval Bounds Coverage
 
 **摘要**：研究在个人笔记本（24GB）上跑的端侧深度研究 Agent：检索语料、读源、写出带引用的简报，并分离两个常被混为一谈的量——引用声明忠实度（cited claim faithfulness）与可信覆盖率（trustworthy coverage）。固定 4B 生成器，交叉「每源可见 400 vs 1500 字符」与「黄金论文 vs 检索论文」。结果：暴露度决定忠实度（检索源 0.45→0.58，黄金源 0.37→0.58，二者收敛），且提升稳健；检索决定覆盖率（检索源始终约 0.22，因 recall 卡在 0.40）。额外暴露约 235 输出 token。实践配方：先廉价提高每源暴露度，再把检索召回作为唯一剩余杠杆。
 **领域**：端侧 / 检索增强 / RAG
 **推荐理由**：首次把「小模型引用到底忠不忠、覆盖全不全」拆开度量，给出端侧 Deep Research 的明确调优顺序（先暴露度、后召回），对做本地/隐私优先研究 Agent 的团队是可操作的工程指南。
-**链接**：https://arxiv.org/abs/2607.12257
+**链接**： <https://arxiv.org/abs/2607.12257>
 
 ### 8. A Threshold Exceedance Framework for CBRN Uplift Evaluation in Frontier Language Models
 
 **摘要**：前沿模型进步后，政策制定者与开发者需评估模型访问是否实质提升非专家实施高危化学生物放射核（CBRN）滥用的能力。现有 CBRN 评测在非专家定义、威胁范围、基线、评分、决策规则上不一致，难以跨研究比较。提出阈值超限准则（TEC）框架，把 uplift 研究拆为可独立执行的组件（非专家资格、CBRN 威胁范围、统计估计 material uplift），并区分生成式 uplift（从零协助规划）与修订式 uplift（优化已有规划）。大规模实证显示域异质性：受控发布前评测中模型协助计划偶获专家级评级，但确认 material uplift 仅限放射领域，结论用于缓解与部署治理而非刻画已部署行为。
 **领域**：AI 安全 / 治理 / 风险评估
 **推荐理由**：给「模型是否降低犯罪门槛」这种争议话题一套可复现、预指定基线的评测方法论，区分生成式/修订式 uplift 并强调初步信号≠确认风险，对做前沿模型发布前安全评估的团队是合规参考。
-**链接**：https://arxiv.org/abs/2607.12200
+**链接**： <https://arxiv.org/abs/2607.12200>
 
 ## 二、GitHub热门AI开源项目（2026.07.18–07.21）
 
@@ -84,56 +84,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：一个「越用越懂你」的个人 AI Agent，随使用时间学习用户偏好，是个性化记忆型 Agent 的高星开源实现。
 **热度**：findarepo AI Agents 榜 #5（2026-07-21），218k★，7 日 +3.5k
 **推荐理由**：「个性化记忆型 Agent」从概念走向高星开源实现，对想做长期陪伴/个人助理类产品的团队是现成参考；NousResearch 在开源社区的号召力也加速生态。
-**链接**：https://github.com/NousResearch/hermes-agent
+**链接**： <https://github.com/NousResearch/hermes-agent>
 
 ### 2. TauricResearch/TradingAgents
 
 **简介**：多智能体 LLM 金融交易框架，把研究员、交易员、风控等角色拆成协作 Agent，基于市场数据做交易决策；Python 实现，持续活跃。
 **热度**：GitHub topics/agent（Python）93.7k★，07-18 更新
 **推荐理由**：多 Agent 协作在金融这类强结果导向场景的范本，把「研究→决策→风控」角色化，对量化/ fintech 团队是把 LLM 接入实盘工作流的架构参考。
-**链接**：https://github.com/TauricResearch/TradingAgents
+**链接**： <https://github.com/TauricResearch/TradingAgents>
 
 ### 3. firecrawl/firecrawl
 
 **简介**：面向 Agent 与 LLM 的网页搜索/抓取/交互 API，把任意网站转成干净、可抽取的结构化数据，是 agentic 工作流里最常用的「上网」原语之一。
 **热度**：findarepo AI Agents 榜 #6（2026-07-21），154k★，7 日 +3.1k
 **推荐理由**：Agent 要「上网查」就绕不开可靠抓取，firecrawl 把反爬/渲染/结构化打包成 API，是 RAG/深研类 Agent 的事实标准入口之一。
-**链接**：https://github.com/firecrawl/firecrawl
+**链接**： <https://github.com/firecrawl/firecrawl>
 
 ### 4. OpenHands/OpenHands
 
 **简介**：AI 驱动的软件开发 Agent（前身 OpenDevin），能自主写代码、跑命令、修 bug、提 PR，支持自托管。
 **热度**：GitHub topics/agent（Python）81.3k★，07-19 更新
 **推荐理由**：开源 coding agent 的标杆项目之一，持续高频迭代，对想自建「软件工程 Agent」、又需可自托管/可审计的团队是核心底座。
-**链接**：https://github.com/OpenHands/OpenHands
+**链接**： <https://github.com/OpenHands/OpenHands>
 
 ### 5. hiyouga/LlamaFactory
 
 **简介**：统一高效微调框架，支持 100+ LLM 与 VLM（ACL 2024），提供 LoRA/QLoRA/全参等多种训练范式。
 **热度**：GitHub topics/agent（Python）73.4k★，07-17 更新
 **推荐理由**：微调仍是把通用模型落到垂直场景的刚需，LlamaFactory 以「一套框架训百模」降低门槛，对做领域定制模型的团队是首选基础设施。
-**链接**：https://github.com/hiyouga/LlamaFactory
+**链接**： <https://github.com/hiyouga/LlamaFactory>
 
 ### 6. unslothai/unsloth
 
 **简介**：本地大模型高效训练与推理（支持 Gemma 4、Qwen3.6、DeepSeek、gpt-oss 等），主打显存与速度优化。
 **热度**：GitHub topics/agent（Python）68.4k★，07-20 更新
 **推荐理由**：把「在消费级/单卡上训大模型」变得可行，与 LlamaFactory 互补（更快更省），对资源受限又想自训的团队是直接降本工具。
-**链接**：https://github.com/unslothai/unsloth
+**链接**： <https://github.com/unslothai/unsloth>
 
 ### 7. DietrichGebert/ponytail
 
 **简介**：让 AI Agent「像房间里最懒的高级工程师一样思考」——优先用最小代码/最少改动解决问题，反「过度工程」的 Agent 哲学走红。
 **热度**：findarepo AI Agents 榜 #4（2026-07-21），87k★，7 日 +4.2k
 **推荐理由**：社区开始关注「Agent 写的代码越多、长期维护成本越高」的痛点，对把 Agent 接进生产代码库的团队是值得借鉴的约束策略。
-**链接**：https://github.com/DietrichGebert/ponytail
+**链接**： <https://github.com/DietrichGebert/ponytail>
 
 ### 8. browser-use/browser-use
 
 **简介**：让网站对 AI Agent 可访问的开源工具，把网页交互封装成 Agent 可调用的动作，是 browser agent 方向的高人气项目。
 **热度**：sifted-network AI Agents Top100（2026-07-17），持续活跃
 **推荐理由**：「让 Agent 操作浏览器」是深研/办公自动化的关键能力，browser-use 把可访问性做成开源原语，对做网页 Agent、RPA 替代的团队是直接入口。
-**链接**：https://github.com/browser-use/browser-use
+**链接**： <https://github.com/browser-use/browser-use>
 
 ## 三、精选AI行业资讯（2026.07.18–07.21）
 

@@ -30,7 +30,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：迄今「规格优先 + 零人工审查」在生产级大规模重构上最完整的实证——证明 SCE（Specify→Plan→Verify→Apply→Observe）范式可在真实巨型代码库落地，191 处缺陷在人机执行前被拦截，给「AI 是否会引入隐蔽破坏」提供了可审计的反例。
 
-**链接**：https://arxiv.org/abs/2608.12440
+**链接**： <https://arxiv.org/abs/2608.12440>
 
 ### 2. vToken: Token-Level Virtualization for Reclaimable KV Caches
 
@@ -40,7 +40,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：直击「KV 驱逐算法 vs 块级管理」的粒度错配这一被长期忽视的工程痛点；不改动注意力内核即可把并发与内存效率同时推高一截，且集成成本极低（<50 行），是 vLLM 系部署可直接捡便宜的优化。
 
-**链接**：https://arxiv.org/abs/2608.13263
+**链接**： <https://arxiv.org/abs/2608.13263>
 
 ### 3. Trie Automata for Constrained Decoding over Large Finite Sets
 
@@ -50,7 +50,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「从大集合中受约束选取」从文法编译的 O(慢) 变成预计算掩码的 O(快)，29× 端到端吞吐对需要大规模合法 JSON/枚举/分类输出的 Agent 与工具调用场景是质变；且与 XGrammar 同生态、可插拔。
 
-**链接**：https://arxiv.org/abs/2608.12574
+**链接**： <https://arxiv.org/abs/2608.12574>
 
 ### 4. MBA: Multimodal Benchmark and Agents for Real-World Business Ideation
 
@@ -60,7 +60,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「商业创意」从文本脑暴推进到「看图说话+市场证据」的多模态评测，且开源 30K 基准与训练方案，给「Agent 能否真的做产品/市场创意」提供了首个可量化标尺。
 
-**链接**：https://arxiv.org/abs/2608.11616
+**链接**： <https://arxiv.org/abs/2608.11616>
 
 ### 5. Foresight Without Seeing: Latent Futures for World Action Models
 
@@ -70,7 +70,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用「KV 复用 + 隐式未来槽」绕开了显式视频生成的高昂推理成本，却保留了对动作通路的预测动力学信号——对需要实时、低成本部署的具身智能体是更现实的 WAM 路线。
 
-**链接**：https://arxiv.org/abs/2608.11605
+**链接**： <https://arxiv.org/abs/2608.11605>
 
 ### 6. CLAIM: Leading Open-domain Active Clarification of LLMs with Uncertainty Measurement
 
@@ -80,7 +80,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「是否该追问、追问什么」建模为可由模型自身不确定性驱动的决策，省掉昂贵的人工偏好标注，给开放域助手的「主动理解」提供低成本鲁棒方案，尤其适合多轮产品对话。
 
-**链接**：https://arxiv.org/abs/2608.11631
+**链接**： <https://arxiv.org/abs/2608.11631>
 
 ### 7. XBridge: Entity-Grounded Latent Bridge for Heterogeneous LLM Communication
 
@@ -90,7 +90,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：解决了「异构模型家族间如何共享内部表征而不丢实体」的硬问题，11× 延迟下降让多模型协作从「文本接力」走向「潜层直连」变得可行，对混合部署（如 Qwen 做轻量、Llama 做重推理）的 Agent 系统有直接价值。
 
-**链接**：https://arxiv.org/abs/2608.11676
+**链接**： <https://arxiv.org/abs/2608.11676>
 
 ### 8. Localizing Safety Alignment: MLP Layers and Mid-Network Blocks Encode Refusal Behavior in LLMs
 
@@ -100,7 +100,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用受控权重移植把「安全拒绝到底长在网络的哪一层」回答到 MLP 中段（layers 8–11），既解释了当前对齐为何脆弱（局部、非可加），也为「精准安全干预」（只动少数块、不动能力）提供了可操作的靶点。
 
-**链接**：https://arxiv.org/abs/2608.11583
+**链接**： <https://arxiv.org/abs/2608.11583>
 
 ## 二、GitHub热门AI开源项目（2026.08.14-08.16）
 
@@ -112,7 +112,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「浏览器自动化」从 DOM 树/CLI 工具变成「Agent 直接写 JS 操作页面」，并引入隔离 Space 实现真正并行多 Agent 浏览——是 Agent 接管真实 Web 应用（而非仅 API）这一方向里工程完成度很高的开源方案。
 
-**链接**：https://github.com/citrolabs/ego-lite
+**链接**： <https://github.com/citrolabs/ego-lite>
 
 ### 2. guillaumemeyer/watermarks-remover
 
@@ -122,7 +122,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 Anthropic 给 Claude 全量加文本水印、C2PA 溯源成监管趋势的当下，这类「溯源标记去除」工具的出现本身就是信号——它把「AI 生成内容可溯源」与「用户隐私/数据清洗」之间的张力摆上了台面，值得关注其合规边界。
 
-**链接**：https://github.com/guillaumemeyer/watermarks-remover
+**链接**： <https://github.com/guillaumemeyer/watermarks-remover>
 
 ### 3. ShawnPana/phone-harness
 
@@ -132,7 +132,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「Agent 控制手机」从云真机/模拟器路线拉回「本地 Mac + iPhone Mirroring」的零依赖路线，且设计上尊重人机边界（不抢屏、连接交由用户）——是端侧 Agent 触达真实移动设备的实用范式。
 
-**链接**：https://github.com/ShawnPana/phone-harness
+**链接**： <https://github.com/ShawnPana/phone-harness>
 
 ### 4. Leutenegger/book-to-skill
 
@@ -142,7 +142,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「知识注入 Agent」从「塞进上下文」推进到「固化成可调用技能」，与 book-to-skill 思路呼应了「把人类文档资产转为 Agent 能力」这一正在成形的工程范式（同类还有 graphify 把代码库变知识图）。
 
-**链接**：https://github.com/Leutenegger/book-to-skill
+**链接**： <https://github.com/Leutenegger/book-to-skill>
 
 ### 5. vercel-labs/eve-software-factory-template
 
@@ -152,7 +152,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Vercel 亲自下场给「多 Agent 软件工厂」画了参考架构，意味着「Agent 协作写软件」正从个人项目走向平台级产品形态（与 DeepSeek harness、ego-lite 同一波「Agent 工程化」浪潮）。
 
-**链接**：https://github.com/vercel-labs/eve-software-factory-template
+**链接**： <https://github.com/vercel-labs/eve-software-factory-template>
 
 ### 6. SaladDay/pi-from-scratch
 
@@ -162,7 +162,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 harness/框架满天飞时，回到 600 行最小实现讲清 Agent loop 本质——对想真正理解「规划→工具→反馈」闭环的人，是极好的教学/自查材料。
 
-**链接**：https://github.com/SaladDay/pi-from-scratch
+**链接**： <https://github.com/SaladDay/pi-from-scratch>
 
 ### 7. ToolJet/ToolJet
 
@@ -172,7 +172,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：低代码平台把 AI Agent 做成「内嵌于业务应用」而非「旁边加点按钮」，反映了企业落地 Agent 的主流姿态——把智能体嵌进既有工作流而非另起炉灶。
 
-**链接**：https://github.com/ToolJet/ToolJet
+**链接**： <https://github.com/ToolJet/ToolJet>
 
 ### 8. MiniMax-AI/MiniMax-H3
 
@@ -182,7 +182,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 MiniMax 刚开源 H3 视频模型后旋即放出全模态 H3 与完整部署/技能工具链，把「开源全模态生成」从单点模型推进到「模型+技能+工作流」的可复现包——对要做视频/多模态生成的团队是即拿即用的资产。
 
-**链接**：https://github.com/MiniMax-AI/MiniMax-H3
+**链接**： <https://github.com/MiniMax-AI/MiniMax-H3>
 
 ## 三、精选AI行业资讯（2026.08.14-08.16）
 

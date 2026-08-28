@@ -29,7 +29,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：这是「国产算力跑通万亿模型全参后训练」的硬核系统工程报告，MFU 34.22% 与 2.93 倍提升是实打实的利用率数据，且把「昇腾 + DeepSeek-V4 + 运筹专用化」串成可复用的全栈路径，对受限于 GPU 供给、又想做领域大模型的团队是直接参考。
 
-**链接**：https://arxiv.org/abs/2607.20145
+**链接**： <https://arxiv.org/abs/2607.20145>
 
 ### 2. SoftReason: A Fully Differentiable Neuro-Soft-Symbolic Deductive Reasoning Architecture over High-Dimensional Perceptual Data
 
@@ -39,7 +39,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「感知→符号演绎」的梯度断点彻底打通，是神经-符号方向少见的 fully differentiable 完整架构，KVQA 上的端到端实验说明它不只是玩具——对做视觉问答、具身推理、需可解释性的团队值得细读。
 
-**链接**：https://arxiv.org/abs/2607.20402
+**链接**： <https://arxiv.org/abs/2607.20402>
 
 ### 3. PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference
 
@@ -49,7 +49,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「让小模型自己决定何时叫大模型」比固定路由更省、更自适应，且把成本压到原来的 1/28 这种数量级——对高并发、成本敏感的服务型应用是直接可落地的范式，数据也足够说服人。
 
-**链接**：https://arxiv.org/abs/2607.20327
+**链接**： <https://arxiv.org/abs/2607.20327>
 
 ### 4. PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning
 
@@ -59,7 +59,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用「完整日志 + 代码式检索」而非「摘要压缩」来破解长程上下文的信息保存-检索两难，token 反而更省，且 18 个点的提升是跨前沿模型的稳定增益——长程 Agent 落地（游戏、运维、科研）的高性价比参考。
 
-**链接**：https://arxiv.org/abs/2607.20064
+**链接**： <https://arxiv.org/abs/2607.20064>
 
 ### 5. EvoDRC: A Self-Evolving Agentic Framework for Automated DRC Violation Repair
 
@@ -69,7 +69,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「Agent + 经验数据库 + 技能自演化」用到 EDA 这种容错极低的工业场景，且给出 73.5% 违例削减的硬指标——说明 Agent 不只停留在聊天/写码，已开始啃芯片设计里最苦的收尾活。
 
-**链接**：https://arxiv.org/abs/2607.20019
+**链接**： <https://arxiv.org/abs/2607.20019>
 
 ### 6. EvoThink: Evolving Thinking in Large Reasoning Models via Self-Pruning and Aha-Moment Preference Optimization
 
@@ -79,7 +79,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与 PyroDash 呼应——本月「去冗余、保能力」成为推理优化共识。EvoThink 的「顿悟数据合成」比单纯压缩更护住能力，IJCAI 接收也说明方法被认可，值得做推理模型减本的团队跟进。
 
-**链接**：https://arxiv.org/abs/2607.19962
+**链接**： <https://arxiv.org/abs/2607.19962>
 
 ### 7. Know Your Agent: Reconnaissance-Driven Pentesting of AI Agents
 
@@ -89,7 +89,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与本周 OpenAI 模型逃逸 HF 的真实事件形成学术呼应——把「先侦察、再精准打击」的方法论系统化，且开源可复现。做 Agent 产品上线前安全审计的团队，这是现成的红队工具箱。
 
-**链接**：https://arxiv.org/abs/2607.19837
+**链接**： <https://arxiv.org/abs/2607.19837>
 
 ### 8. Silent Failures in Multimodal Agentic Search: A Diagnostic Taxonomy and Cross-Judge Evaluation
 
@@ -99,7 +99,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：戳破「多模态 Agent 搜索看着答对就真对」的错觉，六类 taxonomy 直接可当评测 checklist 用，且证明失败会随能力变化「转移」而非消失——对部署多模态检索 Agent 的团队，是补齐可靠性盲区的关键工作。
 
-**链接**：https://arxiv.org/abs/2607.19793
+**链接**： <https://arxiv.org/abs/2607.19793>
 
 ## 二、GitHub热门AI开源项目（2026.07.21-07.23）
 
@@ -113,7 +113,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 编排从「单 Agent Demo」走向「多智能体协作基础设施」是本月明确趋势，ruflo 是其中 star 体量最大的元编排项目之一，适合做多 Agent 系统的底座参考。
 
-**链接**：https://github.com/ruvnet/ruflo
+**链接**： <https://github.com/ruvnet/ruflo>
 
 ### 2. thedotmack/claude-mem
 
@@ -125,7 +125,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与本期 arXiv 的 PRO-LONG（程序化记忆）方向一致——「Agent 记忆层」是高频痛点。claude-mem 把跨会话记忆做成开箱即用的工具，是落地长程 Agent 的现成拼图。
 
-**链接**：https://github.com/thedotmack/claude-mem
+**链接**： <https://github.com/thedotmack/claude-mem>
 
 ### 3. mem0ai/mem0
 
@@ -137,7 +137,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：记忆层赛道头部项目，本周仍在稳定涨星，说明「给 Agent 加长期记忆」已成标配需求而非噱头；生态成熟、接入成本低，适合快速集成。
 
-**链接**：https://github.com/mem0ai/mem0
+**链接**： <https://github.com/mem0ai/mem0>
 
 ### 4. decolua/9router
 
@@ -149,7 +149,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：呼应「模型资源管理」趋势——当不同模型价格/速度/强项各异，应用层需要一层网关做 fallback 与供应商切换。9router 把这件事做成零成本路由，中小团队省心。
 
-**链接**：https://github.com/decolua/9router
+**链接**： <https://github.com/decolua/9router>
 
 ### 5. ComposioHQ/awesome-claude-skills
 
@@ -161,7 +161,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「Skills 生态」是本周 WAIC 上腾讯 SkillHub 上线 7.8 万 Skills 的民间镜像——技能市场正在成为 Agent 能力的分发范式，这份合集是上手与选型的好入口。
 
-**链接**：https://github.com/ComposioHQ/awesome-claude-skills
+**链接**： <https://github.com/ComposioHQ/awesome-claude-skills>
 
 ### 6. CloakHQ/CloakBrowser
 
@@ -173,7 +173,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：随着浏览器 Agent（browser-use 等）走热，可控、抗检测的浏览器运行时成为刚需；CloakBrowser 直接对标 Playwright 做 drop-in 替换，做网页自动化 Agent 的团队会感兴趣。
 
-**链接**：https://github.com/CloakHQ/CloakBrowser
+**链接**： <https://github.com/CloakHQ/CloakBrowser>
 
 ### 7. microsoft/ai-agents-for-beginners
 
@@ -185,7 +185,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 入门长期高需求，微软这份官方教程体系完整、更新活跃，是团队内训与新人的首选起点，涨星稳定说明口碑扎实。
 
-**链接**：https://github.com/microsoft/ai-agents-for-beginners
+**链接**： <https://github.com/microsoft/ai-agents-for-beginners>
 
 ### 8. code-yeongyu/oh-my-openagent
 
@@ -197,7 +197,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与本期 PyroDash、EvoThink 的「推理降本」主线同频——「省 token 的 harness」本身就是卖点，说明成本敏感已成编码 Agent 的一级需求。
 
-**链接**：https://github.com/code-yeongyu/oh-my-openagent
+**链接**： <https://github.com/code-yeongyu/oh-my-openagent>
 
 ## 三、精选AI行业资讯（2026.07.21-07.23）
 

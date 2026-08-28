@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：主流视频扩散模型大多只拟合像素、未建模像素随时间的转换规律，生成帧看似合理却未必遵循运动定律。LDR（Latent Dynamics Reasoning）将潜态转换建模为显式运动学积分，低阶动态用数值积分处理、模型只回归驱动序列展开的三阶及以上残差，并在结构化潜态而非密集卷积特征上运行。在受控白盒物理基准 PhyWorld 上，其分布内/外误差差距比视频扩散基线小 20 倍以上，参数减 26 倍、速度快 143 倍，且能泛化至训练分布外（如只在红球左移数据上训练，可正确预测蓝球右移）。
 **领域**：视频世界模型 / 物理推理
 **推荐理由**：首个被验证能把学到的动力学规律外推到训练分布之外的视频世界模型，对具身 AI、交互仿真比单纯「好看」的视频生成更有长期价值。
-**链接**：https://arxiv.org/abs/2608.09926
+**链接**： <https://arxiv.org/abs/2608.09926>
 
 ### 2. SCOUT：超长第一视角视频的自检与可恢复工具思维智能体
 
 **摘要**：超长第一视角视频理解需在跨数小时/数天、时间稀疏的证据上推理，现有 Chain-of-Tool-Thought 系统因缺乏恢复机制而错误传播。SCOUT 提出自适应策略，评估中间工具观测后动态权衡「 exploitation（放大）/ exploration（切换区域）」，并设计 UPS-GRPO 不确定性优先策略优化与回合级优势分解，改善长程信用分配。在超长第一视角基准上取得 SOTA，同时在较短长视频设定上仍有竞争力。
 **领域**：长视频推理 / Agent
 **推荐理由**：针对「长视频 + 工具调用」真正落地的信用分配难题给出可训练方案，对监控、穿戴设备、 procedural 视频分析有直接启发。
-**链接**：https://arxiv.org/abs/2608.07959
+**链接**： <https://arxiv.org/abs/2608.07959>
 
 ### 3. AutoPrune：用 LLM 自动设计视觉 Token 剪枝策略
 
 **摘要**：视觉 Token 剪枝能大幅降低多模态大模型推理成本，但现有方法依赖固定启发式与昂贵试错。AutoPrune 提出一个无训练的「AI4AI」框架：用 LLM 自动设计剪枝算法，核心是 131 个可复用原子组成的 Token Pruning DSL（TPDSL），并把每个搜索状态表示为强基策略的残差修改以收窄搜索空间。在 14 个多模态基准、3 个 MLLM 主干上，即使剪掉 94.4% 视觉 Token 仍保留 99% 以上全 Token 性能，FLOPs 降 9.9×、prefill 延迟降 6.4×。
 **领域**：多模态效率 / 自动机器学习
 **推荐理由**：把「剪枝策略设计」本身交给 LLM，且零训练即可迁移，对端侧/高吞吐 MLLM 部署是可直接复用的降本范式。
-**链接**：https://arxiv.org/abs/2608.07193
+**链接**： <https://arxiv.org/abs/2608.07193>
 
 ### 4. AnyTrack：任意模态统一的视觉目标跟踪框架
 
 **摘要**：现有多模态跟踪器多为固定模态组合设计，缺模态或模态不完美时适应性差。AnyTrack 提出统一框架，用 Modality-aware Interaction Module（MIM）桥接模态差异并聚合时序线索，用 Context Understanding Module（CUM）通过全局-局部提示建立视觉特征与目标位置的空间对应，增强前景-背景判别以实现精确定位。
 **领域**：计算机视觉 / 目标跟踪
 **推荐理由**：把「模态缺失」作为一等公民处理，比为每个模态组合单独训模型更省算力，对机器人、自动驾驶的异构传感融合有现实意义。
-**链接**：https://arxiv.org/abs/2608.06773
+**链接**： <https://arxiv.org/abs/2608.06773>
 
 ### 5. AgentPatch：免训练粗到细修复，合并智能体多模态大模型
 
 **摘要**：Agentic MLLM 合并面临两大挑战——非对称能力保持（不同交互复杂度能力保留不均，产生弱任务）与行为关键遗忘（丢失决定性动作会拖垮长程执行）。AgentPatch 提出免训练粗到细修复框架：选稳定合并主干，用 Weak-Task Unique Residual Recovery 恢复被稀释的弱任务信号，再用 Agent-Guided Behavior-Critical Patch 在显式能力保护下恢复决定性行为，产出单一静态检查点（无路由/集成）。在 6 个智能体与多模态基准上缓解弱任务退化并更好平衡恢复与互补能力保留。
 **领域**：模型合并 / 智能体多模态
 **推荐理由**：给「把多个专用 Agent 模型合成一个通用模型」这条路线提供了免训练、可落地的工程解法，避免重新训练的成本。
-**链接**：https://arxiv.org/abs/2608.06699
+**链接**： <https://arxiv.org/abs/2608.06699>
 
 ### 6. Unified Agent：跨设备跨时间的状态化交互管理
 
 **摘要**：随能力增长，Agent 从单应用内运行走向跨用户设备行动，但主流系统观察分散在各设备各时刻、缺乏有效状态管理。作者论证 Agent 应维护一个紧凑、可行动的「状态」，组织交互证据、已陈述事实与待办请求；据此构建跨设备跨时间交互基准，并实例化 Unified Agent——携带交互证据跨设备跨时刻、结合当前观测行动。在默认设定下显著优于 4 个已发表设计的适配版，且在不同 MLLM 家族/能力/推理力度下均保持领先。
 **领域**：智能体 / 状态管理
 **推荐理由**：点出了「跨设备常驻 Agent」真正难的不是模型而是状态，与本期 Meta/Cloudflare 的落地基建形成方法论呼应。
-**链接**：https://arxiv.org/abs/2608.05729
+**链接**： <https://arxiv.org/abs/2608.05729>
 
 ### 7. OneDayAgent：面向自主智能体的长程编排框架
 
 **摘要**：LLM Agent 越来越多用于跨越工作/学习/生活的开放式长程请求，需跨多步保留目标与约束、驾驭异构工具与附件。OneDayAgent 把开放式请求转为受管执行过程：分解为有界子任务、在上下文压力下维持执行记忆、对最终交付物验证并修复。在 AgentIF-OneDay 的 104 个任务上，以 GLM-5.2 后端取得 0.821 的总体 SOTA；同一框架在 3 个模型家族的 5 个后端 LLM 上无需调参即可泛化，尽管不同模型在执行风格上有差异。
 **领域**：智能体 / 长程任务
 **推荐理由**：给出了「单框架跨后端」的实证，验证了 harness 设计优于逐模型调参，对企业选型的鲁棒性判断有参考价值。
-**链接**：https://arxiv.org/abs/2608.05013
+**链接**： <https://arxiv.org/abs/2608.05013>
 
 ### 8. Video-DeepResearch：迈向下一代多模态深度研究智能体
 
 **摘要**：提出解耦的「感知-探索」流水线与 GRPO 训练增强基于视频的网络探索能力。Video-DeepResearch-35B-A3B 在复杂多跳视频问答上平均准确率 64.0% 创 SOTA，超过 Claude-4.5-Sonnet（59.0%）5 个百分点，显著优于 GPT-5（52.5%）与 Gemini 2.5 Pro（57.5%）；30B-A3B 变体达 59.3%，在紧凑规模下验证范式有效。
 **领域**：多模态 Agent / 深度研究
 **推荐理由**：把「DeepResearch」范式从文本扩展到视频多跳推理并以更小参数超越大闭源模型，是研究型 Agent 的清晰增量方向。
-**链接**：https://arxiv.org/abs/2608.03979
+**链接**： <https://arxiv.org/abs/2608.03979>
 
 ## 二、GitHub热门AI开源项目（2026.08.05-08.12）
 
@@ -84,56 +84,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：自适应成长型 AI 智能代理框架，统一调度 Claude / OpenAI / Codex 等多模型，覆盖自主任务规划、工具调用与长期记忆，赋能开发者构建复杂智能体系统。
 **热度**：累计约 225k Stars（Nous Research 旗舰 Agent 产品）
 **推荐理由**：多模型自适应调度 + 持续进化架构，是闭源 Agent 产品之外最成熟的开放替代之一，社区贡献者遍布全球。
-**链接**：https://github.com/NousResearch/hermes-agent
+**链接**： <https://github.com/NousResearch/hermes-agent>
 
 ### 2. obra/superpowers
 
 **简介**：Agent Skills 框架与软件开发方法论，提供模块化技能组合、进度追踪、验证循环与上下文管理，系统性解决复杂多步骤 AI 辅助开发任务的编排。
 **热度**：单日斩获约 267k Stars（曾创 GitHub 历史纪录），社区称其为「Agent 时代的 Linux」
 **推荐理由**：内置质量验证闭环防止幻觉代码提交，把「技能组合」做成可复用方法论，是 Agent 工程化的事实标准候选。
-**链接**：https://github.com/obra/superpowers
+**链接**： <https://github.com/obra/superpowers>
 
 ### 3. affaan-m/ECC
 
 **简介**：AI 编程工具性能增强与能力拓展，全面适配 Claude Code / Codex / Cursor / Gemini / GitHub Copilot 等主流 AI 编程工具，集成安全扫描、记忆优化、持续学习、模型调度全链路能力。
 **热度**：约 238k Stars，Anthropic 黑客马拉松获奖项目，MIT 永久开源，近期密集迭代
 **推荐理由**：内置 60+ 专属代理、232 项技能与 Prompt 防御/Token 优化，是「给现有编程 Agent 打增强包」思路的代表作。
-**链接**：https://github.com/affaan-m/ECC
+**链接**： <https://github.com/affaan-m/ECC>
 
 ### 4. DietrichGebert/ponytail
 
 **简介**：让 AI Agent 以「最懒高级工程师」思维写代码，践行 YAGNI 原则，优先标准库与原生能力，一行能搞定不写五十行。
 **热度**：约 97k Stars，7 日增星 +5.4k，Hacker News 讨论评分 98 分
 **推荐理由**：以决策阶梯（YAGNI / 标准库优先 / 原生优先）大幅减少 AI 冗余代码，对治理「AI 过度工程」有立竿见影的价值。
-**链接**：https://github.com/DietrichGebert/ponytail
+**链接**： <https://github.com/DietrichGebert/ponytail>
 
 ### 5. bytedance/deer-flow
 
 **简介**：企业级长效 AI 智能体框架，专注支持长时间、长周期、高复杂度的多步骤任务自动化编排与持续迭代，支持多任务并行调度、流程复盘、异常自愈。
 **热度**：约 79k Stars，MIT 开源无商用限制，国内主流企业级 SuperAgent 搭建核心框架
 **推荐理由**：架构稳定可拓展、异常自愈，是验证过的「生产级长程 Agent」落地模板，适合直接对标企业工作流。
-**链接**：https://github.com/bytedance/deer-flow
+**链接**： <https://github.com/bytedance/deer-flow>
 
 ### 6. cloudflare/computer
 
 **简介**：为 AI Agent 提供沙箱化独立计算机运行环境，Agent 可直接在沙箱中操作浏览器、文件系统和终端。
 **热度**：新兴热门项目，单日增星约 +796，GitHub Trending 上榜
 **推荐理由**：把「给 Agent 一台安全隔离的完整计算机」做成轻量原语，Agent 浏览器/终端/文件操作的可信执行边界补齐了落地最后一块。
-**链接**：https://github.com/cloudflare/computer
+**链接**： <https://github.com/cloudflare/computer>
 
 ### 7. TencentCloud/TencentDB-Agent-Memory
 
 **简介**：AI Agent 团队级记忆中心，将对话、文档和代码转化为四种可复用记忆资产（Chat Memory / Skill / LLM-Wiki / Code-Graph），跨 Agent 与框架共享治理。
 **热度**：腾讯云开源，企业级记忆治理方案
 **推荐理由**：把「记忆」从单 Agent 私有状态升级为团队级可治理资产，解决了多 Agent 协作时的知识孤岛与重复检索。
-**链接**：https://github.com/TencentCloud/TencentDB-Agent-Memory
+**链接**： <https://github.com/TencentCloud/TencentDB-Agent-Memory>
 
 ### 8. huangruiteng/loopx
 
 **简介**：AI Agent 循环工程状态内核，轻量级长运行 Agent 团队状态管理，跨 Codex / Claude Code 等框架，支持持久化目标、配额感知自动唤醒与可验证交接。
 **热度**：国内个人开发者开源，长运行 Agent 状态内核方向
 **推荐理由**：用「持久化目标 + 配额感知唤醒 + 可验证交接」解决长任务跨会话断点，与本期 arXiv 的 Unified Agent 思路互补。
-**链接**：https://github.com/huangruiteng/loopx
+**链接**： <https://github.com/huangruiteng/loopx>
 
 ## 持续追踪
 

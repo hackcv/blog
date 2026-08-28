@@ -19,27 +19,27 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 1. GaussianGPT: Towards Autoregressive 3D Gaussian Scene Generation
 - **方向**：3D生成 / 计算机视觉
 - **摘要**：提出基于 Transformer 的自回归 3D 高斯场景生成模型，通过 next-token prediction 直接生成 3D Gaussians。使用稀疏 3D 卷积自编码器 + 向量量化压缩高斯原语，支持场景补全、外绘、可控采样。与扩散模型互补，天然支持 context-aware 3D 生成。
-- **链接**：https://arxiv.org/abs/2603.26661
+- **链接**： <https://arxiv.org/abs/2603.26661>
 
 ### 2. VGGRPO: Towards World-Consistent Video Generation with 4D Latent Reward
 - **方向**：视频生成 / 工程优化
 - **摘要**：提出 VGGRPO，在 latent 空间用 GRPO 做几何一致性视频后训练。引入 Latent Geometry Model（LGM）直接从 latent 解码场景几何，避免昂贵的 VAE 解码。支持动态场景，用相机运动平滑奖励 + 几何重投影一致性奖励双重约束。
-- **链接**：https://arxiv.org/abs/2603.26599
+- **链接**： <https://arxiv.org/abs/2603.26599>
 
 ### 3. PerceptionComp: A Video Benchmark for Complex Perception-Centric Reasoning
 - **方向**：多模态大模型 / 视频理解
 - **摘要**：提出 PerceptionComp，一个需要多时间段视觉证据 + 组合逻辑推理的视频 benchmark（1114题/279视频）。最强模型 Gemini-3-Flash 仅达 45.96%，开源模型低于 40%，揭示感知中心长时序推理仍是瓶颈。
-- **链接**：https://arxiv.org/abs/2603.26653
+- **链接**： <https://arxiv.org/abs/2603.26653>
 
 ### 4. GeoSR: Make Geometry Matter for Spatial Reasoning
 - **方向**：VLM / 空间推理
 - **摘要**：提出 GeoSR 框架，通过 Geometry-Unleashing Masking（遮蔽 2D 视觉 token 迫使模型依赖几何 token）和 Geometry-Guided Fusion（门控路由自适应放大几何贡献），让 VLM 真正利用 3D 几何信息做空间推理，在静态和动态 benchmark 上 SOTA。
-- **链接**：https://arxiv.org/abs/2603.26639
+- **链接**： <https://arxiv.org/abs/2603.26639>
 
 ### 5. Zero-Shot Depth from Defocus (FOSSA)
 - **方向**：计算摄影 / 深度估计
 - **摘要**：提出 FOSSA，基于 Transformer 的零样本焦距散焦深度估计网络，核心是带焦距距离嵌入的 stack attention layer，实现焦点堆栈间高效信息交换。同时发布 ZEDD benchmark（比前作多 8.3x 场景），误差降低最高 55.7%。
-- **链接**：https://arxiv.org/abs/2603.26658
+- **链接**： <https://arxiv.org/abs/2603.26658>
 
 ---
 

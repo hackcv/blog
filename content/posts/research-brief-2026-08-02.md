@@ -28,7 +28,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：直接点破"上下文级护栏"的结构性盲区——只要证据可被复制，意图检查就形同虚设。对正在部署轻量级 guardrail 的安全团队是必须读的理论地基，比又一篇经验性红队更有长期价值。
 
-**链接**：https://arxiv.org/abs/2607.27951
+**链接**： <https://arxiv.org/abs/2607.27951>
 
 ### 2. Piggybacking on Perception: Stealthy Concurrent Audio Prompt Injections against Multimodal LLM Agents
 
@@ -38,7 +38,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把提示注入从"文本 trick"推进到"感知通道"，说明多模态 Agent 的攻击面在音频/视觉侧。配了基准，可直接用于评估自家多模态 Agent 的健壮性。
 
-**链接**：https://arxiv.org/abs/2607.28165
+**链接**： <https://arxiv.org/abs/2607.28165>
 
 ### 3. Do Context Files Help Coding Agents? A Two-Agent Ablation Study on Real Repositories
 
@@ -48,7 +48,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：给"维护一份 CLAUDE.md 就能提升 Agent 正确率"的流行做法泼了冷水——失败更多源于实现能力而非仓库知识。对工程团队判断"该不该重金维护上下文文件"很有参考价值。
 
-**链接**：https://arxiv.org/abs/2607.27250
+**链接**： <https://arxiv.org/abs/2607.27250>
 
 ### 4. Beyond KV Reconstruction: Functional Reconstruction for MLA Draft Models
 
@@ -58,7 +58,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"MLA 长上下文省显存"和"投机解码高吞吐"真正打通——之前转换会杀接受率，这篇让它可行。对做长上下文推理服务的团队是直接可落地的工程改进。
 
-**链接**：https://arxiv.org/abs/2607.27269
+**链接**： <https://arxiv.org/abs/2607.27269>
 
 ### 5. GuideSkill: Evolving Executable LLM Agent Skills
 
@@ -68,7 +68,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**："把规则编译成可执行函数、让 LLM 只做编排"这个范式在 agent 系统里越来越常见，这篇用临床场景验证了它的有效性，且小模型即可生效，落地门槛低。
 
-**链接**：https://arxiv.org/abs/2607.26160
+**链接**： <https://arxiv.org/abs/2607.26160>
 
 ### 6. LabEvolver: Training-Free Experience Evolution for Safe and Grounded Wet-Lab Agents
 
@@ -78,7 +78,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：科学实验 Agent 一旦出错代价极高，这篇用"免训练经验演化"而非重训来提升安全与 grounded，思路轻量、易迁移到别的高风险 Agent 场景。
 
-**链接**：https://arxiv.org/abs/2607.27690
+**链接**： <https://arxiv.org/abs/2607.27690>
 
 ### 7. Cross-Embodiment Transfer via Behavior-Aligned Representations
 
@@ -88,7 +88,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：跨具身迁移是机器人从"单任务 demo"走向"通用操作"的关键瓶颈。从行为而非形态对齐，思路更贴近"能力可移植"，对多形态机器人平台有实操意义。
 
-**链接**：https://arxiv.org/abs/2607.27549
+**链接**： <https://arxiv.org/abs/2607.27549>
 
 ### 8. Failure Detection for Surgical Robot Imitation Policies via Flow-Matching World Modeling
 
@@ -98,7 +98,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：手术机器人容错为零，这篇用世界模型做"实时失败预警"而非事后评估，是把生成式世界模型用到高风险控制回路的扎实例子。
 
-**链接**：https://arxiv.org/abs/2607.27511
+**链接**： <https://arxiv.org/abs/2607.27511>
 
 ## 二、GitHub热门AI开源项目（2026.07.31-08.02）
 
@@ -110,7 +110,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"安全研究"做成可路由的 Agent 技能包，且强调合规授权场景，是安全+Agent 工程化的一个干净样本，适合想给 coding agent 加安全能力的团队参考。
 
-**链接**：https://github.com/zhaoxuya520/reverse-skill
+**链接**： <https://github.com/zhaoxuya520/reverse-skill>
 
 ### 2. usekaneo/kaneo
 
@@ -120,7 +120,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：自托管 PM 赛道持续升温，Kaneo 以极简定位挤进趋势前三，说明"轻量、可私有部署"仍是团队工具的真实需求，而非一味堆功能。
 
-**链接**：https://github.com/usekaneo/kaneo
+**链接**： <https://github.com/usekaneo/kaneo>
 
 ### 3. huggingface/speech-to-speech
 
@@ -130,7 +130,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：本地优先的语音 Agent 越来越成气候，HF 官方下场给了社区一个标准参考实现，对做私有化语音助手/客服的团队是直接可改的底座。
 
-**链接**：https://github.com/huggingface/speech-to-speech
+**链接**： <https://github.com/huggingface/speech-to-speech>
 
 ### 4. github/copilot-sdk
 
@@ -140,7 +140,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Copilot 从"编辑器插件"走向"可嵌入的 Agent SDK"，意味着 coding agent 能力开始以平台化方式对外输出，对 SaaS 集成 AI 编程能力是信号。
 
-**链接**：https://github.com/github/copilot-sdk
+**链接**： <https://github.com/github/copilot-sdk>
 
 ### 5. MemTensor/memmy-agent
 
@@ -150,7 +150,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 记忆正从"单一 agent 上下文"抽象到"个人/团队级可复用记忆"，memmy-agent 占位"个人跨 agent 记忆"，和团队级 TencentDB-Agent-Memory 形成互补，是记忆基建收敛前的早期样本。
 
-**链接**：https://github.com/MemTensor/memmy-agent
+**链接**： <https://github.com/MemTensor/memmy-agent>
 
 ### 6. Intuition-Lab/personal-model
 
@@ -160,7 +160,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"个人模型/画像"做成 MCP 上下文文件，思路接近"给 agent 一个持久身份"，和 memmy-agent 同属记忆基建的早期探索，值得关注这类抽象如何最终收敛。
 
-**链接**：https://github.com/Intuition-Lab/personal-model
+**链接**： <https://github.com/Intuition-Lab/personal-model>
 
 ### 7. antirez/ds4
 
@@ -170,7 +170,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：DeepSeek 4 的本地生态正在并行长出"推理层 + agent 层"，antirez 下场意味着高性能本地推理有了社区级参考实现，利好端侧/私有化部署。
 
-**链接**：https://github.com/antirez/ds4
+**链接**： <https://github.com/antirez/ds4>
 
 ### 8. 0xwilliamortiz/ratchet
 
@@ -180,7 +180,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把安全约束做成 agent 执行后的"硬校验钩子"，而非依赖模型自觉——这类 post-action enforcement 正是 agent 基础设施成熟化的标志，时机和趋势吻合。
 
-**链接**：https://github.com/0xwilliamortiz/ratchet
+**链接**： <https://github.com/0xwilliamortiz/ratchet>
 
 ## 三、精选AI行业资讯（2026.07.31-08.02）
 

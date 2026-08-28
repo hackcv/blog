@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：提出自演化拓扑框架，用有向无环图（DAG）替代线性轨迹：前端分解器将复杂查询拆为视觉锚定的原子，按依赖组织成 DAG 实现严格上下文隔离，并引入自适应原子裂变，在工具能力边界超限时把瓶颈节点动态细分为更细的子原子。数学/物理/化学基准上显著优于 SOTA 线性 Agent 框架。
 **领域**：多模态 / Agent / 科学推理
 **推荐理由**：直面「长上下文幻觉、视觉-语义错位、固定粒度脆弱」三大痛点，用图演化 + 上下文隔离给出可纠错范式，对需要多步严谨推理的科研 Agent 尤为实用。
-**链接**：https://arxiv.org/abs/2607.14658
+**链接**： <https://arxiv.org/abs/2607.14658>
 
 ### 2. SPyCE: Skill-Policy Co-evolution for Multimodal Agents
 
 **摘要**：框架将多模态推理轨迹蒸馏为分层技能库——执行技能捕获局部视觉操作，工作流技能编码高层先验，并在强化学习训练中与之共同演化：策略以检索到的技能为条件引导 rollout，技能库又用策略产生的有价值 rollout 更新。八大基准上一致超越 RL 与记忆基线。
 **领域**：多模态 Agent / 强化学习 / 技能演化
 **推荐理由**：把「技能」从静态存储或稀疏奖励里解放出来，形成「策略越好→技能越强→先验更强」的闭环，是多模态 Agent 从 Demo 走向可靠系统的关键路径。
-**链接**：https://arxiv.org/abs/2607.13854
+**链接**： <https://arxiv.org/abs/2607.13854>
 
 ### 3. Who Grades the Grader? Co-Evolving Evaluation Metrics and Skills for Self-Improving LLM Agents
 
 **摘要**：指出自演化 Agent 依赖「已有可靠评测指标」这一隐藏假设在真实场景常不成立。提出 metric loop 在完整进化生命周期中搜索小缺陷检测器的组合，并以 Double Ratchet 让指标与技能生命周期共同演化；在代码生成（MBPP+）、企业 Text-to-SQL（Spider 2.0-Snow）与无参考报告生成上保留 88–110% 的留出提升，并在技能博弈评测规则时由独立裁判捕获。
 **领域**：Agent / 自演化 / 评测
 **推荐理由**：没有可靠验证器时如何评估与进化 Agent，是落地最大暗坑之一；论文用「锚点纪律 + 外部审计」给出可审计、可解释的指标，而非黑箱裁判，工程上很有参考价值。
-**链接**：https://arxiv.org/abs/2607.12790
+**链接**： <https://arxiv.org/abs/2607.12790>
 
 ### 4. SEED: Self-Evolving On-Policy Distillation for Agentic Reinforcement Learning
 
 **摘要**：提出自演化框架，将完成的 on-policy 轨迹转化为训练时的「后见之明技能」并蒸馏回策略模型。策略先微调以分析轨迹并生成自然语言技能（可复用工作流、决定性观察、避错规则），RL 中当前策略既收集轨迹也充当分析器；再以普通与技能增强上下文下的动作概率偏移，构造稠密 token 级 on-policy 蒸馏信号，与结果 RL 联合优化。
 **领域**：Agent / 强化学习 / 技能蒸馏
 **推荐理由**：与 SPyCE 异曲同工，都主张「轨迹→技能→策略」闭环，但 SEED 侧重 on-policy 蒸馏的稠密信号，缓解结果奖励稀疏问题、样本效率更高，对长程 Agent RL 训练是直接补丁。
-**链接**：https://arxiv.org/abs/2607.14777
+**链接**： <https://arxiv.org/abs/2607.14777>
 
 ### 5. Analogical Deep Research: Retrieving and Integrating Historical Analogies for Foresight Analysis
 
 **摘要**：提出 Analogical Deep Research（ADR）任务与首个基准 ADR-bench，研究 LLM Agent 能否在预测分析中找到并借用历史类比；指出 Agent 因「按表层特征而非底层机制匹配」而表现差，据此提出 CANA 框架（机制对齐 + 跨类比确认），在历史类比生成上带来最高 10% 提升，超越 SOTA deep research Agent。
 **领域**：深度研究 / 推理 / 预测分析
 **推荐理由**：把「历史类比」这一人类最强前瞻工具形式化为 Agent 能力，并点出「机制对齐」是关键——对做 deep research、战略分析类 Agent 的产品有很好的方法论启发。
-**链接**：https://arxiv.org/abs/2607.13602
+**链接**： <https://arxiv.org/abs/2607.13602>
 
 ### 6. Internet of Agentic Things: Networked AI Agents for Closed-Loop IoT Orchestration
 
 **摘要**：提出 IoAT 架构框架，将 agentic AI、IoT、信息物理系统、Physical AI、边缘计算与数字孪生统一为闭环编排框架；分云、边/雾、物理 IoT 三层，由自主 Agent 跨分布式环境感知-推理-协调-执行；用形质动态规划（hylomorphic DP）将 Agent 规划与物理执行耦合，并以智能楼宇编排为案例讨论安全/治理/韧性挑战。
 **领域**：多 Agent / IoT / 信息物理系统
 **推荐理由**：给「Agent 如何真正接管物理世界设备编排」一个可形式化的闭环框架，对做具身/边缘/Agent 编排的团队是把抽象概念落到系统架构的参考。
-**链接**：https://arxiv.org/abs/2607.12662
+**链接**： <https://arxiv.org/abs/2607.12662>
 
 ### 7. XScientist: A Git-Like Research Protocol for Long-Running Autonomous Scientific Discovery
 
 **摘要**：提出类 git 的研究协议与操作系统 XScientist，将想法生成、实验执行、手稿起草、自审、修复、质量门禁、守护进程调度与可复现制品统一为一条持续可观测管线；核心是把每次运行视为可移植研究制品（ARA），记录探索 DAG、逐节点代码与输出、claim-to-evidence 锚点、内容哈希与重执行钩子；含确定性完整性取证、样本门禁与 reviewer 修复循环。
 **领域**：自主科研 / Agent / 可复现性
 **推荐理由**：把「科研 Agent 不该只是一键出 PDF」说透了——强调分支、失败、可审计交接，直击自主科研系统「不可信、不可复现」的运营痛点，是走向可 fork 科研基础设施的范本。
-**链接**：https://arxiv.org/abs/2607.12301
+**链接**： <https://arxiv.org/abs/2607.12301>
 
 ### 8. REAL: Exploratory, Communicative, and Deployable Vision-Driven Embodied Agents for Open-World Mobile Manipulation
 
 **摘要**：提出 REAL 具身框架，建立 sim-to-real 一致的环境 API（无 oracle 感知）并集成模拟用户实现人机交互；设计多样任务组合驱动数据收集、SFT 与在线 RL。REAL-Bench 含 241 个任务；训练后 Agent 在交互任务上以 56.9% 成功率超越头部闭源 VLM，并在真实双臂移动机器人上 60 个 episode 取得 78.3% 端到端成功率。
 **领域**：具身智能 / 视觉语言 / 移动操作
 **推荐理由**：不只刷榜，而是真正把 sim-to-real、人机交互、零样本迁移串起来并在实体机器人上验证（78.3% 成功率），是多模态具身落地「最后一公里」的扎实样本。
-**链接**：https://arxiv.org/abs/2607.13653
+**链接**： <https://arxiv.org/abs/2607.13653>
 
 ## 二、GitHub热门AI开源项目（2026.07.16–07.19）
 
@@ -84,56 +84,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：Agent Development Environment（ADE），用于管理一支并行的 coding agent 舰队；可用自有订阅运行任意 coding agent，支持桌面与移动端。
 **热度**：GitHub TrendShift 日榜新晋热门（2026.07）
 **推荐理由**：coding agent 从「单 agent 助手」走向「多 agent 舰队」已是明确趋势，orca 把「用自己的订阅跑任意 agent + 跨端管理」做成产品形态，对想规模化编排多个 coding agent 的团队有参考价值。
-**链接**：https://github.com/stablyai/orca
+**链接**： <https://github.com/stablyai/orca>
 
 ### 2. Panniantong/Agent-Reach
 
 **简介**：给你的 AI agent 一双「看遍全网」的眼睛——一个 CLI 即可读取并搜索 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书，零 API 费用。
 **热度**：GitHub TrendShift 周增长榜新晋（2026.07）
 **推荐理由**：把「Agent 联网感知」从付费 API 降级为免费 CLI，直击 Agent 缺「实时外部视界」的短板，对做研究/舆情/内容类 Agent 是即插即用的感知层。
-**链接**：https://github.com/Panniantong/Agent-Reach
+**链接**： <https://github.com/Panniantong/Agent-Reach>
 
 ### 3. calesthio/OpenMontage
 
 **简介**：全球首个开源「智能体视频制作系统」——12 条流水线、52 个工具、500+ agent skills，把 AI coding assistant 变成完整视频工作室。
 **热度**：GitHub TrendShift 周增长榜新晋（2026.07）
 **推荐理由**：AI 视频生成正从「单点文生视频」升级为「多 Agent 协作的端到端制作流水线」，OpenMontage 把这套编排范式开源，降低了非代码创作者进入的门槛。
-**链接**：https://github.com/calesthio/OpenMontage
+**链接**： <https://github.com/calesthio/OpenMontage>
 
 ### 4. usestrix/strix
 
 **简介**：开源 AI 渗透测试工具，自动发现并修复应用漏洞。
 **热度**：GitHub TrendShift 周增长榜新晋（2026.07）
 **推荐理由**：安全左移 + Agent 自动化结合的典型代表，呼应「用 Agent 做防御性安全」的需求上升；对 DevSecOps 团队是把安全测试嵌入 CI 的轻量入口。
-**链接**：https://github.com/usestrix/strix
+**链接**： <https://github.com/usestrix/strix>
 
 ### 5. alirezarezvani/claude-skills
 
 **简介**：345 个 Claude Code skills & agent skills & 插件（30+ Agents、70+ 自定义命令、330+ skills），适用于 Claude Code、Codex、Gemini CLI、Cursor 等 8+ coding agent。
 **热度**：GitHub TrendShift 周增长榜新晋（2026.07）
 **推荐理由**：「Skills 生态」已成为 coding agent 生产力的核心杠杆，该仓库把跨 8 个 agent 的技能/命令/插件汇成超大合集，是建团队内部 skill 库的现成底座。
-**链接**：https://github.com/alirezarezvani/claude-skills
+**链接**： <https://github.com/alirezarezvani/claude-skills>
 
 ### 6. Graphify-Labs/graphify
 
 **简介**：将代码库、schema、文档与媒体转为可被 AI coding assistant 查询的知识图谱。
 **热度**：GitHub TrendShift 日榜热门（2026.07）
 **推荐理由**：直击「大代码库喂满上下文导致 Token 爆炸、召回不精准」的刚需——把代码智能做成可查询知识图谱，是 MCP + 代码上下文增强方向的硬核代表。
-**链接**：https://github.com/Graphify-Labs/graphify
+**链接**： <https://github.com/Graphify-Labs/graphify>
 
 ### 7. TencentCloud/TencentDB-Agent-Memory
 
 **简介**：完全本地的 AI agent 长期记忆方案，采用四层流水线，无外部 API 依赖。
 **热度**：腾讯云开源，Agent 记忆方向代表项目
 **推荐理由**：Agent 长期记忆是「有状态、能连续干活」的关键组件，腾讯云给出完全本地、四层流水线的开源实现，对数据合规/隐私敏感场景尤具吸引力。
-**链接**：https://github.com/TencentCloud/TencentDB-Agent-Memory
+**链接**： <https://github.com/TencentCloud/TencentDB-Agent-Memory>
 
 ### 8. jamiepine/voicebox
 
 **简介**：开源 AI 语音工作室，支持声音克隆、听写与音频创作。
 **热度**：GitHub TrendShift 日榜热门（2026.07）
 **推荐理由**：AI 语音从「单一 TTS」走向「克隆 + 听写 + 创作」的工作室化，voicebox 把这套能力开源，降低了内容创作者做多语种/个性化音频的门槛。
-**链接**：https://github.com/jamiepine/voicebox
+**链接**： <https://github.com/jamiepine/voicebox>
 
 ## 三、精选AI行业资讯（2026.07.18–07.19）
 

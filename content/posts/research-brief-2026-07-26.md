@@ -30,7 +30,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：直击生产级 agent 最大隐性成本——上下文膨胀让 token 费用随对话长度二次增长，并给出可量化的压缩方案；对长期运行 agent 的落地成本有直接指导意义，而非又一篇"更长记忆"的空谈。
 
-**链接**：https://arxiv.org/abs/2607.21503
+**链接**： <https://arxiv.org/abs/2607.21503>
 
 ### 2. Token Budget Saturation and Mechanistic Early Detection of Reasoning Non-Convergence in Chain-of-Thought Models
 
@@ -40,7 +40,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：给出"推理是否收敛"的早期可检测信号，为自适应计算分配（早停 / 加预算）提供量化依据，直接关联推理成本与准确率的权衡，对推理调度器设计很实用。
 
-**链接**：https://arxiv.org/abs/2607.21433
+**链接**： <https://arxiv.org/abs/2607.21433>
 
 ### 3. Anti-Periodic Positional Encoding: Möbius Boundary Conditions Make In-Context Retrieval Reliable
 
@@ -50,7 +50,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：提出首个反周期位置编码边界条件，单行长上下文检索可靠性从 63% 提到 90%，且零训练成本，对长文档 RAG / agent 记忆检索有即插即用价值。
 
-**链接**：https://arxiv.org/abs/2607.21405
+**链接**： <https://arxiv.org/abs/2607.21405>
 
 ### 4. Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context
 
@@ -60,7 +60,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：解决百万级上下文下投机解码"反噬"的工程痛点，训练无关即降 28–44% 解码成本，对长上下文 agent / 文档处理部署很有参考价值。
 
-**链接**：https://arxiv.org/abs/2607.21535
+**链接**： <https://arxiv.org/abs/2607.21535>
 
 ### 5. Error Certificates for KV-Cache Eviction via Randomized Design
 
@@ -70,7 +70,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用随机化设计给 KV 驱逐上"误差证书"，能把缓存引起的失败与模型固有失败区分开（AUC 0.73+），为长上下文服务的预算调度提供可信信号而非玄学。
 
-**链接**：https://arxiv.org/abs/2607.21475
+**链接**： <https://arxiv.org/abs/2607.21475>
 
 ### 6. X³-OPD: Distilling Reasoning into Large Audio-Language Models via On-Policy Alignment
 
@@ -80,7 +80,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把文本 LLM 的推理能力蒸馏进音频模型，覆盖副语言 / 事件等文本不可还原的推理，对语音 agent、会议理解等落地有直接增益。
 
-**链接**：https://arxiv.org/abs/2607.21550
+**链接**： <https://arxiv.org/abs/2607.21550>
 
 ### 7. MIRROR: Learning from the Other View for Multi-Modal Reasoning
 
@@ -90,7 +90,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：利用"文本能解、图解不出"的互补失效模式做自监督互惠训练，不改架构即提升 VLM 跨模态一致性，对多模态 agent 的稳健推理有启发。
 
-**链接**：https://arxiv.org/abs/2607.21552
+**链接**： <https://arxiv.org/abs/2607.21552>
 
 ### 8. Artificial Epanorthosis: Why large language models overuse a classical rhetorical figure, and how to mitigate it
 
@@ -100,7 +100,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：量化 LLM"宣传腔"滥用并给出按语体校准到人类率的方案，对品牌文案、客服话术等风格可控场景实用，且一行指令即可见效。
 
-**链接**：https://arxiv.org/abs/2607.21498
+**链接**： <https://arxiv.org/abs/2607.21498>
 
 ## 二、GitHub热门AI开源项目（2026.07.23-07.26）
 
@@ -112,7 +112,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：AI 编程与通信类项目领跑今日热榜，Rust 实现的高性能 swarm 通信底座，对多 agent 协同的通信层有参考价值。
 
-**链接**：https://github.com/block/buzz
+**链接**： <https://github.com/block/buzz>
 
 ### 2. permissionlesstech/bitchat
 
@@ -122,7 +122,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：去中心化、无服务器的近场通信工具登上热榜，反映"抗审查 / 本地优先"通信需求升温，与 AI agent 的本地协作场景有交叉。
 
-**链接**：https://github.com/permissionlesstech/bitchat
+**链接**： <https://github.com/permissionlesstech/bitchat>
 
 ### 3. citrolabs/ego-lite
 
@@ -132,7 +132,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：解决 agent 浏览器自动化的"登录态"痛点，让多 agent 复用同一真实登录会话，比每次重建上下文更省 token、更稳。
 
-**链接**：https://github.com/citrolabs/ego-lite
+**链接**： <https://github.com/citrolabs/ego-lite>
 
 ### 4. CopilotKit/CopilotKit
 
@@ -142,7 +142,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"agent 嵌入应用前端"做成标准协议与组件库，降低产品在 UI 层接 agent 的门槛，是 generative UI 方向的主流开源方案。
 
-**链接**：https://github.com/CopilotKit/CopilotKit
+**链接**： <https://github.com/CopilotKit/CopilotKit>
 
 ### 5. MemPalace/mempalace
 
@@ -152,7 +152,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：继 mem0 / cognee 之后又一款主打"benchmark 最佳"的开源 agent 记忆层，记忆系统赛道持续高热，值得对比选型。
 
-**链接**：https://github.com/MemPalace/mempalace
+**链接**： <https://github.com/MemPalace/mempalace>
 
 ### 6. lfnovo/open-notebook
 
@@ -162,7 +162,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：NotebookLM 类"文档对话 + 播客生成"需求旺盛，开源替代快速涨星，对做私有化知识库 / 研究助理的团队是直接可用底座。
 
-**链接**：https://github.com/lfnovo/open-notebook
+**链接**： <https://github.com/lfnovo/open-notebook>
 
 ### 7. microsoft/VibeVoice
 
@@ -172,7 +172,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：微软开源的 frontier 级语音模型，延续语音合成 / 对话方向，对语音 agent、TTS 产品化是直接可用的高质量权重。
 
-**链接**：https://github.com/microsoft/VibeVoice
+**链接**： <https://github.com/microsoft/VibeVoice>
 
 ### 8. microsoft/mxc
 
@@ -182,7 +182,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：针对 agent 安全的最小可用隔离层，用策略做分层 containment，呼应本周 OpenAI 模型逃逸入侵 HF 的安全议题，是 agent 沙箱方向轻量新选择。
 
-**链接**：https://github.com/microsoft/mxc
+**链接**： <https://github.com/microsoft/mxc>
 
 ## 持续追踪
 

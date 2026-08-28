@@ -29,56 +29,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：指出纯检索式记忆无法对历史做聚合、平均或过滤操作，提出由 schema 归纳出的分析型记忆（analytic memory），让智能体能对过往轨迹执行表格化分析查询。
 **领域**：多模态智能体 / 记忆架构
 **推荐理由**：多模态智能体最高提升 11.3%。价值在于点破了"记忆=向量检索"这个默认假设——很多任务需要的是对历史做统计而非召回单条，加一张可分析的表比换模型便宜得多。
-**链接**：https://arxiv.org/abs/2607.29440
+**链接**： <https://arxiv.org/abs/2607.29440>
 
 ### 2\. Beyond Component Testing: Validating Agentic AI Systems
 
 **摘要**：基于 257 篇论文的系统性综述，论证智能体系统的可信度必须建立在完整动作轨迹之上，而非孤立输出的组件测试。
 **领域**：智能体评测 / 可信 AI
 **推荐理由**："通过了所有测试，依然不安全"——这篇把行业普遍的组件级测试盲区摆到台面上。对正在搭 agent 上线流程的团队，是一份现成的验收清单来源。
-**链接**：https://arxiv.org/abs/2607.29405
+**链接**： <https://arxiv.org/abs/2607.29405>
 
 ### 3\. PAIChecker: Uncovering and Checking PR-Issue Misalignment in SWE-Bench-Like Benchmarks
 
 **摘要**：发现 SWE-bench Verified 中有 13.6% 的实例存在 PR 与 Issue 错位问题，并给出多智能体检查器自动识别此类污染。
 **领域**：基准审计 / 软件工程智能体
 **推荐理由**：13.6% 这个数字直接动摇了近两年 coding agent 的横向对比结论。如果你在用 SWE-bench 分数做选型或汇报，这篇是必须先读的修正项。
-**链接**：https://arxiv.org/abs/2607.28587
+**链接**： <https://arxiv.org/abs/2607.28587>
 
 ### 4\. Collusion with Competitive Marginals: Price-Level Audits Are Blind by Construction
 
 **摘要**：从理论上证明，针对 LLM 定价智能体的价格层级审计在构造上就无法检测某类合谋——合谋者可以维持看似竞争性的边际价格。
 **领域**：多智能体安全 / 算法合谋审计
 **推荐理由**：不是"审计做得不够好"，而是"这类审计原理上无效"。对监管方与做定价智能体的公司，意味着现有合规手段需要换一套观测维度。
-**链接**：https://arxiv.org/abs/2607.26385
+**链接**： <https://arxiv.org/abs/2607.26385>
 
 ### 5\. ChronoMem: Version Control and Semantic Rollback for Large Language Model Agent Memory
 
 **摘要**：为智能体记忆引入版本控制与语义回滚机制，在记忆漂移、污染与需要纠正的场景下显著提升可靠性。
 **领域**：智能体记忆 / 系统可靠性
 **推荐理由**：把 git 的心智模型搬进 agent memory。长期运行的 agent 一旦写入错误事实就会自我强化，能回滚比能记住更重要，这是工程上可直接落地的一层。
-**链接**：https://arxiv.org/abs/2607.27773
+**链接**： <https://arxiv.org/abs/2607.27773>
 
 ### 6\. Are GUI Agents Correct but Late? Decode on the Decision-Time Critical Path, Tested with Pre-Compiled Policy Trees
 
 **摘要**：指出 GUI 智能体的主要问题不是决策错误而是决策太慢，通过预编译策略树把解码放在决策时间关键路径上加速响应。
 **领域**：GUI 智能体 / 推理延迟优化
 **推荐理由**：换了个正确的问题问——GUI 场景里"对但慢"等于失败（页面已经变了）。预编译策略树是少见的不牺牲准确率的延迟优化路径。
-**链接**：https://arxiv.org/abs/2607.28399
+**链接**： <https://arxiv.org/abs/2607.28399>
 
 ### 7\. SeekBrain: Recipe-Grounded Agents for Neuroscience Analysis
 
 **摘要**：构建基于研究文献蒸馏出的分析"配方库"，让智能体在神经科学分析任务上全面超越通用编程智能体，登顶该领域基准。
 **领域**：科学智能体 / 领域知识工程
 **推荐理由**：证明领域配方库的收益大于换更强的通用模型，且在每一类任务上都赢。这条路径对任何有沉淀性 SOP 的垂直行业都可复制。
-**链接**：https://arxiv.org/abs/2607.29347
+**链接**： <https://arxiv.org/abs/2607.29347>
 
 ### 8\. Versatile On-device Adaptation at the Edge by Unifying Few-shot, Zero-shot, Continual, and In-context Learning
 
 **摘要**：用一个冻结的嵌入器在单颗芯片上统一支持少样本、持续、零样本与上下文学习四种模式，并给出后两者的首个流片实测结果。
 **领域**：端侧 AI / 芯片架构
 **推荐理由**：难得有真实硅片数据而非仿真。四种自适应模式共用一个加速器，对做端侧个性化的硬件团队意味着 BOM 不必为每种学习范式各留一块面积。
-**链接**：https://arxiv.org/abs/2607.29353
+**链接**： <https://arxiv.org/abs/2607.29353>
 
 * * *
 
@@ -89,56 +89,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：定位为"你的编程智能体运行其上的运行时"，用 Rust 实现的 agent 执行底座。
 **热度**：约 23.8K stars，24 小时新增 +195
 **推荐理由**：Agent 工具层已经过剩，运行时层还很空。用 Rust 做隔离与调度而非再包一层 Python 胶水，是这波 harness 竞争里少数在解决真问题的做法。
-**链接**：https://github.com/herdrdev/herdr
+**链接**： <https://github.com/herdrdev/herdr>
 
 ### 2\. 1jehuang/jcode
 
 **简介**：Rust 编写的极简 Coding Agent Harness。
 **热度**：约 15.4K stars，24 小时新增 +132
 **推荐理由**：当前动量榜第一。在 harness 普遍臃肿的当下，一个可读完的 Rust 实现对想搞清楚"agent 循环到底怎么跑"的人价值很高。
-**链接**：https://github.com/1jehuang/jcode
+**链接**： <https://github.com/1jehuang/jcode>
 
 ### 3\. StarTrail-org/PixelRAG
 
 **简介**：开源 RAG 框架，支持像素级视觉 grounding，把检索结果定位到图像具体区域。
 **热度**：约 8.9K stars，24 小时新增 +117（单日涨幅比例居前）
 **推荐理由**：多数多模态 RAG 只做到"召回这张图"，PixelRAG 做到"召回图里这块"。对文档、图表、工业质检类场景，定位精度直接决定可用性。
-**链接**：https://github.com/StarTrail-org/PixelRAG
+**链接**： <https://github.com/StarTrail-org/PixelRAG>
 
 ### 4\. rohitg00/agentmemory
 
 **简介**：开源智能体记忆层，内置向量存储集成。
 **热度**：约 26.4K stars，24 小时新增 +51
 **推荐理由**：与今天 ChronoMem、Analytic Memory 两篇论文形成呼应——记忆正在从"框架的一个模块"独立成"一层基础设施"。可直接拿来替换自研的临时方案。
-**链接**：https://github.com/rohitg00/agentmemory
+**链接**： <https://github.com/rohitg00/agentmemory>
 
 ### 5\. hugohe3/ppt-master
 
 **简介**：AI 驱动的 PowerPoint 生成器，支持 markdown 到幻灯片的转换。
 **热度**：约 42.7K stars，24 小时新增 +134
 **推荐理由**：难得的非 agent 类高增长项目，说明"把 AI 塞进具体办公动作"的需求依然被严重低估。markdown 作为中间表示比让模型直接吐 pptx 稳定得多。
-**链接**：https://github.com/hugohe3/ppt-master
+**链接**： <https://github.com/hugohe3/ppt-master>
 
 ### 6\. earthtojake/text-to-cad
 
 **简介**：基于 OpenSCAD 的 LLM 文本转 CAD 生成器。
 **热度**：约 12.6K stars，24 小时新增 +90
 **推荐理由**：选 OpenSCAD 作为目标语言是聪明的取巧——CAD 变成了可执行代码，模型的输出天然可验证、可版本管理，绕开了直接生成几何体的评估难题。
-**链接**：https://github.com/earthtojake/text-to-cad
+**链接**： <https://github.com/earthtojake/text-to-cad>
 
 ### 7\. livekit/agents
 
 **简介**：构建实时语音 AI 智能体的框架，支持语音、视频通道。
 **热度**：约 11.8K stars，24 小时新增 +69
 **推荐理由**：在全双工语音成为大厂标配的节点上，这是自托管路线里最成熟的一个。延迟预算、打断处理这些脏活它已经趟过一遍。
-**链接**：https://github.com/livekit/agents
+**链接**： <https://github.com/livekit/agents>
 
 ### 8\. THU-MAIC/OpenMAIC
 
 **简介**：Open Multi-Agent Interactive Classroom，多智能体互动课堂，提供沉浸式多智能体学习体验。
 **热度**：约 20.5K stars，24 小时新增 +23
 **推荐理由**：清华团队出品，把多智能体从"完成任务"转向"扮演教学角色"。教育场景对 agent 的容错率更高，是多智能体少见的能真实落地的方向。
-**链接**：https://github.com/THU-MAIC/OpenMAIC
+**链接**： <https://github.com/THU-MAIC/OpenMAIC>
 
 * * *
 

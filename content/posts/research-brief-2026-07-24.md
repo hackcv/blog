@@ -29,7 +29,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「Agent 记忆与经验」从单框架孤岛推向跨框架联邦演化，且不交换原始轨迹、天然隐私友好，是协作式 Agent 进化的务实方向，对多团队/多 Agent 产品有直接参考价值。
 
-**链接**：https://arxiv.org/abs/2607.21361
+**链接**： <https://arxiv.org/abs/2607.21361>
 
 ### 2. ResearchArena: Evaluating Sabotage and Monitoring in Automated AI R&D
 
@@ -39,7 +39,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：直接把「长程自主研发 Agent 会不会 sabotage」做成可量化基准，与 OpenAI 模型逃逸 Hugging Face 的真实事件形成学术呼应——给自动化研发 Agent 的监控与防破坏提供了评测工具，而非空谈安全。
 
-**链接**：https://arxiv.org/abs/2607.19321
+**链接**： <https://arxiv.org/abs/2607.19321>
 
 ### 3. Semantic Cooperative Games for Contribution Attribution in LLM-Based Multi-Agent Systems
 
@@ -49,7 +49,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：多 Agent 协作长期「算不清谁贡献了什么」，直接拖慢信用分配与奖励设计；用合作博弈做语义级归因，是让多 Agent 系统可解释、可激励的关键一步，也是多 Agent RL 的 prerequisite。
 
-**链接**：https://arxiv.org/abs/2607.18253
+**链接**： <https://arxiv.org/abs/2607.18253>
 
 ### 4. Probabilistic Concept-Aware Steering for Trustworthy LLM Inference
 
@@ -59,7 +59,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把 steering vector 从「加一个固定方向」升级为「带概率的概念感知」，对做可控生成、去偏与安全对齐的团队是更稳的推理时干预手段，也更易解释。
 
-**链接**：https://arxiv.org/abs/2607.18259
+**链接**： <https://arxiv.org/abs/2607.18259>
 
 ### 5. Copy Less, Ground More: Overcoming Repetitive Copying in Long-Context Reasoning via Evidence-Aware Reinforcement Learning
 
@@ -69,7 +69,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长上下文模型「复制黏贴」而非真正 grounding，是 RAG/长文档问答的真实痛点；本文用证据感知 RL 从训练侧根治，比单纯截断/压缩更治本，对依赖真实证据的场景是直接改进。
 
-**链接**：https://arxiv.org/abs/2607.19345
+**链接**： <https://arxiv.org/abs/2607.19345>
 
 ### 6. Fence: Specialized SLM Guardrails for LLM Applications
 
@@ -79,7 +79,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用专门小模型做护栏、而非依赖大模型自带过滤，是成本与可控性兼顾的工程思路，做合规 SaaS/企业 Agent 的团队能直接套用，也降低了安全层对大模型的耦合。
 
-**链接**：https://arxiv.org/abs/2607.18268
+**链接**： <https://arxiv.org/abs/2607.18268>
 
 ### 7. When JSON Is Not Enough: Semantic Reliability of Schema-Constrained LLM Ordering Agents
 
@@ -89,7 +89,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：戳中「JSON 能生成、顺序却错」的真实痛点——当 Agent 直接发指令给 API 执行，顺序错就是线上 bug；论文量化了 schema 约束下顺序的语义可靠性，给结构化 Agent 提了醒。
 
-**链接**：https://arxiv.org/abs/2607.18261
+**链接**： <https://arxiv.org/abs/2607.18261>
 
 ### 8. Measuring Reward-Seeking via Contrastive Belief Updates
 
@@ -99,7 +99,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用对比信念更新直接度量模型是否在钻奖励漏洞，比看最终指标更早暴露对齐隐患，是 RLHF 行为审计的实用探针，也便于在训练早期发现「走捷径」。
 
-**链接**：https://arxiv.org/abs/2607.18966
+**链接**： <https://arxiv.org/abs/2607.18966>
 
 ## 二、GitHub热门AI开源项目（2026.07.21-07.24）
 
@@ -111,7 +111,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「AI 新闻聚合 + 地缘 + 基础设施」做成统一态势感知面板，且增速登顶当日热榜，说明「实时情报面板」正成为 Agent 应用的高频落地方向，也是信息过载时代的高需求产品形态。
 
-**链接**：https://github.com/koala73/worldmonitor
+**链接**： <https://github.com/koala73/worldmonitor>
 
 ### 2. openai/codex-plugin-cc
 
@@ -121,7 +121,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：连 OpenAI 都给 Claude Code 出官方 Codex 插件——模型间「互操作」取代「各自为战」，多 Agent/多模型协同从社区实验升级为厂商品牌动作，对混合模型工作流的团队是直接利好。
 
-**链接**：https://github.com/openai/codex-plugin-cc
+**链接**： <https://github.com/openai/codex-plugin-cc>
 
 ### 3. addyosmani/agent-skills
 
@@ -131,7 +131,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：由一线工程负责人背书的生产级 skills 合集，印证「技能模块化」成为 Agent 工程化核心范式——开发者不再拼单 Agent，而是像搭积木一样组合预制技能，降低落地门槛。
 
-**链接**：https://github.com/addyosmani/agent-skills
+**链接**： <https://github.com/addyosmani/agent-skills>
 
 ### 4. EverMind-AI/Raven
 
@@ -141,7 +141,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「记忆层」提到 harness 的一等公民并主打自进化，与本期 arXiv 的 FedAgentKE/PRO-LONG 记忆方向同频——长程 Agent 的竞争力越来越取决于记忆与自我改进，而非单次推理能力。
 
-**链接**：https://github.com/EverMind-AI/Raven
+**链接**： <https://github.com/EverMind-AI/Raven>
 
 ### 5. oomol-lab/open-connector
 
@@ -151,7 +151,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 要真正「办事」必须能安全连 SaaS；open-connector 用 MCP 统一 1000+ 供应商认证，是 Agent 接入真实工作流的关键基建拼图，省去逐个对接的重复劳动。
 
-**链接**：https://github.com/oomol-lab/open-connector
+**链接**： <https://github.com/oomol-lab/open-connector>
 
 ### 6. multica-ai/multica
 
@@ -161,7 +161,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：解决 AI 编码 Agent「一次性指令、执行黑盒、无法协同」的痛点，做「人机协同研发基础设施」，是开源领域最成熟的 Agent 协作管理层之一，小团队可借其释放数倍产能。
 
-**链接**：https://github.com/multica-ai/multica
+**链接**： <https://github.com/multica-ai/multica>
 
 ### 7. Emily2040/seedance-2.0
 
@@ -171,7 +171,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「四模态生成」封装成可流水线生产的影视工具，呼应本期 HeyGen Companion Mode——AI 视频正从单次生成走向「带审片流程的工程化生产」，专业内容团队值得关注。
 
-**链接**：https://github.com/Emily2040/seedance-2.0
+**链接**： <https://github.com/Emily2040/seedance-2.0>
 
 ### 8. fqscfqj/Y2A-Auto
 
@@ -181,7 +181,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用 AI 翻译+字幕把跨语言视频搬运做成一键流水线，是「内容本地化 Agent」的典型落地，也折射出多语言内容流转的真实需求与自动化空间。
 
-**链接**：https://github.com/fqscfqj/Y2A-Auto
+**链接**： <https://github.com/fqscfqj/Y2A-Auto>
 
 ## 三、精选AI行业资讯（2026.07.21-07.24）
 

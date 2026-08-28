@@ -18,49 +18,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/CV
 - **摘要**：Conventional frame-based cameras capture rich contextual information but suffer from limited temporal resolution and motion blur in dynamic scenes. Event cameras offer an alternative visual representation with higher dynamic range free from such limitations. The complementary characteristics of the two modalities make event-frame asymmetric stereo promising for reliable 3D perception under fast mo...
 - **推荐原因**：从社区反馈来看有一定价值，可以快速浏览。
-- **链接**：https://arxiv.org/abs/2604.15312v1
+- **链接**： <https://arxiv.org/abs/2604.15312v1>
 
 ### 2. LeapAlign: Post-Training Flow Matching Models at Any Generation Step by Building Two-Step Trajectories
 - **方向**：arXiv/CV
 - **摘要**：This paper focuses on the alignment of flow matching models with human preferences. A promising way is fine-tuning by directly backpropagating reward gradients through the differentiable generation process of flow matching. However, backpropagating through long trajectories results in prohibitive memory costs and gradient explosion. Therefore, direct-gradient methods struggle to update early gener...
 - **推荐原因**：检索增强的持续优化让大模型更好地融入真实业务场景。
-- **链接**：https://arxiv.org/abs/2604.15311v1
+- **链接**： <https://arxiv.org/abs/2604.15311v1>
 
 ### 3. Generalization in LLM Problem Solving: The Case of the Shortest Path
 - **方向**：arXiv/LG
 - **摘要**：Whether language models can systematically generalize remains actively debated. Yet empirical performance is jointly shaped by multiple factors such as training data, training paradigms, and inference-time strategies, making failures difficult to interpret. We introduce a controlled synthetic environment based on shortest-path planning, a canonical composable sequential optimization problem. The s...
 - **推荐原因**：推理优化是 LLM 落地最后一公里的核心，降低成本是产业刚需。
-- **链接**：https://arxiv.org/abs/2604.15306v1
+- **链接**： <https://arxiv.org/abs/2604.15306v1>
 
 ### 4. Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations
 - **方向**：arXiv/LG
 - **摘要**：LLM-as-judge frameworks are increasingly used for automatic NLG evaluation, yet their per-instance reliability remains poorly understood. We present a two-pronged diagnostic toolkit applied to SummEval: $\textbf{(1)}$ a transitivity analysis that reveals widespread per-input inconsistency masked by low aggregate violation rates ($\barρ = 0.8$-$4.1\%$), with $33$-$67\%$ of documents exhibiting at l...
 - **推荐原因**：AI 安全和对齐问题日益突出，评估体系和防护手段是重要研究方向。
-- **链接**：https://arxiv.org/abs/2604.15302v1
+- **链接**： <https://arxiv.org/abs/2604.15302v1>
 
 ### 5. MM-WebAgent: A Hierarchical Multimodal Web Agent for Webpage Generation
 - **方向**：arXiv/AI
 - **摘要**：The rapid progress of Artificial Intelligence Generated Content (AIGC) tools enables images, videos, and visualizations to be created on demand for webpage design, offering a flexible and increasingly adopted paradigm for modern UI/UX. However, directly integrating such tools into automated webpage generation often leads to style inconsistency and poor global coherence, as elements are generated i...
 - **推荐原因**：Agent 是当前 AI 工程化的核心方向，代表了大模型从「对话」到「执行」的关键跃迁。
-- **链接**：https://arxiv.org/abs/2604.15309v1
+- **链接**： <https://arxiv.org/abs/2604.15309v1>
 
 ### 6. How Do LLMs and VLMs Understand Viewpoint Rotation Without Vision? An Interpretability Study
 - **方向**：arXiv/AI
 - **摘要**：Over the past year, spatial intelligence has drawn increasing attention. Many prior works study it from the perspective of visual-spatial intelligence, where models have access to visuospatial information from visual inputs. However, in the absence of visual information, whether linguistic intelligence alone is sufficient to endow models with spatial intelligence, and how models perform relevant t...
 - **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://arxiv.org/abs/2604.15294v1
+- **链接**： <https://arxiv.org/abs/2604.15294v1>
 
 ### 7. CoopEval: Benchmarking Cooperation-Sustaining Mechanisms and LLM Agents in Social Dilemmas
 - **方向**：arXiv/CL
 - **摘要**：It is increasingly important that LLM agents interact effectively and safely with other goal-pursuing agents, yet, recent works report the opposite trend: LLMs with stronger reasoning capabilities behave _less_ cooperatively in mixed-motive games such as the prisoner's dilemma and public goods settings. Indeed, our experiments show that recent models -- with or without reasoning enabled -- consist...
 - **推荐原因**：模型安全评测是保证大模型可靠部署的基础。
-- **链接**：https://arxiv.org/abs/2604.15267v1
+- **链接**： <https://arxiv.org/abs/2604.15267v1>
 
 ### 8. From Tokens to Steps: Verification-Aware Speculative Decoding for Efficient Multi-Step Reasoning
 - **方向**：arXiv/CL
 - **摘要**：Speculative decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose outputs that a stronger target model verifies. However, its token-centric nature allows erroneous steps to propagate. Prior approaches mitigate this using external reward models, but incur additional latency, computational overhead, and limit generalizability. We propose SpecGuard,...
 - **推荐原因**：大模型能力持续突破，多模态融合是下一代 AI 的标配能力。
-- **链接**：https://arxiv.org/abs/2604.15244v1
+- **链接**： <https://arxiv.org/abs/2604.15244v1>
 
 
 ## 🌟 二、GitHub 热门项目
@@ -69,49 +69,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **Stars**：⭐ 2,775 · TypeScript
 - **简介**：See where your AI coding tokens go. Interactive TUI dashboard for Claude Code, Codex, and Cursor cost observability.
 - **推荐原因**：技术实现有一定参考价值，可借鉴到类似项目中。
-- **链接**：https://github.com/getagentseal/codeburn
+- **链接**： <https://github.com/getagentseal/codeburn>
 
 ### 2. browser-use/browser-harness
 - **Stars**：⭐ 1,433 · Python
 - **简介**：Self-healing browser harness that enables LLMs to complete any task.
 - **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://github.com/browser-use/browser-harness
+- **链接**： <https://github.com/browser-use/browser-harness>
 
 ### 3. Mouseww/anything-analyzer
 - **Stars**：⭐ 1,406 · TypeScript
 - **简介**：全能协议分析工具：浏览器抓包 + MITM 代理 + 指纹伪装 + AI 分析 + MCP Server 无缝对接 AI Agent/IDE   |  All-in-one protocol analysis toolkit — built-in browser capture, MITM proxy, JS hooks, fingerprint spoofing, AI analysis & M
 - **推荐原因**：Agent 是当前 AI 工程化的核心方向，代表了大模型从「对话」到「执行」的关键跃迁。
-- **链接**：https://github.com/Mouseww/anything-analyzer
+- **链接**： <https://github.com/Mouseww/anything-analyzer>
 
 ### 4. Manavarya09/design-extract
 - **Stars**：⭐ 1,050 · JavaScript
 - **简介**：Extract any website's complete design system with one command. DTCG tokens, semantic+primitive+composite, MCP server for Claude Code/Cursor/Windsurf, multi-platform emitters (iOS SwiftUI, Android Comp
 - **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://github.com/Manavarya09/design-extract
+- **链接**： <https://github.com/Manavarya09/design-extract>
 
 ### 5. BuilderPulse/BuilderPulse
 - **Stars**：⭐ 951
 - **简介**：AI-powered daily intelligence for indie hackers and builders. 20 questions, 10+ sources, every morning.
 - **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://github.com/BuilderPulse/BuilderPulse
+- **链接**： <https://github.com/BuilderPulse/BuilderPulse>
 
 ### 6. WeaveMindAI/weft
 - **Stars**：⭐ 857 · Rust
 - **简介**：A programming language for AI systems
 - **推荐原因**：是近期技术趋势的典型案例，有一定代表性。
-- **链接**：https://github.com/WeaveMindAI/weft
+- **链接**： <https://github.com/WeaveMindAI/weft>
 
 ### 7. yaojingang/GEOFlow
 - **Stars**：⭐ 825 · PHP
 - **简介**：Open-source GEO content production system with AI tasks, review workflow, and publishing.
 - **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://github.com/yaojingang/GEOFlow
+- **链接**： <https://github.com/yaojingang/GEOFlow>
 
 ### 8. amitshekhariitbhu/llm-internals
 - **Stars**：⭐ 550
 - **简介**：Learn LLM internals step by step - from tokenization to attention to inference optimization.
 - **推荐原因**：工程优化类工作往往直接决定技术能否真正落地，值得重点关注。
-- **链接**：https://github.com/amitshekhariitbhu/llm-internals
+- **链接**： <https://github.com/amitshekhariitbhu/llm-internals>
 
 
 ## 📰 三、AI 科技媒体 & 大厂博客
@@ -120,73 +120,73 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **来源**：TechCrunch AI · AI 媒体
 - **摘要**：The company now offers robotaxi service in three cities, all of them in Texas, after launching in Austin last year and starting to offer rides without safety drivers in January 2026.
 - **推荐原因**：模型安全评测是保证大模型可靠部署的基础。
-- **链接**：https://techcrunch.com/2026/04/18/tesla-brings-its-robotaxi-service-to-dallas-and-houston/
+- **链接**： <https://techcrunch.com/2026/04/18/tesla-brings-its-robotaxi-service-to-dallas-and-houston/>
 
 ### 2. AI chip startup Cerebras files for IPO
 - **来源**：TechCrunch AI · AI 媒体
 - **摘要**：In recent months, the company announced an agreement with Amazon Web Services to use Cerebras chips in Amazon data centers, as well as a deal with OpenAI reportedly worth more than $10 billion.
 - **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://techcrunch.com/2026/04/18/ai-chip-startup-cerebras-files-for-ipo/
+- **链接**： <https://techcrunch.com/2026/04/18/ai-chip-startup-cerebras-files-for-ipo/>
 
 ### 3. Anthropic’s relationship with the Trump administration seems to be thawing
 - **来源**：TechCrunch AI · AI 媒体
 - **摘要**：Despite recently being designated a supply-chain risk by the Pentagon, Anthropic is still talking to high-level members of the Trump administration.
 - **推荐原因**：技术实现有一定参考价值，可借鉴到类似项目中。
-- **链接**：https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/
+- **链接**： <https://techcrunch.com/2026/04/18/anthropics-relationship-with-the-trump-administration-seems-to-be-thawing/>
 
 ### 4. It Takes 2 Minutes to Hack the EU’s New Age-Verification App
 - **来源**：Wired AI · AI 媒体
 - **摘要**：Plus: Major data breaches at a gym chain and hotel giant, a disruptive DDoS attack against Bluesky, dubious ICE hires, and more.
 - **推荐原因**：是近期技术趋势的典型案例，有一定代表性。
-- **链接**：https://www.wired.com/story/security-news-this-week-it-takes-2-minutes-to-hack-the-eus-new-age-verification-app/
+- **链接**： <https://www.wired.com/story/security-news-this-week-it-takes-2-minutes-to-hack-the-eus-new-age-verification-app/>
 
 ### 5. Schematik Is ‘Cursor for Hardware.’ Anthropic Wants In
 - **来源**：Wired AI · AI 媒体
 - **摘要**：Schematik is a program that aims to help people vibe code for physical devices. Hopefully, it won’t blow anything up.
 - **推荐原因**：内容偏向工程实践，对实际项目有一定帮助。
-- **链接**：https://www.wired.com/story/schematik-is-cursor-for-hardware-anthropic-wants-in-on-it/
+- **链接**： <https://www.wired.com/story/schematik-is-cursor-for-hardware-anthropic-wants-in-on-it/>
 
 ### 6. OpenAI Executive Kevin Weil Is Leaving the Company
 - **来源**：Wired AI · AI 媒体
 - **摘要**：The former Instagram VP is departing the ChatGPT-maker, which is folding the AI science application he led into Codex.
 - **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://www.wired.com/story/openai-executive-kevin-weil-is-leaving-the-company/
+- **链接**： <https://www.wired.com/story/openai-executive-kevin-weil-is-leaving-the-company/>
 
 ### 7. US-sanctioned currency exchange says $15 million heist done by "unfriendly states"
 - **来源**：Ars Technica · AI 媒体
 - **摘要**：Grinex says needed hacking resources "available exclusively to ... unfriendly states."
 - **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://arstechnica.com/security/2026/04/russia-friendly-exchange-says-western-special-service-behind-15-million-cyberattack/
+- **链接**： <https://arstechnica.com/security/2026/04/russia-friendly-exchange-says-western-special-service-behind-15-million-cyberattack/>
 
 ### 8. Recent advances push Big Tech closer to the Q-Day danger zone
 - **来源**：Ars Technica · AI 媒体
 - **摘要**：Here's which players are winning the race to transition to post-quantum crypto.
 - **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://arstechnica.com/security/2026/04/while-some-big-tech-players-accelerate-pqc-readiness-others-stay-the-course/
+- **链接**： <https://arstechnica.com/security/2026/04/while-some-big-tech-players-accelerate-pqc-readiness-others-stay-the-course/>
 
 ### 9. “Negative” views of Broadcom driving thousands of VMware migrations, rival says
 - **来源**：Ars Technica · AI 媒体
 - **摘要**：Western Union exec says there were "challenges" working with Broadcom.
 - **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://arstechnica.com/information-technology/2026/04/nutanix-claims-it-has-poached-30000-vmware-customers/
+- **链接**： <https://arstechnica.com/information-technology/2026/04/nutanix-claims-it-has-poached-30000-vmware-customers/>
 
 ### 10. Pie Day 2026
 - **来源**：MIT Tech Review · AI 媒体
 - **摘要**：Ellie’s Pi Day post: https://mitadmissions.org/blogs/entry/pi-day-2026-food-institute/ How Ellie orchestrated the baking of 30 pies: https://mitadmissions.org/blogs/entry/behind-the-scenes-of-thirty-p
 - **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://www.technologyreview.com/2026/04/17/1136121/pie-day-links/
+- **链接**： <https://www.technologyreview.com/2026/04/17/1136121/pie-day-links/>
 
 ### 11. The Download: bad news for inner Neanderthals, and AI warfare’s human illusion
 - **来源**：MIT Tech Review · AI 媒体
 - **摘要**：This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. The problem with thinking you’re part Neanderthal There’s a th
 - **推荐原因**：引发了不少讨论，值得了解业界观点。
-- **链接**：https://www.technologyreview.com/2026/04/17/1136112/the-download-inner-neanderthal-ai-war-human-in-the-loop/
+- **链接**： <https://www.technologyreview.com/2026/04/17/1136112/the-download-inner-neanderthal-ai-war-human-in-the-loop/>
 
 ### 12. The case for fixing everything
 - **来源**：MIT Tech Review · AI 媒体
 - **摘要**：The handsome new book Maintenance: Of Everything, Part One, by the tech industry legend Stewart Brand, promises to be the first in a series offering “a comprehensive overview of the civilizational imp
 - **推荐原因**：从社区反馈来看有一定价值，可以快速浏览。
-- **链接**：https://www.technologyreview.com/2026/04/17/1135408/book-review-stewart-brand-fixing-everything-maintenance/
+- **链接**： <https://www.technologyreview.com/2026/04/17/1135408/book-review-stewart-brand-fixing-everything-maintenance/>
 
 
 ## 🔥 四、HackerNews 近 48h 热门
@@ -194,7 +194,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 1. Claude Design
 - **热度**：1203 points · 💬 746 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://www.anthropic.com/news/claude-design-anthropic-labs
+- **链接**： <https://www.anthropic.com/news/claude-design-anthropic-labs>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47806725
 - **高赞评论（原文+中文）**：
   · **ljm** ：I reckon something like this has only been possible to develop because of how homogenous the internet has become in terms of design ever since the glass effect and drop-shadows took over in Web 2.0 and Twitter Bootstrap entered the scene. You'll get a competent UI with little effort but nothing…
@@ -207,7 +207,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 2. Migrating from DigitalOcean to Hetzner
 - **热度**：819 points · 💬 409 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://isayeter.com/posts/digitalocean-to-hetzner-migration/
+- **链接**： <https://isayeter.com/posts/digitalocean-to-hetzner-migration/>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47815774
 - **高赞评论（原文+中文）**：
   · **antirez** ：I moved two servers, one from Linode and the other from DO to Hetzner a few months ago, with similar savings. The best part was that the two servers had tens of different sites running, implemented in different languages, with obsolete libraries, MySQL and Redis instances. A total mess. Well:…
@@ -220,7 +220,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 3. Measuring Claude 4.7's tokenizer costs
 - **热度**：701 points · 💬 488 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you
+- **链接**： <https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47807006
 - **高赞评论（原文+中文）**：
   · **louiereederson** ：LLMs exist on a logaritmhic performance/cost frontier. It's not really clear whether Opus 4.5+ represent a level shift on this frontier or just inhabits place on that curve which delivers higher performance, but at rapidly diminishing returns to inference cost. To me, it is hard to reject this…
@@ -233,31 +233,31 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 4. Anonymous request-token comparisons from Opus 4.6 and Opus 4.7
 - **热度**：559 points · 💬 538 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://tokens.billchambers.me/leaderboard
+- **链接**： <https://tokens.billchambers.me/leaderboard>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47816960
 
 ### 5. Show HN: Smol machines – subsecond coldstart, portable virtual machines
 - **热度**：469 points · 💬 140 comments
 - **推荐原因**：HN 讨论热烈（140 条评论），社区关注度高。
-- **链接**：https://github.com/smol-machines/smolvm
+- **链接**： <https://github.com/smol-machines/smolvm>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47808268
 
 ### 6. Why Japan has such good railways
 - **热度**：454 points · 💬 428 comments
 - **推荐原因**：HN 讨论热烈（428 条评论），社区关注度高。
-- **链接**：https://worksinprogress.co/issue/why-japan-has-such-good-railways/
+- **链接**： <https://worksinprogress.co/issue/why-japan-has-such-good-railways/>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47815395
 
 ### 7. All 12 moonwalkers had "lunar hay fever" from dust smelling like gunpowder (2018)
 - **热度**：448 points · 💬 263 comments
 - **推荐原因**：HN 讨论热烈（263 条评论），社区关注度高。
-- **链接**：https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_toxic_side_of_the_Moon
+- **链接**： <https://www.esa.int/Science_Exploration/Human_and_Robotic_Exploration/The_toxic_side_of_the_Moon>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47808913
 
 ### 8. State of Kdenlive
 - **热度**：425 points · 💬 130 comments
 - **推荐原因**：HN 讨论热烈（130 条评论），社区关注度高。
-- **链接**：https://kdenlive.org/news/2026/state-2026/
+- **链接**： <https://kdenlive.org/news/2026/state-2026/>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47815118
 
 

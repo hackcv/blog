@@ -22,56 +22,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：针对统一多模态模型在长程对话中因视觉token爆炸、跨轮引用不可靠而受限的问题，提出认知结构多模态智能体，将视觉信息外化为情景视觉记忆（Episodic Visual Memory）并在推理时选择性激活。系统由感知抽象引擎、认知检索引擎和多模态执行控制器组成，并配套生成细粒度检索标注的合成对话引擎与分层难度基准。其8B智能体在20轮会话中检索准确率达91.4%，超越32B基线+8.2%，单轮推理耗时由23.1s降至12.7s。
 **领域**：多模态大模型、智能体记忆、长程对话
 **推荐理由**：用结构化记忆与模块化决策替代单体参数堆砌，为长程多模态智能体提供了更可扩展、更高效的范式，可直接落地到助手类应用的长期交互场景。
-**链接**：https://arxiv.org/abs/2607.08497
+**链接**： <https://arxiv.org/abs/2607.08497>
 
 ### 2\. iFLYTEK-Embodied-Omni: Unifying Vision, Language and Action in a Single Embodied Model
 
 **摘要**：科大讯飞发布Embodied-Omni技术报告，提出在单一框架内统一视觉（图像/视频）、语言与动作生成的具身基础模型。架构采用"脑-小脑"协作：视觉语言模型与视频生成模型作为高层"脑"负责任务规划与未来视觉状态预测，动作生成组件作为低层"小脑"直接输出控制指令，三者通过共享多模态自注意力通信，消除级联流水线的接口误差累积。
 **领域**：具身智能、机器人学、多模态统一建模
 **推荐理由**：解决了当前机器人系统"视觉推理、世界建模、动作生成"三者割裂的痛点，用统一注意力空间替代模块间文件式传递，为通用具身智能体提供了可信的技术路径。
-**链接**：https://arxiv.org/abs/2607.02542
+**链接**： <https://arxiv.org/abs/2607.02542>
 
 ### 3\. Gemma 4 Technical Report
 
 **摘要**：Google DeepMind发布Gemma 4技术报告，全系采用Apache 2.0彻底开源。报告展示了一次底层重构：直接移除多模态模型中最沉重的视觉与音频编码器，将媲美顶级云端AI的深度推理与多模态理解能力塞进可离线运行的轻量模型，31B版本在多项基准上直逼闭源前沿模型。
 **领域**：端侧大模型、多模态、高效推理
 **推荐理由**：端侧大模型不再是云端的廉价替代品，而是拥有原生多模态与深度思考能力的独立智能体，将大幅加速AI终端普及与本地化部署，敲响云端AI依赖的丧钟。
-**链接**：https://arxiv.org/abs/2607.02770
+**链接**： <https://arxiv.org/abs/2607.02770>
 
 ### 4\. WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search
 
 **摘要**：针对单一ReAct式搜索智能体受限于单条长轨迹、难以兼顾深度与覆盖的问题，提出渐进式递归委派框架WebSwarm，在推理过程中联合构建任务分解、递归扩展与智能体协作。每个节点耦合局部目标与搜索模式，可自主求解或进一步委派子节点，求解后向上返回证据与结果，使父节点能继续扩展、修正或聚合。在BrowseComp-Plus、WideSearch、DeepWideSearch、GISA等基准上一致超越单/多智能体基线。
 **领域**：智能体、网络搜索、多智能体编排
 **推荐理由**：为深度与广度兼具的研究型搜索提供了可复用的多智能体范式，其过程级经验复用机制对构建企业级研究助手、情报分析系统具有直接参考价值。
-**链接**：https://arxiv.org/abs/2607.08662
+**链接**： <https://arxiv.org/abs/2607.08662>
 
 ### 5\. FSD-VLN: Fast-Slow Dual-System Modeling for Aerial Long-Horizon Vision-Language Navigation
 
 **摘要**：面向无人机视觉语言导航（VLN）长程任务中高层语义推理与低延迟飞控之间的结构错位问题，提出快慢双系统架构：慢流从预训练视觉语言模型提取稳定语义先验，快流用扩散Transformer（DiT）建模跨时序动作分布产出一致飞控输出，并引入时间感知自适应优化器稳定长序列训练。大规模低空仿真显示，其在未见场景导航成功率最高提升2倍，单步推理延迟与总任务耗时削减超50%。
 **领域**：机器人学、视觉语言导航、无人机自主飞行
 **推荐理由**：验证了"语义-控制"解耦建模在长程空中VLN中的显著收益，为物流巡检、应急救援等真实低空智能场景提供了实用范式。
-**链接**：https://arxiv.org/abs/2607.08359
+**链接**： <https://arxiv.org/abs/2607.08359>
 
 ### 6\. Multimodal Continuous Reasoning via Asymmetric Mutual Variational Learning
 
 **摘要**：上海交通大学与蚂蚁集团联合发布，针对多模态大模型在评测中"考场作弊"（依赖表层文字捷径而非真实推理）的难题，提出非对称互学习变分学习（AMVL）。核心思路是让AI在连续的、类似内心独白的隐藏空间中进行推理，而非将推理过程翻译成文字，从而真正学会独立思考与跨模态对齐。
 **领域**：多模态大模型、AI对齐、复杂推理
 **推荐理由**：直击大模型评测可信度这一行业核心痛点，为抑制评测捷径、提升模型真实推理能力提供了可验证的方法论，对金融、医疗等高可靠性场景的模型落地意义重大。
-**链接**：https://arxiv.org/abs/2607.00461
+**链接**： <https://arxiv.org/abs/2607.00461>
 
 ### 7\. Prismata: Confining Cross-Site Prompt Injection in Web Agents
 
 **摘要**：针对Web智能体面临的跨站提示注入攻击，提出基于最小权限隔离与结构化策略推导的防御框架Prismata。该方法将智能体的工具调用约束在最窄必要权限内，并从网页结构自动派生安全策略，在不显著牺牲任务成功率的前提下，有效遏制恶意网页诱导智能体执行越权操作。
 **领域**：AI安全、提示注入、Web智能体
 **推荐理由**：随着浏览器智能体获得越来越多系统权限，提示注入已从内容风险升级为系统级风险，Prismata提供的最小权限隔离思路是智能体安全落地的关键基础设施。
-**链接**：https://arxiv.org/abs/2607.08147
+**链接**： <https://arxiv.org/abs/2607.08147>
 
 ### 8\. Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents
 
 **摘要**：提出即插即用的主动记忆智能体，面向长程LLM智能体在上下文窗口限制下的可靠性问题。该记忆模块可在任务执行过程中主动判断"何时该记住什么"，以结构化方式沉淀关键信息并在后续步骤精准召回，在不改造基座模型的前提下显著提升长程任务的执行稳定性。
 **领域**：AI Agent、记忆机制、长程任务可靠性
 **推荐理由**：长程任务是智能体走向生产的核心门槛，即插即用记忆模块降低了Agent工程化改造成本，可直接集成到主流智能体框架，提升多轮复杂任务连贯性。
-**链接**：https://arxiv.org/abs/2607.08716
+**链接**： <https://arxiv.org/abs/2607.08716>
 
 * * *
 
@@ -82,56 +82,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：用Shell编写的AI编程助手技能框架，直接从作者真实项目的.claude目录提炼而来，面向一线工程师工作流设计，覆盖类型安全、测试、重构等高频实战技能，强调"能直接用在真实代码库"而非玩具示例。
 **热度**：单日新增1,712星，登顶当日GitHub Trending AI类目
 **推荐理由**：由TypeScript社区意见领袖维护，代表了"把专家经验沉淀为可复用技能"的AI编程工程化趋势，是团队规模化落地AI辅助开发的优质起点模板。
-**链接**：https://github.com/mattpocock/skills
+**链接**： <https://github.com/mattpocock/skills>
 
 ### 2\. iOfficeAI/OfficeCLI: 专为AI Agent设计的Office套件CLI
 
 **简介**：首个面向AI Agent的Office套件命令行工具，无需安装微软Office，单二进制文件即可读写Word、Excel、PowerPoint，支持复杂表格计算、格式调整与内容生成，开源免费，专为自动化办公与RPA场景优化。
 **热度**：单日新增1,224星，持续位列热榜前列
 **推荐理由**：解决了AI Agent无法直接操作Office文档的行业痛点，是办公自动化、智能报表生成场景的必备工具，大幅降低企业流程自动化门槛。
-**链接**：https://github.com/iOfficeAI/OfficeCLI
+**链接**： <https://github.com/iOfficeAI/OfficeCLI>
 
 ### 3\. addyosmani/agent-skills: 生产级AI编程技能库
 
 **简介**：由Google Chrome团队前工程总监Addy Osmani维护的生产级AI编程Agent工程技能库，封装了从需求定义到发布上线的全流程技能模块，支持Claude Code、Cursor等70多个平台，强调工业级可用性与最佳实践沉淀。
 **热度**：单日新增1,116星
 **推荐理由**：来自一线大厂工程领袖的方法论输出，质量与覆盖面兼具，是AI编程技能生态的事实标准参考库，帮助企业统一Agent开发规范。
-**链接**：https://github.com/addyosmani/agent-skills
+**链接**： <https://github.com/addyosmani/agent-skills>
 
 ### 4\. obra/superpowers: Agent能力层与软件开发方法论
 
 **简介**：Agent技能框架与软件开发方法论集合，提供可组合、可扩展的Agent能力层，核心是7阶段结构化工作流（需求澄清、计划审批、TDD实现、子Agent并行、审查收尾），已同时进入Claude Code与Codex官方插件市场，兼容10+主流平台。
 **热度**：单日新增1,013星，总星标超21万
 **推荐理由**：用"先想清楚再写"的工程铁律约束AI编码Agent，从"快但乱"转向"稳且规范"，是中大型团队提升AI产出质量的标杆方法论。
-**链接**：https://github.com/obra/superpowers
+**链接**： <https://github.com/obra/superpowers>
 
 ### 5\. TencentCloud/CubeSandbox: AI Agent硬件级隔离沙箱
 
 **简介**：腾讯云开源的AI Agent沙箱服务，基于RustVMM与KVM提供硬件级隔离，冷启动低于60毫秒，内存占用极小，支持快照、克隆、回滚等状态管理，专为安全执行AI生成代码的生产级场景设计。
 **热度**：本周新晋热榜，AI基础设施类目焦点
 **推荐理由**：标志AI基础设施层向Agent时代靠拢，解决了"让AI生成的代码在隔离环境安全执行"这一关键生产问题，是Agent托管平台的必备底座。
-**链接**：https://github.com/tektite-io/CubeSandbox
+**链接**： <https://github.com/tektite-io/CubeSandbox>
 
 ### 6\. msitarzewski/agency-agents: AI Agent虚拟公司全家桶
 
 **简介**：汇集从"前端魔法师"到"Reddit社区运营"的预制AI Agent集合，每个Agent都预定义了人格特征、工作流程与质量标准，覆盖前端开发、社区运营、创意注入等场景，可视为"Agent应用商店"。
 **热度**：总星标约12.8万，本周新增超1万星
 **推荐理由**：让独立开发者与创业团队以极低成本获得一支"AI虚拟团队"，代表角色化Agent从Demo走向生产的典型范式，降低多Agent协作的搭建成本。
-**链接**：https://github.com/msitarzewski/agency-agents
+**链接**： <https://github.com/msitarzewski/agency-agents>
 
 ### 7\. usestrix/strix: 开源AI渗透测试平台
 
 **简介**：开源AI驱动的渗透测试平台，可自动扫描Web应用、API接口与基础设施的安全漏洞并给出修复建议，覆盖侦查、漏洞利用、权限提升、横向移动、报告生成完整网络杀伤链，完全自托管离线可用。
 **热度**：总星标约3.7万，本周新增超1万星
 **推荐理由**：AI+"安全"赛道的标杆项目，大幅降低渗透测试技术门槛，同时帮助防御方提前应对AI驱动的网络攻击，对提升整体网络安全水位意义重大。
-**链接**：https://github.com/usestrix/strix
+**链接**： <https://github.com/usestrix/strix>
 
 ### 8\. alibaba/open-code-review: 混合架构代码审查工具
 
 **简介**：阿里大规模验证的混合型代码审查工具，结合确定性流水线与原生LLM Agent，提供精确到行的审查意见，内置针对空指针、线程安全、XSS、SQL注入等场景微调的规则集，兼容OpenAI与Anthropic。
 **热度**：本周新增约3.47万星
 **推荐理由**：将确定性规则与LLM语义理解结合，兼顾审查可靠性与智能性，是企业级代码质量门禁的成熟开源方案，可直接嵌入CI/CD流程。
-**链接**：https://github.com/alibaba/open-code-review
+**链接**： <https://github.com/alibaba/open-code-review>
 
 * * *
 

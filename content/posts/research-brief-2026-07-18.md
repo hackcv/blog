@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：提出面向「支付集成」的真实编码智能体基准，覆盖沙箱内的支付 API 调用、错误处理与合规校验，用以评估 Agent 在金融场景下的可靠性。
 **领域**：Agent / 软件工程 / 基准评测
 **推荐理由**：支付是容错率最低的落地场景之一，该基准把「能写代码」推进到「能正确且安全地接入真实支付链路」，对企业级 Agent 部署有直接参考价值。
-**链接**：https://arxiv.org/abs/2607.14573
+**链接**： <https://arxiv.org/abs/2607.14573>
 
 ### 2. Democratizing Agent Deployment Safety: A Structural Monitoring Approach
 
 **摘要**：提出一种结构化的 Agent 部署安全监控方法（已被 ICML 2026 工作坊接收），通过运行时结构观测，在不修改模型的前提下持续监测 Agent 行为异常。
 **领域**：Agent 安全 / 可观测性
 **推荐理由**：与「改写模型」路线不同，该方法主张「监控优先」，更易在现有生产系统上落地，呼应了近期 Agent 误删文件等安全事故对可观测性的迫切需求。
-**链接**：https://arxiv.org/abs/2607.14570
+**链接**： <https://arxiv.org/abs/2607.14570>
 
 ### 3. Seeing the End at Step Zero: Accelerating Diffusion MLLMs via MLP Sparsity-Aware Truncation
 
 **摘要**：针对扩散式多模态大模型推理慢的问题，提出基于 MLP 稀疏感知的早停 / 截断策略，在生成第一步即预测可丢弃的中间步骤。
 **领域**：多模态 / 扩散模型 / 推理加速
 **推荐理由**：把「连续潜在推理」与「稀疏性」结合做推理加速，对视频 / 图像生成端侧部署有现实意义，已被 ACM MM 2026 接收。
-**链接**：https://arxiv.org/abs/2607.14557
+**链接**： <https://arxiv.org/abs/2607.14557>
 
 ### 4. Are LLM-Generated GPU Kernels Production-Ready? A Trace-Driven Benchmark and Optimization Agent
 
 **摘要**：发布 Atrex-Bench 基准与 Atrex-Kernel-Agent，用真实 trace 驱动评估 LLM 生成的 GPU kernel 是否达到生产可用，并给出自动优化 Agent。
 **领域**：LLM 代码生成 / GPU 算子 / 工程优化
 **推荐理由**：直击「LLM 写 kernel 能不能上生产」的痛点，配套开源基准与优化 Agent，对高性能计算与推理加速团队很有用。
-**链接**：https://arxiv.org/abs/2607.14541
+**链接**： <https://arxiv.org/abs/2607.14541>
 
 ### 5. RetroAgent: Harnessing LLMs to Search Over Structured Memory for Agentic Retrosynthesis Planning
 
 **摘要**：让 LLM Agent 在结构化记忆（化学反应知识库）上检索与规划，完成逆合成路线设计，已被 COLM 2026 接收。
 **领域**：Agent / 科学发现（化学）
 **推荐理由**：把「长期结构化记忆检索」引入专业领域 Agent，展示了 LLM 在化学合成规划中的可落地范式，而非泛聊天。
-**链接**：https://arxiv.org/abs/2607.14512
+**链接**： <https://arxiv.org/abs/2607.14512>
 
 ### 6. Contextualized Evaluation of Vision Language Models through Dynamic, Multi-turn Interactions
 
 **摘要**：提出通过动态、多轮交互对视觉语言模型做情境化评测，弥补静态单轮基准无法捕捉的上下文依赖能力。
 **领域**：视觉语言模型 / 评测
 **推荐理由**：多轮交互正成为 VLM 落地（如视觉 Agent、GUI 操作）的核心形态，动态评测比静态榜单更贴近真实使用。
-**链接**：https://arxiv.org/abs/2607.14499
+**链接**： <https://arxiv.org/abs/2607.14499>
 
 ### 7. SAGA: Schema-Aware Grounding for Agentic Text-to-SPARQL Generation
 
 **摘要**：提出模式感知 grounding 方法，提升 Agent 将自然语言转写为 SPARQL 查询的准确率与可执行性。
 **领域**：Agent / 文本到查询（Text-to-SPARQL）
 **推荐理由**：把「数据库 / 知识图谱问答」从一次性生成推进到「模式感知 + grounding」的可靠生成，对企业数据 Agent 有实用价值。
-**链接**：https://arxiv.org/abs/2607.14494
+**链接**： <https://arxiv.org/abs/2607.14494>
 
 ### 8. VLT: A Vision-Language-Time Series Multimodal Foundation Model for Industrial Intelligence
 
 **摘要**：提出融合视觉、语言与时间序列的工业多模态基础模型 VLT，用于设备故障预警、工艺优化等工业智能任务。
 **领域**：多模态基础模型 / 工业 AI
 **推荐理由**：把视觉-语言-时序三种模态统一建模，直击工业场景「看图 + 读表 + 读文本」的复合决策需求，是多模态落地工业的代表工作。
-**链接**：https://arxiv.org/abs/2607.14510
+**链接**： <https://arxiv.org/abs/2607.14510>
 
 ## 二、GitHub热门AI开源项目（2026.07.15–07.18）
 
@@ -84,56 +84,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：为 Codex 打造的「梦境皮肤」，个性化与增强 coding agent 的界面 / 体验层，TrendShift 今日新增热门。
 **热度**：TrendShift 今日新增，约 4.1k ★
 **推荐理由**：在 coding agent 从「能用」走向「好用」的节点，开发者体验（DX）层开始独立成赛道，值得前端 / 工具链团队关注。
-**链接**：https://github.com/Fei-Away/Codex-Dream-Skin
+**链接**： <https://github.com/Fei-Away/Codex-Dream-Skin>
 
 ### 2. Nutlope/hallmark
 
 **简介**：面向 Claude Code / Cursor / Codex 的「反 AI 套话」设计 skill，帮助生成更具辨识度的 UI 与文案。
 **热度**：TrendShift 今日新增，约 1.7k ★
 **推荐理由**：AI 生成内容「千篇一律」已成痛点，反模板化设计 skill 反映了对「有品味输出」的真实需求，skill 生态持续升温。
-**链接**：https://github.com/Nutlope/hallmark
+**链接**： <https://github.com/Nutlope/hallmark>
 
 ### 3. DeusData/codebase-memory-mcp
 
 **简介**：用 Go/Rust 编写的高性能代码智能 MCP 服务器，毫秒级将代码库索引为持久化知识图谱，AI 客户端经亚毫秒图查询精准召回上下文。
 **热度**：7 月 GitHub 热榜，约 31.5k ★（官方称可减少高达 99% 冗余 Token）
 **推荐理由**：直接命中「大代码库喂满上下文导致 Token 爆炸、响应变慢」的刚需，是 MCP + 代码智能方向的硬核代表。
-**链接**：https://github.com/DeusData/codebase-memory-mcp
+**链接**： <https://github.com/DeusData/codebase-memory-mcp>
 
 ### 4. Shubhamsaboo/awesome-llm-apps
 
 **简介**：100+ 个可真正运行的 AI Agent 与 RAG 应用合集，开箱克隆、定制、部署。
 **热度**：TrendShift 今日热门，约 56k ★
 **推荐理由**：想快速上手 Agent/RAG 工程化、找参考实现，这是目前最齐全的「能跑」样例库，比纯论文更贴近落地。
-**链接**：https://github.com/Shubhamsaboo/awesome-llm-apps
+**链接**： <https://github.com/Shubhamsaboo/awesome-llm-apps>
 
 ### 5. datawhalechina/hello-agents
 
 **简介**：《从零开始构建智能体》——系统讲解智能体原理与实战的教程项目，含 API/SDK/CLI 与编排能力。
 **热度**：7 月增长榜，65.4k ★（近观察周期 +19.6k）
 **推荐理由**：中文社区最成体系的 Agent 入门教程之一，且明确强调「编排 / 工作流」而非单点 Demo，适合团队内部培训。
-**链接**：https://github.com/datawhalechina/hello-agents
+**链接**： <https://github.com/datawhalechina/hello-agents>
 
 ### 6. HenryNdubuaku/maths-cs-ai-compendium
 
 **简介**：汇总数学 / 计算机 / AI 的系统化学习资料，目标「成为顶尖 AI/ML 研究工程师」。
 **热度**：TrendShift 今日新增，约 31.3k ★
 **推荐理由**：AI 研究工程师的「地基清单」持续走红，说明行业对「扎实基础 + 工程能力」的复合型人才需求不减。
-**链接**：https://github.com/HenryNdubuaku/maths-cs-ai-compendium
+**链接**： <https://github.com/HenryNdubuaku/maths-cs-ai-compendium>
 
 ### 7. dimthink/PriceAI
 
 **简介**：AI 订阅卡网渠道比价工具，聚合 100+ 卡网渠道（ChatGPT/Claude/Gemini/Grok 等）报价，展示有货最低价与库存。
 **热度**：TrendShift 今日新增，约 1.7k ★
 **推荐理由**：订阅卡渠道混乱、价格波动大是真实痛点，这类「信息聚合 + AI」小工具展示了长尾场景的自动化机会。
-**链接**：https://github.com/dimthink/PriceAI
+**链接**： <https://github.com/dimthink/PriceAI>
 
 ### 8. CloudEngineHub/WrenAI
 
 **简介**：开源 AI Agent，让数据 / 产品团队用自然语言对话数据，生成 Text-to-SQL、图表、表格、报告与 BI；Rust 核心，07-16 仍有提交。
 **热度**：2,570 commits，多分支持续活跃；开源 Text-to-SQL/BI Agent 代表
 **推荐理由**：Text-to-SQL 是离业务最近的 Agent 场景之一，WrenAI 把「对话 → SQL → 报表」做成完整产品，适合想自建数据分析 Agent 的团队参考。
-**链接**：https://github.com/CloudEngineHub/WrenAI
+**链接**： <https://github.com/CloudEngineHub/WrenAI>
 
 ## 三、精选AI行业资讯（2026.07.15–07.18）
 

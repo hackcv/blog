@@ -33,56 +33,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：线束（harness）优化通过反复重写 harness 代码提升 LLM agent 表现，无需更新模型权重；但现有方法每轮都要跑完整验证集，即使某些任务在 harness 演化后已失去区分度也要全额评估。Task-CoEvolve 让验证任务集与线束共同进化：基于历史结果的方差加权采样，把评测预算集中到候选 harness 之间分歧最大的任务上，再用考虑采样概率的估计器从部分评测还原全集分数。在线文本分类与 Terminal-Bench 2.1 上稳定优于固定子集基线，最终性能与全集搜索持平，而优化期间的评测次数减少 80%。
 **领域**：Agent 工程 / 评测优化
 **推荐理由**：不动权重、只改 harness 已是当前提升 agent 的主流手段，本文把它的最大成本项（全量评测）砍掉八成，让"评测驱动优化"从实验室走入日常迭代。
-**链接**：https://arxiv.org/abs/2608.20169
+**链接**： <https://arxiv.org/abs/2608.20169>
 
 ### 2. Optimal Skill Selection for LLM Agents with Provable Bicriteria Guarantees
 
 **摘要**：把可复用技能文档装进有限上下文窗口，是 agent 获得任务能力的主要方式；但现有做法按语义相关性独立打分后取 top-k，对选出的集合既无质量保证也不顾 token 成本。本文首次给出"技能集合如何决定执行结果"的模型，把技能选择形式化为硬 token 预算下最大化单调次模收益减去上下文惩罚的优化问题，提出多项式时间算法 BPS，证明双准则 (1−1/e, 1) 近似，其中收益系数在多项式时间内最优。在污染受控的 BigCodeBench 变体上，BPS 任务成功率 0.73，而技能路由器、文本检索器和执行器自选只有 0.20–0.52，且 token 用量比最强路由器少 28%。
 **领域**：Agent / 技能选择
 **推荐理由**：第一个带理论性能保证的技能选择方法，把"装哪些技能"从启发式变成可证明有界的优化问题，对上下文预算紧张的多技能 agent 可直接落地。
-**链接**：https://arxiv.org/abs/2608.19993
+**链接**： <https://arxiv.org/abs/2608.19993>
 
 ### 3. MileGPO: Milestone Inference with Local Evidence for Graph-Based Policy Optimization of Long-Horizon LLM Agents
 
 **摘要**：长程 agent 强化学习的监督往往只有最终奖励，把轨迹级信号细化到每一步时容易漏掉有意义的中间里程碑。MileGPO 从分组的在线 rollout 中推导过程级信用：里程碑发现环节在成功轨迹上找候选里程碑、在失败轨迹上找反复掉入的陷阱；可靠性校准加权按结果置信度放大可信信号、压低存疑信号；进展对比校准再检验候选点是否反映局部进展。方法不需要辅助模型，也不增加环境交互，在 ALFWorld 和 WebShop 上达到当前最优，且分布内外差距小。
 **领域**：Agent 强化学习
 **推荐理由**：直指 agentic RL 训练效率的核心瓶颈——步级信用分配，无辅助模型、零额外交互的务实方案，训练成本敏感的团队可快速复现。
-**链接**：https://arxiv.org/abs/2608.19803
+**链接**： <https://arxiv.org/abs/2608.19803>
 
 ### 4. Harness Continual Learning: Continual Adaptation Beyond Model Parameters
 
 **摘要**：持续学习长期以模型为中心，把参数当作随经验变化的状态；而现代 agent 还能通过提示词、记忆、工具、技能与路由规则的"harness"持续适应。由于这些内容共同塑造后续执行，一次 harness 更新可能破坏此前可靠的行为——即便模型完全冻结。论文将这一现象命名为 harness 级遗忘，并提出 HCL 框架：为每次 harness 更新加一道门控检查，像代码变更一样先跑回归测试再允许更新持久化。提示词与记忆的改动应当被当作代码提交来管理，而非"模型自我进化"的魔法。
 **领域**：Agent 工程 / 持续学习
 **推荐理由**：首次系统化定义"模型外围系统的持续学习与回归测试"问题，把提示词/记忆更新的工程纪律上升到与代码同级的版本控制，做 agent 平台与生产运维的团队必读。
-**链接**：https://arxiv.org/abs/2608.19013
+**链接**： <https://arxiv.org/abs/2608.19013>
 
 ### 5. SAPO: Single-Rollout Autoregressive Policy Optimization for Agentic Reinforcement Learning
 
 **摘要**：现有 agent 强化学习方法存在三大局限：需要多次 rollout 才能估算优势、策略与价值网络分离导致内存与计算开销高、对奖励噪声敏感。SAPO 共享策略与价值函数的自回归主干，结合广义优势估计器（GAE），单次 rollout 即可完成策略更新。在 ALFWorld、WebShop 等任务上性能优于 PPO 和 GRPO，且内存与计算效率更高。
 **领域**：Agent 强化学习
 **推荐理由**：单 rollout 自回归策略优化直击 agentic RL 的采样成本痛点，是 PPO/GRPO 之外又一个可落地、更省算力的训练范式。
-**链接**：https://arxiv.org/abs/2608.19842
+**链接**： <https://arxiv.org/abs/2608.19842>
 
 ### 6. Rule-Compliant Visual Spatial Planning for Multimodal Large Language Models
 
 **摘要**：多模态大语言模型（MLLM）结合了语言推理与视觉感知，但在显式或未见规则约束下进行视觉空间规划的能力仍未被充分研究——该场景要求模型同时理解空间布局、解释自然语言规则并据此规划合法动作。本文提出 RuleMaze 可控基准：MLLM 必须遵守复杂度递进的自然语言规则走出迷宫；并配套语言-逻辑-函数混合方法与解耦多模态规划（DMP），显著提升规则遵循度与规划成功率。
 **领域**：多模态大模型 / 视觉空间推理
 **推荐理由**：填补 MLLM"边看边规划还要守规则"的能力缺口，把自然语言规则转成可执行逻辑的混合方法，对具身智能与导航类 agent 有直接参考价值。
-**链接**：https://arxiv.org/abs/2608.20237
+**链接**： <https://arxiv.org/abs/2608.20237>
 
 ### 7. ID-VTG: Image-Disambiguated Video Temporal Grounding
 
 **摘要**：视频时间定位（VTG）在查询需要区分多个视觉相似实体、且必须依赖难以用文字精确描述的细粒度视觉属性时面临显著挑战。ID-VTG 引入"参考图 + 文本描述"的多模态查询来精确定位片段，并构建两个基准：IDVTG-Gym（穿相似队服的运动员的细粒度体操动作）与 IDVTG-InternVid（人、动物、虚构角色等开放世界实体 + 大量时间干扰项），所提 VGD-Agg 框架在两个基准上均达当前最优。
 **领域**：音视频理解 / 视频定位
 **推荐理由**：把"图 + 文"双模态查询引入视频时间定位，正面解决同装运动员、同名角色等经典歧义场景，对视频问答与多模态检索方向可迁移。
-**链接**：https://arxiv.org/abs/2608.20127
+**链接**： <https://arxiv.org/abs/2608.20127>
 
 ### 8. 4DAnyone: Create Anyone in 4D from a Casual Monocular Video
 
 **摘要**：4DAnyone 从无标定的单目视频重建 4D 人体：先生成重建级多视角一致的视频，再提升为 4D Gaussian Splatting（4DGS）。论文指出当目标视角数超过单次 DiT 前向的容量时，注意力上下文成为瓶颈，并提出 Reference Context Packing（RCP）压缩视觉上下文至 O(1) 复杂度、Target Context Routing（TCR）动态分组目标视角保证一致性。配套发布 MVGameHuman 数据集：318 位演员、24 相机拍摄的 38k 视频，在 DNA-Rendering 与 DyMVHumans 上表现领先。
 **领域**：计算机视觉 / 3D 重建
 **推荐理由**：把"一段手机视频 → 4D 数字人"做成现实，O(1) 上下文压缩思路对长序列视频生成与重建类任务都有通用启发。
-**链接**：https://arxiv.org/abs/2608.20335
+**链接**： <https://arxiv.org/abs/2608.20335>
 
 ## 二、GitHub热门AI开源项目（2026.08.19-08.23）
 
@@ -91,56 +91,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：agent meta-harness：部署多智能体 swarm、协调自主工作流，内置自适应记忆、自学习、RAG，原生集成 Claude Code / Codex / Hermes 等。
 **热度**：68,940★（TypeScript）
 **推荐理由**：把多智能体协作从"玩具 demo"变成可编排的 swarm 工作流，harness 思路的集大成者，热度说明 Agent 编排层的需求仍在爆发。
-**链接**：https://github.com/ruvnet/ruflo
+**链接**： <https://github.com/ruvnet/ruflo>
 
 ### 2. modular/modular
 
 **简介**：Modular 平台，包含 MAX 推理引擎与 Mojo 语言。
 **热度**：28,926★（Mojo）
 **推荐理由**：Mojo 持续演进并保持高热度，面向 AI 的 Python 超集 + 高性能推理引擎，单卡/边缘推理优化关注者可跟进。
-**链接**：https://github.com/modular/modular
+**链接**： <https://github.com/modular/modular>
 
 ### 3. AprilNEA/OpenLogi
 
 **简介**：用 Rust 编写的 Logitech Options+ 本地优先替代品：通过 HID++ 重映射按键、DPI、SmartShift，无需账号、无遥测，Linux 一等公民。
 **热度**：14,488★（Rust，08-22 单日 +1,380★）
 **推荐理由**：社区重建厂商软件的教科书案例——本地优先、隐私友好、配置存 TOML 可跨机同步，硬件工具链的"去云端化"趋势。
-**链接**：https://github.com/AprilNEA/OpenLogi
+**链接**： <https://github.com/AprilNEA/OpenLogi>
 
 ### 4. cursor/plugins
 
 **简介**：Cursor 官方插件规范与官方插件集合。
 **热度**：4,765★（TypeScript）
 **推荐理由**：Cursor 把插件生态标准化，Agent 时代的编辑器扩展范式正式确立，做 IDE/Agent 集成的人应直接对齐这套规范。
-**链接**：https://github.com/cursor/plugins
+**链接**： <https://github.com/cursor/plugins>
 
 ### 5. MengTo/threeui
 
 **简介**：开源的 ThreeUI 社区目录：实时交互组件 + 完整社区源码。
 **热度**：2,482★（HTML，08-19 后新建即上榜）
 **推荐理由**：AI 应用 3D/沉浸式 UI 的组件化方案，上线数天冲上新建榜第一，前端 3D 交互方向的现成弹药库。
-**链接**：https://github.com/MengTo/threeui
+**链接**： <https://github.com/MengTo/threeui>
 
 ### 6. missuo/herdrm
 
 **简介**：macOS 原生控制台：管理所有 coding agent 与其实时终端，跨设备同步。
 **热度**：609★（Swift，08-20 新建）
 **推荐理由**：多 agent 并行开发场景的"终端总控"，Swift 原生实现，补上 agent 工具链里被忽视的"运行监控"环节。
-**链接**：https://github.com/missuo/herdrm
+**链接**： <https://github.com/missuo/herdrm>
 
 ### 7. cclank/lanshu-create-ai-presenter-video
 
 **简介**：Provider-neutral 的 Codex Skill：从脚本 + 授权人像生成可核验的 AI presenter 视频。
 **热度**：525★（Python，08-19 新建）
 **推荐理由**：把"AI 数字人播报"做成可复现的 Skill 流水线，视频营销自动化从一次性脚本走向标准化组件。
-**链接**：https://github.com/cclank/lanshu-create-ai-presenter-video
+**链接**： <https://github.com/cclank/lanshu-create-ai-presenter-video>
 
 ### 8. duty1g/x64dbg-mcp-server
 
 **简介**：x64dbg 调试器的原生 MCP 插件：通过 HTTP 暴露调试器全部功能。
 **热度**：384★（Zig，08-19 新建）
 **推荐理由**：调试器 × MCP 的直接结合，逆向工程与漏洞研究从此可以被 LLM agent 直接驱动，安全方向的新入口。
-**链接**：https://github.com/duty1g/x64dbg-mcp-server
+**链接**： <https://github.com/duty1g/x64dbg-mcp-server>
 
 ## 持续追踪
 

@@ -18,61 +18,61 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/多模态大模型
 - **摘要**：由香港中文大学与MiniMax合作完成，论文编号arXiv:2605.20278。提出ClaimDiff-RL新框架，将传统总体打分评判机制替换为精细逐条核查机制，解决AI生成长篇图像描述时要么虚构信息要么遗漏细节的两难问题。
 - **推荐理由**：针对多模态模型的核心痛点提出创新性解决方案，技术实现具备较高参考价值，可应用于图像描述、图文问答等场景。
-- **链接**：http://m.toutiao.com/group/7645326258808668713/
+- **链接**： <http://m.toutiao.com/group/7645326258808668713/>
 
 ### 2. Meta-Attention: 逐token路由的高效Transformer推理框架
 - **方向**：arXiv/大模型架构优化
 - **摘要**：Knowledge Lab AG团队提出Meta-Attention框架，将注意力机制选择视为贝叶斯后验推断问题，通过贝叶斯元控制器动态路由token到不同注意力策略。同时提出Moment-KV缓存压缩方法，将长生成任务保真度提升2.3-3.2%。
 - **推荐理由**：有效解决长文本生成中的KV缓存性能瓶颈，为大模型推理优化提供了新思路，具备较强工程落地价值。
-- **链接**：https://blog.csdn.net/weixin_57854040/article/details/161525157
+- **链接**： <https://blog.csdn.net/weixin_57854040/article/details/161525157>
 
 ### 3. 检索增强LLM智能体安全退化问题研究
 - **方向**：arXiv/AI安全
 - **摘要**：系统分析了检索增强型LLM智能体的安全退化问题，发现两个关键漏洞：工具调用与响应生成绑定会放大有害输出；即使包含安全警告的来源也会使有害合规率平均提升25%。发布HarmURL-Bench基准用于评估LLM智能体安全性。
 - **推荐理由**：为检索增强AI系统的安全设计提供重要指导，相关基准测试集可直接用于提升AI智能体的安全防护能力。
-- **链接**：https://blog.csdn.net/weixin_57854040/article/details/161525157
+- **链接**： <https://blog.csdn.net/weixin_57854040/article/details/161525157>
 
 ### 4. ETCHR: 通过图像编辑实现多模态推理的系统
 - **方向**：arXiv/多模态大模型
 - **摘要**：香港中文大学、上海AI实验室等联合提出ETCHR（Editing To Clarify and Harness Reasoning）系统，让AI在推理过程中主动编辑图像突出关键信息，解决现有多模态模型"只想不看"导致的推理错误问题，在视觉定位任务上成为新基准。
 - **推荐理由**：提出了多模态推理的新范式，让模型具备主动感知能力，在具身智能、视觉问答等领域有广阔应用前景。
-- **链接**：http://m.toutiao.com/group/7645329506093318699/
+- **链接**： <http://m.toutiao.com/group/7645329506093318699/>
 
 ### 5. VFEAgent: 端到端自动化有限元分析多模态Agent框架
 - **方向**：arXiv/AI for Science
 - **摘要**：提出VFEAgent多模态Agent框架，实现端到端自动化有限元分析，可自动处理工程仿真中的几何建模、网格划分、求解计算、结果分析全流程，大幅降低工程仿真的技术门槛。
 - **推荐理由**：AI与工程仿真结合的典型案例，能显著提升工业研发效率，具备较高产业应用价值。
-- **链接**：https://arxiv.org/list/cs.AI/recent?skip=130
+- **链接**： <https://arxiv.org/list/cs.AI/recent?skip=130>
 
 ### 6. 解决离散自回归文生图模型的"翻译失真"问题
 - **方向**：arXiv/图像生成
 - **摘要**：西湖大学等机构联合完成，论文编号arXiv:2605.21195。发现当前文生图模型中编解码器与策略网络训练不同步导致的"翻译失真"问题，提出联合训练方案显著提升图像生成质量。
 - **推荐理由**：直击当前主流文生图模型的底层缺陷，优化方案简单有效，可直接应用于现有图像生成系统的性能提升。
-- **链接**：http://m.toutiao.com/group/7645328562840470022/
+- **链接**： <http://m.toutiao.com/group/7645328562840470022/>
 
 ### 7. 扩散自适应路由（DAR）：提升AI图像生成模型训练效率
 - **方向**：arXiv/图像生成
 - **摘要**：阿里巴巴与南京大学联合提出扩散自适应路由（DAR）方法，解决扩散模型训练中的信息稀释、梯度衰减、计算冗余问题，在不增加额外计算成本的前提下大幅提升训练效率和生成质量。
 - **推荐理由**：针对扩散模型训练的核心痛点提出创新优化方案，工程落地价值高，可直接提升图像生成模型的训练效率。
-- **链接**：http://m.toutiao.com/group/7645239873539949066/
+- **链接**： <http://m.toutiao.com/group/7645239873539949066/>
 
 ### 8. 基于物理接地接触表示的仿真到现实灵巧操作
 - **方向**：arXiv/具身智能
 - **摘要**：提出压力中心（CoP）接触表示方法，平衡触觉信息在仿真到真实迁移中的表现力与鲁棒性，在销孔插入和球平衡任务上零样本迁移性能显著优于基准方法，为复杂接触操控任务的仿真到真实迁移提供新思路。
 - **推荐理由**：具身智能领域的重要突破，解决了触觉感知在仿真与真实环境对齐的难题，推动机器人灵巧操作的实际落地。
-- **链接**：http://m.toutiao.com/group/7645351438251606563/
+- **链接**： <http://m.toutiao.com/group/7645351438251606563/>
 
 ### 9. WaDi：面向单步图像生成的权重方向感知蒸馏
 - **方向**：arXiv/图像生成
 - **摘要**：南开大学PCA Lab团队提出权重方向低秩旋转（LoRaD）适配器和权重方向感知蒸馏（WaDi）框架，实现单步扩散蒸馏，仅需10%可训练参数就在COCO数据集上取得SOTA FID分数，可泛化到多种下游任务。
 - **推荐理由**：大幅提升扩散模型的推理速度，让单步图像生成成为可能，极大降低图像生成系统的部署成本。
-- **链接**：http://m.toutiao.com/group/7645312162206663218/
+- **链接**： <http://m.toutiao.com/group/7645312162206663218/>
 
 ### 10. Abstract-CoT: 抽象推理链将推理成本压缩11倍
 - **方向**：arXiv/大模型推理优化
 - **摘要**：IBM Research提出Abstract Chain-of-Thought（抽象推理链）方法，让模型用一套抽象符号词汇表替代自然语言思维链进行推理，在不损失准确率的前提下将推理token消耗降低至1/11，推理成本压缩11倍。
 - **推荐理由**：推理成本是当前大模型规模化应用的核心瓶颈，该方法提供了极具性价比的优化方案，产业应用价值极高。
-- **链接**：http://m.toutiao.com/group/7645615438772060687/
+- **链接**： <http://m.toutiao.com/group/7645615438772060687/>
 
 ## 🌟 二、GitHub 热门项目
 
@@ -80,61 +80,61 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **Stars**：⭐ 88k (+19k 本周) · Shell
 - **简介**：Matt Pocock的AI编程代理技能集，专为真实工程场景设计，技能小巧易适配可组合，包含issue tracker、triage等工作流，兼容任意模型。
 - **推荐理由**：AI编程助手的核心能力扩展，帮助开发者大幅提升编码效率，是当前AI编程领域最受关注的项目之一。
-- **链接**：https://github.com/mattpocock/skills
+- **链接**： <https://github.com/mattpocock/skills>
 
 ### 2. obra/superpowers
 - **Stars**：⭐ 195k (+9.9k 本周) · Shell
 - **简介**：一套完整的AI编程代理方法论，通过可组合技能和自动触发机制让编码助手具备超能力，可引导需求规格、制定实施计划、启动子代理驱动开发，自主工作数小时不偏离计划。
 - **推荐理由**：定义了AI编程代理的标准工作流，是企业级AI编程助手的标杆框架，具备极高参考价值。
-- **链接**：https://github.com/obra/superpowers
+- **链接**： <https://github.com/obra/superpowers>
 
 ### 3. karpathy/autoresearch
 - **Stars**：⭐ 2.5k+ 上线即暴涨 · Python
 - **简介**：Andrej Karpathy开源的"AI研究员"项目，仅630行代码即可让AI智能体在夜间自主跑大模型训练实验，自动修改代码、验证效果、保留有效改动，实现AI自主优化模型。
 - **推荐理由**：AI科研自动化的里程碑项目，让AI从工具变成科研助手，大幅降低AI模型研发的人力成本。
-- **链接**：https://github.com/karpathy/autoresearch
+- **链接**： <https://github.com/karpathy/autoresearch>
 
 ### 4. ChromeDevTools/chrome-devtools-mcp
 - **Stars**：⭐ 42,019 stars | 本周 +1,876 stars
 - **简介**：Chrome DevTools官方推出的MCP集成，让编码Agent直接操控浏览器开发者工具，可检查DOM、分析网络请求、调试JavaScript，实现"AI即前端工程师"。
 - **推荐理由**：官方出品的AI Agent能力扩展，为AI自动化前端开发提供了标准化接口，是前端AI开发的核心基础设施。
-- **链接**：https://github.com/ChromeDevTools/chrome-devtools-mcp
+- **链接**： <https://github.com/ChromeDevTools/chrome-devtools-mcp>
 
 ### 5. HKUDS/CLI-Anything
 - **Stars**：⭐ 40,889 stars | 本周 +2,602 stars
 - **简介**：香港大学重磅项目，核心理念是"让所有软件Agent-Native"，提供CLI-Hub平台将传统软件的命令行接口转化为AI Agent可直接调用的标准化能力，实现操作系统层面的范式转换。
 - **推荐理由**：AI Agent与传统软件交互的标准解决方案，大幅降低AI Agent集成现有软件系统的成本，具备极高战略价值。
-- **链接**：https://github.com/HKUDS/CLI-Anything
+- **链接**： <https://github.com/HKUDS/CLI-Anything>
 
 ### 6. Understand-Anything
 - **Stars**：⭐ 40,058 stars | 本周 +23,401 stars
 - **简介**：本周增速最猛项目，将任意代码库转化为可交互的知识图谱，支持探索、搜索和提问，兼容Claude Code、Codex、Cursor、Copilot等主流AI编程工具，让代码理解从黑盒变白盒。
 - **推荐理由**：解决了大模型理解大型代码库的核心痛点，是AI辅助代码阅读、重构、维护的必备工具，开发者需求强烈。
-- **链接**：https://github.com/Understand-Anything/Understand-Anything
+- **链接**： <https://github.com/Understand-Anything/Understand-Anything>
 
 ### 7. BaiFu/MiroFish
 - **Stars**：⭐ 登GitHub全球趋势榜第一 · Python
 - **简介**：中国大四学生开发的开源群体智能预测引擎，基于多智能体技术构建平行数字世界，通过智能体自由交互推演未来走向，用户上传种子材料即可获得详尽预测报告和可交互数字世界。
 - **推荐理由**：AI预测领域的突破性创新，将多智能体技术应用于未来推演，在商业决策、政策分析、风险预警等领域有广阔应用前景。
-- **链接**：https://github.com/BaiFu/MiroFish
+- **链接**： <https://github.com/BaiFu/MiroFish>
 
 ### 8. harry0703/MoneyPrinterTurbo
 - **Stars**：⭐ 69,511 | 今日+3,563 · Python
 - **简介**：AI大模型一键生成高清短视频工具，输入文案即可自动匹配配音、画面，支持批量出片和多平台格式输出，无需视频剪辑经验即可生产高质量短视频。
 - **推荐理由**：AIGC内容生产的爆款工具，极大降低短视频创作门槛，符合当前内容创作的市场需求，商业化潜力巨大。
-- **链接**：https://github.com/harry0703/MoneyPrinterTurbo
+- **链接**： <https://github.com/harry0703/MoneyPrinterTurbo>
 
 ### 9. Leonxlnx/taste-skill
 - **Stars**：⭐ 28,045 | 今日+2,066 · Shell
 - **简介**：优化AI输出质量的技能文件，阻止AI生成无聊、通用的垃圾内容，避免"AI腔"和模板化表达，支持多种AI后端，让AI输出更具人类风格和辨识度。
 - **推荐理由**：AI普及后的刚需工具，解决了AI内容同质化的痛点，提升AI输出质量，在写作、编程、内容生成等场景广泛适用。
-- **链接**：https://github.com/Leonxlnx/taste-skill
+- **链接**： <https://github.com/Leonxlnx/taste-skill>
 
 ### 10. hardikpandya/stop-slop
 - **Stars**：⭐ 6,363 | 今日+755 · Python
 - **简介**：专门移除AI写作痕迹的工具，检测并移除AI典型表达模式，保持个人写作风格，与taste-skill形成互补，解决AI内容的"机器味"问题。
 - **推荐理由**：应对AI内容识别监管的实用工具，满足内容创作者保留个人风格、避免AI痕迹的需求，市场需求强烈。
-- **链接**：https://github.com/hardikpandya/stop-slop
+- **链接**： <https://github.com/hardikpandya/stop-slop>
 
 ## 📰 三、AI 科技媒体 & HackerNews 资讯
 
@@ -142,58 +142,58 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **来源**：Lyptus Research / 今日头条
 - **摘要**：GPT-5.5在316道顶级进攻性网络安全任务中解出292道，正确率达92.4%，使得专门为未来两三年准备的测试体系直接饱和，AI进攻性网络安全能力每5-6个月翻一倍，且在高Token预算下能力仍无平台期。
 - **推荐理由**：AI在专业领域的能力突破超出人类预期，网络安全行业将迎来重大变革，安全防护体系需要针对性升级。
-- **链接**：http://m.toutiao.com/group/7645061704019132947/
+- **链接**： <http://m.toutiao.com/group/7645061704019132947/>
 
 ### 2. CNN起诉Perplexity，AI搜索版权争议爆发
 - **来源**：网易科技
 - **摘要**：CNN正式起诉AI搜索公司Perplexity未经授权大量使用其内容生成答案，认为AI搜索产品直接替代用户访问原站，对传统媒体商业模式造成根本性冲击，该案成为AI搜索领域版权争议的标杆性案件。
 - **推荐理由**：标志着AI内容产业的版权问题进入司法实践阶段，将对AI搜索、AI摘要、内容聚合等领域的商业模式产生深远影响。
-- **链接**：http://m.163.com/dy/article/KU6B1FNB051187VR.html
+- **链接**： <http://m.163.com/dy/article/KU6B1FNB051187VR.html>
 
 ### 3. Anthropic完成650亿美元H轮融资，估值9650亿美元超越OpenAI
 - **来源**：新浪财经
 - **摘要**：Anthropic宣布完成650亿美元H轮融资，投后估值达9650亿美元，超越OpenAI登顶AI估值榜首，年化运营收入已突破470亿美元，美光、三星、SK海力士等芯片巨头均参与本轮融资。
 - **推荐理由**：AI产业格局发生重大变化，Anthropic的快速崛起证明大模型行业仍存在巨大竞争空间，产业链上下游的联动也愈加紧密。
-- **链接**：https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-05-29%2Fdoc-inhzpwvs0874027.shtml
+- **链接**： <https://cj.sina.cn/article/norm_detail?url=https%3A%2F%2Ffinance.sina.com.cn%2Fwm%2F2026-05-29%2Fdoc-inhzpwvs0874027.shtml>
 
 ### 4. OpenAI推理模型首次自主证明80年数学猜想
 - **来源**：搜狐科技
 - **摘要**：OpenAI内部通用推理模型独立完成困扰数学界80年的Erdős单位距离猜想证明，提出了n^(1+δ)级的新点集构造，获得菲尔兹奖得主认证，是AI首次独立产出人类未发现的原创数学知识。
 - **推荐理由**：AI从"工具"走向"发现者"的标志性事件，证明大模型在科学推理领域已达到甚至超越人类顶尖专家水平，将极大加速基础科学研究进程。
-- **链接**：https://m.sohu.com/a/1029059172_122772805/
+- **链接**： <https://m.sohu.com/a/1029059172_122772805/>
 
 ### 5. 亚马逊报告：黑客利用AI工具五周攻破全球600+防火墙
 - **来源**：亚马逊安全研究报告
 - **摘要**：亚马逊报告显示，过去五周内黑客利用商业化AI工具成功侵入全球55个国家的600+防火墙系统，攻击效率相比传统方法提升数十倍，且技术门槛大幅降低，普通攻击者也能实施大规模攻击。
 - **推荐理由**：AI降低了网络攻击门槛，网络安全威胁进入新阶段，企业和机构需要升级安全防护体系应对AI增强型攻击。
-- **链接**：http://gzsihang.com/pingxiang/19828ec29b8d392KOOoQ.html
+- **链接**： <http://gzsihang.com/pingxiang/19828ec29b8d392KOOoQ.html>
 
 ### 6. 微软推出MAI-Image-2.5，打破图像生成领域Google+OpenAI垄断
 - **来源**：今日头条
 - **摘要**：微软研究院推出MAI-Image-2.5图像生成模型，在Arena文生图榜单升至第3名，打破此前前5名仅由Google DeepMind和OpenAI占据的局面，重点增强文字渲染能力，可直接生成符合商业需求的海报、信息图等物料。
 - **推荐理由**：AI图像生成领域竞争格局进一步多元化，文字渲染能力的突破使得AI图像生成的商用场景大幅扩展。
-- **链接**：http://m.toutiao.com/group/7644994543191867954/
+- **链接**： <http://m.toutiao.com/group/7644994543191867954/>
 
 ### 7. OpenAI设立首个海外AI实验室，落子新加坡
 - **来源**：新加坡经济发展局
 - **摘要**：OpenAI宣布投资3亿新元在新加坡设立美国以外首个应用型AI研究机构，计划雇佣超200名技术专家，聚焦教育、医疗、金融及数字基建领域的AI应用落地。
 - **推荐理由**：标志着AI巨头开始全球布局，新加坡作为亚太AI枢纽的地位进一步强化，亚太地区AI产业发展将迎来新机遇。
-- **链接**：http://m.toutiao.com/group/7644994543191867954/
+- **链接**： <http://m.toutiao.com/group/7644994543191867954/>
 
 ### 8. Anthropic发布Claude Opus 4.8，大幅提升Agent和编码能力
 - **来源**：Anthropic官方公告
 - **摘要**：Anthropic发布Claude Opus 4.8版本，新增动态工作流能力，在编码、Agent任务、复杂推理、知识工作等场景表现相比上一代提升30%，特别优化了长上下文处理和工具调用准确性。
 - **推荐理由**：大模型的Agent能力持续快速进化，企业级AI应用的落地速度将进一步加快，AI Agent的规模化应用拐点临近。
-- **链接**：https://stemgeeks.net/@ai-news-daily/ai-news-daily-2026-05-29
+- **链接**： <https://stemgeeks.net/@ai-news-daily/ai-news-daily-2026-05-29>
 
 ### 9. 国产大模型周调用量达7.94万亿Token，两倍于美国
 - **来源**：中国信通院
 - **摘要**：中国信通院发布数据显示，国内大模型周调用量已达7.94万亿Token，是美国市场的两倍，大模型在金融、制造、政务、医疗等行业的渗透率快速提升，产业应用规模全球领先。
 - **推荐理由**：中国大模型应用市场规模优势凸显，庞大的应用场景将反过来驱动大模型技术创新，形成技术与应用相互促进的良性循环。
-- **链接**：http://m.toutiao.com/group/7644994543191867954/
+- **链接**： <http://m.toutiao.com/group/7644994543191867954/>
 
 ### 10. 国务院"人工智能+制造"专项行动落地，AI Agent进入规模化部署元年
 - **来源**：工信部官网
 - **摘要**：国务院正式发布"人工智能+制造"专项行动实施方案，提出2026年实现规模以上制造企业AI应用覆盖率达30%，重点推广AI Agent在生产调度、质量检测、设备运维等场景的规模化应用。
 - **推荐理由**：AI工业应用的政策红利开始释放，AI Agent在实体经济领域的规模化落地将进入快车道，工业AI市场将迎来爆发式增长。
-- **链接**：https://m.sohu.com/a/1029059172_122772805/
+- **链接**： <https://m.sohu.com/a/1029059172_122772805/>

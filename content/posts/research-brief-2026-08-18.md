@@ -32,7 +32,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长文档 RAG 的痛点是「证据不全 + 算力浪费」。D2-ScaleAgent 把「该多取还是该深想」做成由难度驱动的路由，比固定流程更接近人类处理长文的节奏，是 Agentic RAG 从 demo 走向生产的实在一步。
 
-**链接**：https://arxiv.org/abs/2608.16417
+**链接**： <https://arxiv.org/abs/2608.16417>
 
 ### 2. RUPA: From Sequence to Structure — Relational Uncertainty Propagation for LLM Agents
 
@@ -42,7 +42,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长程 Agent 最怕「一路错到结尾才暴露」。RUPA 把不确定性当成图上的传播过程来建模，比逐 token 概率更能抓「连带失败」，给可信 Agent 执行提供了可落地的早期预警机制。
 
-**链接**：https://arxiv.org/abs/2608.16002
+**链接**： <https://arxiv.org/abs/2608.16002>
 
 ### 3. RoboPhD: Competing at Every Price Point with Agentic Evolution over a Menu of LLMs
 
@@ -52,7 +52,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：这篇把「用智能体进化去卷性价比」做成了可证伪的实证研究——仅用百例样本就能在每个价位点压过 incumbent，直接回应了「低价模型能否打高质量」的产业命题，对企业选型路由有方法论价值。
 
-**链接**：https://arxiv.org/abs/2608.16207
+**链接**： <https://arxiv.org/abs/2608.16207>
 
 ### 4. Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask
 
@@ -62,7 +62,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长程操作落地难的不是单技能，而是「技能之间的衔接」。BATON 用零参数更新的方式把衔接做成可记忆、可归因、可恢复的状态机，比端到端重训更省更稳，是机器人从 Demo 走向真实长任务的实用范式。
 
-**链接**：https://arxiv.org/abs/2608.16889
+**链接**： <https://arxiv.org/abs/2608.16889>
 
 ### 5. QVIRL: Q-based Variational Inverse Reinforcement Learning
 
@@ -72,7 +72,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「奖励函数」从单点估计变成带不确定性的后验，对安全关键场景意义重大——模型不仅知道「该怎么做」，还知道「自己有多不确定」。这是把 IRL 推向可部署对齐工具的一步。
 
-**链接**：https://arxiv.org/abs/2608.16888
+**链接**： <https://arxiv.org/abs/2608.16888>
 
 ### 6. Security of Foundation-Model-Powered Embodied Agents: Attack Surfaces, Attacks, Defenses, and Evaluation
 
@@ -82,7 +82,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：当 Agent 开始动真格（机器人、自动驾驶），「安全」从提示词层面上升到物理控制回路。这篇用信任边界把混乱的威胁分类理清，并指出最被低估的盲区（记忆/中间件/多智能体信任），是做具身安全的必读地图。
 
-**链接**：https://arxiv.org/abs/2608.16843
+**链接**： <https://arxiv.org/abs/2608.16843>
 
 ### 7. Proteus: Scheduling Effective Capacity for Sequence Modeling
 
@@ -92,7 +92,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与本周 GitHub 上 headroom 等「上下文压缩层」热潮呼应——推理侧真正稀缺的是「有效容量」而非总参数量。Proteus 用调度而非堆叠解决长上下文，给「省着用上下文」提供了又一理论支撑。
 
-**链接**：https://arxiv.org/abs/2608.16844
+**链接**： <https://arxiv.org/abs/2608.16844>
 
 ### 8. DuplexGen: Decoupling Content, Timing, and Acoustics for Synthetic Dialogue Speech
 
@@ -102,7 +102,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：全双工语音 Agent 卡住的往往不是音色而是「打断与重叠的时序」。DuplexGen 让时序从真实互听中涌现而非硬编码，给语音 Agent、陪伴型机器人的「自然对话」补上了关键一环。
 
-**链接**：https://arxiv.org/abs/2608.16053
+**链接**： <https://arxiv.org/abs/2608.16053>
 
 * * *
 
@@ -116,7 +116,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：它把「社区真实信号（含真金白银的下注）」当成排序依据，是 Agent 感知层的一次有意思尝试——比向量检索更接近「人类在关注什么」。对做研究/情报 Agent 的团队有直接参考价值。
 
-**链接**：https://github.com/mvanhorn/last30days-skill
+**链接**： <https://github.com/mvanhorn/last30days-skill>
 
 ### 2. Leonxlnx/taste-skill
 
@@ -126,7 +126,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「AI 生成的页面都很丑」是普遍痛点。taste-skill 把「审美」做成可复用 skill，与本周「skill 化一切」趋势（spec-kit、headroom、archify）同一脉络，让 Agent 既能写代码也能好看。
 
-**链接**：https://github.com/Leonxlnx/taste-skill
+**链接**： <https://github.com/Leonxlnx/taste-skill>
 
 ### 3. OpenCut-app/OpenCut
 
@@ -136,7 +136,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：视频编辑是创作者最高频的需求之一，OpenCut 把「剪映能力」开源化，契合 AIGC 内容生产从「生成」走向「可编辑成品」的拐点，对自媒体/小团队是直接可用的本地工具。
 
-**链接**：https://github.com/OpenCut-app/OpenCut
+**链接**： <https://github.com/OpenCut-app/OpenCut>
 
 ### 4. unslothai/unsloth
 
@@ -146,7 +146,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：随着开源权重密集上新（Qwen3.8、Kimi K3、DeepSeek-V4），本地微调门槛成为普及瓶颈。unsloth 把「消费级显卡训前沿模型」做成开箱即用，是开源生态扩张的关键基建。
 
-**链接**：https://github.com/unslothai/unsloth
+**链接**： <https://github.com/unslothai/unsloth>
 
 ### 5. ToolJet/ToolJet
 
@@ -156,7 +156,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：当 Agent 从聊天框走向「企业内部系统」，低代码 + Agent 的生成平台价值凸显。ToolJet 把内部工具搭建与 Agent 编排合流，是企业落地 Agent 的现成脚手架。
 
-**链接**：https://github.com/ToolJet/ToolJet
+**链接**： <https://github.com/ToolJet/ToolJet>
 
 ### 6. holaboss-ai/holaOS
 
@@ -166,7 +166,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 真正干活需要「常驻的工作桌面」而非一次性对话。holaOS 把记忆/压缩/多工具收进本地工作区，是「个人 Agent OS」方向的代表，与 worldmonitor 等常驻监控型 Agent 同频。
 
-**链接**：https://github.com/holaboss-ai/holaOS
+**链接**： <https://github.com/holaboss-ai/holaOS>
 
 ### 7. omnigent-ai/omnigent
 
@@ -176,7 +176,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：上周 DeepSeek Harness 把「一切皆插件」推上主线，Omnigent 进一步把「多 Agent 编排 + 策略 + 沙箱」标准化，是「控制面」成熟化的又一个标志——尤其沙箱隔离直指本周 Copilot Autofix 暴露的安全命题。
 
-**链接**：https://github.com/omnigent-ai/omnigent
+**链接**： <https://github.com/omnigent-ai/omnigent>
 
 ### 8. lidge-jun/opencodex
 
@@ -186,7 +186,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Codex 的能力不该被绑定在单一供应商。opencodex 做了一层协议适配，让「用 Codex 的工作流跑任意模型」成为现实，是 Agent 工具「去供应商锁定」的小而实用的拼图。
 
-**链接**：https://github.com/lidge-jun/opencodex
+**链接**： <https://github.com/lidge-jun/opencodex>
 
 * * *
 

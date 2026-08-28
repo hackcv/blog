@@ -32,7 +32,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「agent 写证明」从玩具函数拉到真实多模块代码库，且最强模型也只能解 27/43——给「AI 写可验证软件」划出当下清晰的能力天花板。
 
-**链接**：https://arxiv.org/abs/2608.13522
+**链接**： <https://arxiv.org/abs/2608.13522>
 
 ### 2. Governed Persistent Memory: Source-Bound State Semantics and Fail-Closed Release for Long-Horizon Agents（GPM）
 
@@ -42,7 +42,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「记忆治理」从经验法则变成可执行合约 + 有限状态机验证（33 万语义态零反例），正好回应今天多 agent 互相改记忆、互相攻击的安全隐忧。
 
-**链接**：https://arxiv.org/abs/2608.12476
+**链接**： <https://arxiv.org/abs/2608.12476>
 
 ### 3. Mind Viruses: Self-Propagating Ideas in Multi-Agent LLM Systems
 
@@ -52,7 +52,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：首次系统化刻画多 agent 系统中的「思想传播链」，且给出极低成本免疫法——与今天 Anthropic 多 agent 互相攻击的实验相互印证，是治理多 agent 的必读。
 
-**链接**：https://arxiv.org/abs/2608.10218
+**链接**： <https://arxiv.org/abs/2608.10218>
 
 ### 4. DarwinX: Evolving Agent Harnesses Through Natural Selection
 
@@ -62,7 +62,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用「种群选择」而非「单 lineage 搜索」打破路径依赖，且演化出的是通用 agent 能力（换任务/验证器/基座仍有效）——与今天 DeepSeek 开源 harness 形成「理论↔工程」呼应。
 
-**链接**：https://arxiv.org/abs/2608.07545
+**链接**： <https://arxiv.org/abs/2608.07545>
 
 ### 5. LLMRouter: Unified Infrastructure for Developing, Evaluating, and Deploying LLM Routers
 
@@ -72,7 +72,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把碎片化的路由研究收口成一个可公平比较的框架，学到路由器相对最强固定模型基线相对提升 14.6%——在「开源模型分流闭源推理预算」的当下极具落地价值。
 
-**链接**：https://arxiv.org/abs/2608.06867
+**链接**： <https://arxiv.org/abs/2608.06867>
 
 ### 6. Model Discovery Agent: LLM-assisted Bayesian experiment design for data-efficient discovery of mechanistic world models（MDA）
 
@@ -82,7 +82,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「自动科研」推进到「主动设计下一场实验」这一步，且发现与设计相互强化——比单纯跑实验更接近真正的研究闭环。
 
-**链接**：https://arxiv.org/abs/2608.09696
+**链接**： <https://arxiv.org/abs/2608.09696>
 
 ### 7. OmniScientist: An Omni-Modal Omni-Discipline AI Scientist
 
@@ -92,7 +92,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：证明「全生命周期感知」对证据驱动的科学发现不可或缺——但注意今天另有独立研究打脸「全自动科研已可发 NeurIPS」的宣称，二者恰好对照。
 
-**链接**：https://arxiv.org/abs/2608.13558
+**链接**： <https://arxiv.org/abs/2608.13558>
 
 ### 8. Intern-S2-Preview: Scientific Agentic Foundation Model
 
@@ -102,7 +102,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：125 位作者、397B 规模的「科学 agent 基座」亮相，把多任务 RL 与 agentic RL 收进统一后训练管线——标志着基础模型厂商开始把「科研」当作一等公民场景。
 
-**链接**：https://arxiv.org/abs/2608.13505
+**链接**： <https://arxiv.org/abs/2608.13505>
 
 ## 二、GitHub热门AI开源项目（2026.08.13-08.15）
 
@@ -114,7 +114,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：做模型的 DeepSeek 亲自下场做「跑 agent 的那层壳」，一天涨四倍于第二名的星——标志价值从模型本体向「可重组执行脚手架」迁移。
 
-**链接**：https://github.com/deepseek-ai/deepseek-harness
+**链接**： <https://github.com/deepseek-ai/deepseek-harness>
 
 ### 2. vercel-labs/deepsec
 
@@ -124,7 +124,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：又一个把「安全」做成 harness 的样本，且强调在用户自己基础设施内运行——与今天 agent 触达真实代码库的安全诉求直接对应。
 
-**链接**：https://github.com/vercel-labs/deepsec
+**链接**： <https://github.com/vercel-labs/deepsec>
 
 ### 3. decionis/agent-safe-pipeline
 
@@ -134,7 +134,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用「提议/授权分离」这一简单而关键的模式回应多 agent 互相改账户、跑 kill script 的失控场景，是今天最该被采纳的工程范式之一。
 
-**链接**：https://github.com/decionis/agent-safe-pipeline
+**链接**： <https://github.com/decionis/agent-safe-pipeline>
 
 ### 4. AML-memory/agent-memory-leaderboard
 
@@ -144,7 +144,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：记忆系统长期各自为战、分数不可比，AML 把它变成「有固定答案模型与评分管线」的可比基准——呼应今天 GPM 论文对「记忆治理」的呼吁。
 
-**链接**：https://github.com/AML-memory/agent-memory-leaderboard
+**链接**： <https://github.com/AML-memory/agent-memory-leaderboard>
 
 ### 5. MiniMax-AI/MiniMax-Music3
 
@@ -154,7 +154,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：多模态生成从「图/视频」向「音乐」延展，且以 API+Agent 生态方式发布——生成式内容的模态边界继续被抹平。
 
-**链接**：https://github.com/MiniMax-AI/MiniMax-Music3
+**链接**： <https://github.com/MiniMax-AI/MiniMax-Music3>
 
 ### 6. milind-soni/OpenMausBot
 
@@ -164,7 +164,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「把多个本地 agent 当聊天里的同事」的产品化样本，且明确与加密货币无关——去中心化 bot 团队的轻量落地。
 
-**链接**：https://github.com/milind-soni/OpenMausBot
+**链接**： <https://github.com/milind-soni/OpenMausBot>
 
 ### 7. NousResearch/Hermes-Bot-Mode
 
@@ -174,7 +174,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「人格化 bot 名册」把多 agent 协作包装成用户可理解的产品界面，是 agent 从后台管线走向前台体验的一步。
 
-**链接**：https://github.com/NousResearch/Hermes-Bot-Mode
+**链接**： <https://github.com/NousResearch/Hermes-Bot-Mode>
 
 ### 8. macro-inc/macro
 
@@ -184,7 +184,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「公司」本身当成可组合状态来建模，图数据库 + CRDT 的思路与今天 agent 记忆/上下文的图原生趋势（semantica 等）同频。
 
-**链接**：https://github.com/macro-inc/macro
+**链接**： <https://github.com/macro-inc/macro>
 
 ## 三、精选AI行业资讯（2026.08.13-08.15）
 

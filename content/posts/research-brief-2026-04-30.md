@@ -18,37 +18,37 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/机器人学
 - **摘要**：arXiv:2604.25949v1 Announce Type: new Abstract: Reliable perception for robotics depends on large-scale labeled data, yet real-world datasets rely on heavy manual annotation and are time-consuming to produce. We present FalconApp, an iPhone app with an end-to-end frontend-backend pipeline that turns a short handheld capture of a rigid object into a perception module for mask detection and 6-DoF po...
 - **推荐原因**：是近期技术趋势的典型案例，有一定代表性。
-- **链接**：https://arxiv.org/abs/2604.25949
+- **链接**： <https://arxiv.org/abs/2604.25949>
 
 ### 2. A Scaled Three-Vehicle Platooning Platform
 - **方向**：arXiv/机器人学
 - **摘要**：arXiv:2604.25963v1 Announce Type: new Abstract: Vehicle platooning has attracted increasing attention as a promising approach to improve traffic efficiency, energy consumption, and roadway safety through coordinated multi-vehicle operation. A key challenge in platooning lies in maintaining stable and accurate path tracking during dynamic maneuvers such as lane changes, where lateral deviations and...
 - **推荐原因**：计算机视觉在感知层的突破持续，尤其是与深度学习的结合带来了精度大幅提升。
-- **链接**：https://arxiv.org/abs/2604.25963
+- **链接**： <https://arxiv.org/abs/2604.25963>
 
 ### 3. FASH-iCNN: Making Editorial Fashion Identity Inspectable Through Multimodal CNN Probing
 - **方向**：arXiv/多媒体
 - **摘要**：arXiv:2604.26186v1 Announce Type: cross Abstract: Fashion AI systems routinely encode the aesthetic logic of specific houses, editors, and historical moments without disclosing it. We present FASH-iCNN, a multimodal system trained on 87,547 Vogue runway images across 15 fashion houses spanning 1991-2024 that makes this cultural logic inspectable. Given a photograph of a garment, the system recover...
 - **推荐原因**：视觉-语言模型（VLM）弥合了感知与理解之间的鸿沟，是当前最活跃的研究方向之一。
-- **链接**：https://arxiv.org/abs/2604.26186
+- **链接**： <https://arxiv.org/abs/2604.26186>
 
 ### 4. StreamGuard: Exploring a 5G Architecture for Efficient, Quality of Experience-Aware Video Conferencing
 - **方向**：arXiv/多媒体
 - **摘要**：arXiv:2604.26223v1 Announce Type: cross Abstract: Video conferencing over 5G is increasingly prevalent, yet its Quality of Experience (QoE) often degrades under limited radio resources. This has two causes: 5G networks must serve many users, while interactive traffic requires careful handling. Motivated by the insight that different subflows within an interactive session have a disproportionate ef...
 - **推荐原因**：视频 AI 处理（生成、压缩、增强）是下一个 AIGC 增长点。
-- **链接**：https://arxiv.org/abs/2604.26223
+- **链接**： <https://arxiv.org/abs/2604.26223>
 
 ### 5. Adaptive Transform Coding for Semantic Compression
 - **方向**：arXiv/图像/视频处理
 - **摘要**：arXiv:2604.26492v1 Announce Type: new Abstract: Visual data compression is shifting from human-centered reconstruction to machine-oriented representation coding. In this setting, an image is often mapped to a compact semantic embedding, which is then compressed and transmitted for downstream inference. We propose an adaptive transform-coding method for semantic-feature compression motivated by the...
 - **推荐原因**：推理优化是 LLM 落地最后一公里的核心，降低成本是产业刚需。
-- **链接**：https://arxiv.org/abs/2604.26492
+- **链接**： <https://arxiv.org/abs/2604.26492>
 
 ### 6. Circular Phase Representation and Geometry-Aware Optimization for Ptychographic Image Reconstruction
 - **方向**：arXiv/图像/视频处理
 - **摘要**：arXiv:2604.26664v1 Announce Type: new Abstract: Traditional iterative reconstruction methods are accurate but computationally expensive, limiting their use in high-throughput and real-time ptychography. Recent deep learning approaches improve speed, but often predict phase as a Euclidean scalar despite its $2\pi$ periodicity, which can introduce wrapping artifacts, discontinuities at $\pm\pi$, and...
 - **推荐原因**：工程优化类工作往往直接决定技术能否真正落地，值得重点关注。
-- **链接**：https://arxiv.org/abs/2604.26664
+- **链接**： <https://arxiv.org/abs/2604.26664>
 
 
 ## 🌟 二、GitHub 热门项目
@@ -57,49 +57,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **Stars**：⭐ 1,356 · Python
 - **简介**：Agent Skill for generating 2D sprite sheets and map, transparent PNG frames, and animated GIFs from prompts.
 - **推荐原因**：Web/代码 Agent 落地加速，工程实践价值显著。
-- **链接**：https://github.com/0x0funky/agent-sprite-forge
+- **链接**： <https://github.com/0x0funky/agent-sprite-forge>
 
 ### 2. openclaw/clawsweeper
 - **Stars**：⭐ 1,355 · JavaScript
 - **简介**：ClawSweeper scans all issues and PRs and suggest what we can close, and why. It runs every PR / Issue once a week.
 - **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://github.com/openclaw/clawsweeper
+- **链接**： <https://github.com/openclaw/clawsweeper>
 
 ### 3. GammaLabTechnologies/harmonist
 - **Stars**：⭐ 920 · Python
 - **简介**：Portable AI agent orchestration with mechanical protocol enforcement. 186 agents, zero runtime dependencies.
 - **推荐原因**：Agent 是当前 AI 工程化的核心方向，代表了大模型从「对话」到「执行」的关键跃迁。
-- **链接**：https://github.com/GammaLabTechnologies/harmonist
+- **链接**： <https://github.com/GammaLabTechnologies/harmonist>
 
 ### 4. future-agi/future-agi
 - **Stars**：⭐ 762 · Python
 - **简介**：Open-source, end-to-end platform for evaluating, observing, and improving LLM and AI agent applications. Tracing · Evals · Simulations · Datasets · Gateway · Guardrails. Self-hostable. Apache 2.0.
 - **推荐原因**：Agent 是当前 AI 工程化的核心方向，代表了大模型从「对话」到「执行」的关键跃迁。
-- **链接**：https://github.com/future-agi/future-agi
+- **链接**： <https://github.com/future-agi/future-agi>
 
 ### 5. epoko77-ai/im-not-ai
 - **Stars**：⭐ 661 · Python
 - **简介**：AI가 쓴 글이 아닌 것처럼 윤문해주는 스킬
 - **推荐原因**：技术实现有一定参考价值，可借鉴到类似项目中。
-- **链接**：https://github.com/epoko77-ai/im-not-ai
+- **链接**： <https://github.com/epoko77-ai/im-not-ai>
 
 ### 6. alash3al/stash
 - **Stars**：⭐ 580 · Go
 - **简介**：Stash — persistent memory layer for AI agents. Episodes, facts, and working context stored in Postgres. MCP server included. Self-hosted, single binary, no cloud required.
 - **推荐原因**：RAG 正在成为企业知识管理和大模型落地的标准架构。
-- **链接**：https://github.com/alash3al/stash
+- **链接**： <https://github.com/alash3al/stash>
 
 ### 7. machinepulse-ai/world2agent
 - **Stars**：⭐ 564 · TypeScript
 - **简介**：World2Agent(W2A) is an open protocol that standardizes how Al agents perceive the real world.
 - **推荐原因**：从社区反馈来看有一定价值，可以快速浏览。
-- **链接**：https://github.com/machinepulse-ai/world2agent
+- **链接**： <https://github.com/machinepulse-ai/world2agent>
 
 ### 8. willchen96/mike
 - **Stars**：⭐ 490 · TypeScript
 - **简介**：OSS AI Legal Platform
 - **推荐原因**：技术实现有一定参考价值，可借鉴到类似项目中。
-- **链接**：https://github.com/willchen96/mike
+- **链接**： <https://github.com/willchen96/mike>
 
 
 ## 📰 三、AI 科技媒体 & 大厂博客
@@ -108,73 +108,73 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **来源**：TechCrunch AI · AI 媒体
 - **摘要**：Meta said over 8 billion advertisers have used at least one of its gen AI tools
 - **推荐原因**：技术实现有一定参考价值，可借鉴到类似项目中。
-- **链接**：https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/
+- **链接**： <https://techcrunch.com/2026/04/30/meta-says-its-business-ai-now-facilitates-10-million-conversations-a-week/>
 
 ### 2. SoftBank is creating a robotics company that builds data centers — and already eyeing a $100B IPO
 - **来源**：TechCrunch AI · AI 媒体
 - **摘要**：You need infrastructure to build AI a and robots, but apparently you also need AI and robots to build infrastructure.
 - **推荐原因**：内容偏向工程实践，对实际项目有一定帮助。
-- **链接**：https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/
+- **链接**： <https://techcrunch.com/2026/04/29/softbank-is-creating-a-robotics-company-that-builds-data-centers-and-already-eyeing-a-100b-ipo/>
 
 ### 3. Amazon’s cloud business is surging — and so is its capital spending
 - **来源**：TechCrunch AI · AI 媒体
 - **摘要**：The e-commerce giant is making more money than expected from AWS but it's also spending a lot, and will continue to do so in the near term, its chief executive said.
 - **推荐原因**：是近期技术趋势的典型案例，有一定代表性。
-- **链接**：https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/
+- **链接**： <https://techcrunch.com/2026/04/29/amazons-cloud-business-is-surging-and-so-is-its-capital-spending/>
 
 ### 4. These Men Allegedly Profit Off Teaching People How to Make AI Porn
 - **来源**：Wired AI · AI 媒体
 - **摘要**：Three Arizona women have filed a lawsuit against a group of men that alleges they used the women’s photos to make AI porn influencers, then offered online courses showing others how to do it.
 - **推荐原因**：提供了一些新的思路和视角，可以扩展知识面。
-- **链接**：https://www.wired.com/story/ai-porn-lawsuit-arizona/
+- **链接**： <https://www.wired.com/story/ai-porn-lawsuit-arizona/>
 
 ### 5. Reid Hoffman Thinks Doctors Should Ask AI for a Second Opinion
 - **来源**：Wired AI · AI 媒体
 - **摘要**：The LinkedIn cofounder now has an AI drug discovery startup—and thinks not asking chatbots for medical advice is “bordering on committing malpractice.”
 - **推荐原因**：从社区反馈来看有一定价值，可以快速浏览。
-- **链接**：https://www.wired.com/story/reid-hoffman-ai-doctor-second-opinion-wired-health/
+- **链接**： <https://www.wired.com/story/reid-hoffman-ai-doctor-second-opinion-wired-health/>
 
 ### 6. How Elon Musk Squeezed OpenAI: They 'Are Gonna Want to Kill Me’
 - **来源**：Wired AI · AI 媒体
 - **摘要**：Tensions flared on the third day of trial in Musk v. Altman as OpenAI’s lawyers cross-examined Musk.
 - **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://www.wired.com/story/model-behavior-elon-musk-cross-examined-sam-altman/
+- **链接**： <https://www.wired.com/story/model-behavior-elon-musk-cross-examined-sam-altman/>
 
 ### 7. Why a recent supply-chain attack singled out security firms Checkmarx and Bitwarden
 - **来源**：Ars Technica · AI 媒体
 - **摘要**：Security firms find themselves especially exposed.
 - **推荐原因**：从社区反馈来看有一定价值，可以快速浏览。
-- **链接**：https://arstechnica.com/information-technology/2026/04/why-a-recent-supply-chain-attack-singled-out-security-firms-checkmarx-and-bitwarden/
+- **链接**： <https://arstechnica.com/information-technology/2026/04/why-a-recent-supply-chain-attack-singled-out-security-firms-checkmarx-and-bitwarden/>
 
 ### 8. Open source package with 1 million monthly downloads stole user credentials
 - **来源**：Ars Technica · AI 媒体
 - **摘要**：If you're one of millions using element-data, it's time to check for compromise.
 - **推荐原因**：HN 社区讨论热度高，反映了开发者社区的真实关注点。
-- **链接**：https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/
+- **链接**： <https://arstechnica.com/security/2026/04/open-source-package-with-1-million-monthly-downloads-stole-user-credentials/>
 
 ### 9. Why are top university websites serving porn? It comes down to shoddy housekeeping.
 - **来源**：Ars Technica · AI 媒体
 - **摘要**：Hundreds of subdomains from dozens of universities have been hijacked by scammers.
 - **推荐原因**：技术实现有一定参考价值，可借鉴到类似项目中。
-- **链接**：https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/
+- **链接**： <https://arstechnica.com/security/2026/04/why-are-top-university-websites-serving-porn-it-comes-down-to-shoddy-housekeeping/>
 
 ### 10. The Download: the North Pole’s future and humanoid data
 - **来源**：MIT Tech Review · AI 媒体
 - **摘要**：This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Digging for clues about the North Pole’s past In the past, get
 - **推荐原因**：是当前热门方向之一，了解一下没坏处。
-- **链接**：https://www.technologyreview.com/2026/04/30/1136713/the-download-north-pole-future-humanoid-data/
+- **链接**： <https://www.technologyreview.com/2026/04/30/1136713/the-download-north-pole-future-humanoid-data/>
 
 ### 11. The Download: storing nuclear waste and orchestrating agents
 - **来源**：MIT Tech Review · AI 媒体
 - **摘要**：This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. It’s time to make a plan for nuclear waste Today, nuclear ener
 - **推荐原因**：内容偏向工程实践，对实际项目有一定帮助。
-- **链接**：https://www.technologyreview.com/2026/04/29/1136666/the-download-nuclear-waste-orchestrated-ai-agents/
+- **链接**： <https://www.technologyreview.com/2026/04/29/1136666/the-download-nuclear-waste-orchestrated-ai-agents/>
 
 ### 12. It’s time to make a plan for nuclear waste
 - **来源**：MIT Tech Review · AI 媒体
 - **摘要**：Today, nuclear energy enjoys a rare moment of support across the political spectrum in the US. Interest from tech companies that are scrambling to meet demand for massive data centers has sparked a re
 - **推荐原因**：内容偏向工程实践，对实际项目有一定帮助。
-- **链接**：https://www.technologyreview.com/2026/04/29/1136659/plan-nuclear-waste/
+- **链接**： <https://www.technologyreview.com/2026/04/29/1136659/plan-nuclear-waste/>
 
 
 ## 🔥 四、HackerNews 近 48h 热门
@@ -182,7 +182,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 1. Ghostty is leaving GitHub
 - **热度**：3426 points · 💬 1023 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://mitchellh.com/writing/ghostty-leaving-github
+- **链接**： <https://mitchellh.com/writing/ghostty-leaving-github>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47939579
 - **高赞评论（原文+中文）**：
   · **mitchellh** ：I know this is ridiculously dramatic, but its the truth: I actually cried writing this blog post (tears hit my keyboard, I'm embarrassed to say). Nobody should cry over a SaaS, of all things. But GitHub has meant so much more to me than that (all laid out in the post). I have an unhealthy…
@@ -195,7 +195,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 2. Zed 1.0
 - **热度**：1971 points · 💬 631 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://zed.dev/blog/zed-1-0
+- **链接**： <https://zed.dev/blog/zed-1-0>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47949027
 - **高赞评论（原文+中文）**：
   · **giancarlostoro** ：Congrats to the Zed team for building the best modern editor I have ever used. I subscribe to the monthly plan just to give you guys the funding you need, even if my funding is a tiny drop in the bucket. I always wanted a feature rich alternative to Sublime Text that can run anywhere and do…
@@ -208,7 +208,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 3. HERMES.md in commit messages causes requests to route to extra usage billing
 - **热度**：1183 points · 💬 503 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://github.com/anthropics/claude-code/issues/53262
+- **链接**： <https://github.com/anthropics/claude-code/issues/53262>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47952722
 - **高赞评论（原文+中文）**：
   · **ecshafer** ：> However, I need to let you know that we are unable to issue compensation for degraded service or *technical errors* that result in incorrect billing routing. This is very surprising. I've never seen a legitimate business not give refunds for technical errors of their own fault. Minimum Anthropic…
@@ -221,31 +221,31 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 ### 4. Copy Fail
 - **热度**：1155 points · 💬 411 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://copy.fail/
+- **链接**： <https://copy.fail/>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47952181
 
 ### 5. Cursor Camp
 - **热度**：1050 points · 💬 170 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://neal.fun/cursor-camp/
+- **链接**： <https://neal.fun/cursor-camp/>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47949939
 
 ### 6. Online age verification is the hill to die on
 - **热度**：912 points · 💬 620 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://x.com/GlennMeder/status/2049088498163216560
+- **链接**： <https://x.com/GlennMeder/status/2049088498163216560>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47950091
 
 ### 7. Where the goblins came from
 - **热度**：809 points · 💬 485 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://openai.com/index/where-the-goblins-came-from/
+- **链接**： <https://openai.com/index/where-the-goblins-came-from/>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47957688
 
 ### 8. Before GitHub
 - **热度**：659 points · 💬 223 comments
 - **推荐原因**：HN 热门文章，热度很高，强烈推荐。
-- **链接**：https://lucumr.pocoo.org/2026/4/28/before-github/
+- **链接**： <https://lucumr.pocoo.org/2026/4/28/before-github/>
 - **HN 讨论**：https://news.ycombinator.com/item?id=47940921
 
 

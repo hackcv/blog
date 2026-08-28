@@ -28,7 +28,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：直接点破当前 Agentic VLM 的两大通病——「啥都调工具」和「调了反而更差」。把「该不该调」做成可量化、可训练的奖励，比堆更多推理步数更对症，对长链路多模态 Agent 的工程落地有参考价值。
 
-**链接**：https://arxiv.org/abs/2607.28595
+**链接**： <https://arxiv.org/abs/2607.28595>
 
 ### 2. FAME: Benchmarking Foundation and Large Language Models for Few-Shot Medical Image Segmentation
 
@@ -38,7 +38,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：FS-MIS 长期「各说各话」，FAME 用近 1.5 万样本的统一设置给出可比结论（如直接视觉适配普遍优于 prompt 策略、语义迁移比成像域适配更难），是医疗 CV 团队选型不可跳过的标尺。
 
-**链接**：https://arxiv.org/abs/2607.27856
+**链接**： <https://arxiv.org/abs/2607.27856>
 
 ### 3. Beyond Frame Selection: Generative Latent Evidence Aggregation for Long-Video Understanding
 
@@ -48,7 +48,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长视频 token 爆炸是端侧/实时多模态落地的核心瓶颈。从「选帧」升级到「生成式潜空间证据」，思路更接近人类「记住要点而非逐帧回放」，值得视频 Agent 与具身场景关注。
 
-**链接**：https://arxiv.org/abs/2607.28516
+**链接**： <https://arxiv.org/abs/2607.28516>
 
 ### 4. Qwen-UI-Agent Technical Report: Toward Next-Generation Real-World Centric Foundation GUI Agents
 
@@ -58,7 +58,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：GUI 是大量数字工作的入口。Qwen 系把「真实世界可用」而非「demo 自动化」作为下一阶段目标，直接对齐办公自动化、企业内系统操作、RPA 升级等高频刚需，是国内基础 Agent 的重要风向标。
 
-**链接**：https://arxiv.org/abs/2607.28227
+**链接**： <https://arxiv.org/abs/2607.28227>
 
 ### 5. Misalignment Has a Personality: A Big Five Account of Emergent Misalignment
 
@@ -68,7 +68,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：失对齐常被当成黑箱事故，本文用「人格」这一可沟通的语言把它结构化，便于安全团队在评测中早发现、可归因——对正在做 RLHF/后训练的团队是低成本的高价值视角。
 
-**链接**：https://arxiv.org/abs/2607.26389
+**链接**： <https://arxiv.org/abs/2607.26389>
 
 ### 6. Hearsay: Vision-Language Medical Diagnoses Without an Image
 
@@ -78,7 +78,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：医疗场景里「模型编造诊断」后果致命。本文点出 VLM 会绕过图像、靠元数据脑补结论，给所有上医疗/风控场景的团队敲了警钟：输入缺失时的行为必须显式评测，而不是假设模型「看到了才说」。
 
-**链接**：https://arxiv.org/abs/2607.26886
+**链接**： <https://arxiv.org/abs/2607.26886>
 
 ### 7. WikiLoop: Jointly Learning to Build and Navigate Agent-Native Wikis with Downstream Feedback
 
@@ -88,7 +88,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：多数 RAG 把知识库当只读外部存储，WikiLoop 让 Agent 自己维护「可写维基」并用下游效果反哺，直击长程 Agent「记不住、找不准」的痛点，对构建可持续进化的 Agent 记忆层有启发。
 
-**链接**：https://arxiv.org/abs/2607.26604
+**链接**： <https://arxiv.org/abs/2607.26604>
 
 ### 8. SpecFirst: Behavioral Specification Elicitation as a First-Class Step in Agent-Based Program Synthesis from Scratch
 
@@ -98,7 +98,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：代码 Agent 最贵的失败是「需求没搞清楚就开干」。SpecFirst 把「先写清楚规约」做成显式阶段，和今天 GitHub 上 book-to-skill、openwork 等「把规范/技能前置」的潮流同频，是降低 Agent 编码返工率的务实杠杆。
 
-**链接**：https://arxiv.org/abs/2607.27167
+**链接**： <https://arxiv.org/abs/2607.27167>
 
 * * *
 
@@ -112,7 +112,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：行业偶像下场定义「Agent 工作流」原语，等于给「如何用 Agent 替代重复脑力劳动」提供了一个可借鉴的参考架构，值得关注其编排范式是否被社区采纳为标准。
 
-**链接**：https://github.com/andrewyng/openworker
+**链接**： <https://github.com/andrewyng/openworker>
 
 ### 2. agentscope-ai/QwenPaw
 
@@ -122,7 +122,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「个人助手 + 自托管 + 可扩展技能」打包成开箱即用的形态，呼应了今天「Skill/工具层成新焦点」的产业主线，是普通用户落地私有 Agent 的低门槛入口。
 
-**链接**：https://github.com/agentscope-ai/QwenPaw
+**链接**： <https://github.com/agentscope-ai/QwenPaw>
 
 ### 3. alibaba/open-code-review
 
@@ -132,7 +132,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：代码审查是 LLM Agent 最快兑现价值的场景之一。阿里把「确定性规则 + Agent」混合、并开源，给中大型团队提供了一条可审计、可控、能接自家模型的落地路径。
 
-**链接**：https://github.com/alibaba/open-code-review
+**链接**： <https://github.com/alibaba/open-code-review>
 
 ### 4. different-ai/openwork
 
@@ -142,7 +142,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent Skills 爆发期最缺的是「跨编辑器复用」。openwork 把技能/插件做成可共享资产，直击今天「工具链碎片化」的痛点，是多 Agent 协作的事实标准有力竞争者。
 
-**链接**：https://github.com/different-ai/openwork
+**链接**： <https://github.com/different-ai/openwork>
 
 ### 5. virgiliojr94/book-to-skill
 
@@ -152,7 +152,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「长文档知识」转成按需加载的结构化技能，是 RAG 之外另一条降 token、提准确率的实用路线，对需要吃透手册/标准/代码的工程团队尤其香。
 
-**链接**：https://github.com/virgiliojr94/book-to-skill
+**链接**： <https://github.com/virgiliojr94/book-to-skill>
 
 ### 6. LYL1015/JarvisHub
 
@@ -162,7 +162,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长程创作的最大痛点是「项目状态易丢」。JarvisHub 让 Agent 直接「看」到画布上的提示词、参考图、候选版本与失败记录，是「Agent 外部记忆」落地的好样本，可类比延伸到设计/视频生产。
 
-**链接**：https://github.com/LYL1015/JarvisHub
+**链接**： <https://github.com/LYL1015/JarvisHub>
 
 ### 7. img2threejs/img2threejs
 
@@ -172,7 +172,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用「生成代码而非生成网格」的方式做图像转 3D，天然可编辑、可动画、体积小，比传统 mesh 生成更适合 Web/游戏管线，是 3D 生成走向工程可用的有趣分支。
 
-**链接**：https://github.com/img2threejs/img2threejs
+**链接**： <https://github.com/img2threejs/img2threejs>
 
 ### 8. anthropics/claude-cookbooks
 
@@ -182,7 +182,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：官方 cookbook 是跟进 Claude 能力的权威入口，尤其适合想把 Claude 接进生产系统的团队照抄「正确姿势」，降低踩坑成本。
 
-**链接**：https://github.com/anthropics/claude-cookbooks
+**链接**： <https://github.com/anthropics/claude-cookbooks>
 
 * * *
 

@@ -25,56 +25,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：极端天气预警长期依赖专家、成本高且难规模化。作者先建 SIREN-Bench（600 QA、19 任务、覆盖 4 个独立预警环节与端到端链路），暴露现有天气 agent 框架的能力缺口；再提出 SIREN——受专家使用历史案例启发，将异构天气证据与工具集成进 agentic 执行环境，并用检索 / 技能蒸馏 / 预测建模利用历史案例的经验驱动 harness。实验显示 SIREN 在单环节与端到端链路上均优于天气 agent 基线。
 **领域**：LLM 智能体 / 气候 / 防灾减灾
 **推荐理由**：把 LLM agent 从「孤立科学任务」推进到「端到端业务闭环」，且用「历史案例经验」做 grounding，是 agent 落地高可靠场景（预警、应急）的扎实范本。
-**链接**：https://arxiv.org/abs/2607.24588
+**链接**： <https://arxiv.org/abs/2607.24588>
 
 ### 2. Self-Authored Verification Is Unreliable in Heuristic Self-Improving Agents
 
 **摘要**：自改进 agent 反复重写策略 / 启发式规则，通常靠自写测试或指标决定接受哪次编辑——agent 同时控制「被优化对象」与「验证器」，导致自评分长期接近满分、真实部署性能却退化。作者提出 SEAL（Sealed Exogenous Acceptance Loop）：保留自写测试，但用固定的 harness 侧审计对比候选与 incumbent，agent 无法撰写或查看审计、只收到接受 / 拒绝，并在出现明显回退时保留 incumbent 状态。6 个模型 × 3 随机种子的实验显示 SEAL 稳定优于无保护基线。
 **领域**：智能体自改进 / 对齐 / 可靠性
 **推荐理由**：直击「agent 自己给自己打分」的结构性陷阱，给出「至少一个在 agent 控制之外的部署验收信号」的简洁解法，对自演化 / 自编程 agent 是必读的安全基线。
-**链接**：https://arxiv.org/abs/2607.24300
+**链接**： <https://arxiv.org/abs/2607.24300>
 
 ### 3. Looping Is Not Reliability: State-Bound Evidence and Typed Revision Contracts for Agentic Code Repair
 
 **摘要**：generate-test-revise 循环在 coding agent 中很常见，但重复本身不保证可靠。作者研究「找到正确补丁」与「保留、验证、提交它」之间的落差：30 个 HumanEval 修复、900 条三修订轨迹的密封五种子实验显示，强制修订下当前轨迹正确率从一次修订后的 0.820 跌到两次后的 0.673，而 ever-correct 升至 0.847；14B 复现中陈旧轨迹伤害 34/135 个正确起点（对比当前轨迹仅 4/135）。据此拆分准入 / 保留 / 认证 / 能力 / 活性，并给出把验证证据绑定到确切代码状态、保留已验证检查点、输出可审计准入回执的参考实现。
 **领域**：智能体代码修复 / 软件工程 / 可靠性
 **推荐理由**：把「循环 ≠ 可靠」用证据绑定与类型化修订合约量化出来，给出可机械执行的参考实现，对做 coding agent 的团队是「如何证明改对了」的硬通货。
-**链接**：https://arxiv.org/abs/2607.24604
+**链接**： <https://arxiv.org/abs/2607.24604>
 
 ### 4. The Visual Bottleneck: Sparse-Frame Adaptation of MLLMs for Joint Spatial-Temporal Video Grounding
 
 **摘要**：大规模视频平台每小时处理百万级上传，审核需定位违规「何时 + 何地」，但逐帧处理不可行，系统只能取 8–16 帧稀疏输入；而 SOTA 多模态大模型（MLLM）在数百帧稠密序列上预训练，部署条件与训练严重错配——Qwen3-VL 8B 在帧数降到 16 时时间 mIoU 从 56.0% 崩到 22.3%（相对降 60.2%）。系统研究表明视觉特征提取才是稀疏帧瓶颈：仅适配最后 3 层 ViT（4% 参数）即达 68.8% 时间 mIoU，反超稠密输入的零样本 8B 模型 12.8 点；语言模型微调收益可忽略甚至为负；知边界的 Hybrid16 采样再提 26 点。结论：稀疏帧视频定位中，训练策略 > 模型规模。
 **领域**：多模态大模型 / 视频理解 / 内容审核
 **推荐理由**：用极低成本（4% 参数）解决「训练稠密、部署稀疏」的致命错配，且证明 2B 微调模型稳定优于 8B 零样本——对短视频 / 直播审核的落地成本有直接指导意义。
-**链接**：https://arxiv.org/abs/2607.24570
+**链接**： <https://arxiv.org/abs/2607.24570>
 
 ### 5. The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation
 
 **摘要**：从预训练到后训练统一刻画多轮长程规划，提出单 / 多教师 on-policy 的 agentic 蒸馏框架，把长程规划能力从强教师蒸馏进学生模型，覆盖规划的前 / 后训练阶段，系统分析多轮 agent 规划中的信用分配与策略迁移。
 **领域**：LLM 后训练 / 长程规划 / 智能体蒸馏
 **推荐理由**：把「多轮长程规划」当成可蒸馏的能力而非只靠 prompt，给小模型获得复杂规划力提供 on-policy 蒸馏路径，契合端侧 / 低成本 agent 趋势。
-**链接**：https://arxiv.org/abs/2607.24720
+**链接**： <https://arxiv.org/abs/2607.24720>
 
 ### 6. DataOrchestra: Learning to Orchestrate Per-Example Curation of Pretraining Data
 
 **摘要**：提出 DataOrchestra，学习对预训练数据做「逐样本」的策展编排——为每个训练样本动态决定其清洗 / 混合 / 采样策略，而非全局统一规则，36 页系统研究覆盖数据策展的学习化与可扩展编排。
 **领域**：预训练数据 / 数据策展 /  scaling
 **推荐理由**：数据质量决定上限，但「逐样本策展」长期靠人工启发式；把它变成可学习问题，是对「数据飞轮」效率的源头优化，值得预训练团队关注。
-**链接**：https://arxiv.org/abs/2607.24717
+**链接**： <https://arxiv.org/abs/2607.24717>
 
 ### 7. DreamStyle3D: Efficient 3D Stylized Asset Generation via Dual-Attention Disentanglement
 
 **摘要**：提出 DreamStyle3D，通过双注意力解耦（dual-attention disentanglement）高效生成风格化 3D 资产，在 ACM MM 2026 发表，旨在在不牺牲几何质量的前提下分离「内容」与「风格」，降低风格化 3D 资产生成成本。
 **领域**：3D 生成 / 计算机视觉 / 创意工具
 **推荐理由**：把「风格」与「内容」解耦生成 3D 资产，对游戏 / 电商 / 影视的批量风格化资产生产有直接提效价值。
-**链接**：https://arxiv.org/abs/2607.24721
+**链接**： <https://arxiv.org/abs/2607.24721>
 
 ### 8. KANEx: Translating Kolmogorov-Arnold Networks' Interpretability to Medical Explainability
 
 **摘要**：提出 KANEx，将 Kolmogorov-Arnold Networks（KAN）的可解释性翻译到医学可解释性场景，发表于 MICCAI 2026，面向临床决策中对「模型为什么这么判断」的可审计需求，用 KAN 的局部可解释基函数增强医学影像 / 诊断的可解释性。
 **领域**：医学 AI / 可解释性 / 计算机视觉
 **推荐理由**：把 KAN 的可解释性落到高风险的医学诊断，呼应监管对「AI 决策可追溯」的硬性要求，是可信医疗 AI 的方向性工作。
-**链接**：https://arxiv.org/abs/2607.24730
+**链接**： <https://arxiv.org/abs/2607.24730>
 
 ## 二、GitHub热门AI开源项目（2026.07.25-07.28）
 
@@ -83,56 +83,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：蚂蚁 inclusionAI 团队开源的 LLaDA 2.2——全球首个大规模 Agentic 扩散语言模型（100B MoE，Apache-2.0），引入 Levenshtein 编辑（增 / 删 / 改）与 L-EBPO 强化学习，原生支持 128K 上下文，可「边行动边纠错」。SWE-bench Verified 49.28%，τ²-Bench 592.80（fast mode 705.30，超参考模型两倍以上），BF16 吞吐达对照 1.64 倍、FP8 再 +18.6%。
 **热度**：7-28 发布即登顶开源热点，技术报告 + 权重 + 代码全开放（HF / GitHub）。
 **推荐理由**：扩散路线首次在长程 Agent 任务上逼近并局部反超自回归，标志「自回归 + 扩散」双轨并行的 Agent 架构成为可能，工程与研究方向都该跟进。
-**链接**：https://github.com/inclusionAI/LLaDA2.X
+**链接**： <https://github.com/inclusionAI/LLaDA2.X>
 
 ### 2. antins-labs/SearchOS
 
 **简介**：人大与蚂蚁联合开源的多智能体搜索协作框架（MIT），把长程开放域信息搜寻建模为「带证据锚定的关系模式补全」，用 Search-Oriented Context Management（SOCM）把搜索进度外化为 Frontier Task / Evidence Graph / Coverage Map / Failure Memory 四类共享状态，配流水线并行调度与约 280 个预置技能。WideSearch Item F1 80.3、GISA Set F1 76.5，全面领先基线。
 **热度**：7-28 机器之心报道，GitHub 当日开源即上榜。
 **推荐理由**：把「搜索智能体也需要操作系统」做成可复用底座，直接解决 agent 长程调研的「失忆 / 重复 / 补漏」，做竞品 / 投研 / 文献综述的团队值得部署。
-**链接**：https://github.com/antins-labs/SearchOS
+**链接**： <https://github.com/antins-labs/SearchOS>
 
 ### 3. garrytan/gstack
 
 **简介**：YC 总裁 Garry Tan 开源的个人 Claude Code 配置（MIT），23 个专家角色技能 + 8 个 power tool，封装成 CEO / Designer / Eng Manager / QA / CSO / Release 等角色 slash 命令，覆盖 think→plan→build→review→test→ship→reflect 全 sprint；支持 Claude Code、Codex、Cursor 等 8 个 host，含 /qa 真实浏览器测试、/codex 跨模型评审、/guard 安全护栏。
 **热度**：3 月开源后数月内冲到约 12 万 Star，Claude Code 配置类第一。
 **推荐理由**：把「整个开发生命周期」编码成可复用 agent 技能、且内置评审与安全闸门，是 AI 时代软件开发方法论的范本，比单条 prompt 更可工程化。
-**链接**：https://github.com/garrytan/gstack
+**链接**： <https://github.com/garrytan/gstack>
 
 ### 4. pipilot-dev/anyclaude-sdk
 
 **简介**：Claude Code 风格的 TypeScript SDK，为 OpenAI / Anthropic 端点提供统一开发体验，支持流式响应、工具调用、多模态输入与类型安全封装，解决不同厂商 API 接口不一致的痛点。
 **热度**：7-28 AI 技术日报收录的新开源项目。
 **推荐理由**：在多家模型间切换 / 构建跨平台 AI 应用的开发者，可用熟悉的 Claude Code 范式统一调用，显著降低多模型适配成本。
-**链接**：https://github.com/pipilot-dev/anyclaude-sdk
+**链接**： <https://github.com/pipilot-dev/anyclaude-sdk>
 
 ### 5. hertz-ai/HARTOS
 
 **简介**：开源 AI 原生操作系统，核心理念是「让模型能力自动匹配任务难度」——检测到当前模型解不了问题时自动把任务升级到更强模型，无需人工干预；采用分布式架构，支持边缘设备与数据中心间灵活调度 AI 任务。
 **热度**：7-28 技术日报收录的新开源项目。
 **推荐理由**：把「动态模型路由」做成 OS 级基础设施，是降低推理成本、保证任务完成质量的底层范式，对构建高效 AI 应用有参考价值。
-**链接**：https://github.com/hertz-ai/HARTOS
+**链接**： <https://github.com/hertz-ai/HARTOS>
 
 ### 6. yuyuanweb/ai-passage-creator
 
 **简介**：程序员鱼皮团队开源的 AI 爆款文章创作平台（Spring Boot3 + Spring AI Alibaba + Vue3），基于 5 智能体协作创作，覆盖多智能体编排、7 种配图与 Stripe 支付，面向内容创作自动化。
 **热度**：7-28 腾讯新闻报道的开源项目。
 **推荐理由**：把「选题 → 写作 → 配图 → 支付」做成多 agent 协作的可运行产品，是「AI 内容工厂」落地的中文开源参考实现。
-**链接**：https://github.com/yuyuanweb/ai-passage-creator
+**链接**： <https://github.com/yuyuanweb/ai-passage-creator>
 
 ### 7. coreyhaines31/marketingskills
 
 **简介**：面向 Claude Code 与 AI agent 的营销技能集，覆盖 CRO、文案、SEO、分析与增长工程，把营销工作流封装成可复用 skills。
 **热度**：2026 新开源，GitHub Trending 上榜。
 **推荐理由**：营销是 agent 最容易兑现价值的职能之一，把 CRO / SEO / 增长做成技能库，非营销背景的开发者也能快速拼出增长工作流。
-**链接**：https://github.com/coreyhaines31/marketingskills
+**链接**： <https://github.com/coreyhaines31/marketingskills>
 
 ### 8. cobusgreyling/loop-engineering
 
 **简介**：关于「loop engineering」的实用参考与模式合集，系统化讲解如何设计与编排 AI coding agent 的提示与循环（prompt + orchestrate），灵感来自 Addy Osmani 与 Anthropic 的 Boris Cherny。
 **热度**：2026 新开源，GitHub Trending 上榜。
 **推荐理由**：把「如何让 coding agent 的循环更可靠」沉淀成可复用的工程模式，弥补「会写 prompt」与「会搭 agent 工作流」之间的断层。
-**链接**：https://github.com/cobusgreyling/loop-engineering
+**链接**： <https://github.com/cobusgreyling/loop-engineering>
 
 ## 持续追踪
 

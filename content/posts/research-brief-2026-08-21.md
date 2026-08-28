@@ -34,56 +34,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：持续自我改进需要一个不断扩张、多样且自适应的目标池。对语言智能体而言，现有训练环境（人工策展、静态合成或冻结验证器）会让目标分布在训练中被固定，限制了探索上限。SPADE 提出自适应合成可执行环境，用自我博弈生成随智能体能力同步进化的目标与可执行验证，让训练信号始终落在「刚好超出当前能力」的区间，从而避免目标分布早衰。
 **领域**：智能体自改进 / 强化学习
 **推荐理由**：把「课程学习」从静态数据推进到动态自博弈环境，是解决 agent 训练后期收益递减的一条干净路径，对做长期自主训练系统的团队有直接参考价值。
-**链接**：https://arxiv.org/abs/2608.19197
+**链接**： <https://arxiv.org/abs/2608.19197>
 
 ### 2. VGI-BENCH: Probing Visual Intelligence in Video Generation Models
 
 **摘要**：近期研究暗示视频生成模型可通过生成帧展现某种零样本视觉推理能力，但可靠评测仍困难：基准必须采用与当前视频模型视觉先验对齐的输入。VGI-BENCH 据此构建 27 个任务、810 个实例的评测，系统探测视频生成模型的空间、时序与物理一致性等视觉智能维度，并指出当前最强模型（如 Seedance 2.0）也仅约 51.0% 准确率。
 **领域**：视频生成 / 视觉推理评测
 **推荐理由**：给「视频模型会不会推理」第一次提供了可量化、对齐先验的标尺；51% 这个数字戳破了「生成即理解」的过度乐观，是做视频生成产品的务实校准。
-**链接**：https://arxiv.org/abs/2608.19583
+**链接**： <https://arxiv.org/abs/2608.19583>
 
 ### 3. Towards general embodied intelligence: integrating LLMs, knowledge bases, and reasoning
 
 **摘要**：大语言模型、结构化知识库与推理能力的汇合，被视为通向通用具身智能（GEI）的有前景路径。论文综述以 LLM 为中心的智能系统演进，强调将外部知识库的符号严谨性与 LLM 的泛化、推理能力结合，才能让机器人在真实物理场景中稳定决策与行动，而非仅停留在语言层面。
 **领域**：具身智能 / 知识增强
 **推荐理由**：把「知识库 + 推理」重新拉回具身讨论，提醒做机器人系统的团队：纯端到端大模型在长程物理任务上仍缺符号锚点，混合架构值得认真考虑。
-**链接**：https://arxiv.org/abs/2608.19794
+**链接**： <https://arxiv.org/abs/2608.19794>
 
 ### 4. Multi-Agent Orchestration with Common-Sense Reasoning for Autonomous Driving
 
 **摘要**：自动驾驶需在多样且未见过的场景中稳健感知与决策。强化学习与规则方法虽能提供有效控制和安全性，但在分布外场景性能会下降。作者提出以 LLM 常识推理能力驱动的多智能体编排框架，将感知、预测、规划子agent按常识约束协调，在保持安全机制的同时提升对未知场景的泛化。
 **领域**：自动驾驶 / 多智能体
 **推荐理由**：把「常识推理」作为多 agent 编排的黏合剂而非单个模型的补丁，对解决自动驾驶长尾分布外失效有现实意义。
-**链接**：https://arxiv.org/abs/2608.20129
+**链接**： <https://arxiv.org/abs/2608.20129>
 
 ### 5. Preference Reasoning under Indeterminacy in Large Language Models
 
 **摘要**：随着 LLM 演变为决策智能体，对偏好的推理能力成为对齐、协调与集体智能的基础。但与标准基准不同，真实世界的偏好推理本质上是「不确定（indeterminate）」的——偏好常模糊、冲突、语境依赖。论文形式化这类不确定偏好推理，揭示当前 LLM 在标准偏好基准上虚高、在真实模糊偏好上显著失能的鸿沟。
 **领域**：对齐 / 偏好推理
 **推荐理由**：直接点破「偏好基准刷分」与「真实对齐」之间的裂缝；任何做推荐、协商、多 agent 协调的产品都应把偏好不确定性当作一等输入。
-**链接**：https://arxiv.org/abs/2608.18631
+**链接**： <https://arxiv.org/abs/2608.18631>
 
 ### 6. DAVSS: Distilled Audio-Visual State Space Models
 
 **摘要**：从 transformer 教师蒸馏出的状态空间模型（SSM）兼具 transformer 性能与 SSM 效率。作者把 Transformer-SSM 知识蒸馏扩展到多模态，提出蒸馏音视觉状态空间模型 DAVSS，仅约 1400 万参数即超越 CAV-MAE 等更大模型约 12 倍参数量的同类方法，在音视觉表征学习任务上取得更优效率-精度权衡。
 **领域**：多模态表征 / 高效模型
 **推荐理由**：14M 参数、比对照小 12 倍还更强——对边缘端音视觉感知（机器人听觉视觉、低功耗设备）是极实用的轻量化方向。
-**链接**：https://arxiv.org/abs/2608.19523
+**链接**： <https://arxiv.org/abs/2608.19523>
 
 ### 7. Beyond Pixels: From Video Priors to 4D Worlds
 
 **摘要**：4D 生成从文本或图像等条件合成动态 3D 场景。现有方法要么用独立 4D 模型重建生成的 RGB 视频，要么改造特定视频生成器直接预测几何，前者存在不一致、后者泛化受限。作者从视频先验出发，提出更统一的 4D 世界合成路径，减少几何漂移并提升时序一致性。
 **领域**：4D 生成 / 计算机视觉
 **推荐理由**：把「视频生成器的先验」转成可编辑的 4D 世界，是影视、游戏与机器人仿真资产生产的关键一步，方法论上的统一尝试值得跟进。
-**链接**：https://arxiv.org/abs/2608.10744
+**链接**： <https://arxiv.org/abs/2608.10744>
 
 ### 8. Qualified Cross-References as a Verification Method: The Normative Environment of the EU AI Act
 
 **摘要**：法律交叉引用通常被表示为条款或文书间的链接。但对精选法律知识库而言，链接的存在只是声明起点：还必须说明交互的法律性质、识别约束主体与效力层级。论文以欧盟《AI 法案》为语料，提出带限定词的交叉引用作为可验证方法，构建双语（英/欧盟官方语言）规范环境知识库。
 **领域**：法律 AI / 合规知识图谱
 **推荐理由**：把「法律条文如何互相引用」形式化为可机器验证的结构，对做 AI 合规、监管科技（RegTech）的团队是直接的方法资产，也呼应各国 AI 立法落地的工程化需求。
-**链接**：https://arxiv.org/abs/2608.19194
+**链接**： <https://arxiv.org/abs/2608.19194>
 
 * * *
 
@@ -94,56 +94,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：个人 AI 助手平台，口号「Your own personal AI assistant. Any OS. Any Platform.」，跨操作系统与平台运行，强调本地化、可自托管的个人智能体体验。
 **热度**：387,009 星，TypeScript；采用自定义开源许可（非标准 SPDX）
 **推荐理由**：逼近 39 万星说明「个人自托管 AI 助手」已成主流需求。它和 anomalyco/opencode、NousResearch/hermes-agent 一起，标志开源 agent 从「开发者工具」扩散到「个人基础设施」。
-**链接**：https://github.com/openclaw/openclaw
+**链接**： <https://github.com/openclaw/openclaw>
 
 ### 2. anomalyco/opencode
 
 **简介**：The open source coding agent——模型无关的编码智能体，定位为通用、可自托管的代码助手底座。
 **热度**：199,759 星，TypeScript，MIT 协议
 **推荐理由**：近 20 万星的纯编码 agent，且模型无关，正好承接本期「harness 开源、底座可替换」的趋势——企业可在自有模型上跑成熟 agent 循环，不必绑定单一厂商。
-**链接**：https://github.com/anomalyco/opencode
+**链接**： <https://github.com/anomalyco/opencode>
 
 ### 3. NousResearch/hermes-agent
 
 **简介**：The agent that grows with you——自进化 Agent 框架，定位为随用户使用持续成长的个人智能体系统。
 **热度**：233,787 星，Python，MIT 协议
 **推荐理由**：与本期 arXiv 的 SPADE（自博弈目标生成）形成呼应：社区侧也在把「agent 自我改进」从论文做成可装的产品。值得看它如何在「成长」与「可控」之间取舍。
-**链接**：https://github.com/NousResearch/hermes-agent
+**链接**： <https://github.com/NousResearch/hermes-agent>
 
 ### 4. santifer/career-ops
 
 **简介**：开源 AI 求职系统——扫描招聘门户、用结构化标准评估职位列表，并基于 Claude Code 构建端到端求职工作流。
 **热度**：67,119 星，JavaScript，MIT 协议
 **推荐理由**：把 agent 直接落到「找工作」这种高频个人场景，且明确架在 Claude Code 之上。它验证了「垂直生活场景 + 成熟 coding agent」是低门槛落地范式，也预示 AI 内容/流程自动化将渗入求职市场。
-**链接**：https://github.com/santifer/career-ops
+**链接**： <https://github.com/santifer/career-ops>
 
 ### 5. block/buzz
 
 **简介**：A hive mind communication platform——基于 Nostr 的分布式工作与通信平台，把 agents 作为「成员」纳入协作网络，强调去中心化与抗审查。
 **热度**：29,030 星，Rust，Apache-2.0 协议
 **推荐理由**：把「多 agent 协作」放到 Nostr 这种去中心化社交协议上，是个有意思的架构赌注——agent 不再是中心服务的子进程，而是网络里的平等节点。对多 agent 通信协议设计有启发。
-**链接**：https://github.com/block/buzz
+**链接**： <https://github.com/block/buzz>
 
 ### 6. PrimeIntellect-ai/prime-agent
 
 **简介**：A self-improving RLM agent for coding workflows and long-running autonomous tasks——自改进强化学习智能体（RLM），面向编码工作流与长程自主任务。
 **热度**：17,605 星，TypeScript，MIT 协议
 **推荐理由**：把「RLM（强化学习智能体）+ 持续自改进」做成可跑的编码 agent，与 SPADE 的自改进环境思路同源。长程自主任务 + 自我迭代，是 agent 研究的工程化出口。
-**链接**：https://github.com/PrimeIntellect-ai/prime-agent
+**链接**： <https://github.com/PrimeIntellect-ai/prime-agent>
 
 ### 7. cloudflare/computer
 
 **简介**：Give your agent a computer——给智能体一台云端虚拟计算机，让 agent 像人一样在沙箱化的桌面环境里操作软件。
 **热度**：8,451 星，TypeScript，MIT 协议
 **推荐理由**：继浏览器/代码执行沙箱后，Cloudflare 把「整台电脑」作为 agent 的可调用资源，直接对应本期 Codex Harness 强调的「沙箱边界」主题。企业级 agent 的隔离执行有了更朴素的实现。
-**链接**：https://github.com/cloudflare/computer
+**链接**： <https://github.com/cloudflare/computer>
 
 ### 8. dimensionalOS/dimos
 
 **简介**：Dimensional is the agentic operating system for physical space——面向物理空间的智能体操作系统，指挥人形/轮式机器人等实体执行器。
 **热度**：4,414 星，Python；采用自定义开源许可
 **推荐理由**：把「agent 操作系统」的概念从数字世界推进到物理空间，与本期具身智能（arXiv 19794、智元机器人）形成软件-硬件呼应。通用机器人需要的不只是模型，更是调度执行层。
-**链接**：https://github.com/dimensionalOS/dimos
+**链接**： <https://github.com/dimensionalOS/dimos>
 
 * * *
 

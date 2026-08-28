@@ -29,7 +29,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：直接给「让 agent 写代码复现论文」泼冷水并量化失真，比单纯看 pass@k 更贴近科研可信度，是做「AI 科研助手」团队必须面对的方法论校准。
 
-**链接**：https://arxiv.org/abs/2608.24269
+**链接**： <https://arxiv.org/abs/2608.24269>
 
 ### 2. ViSculpt: Visual-Centric Agentic Geometry Editing
 
@@ -39,7 +39,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「人怎么雕 3D」抽象成可模拟的交互闭环，让 agent 像艺术家一样迭代改网格，比一次性生成更可控、更易纠错，给 3D 内容生产提供新范式。
 
-**链接**：https://arxiv.org/abs/2608.24252
+**链接**： <https://arxiv.org/abs/2608.24252>
 
 ### 3. Knowing When to Ask for Help: Bayesian Self-Escalation in Hierarchical LLM Agents
 
@@ -49,7 +49,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用贝叶斯不确定性做「求援」开关，比硬阈值路由更省算力也更稳，给分层 agent 系统一个即插即用的实用决策层。
 
-**链接**：https://arxiv.org/abs/2608.24169
+**链接**： <https://arxiv.org/abs/2608.24169>
 
 ### 4. SQLite is Enough. Lexical, Semantic, and Hybrid Search with scrydb
 
@@ -59,7 +59,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：单机 SQLite 就能做混合检索，小团队搭 RAG 可省掉一整套向量库与运维，部署成本与复杂度直降，是「轻量 agent 记忆/检索」的务实选择。
 
-**链接**：https://arxiv.org/abs/2608.24087
+**链接**： <https://arxiv.org/abs/2608.24087>
 
 ### 5. WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report
 
@@ -69,7 +69,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：微信量级落地的通用多模态嵌入，统一跨模态表征，对检索、推荐、内容理解有直接工程价值，也给出大模型公司「嵌入即基础设施」的路线样本。
 
-**链接**：https://arxiv.org/abs/2608.24060
+**链接**： <https://arxiv.org/abs/2608.24060>
 
 ### 6. What Guides the Agent? Adjudicating Unauthorized Behavior via Localizing Behavior-Guiding Instructions (Attnlocate)
 
@@ -79,7 +79,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：从注意力层面定位「谁在指挥 agent 干坏事」，把 agent 安全审计从黑箱告警变成可解释抓手，是 agent 上生产前的刚需能力。
 
-**链接**：https://arxiv.org/abs/2608.24053
+**链接**： <https://arxiv.org/abs/2608.24053>
 
 ### 7. WebMCP-Phalanx: Enforcing and Characterizing Trust Boundaries for Browser-Integrated LLM Agents
 
@@ -89,7 +89,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：给「住在浏览器里的 agent」画清信任边界、防注入与伪造，是 agent 从演示走向日常使用前的护栏基线，与同日 Claude in Chrome 的护栏设计形成呼应。
 
-**链接**：https://arxiv.org/abs/2608.24022
+**链接**： <https://arxiv.org/abs/2608.24022>
 
 ### 8. Rules Before Oracles: Auditable, User-Configurable Argument Selection for Deliberative Polling
 
@@ -99,7 +99,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用可配置规则替代黑箱 AI 排序，把「透明度」放回 AI 介入公共决策的场景，给治理类应用一个可追责的样板。
 
-**链接**：https://arxiv.org/abs/2608.23979
+**链接**： <https://arxiv.org/abs/2608.23979>
 
 ## 二、GitHub热门AI开源项目（2026.08.25-08.27）
 
@@ -111,7 +111,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用系统级语言把 agent CLI 压到 8 MiB 量级，印证「端侧 / 本地优先」正成为 coding agent 的新战场，而非只有云端重型运行时。
 
-**链接**：https://github.com/vercel-labs/fx
+**链接**： <https://github.com/vercel-labs/fx>
 
 ### 2. nvidia-nemo/labs-oo-agents
 
@@ -121,7 +121,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：大厂把「agent 即对象」范式工程化，面向对象地组织 prompt/工具/工作流，利好企业级多 agent 系统的可维护落地。
 
-**链接**：https://github.com/nvidia-nemo/labs-oo-agents
+**链接**： <https://github.com/nvidia-nemo/labs-oo-agents>
 
 ### 3. CopilotKit/OpenBot
 
@@ -131,7 +131,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把治理前置到动作执行前，直接回应企业对 agent 越权执行的焦虑，是「可问责数字同事」方向的代表实现。
 
-**链接**：https://github.com/CopilotKit/OpenBot
+**链接**： <https://github.com/CopilotKit/OpenBot>
 
 ### 4. MadsLorentzen/ai-job-search
 
@@ -141,7 +141,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：AI-for-personal-productivity 持续跨入 coding-agent 榜单且走高，说明「个人生产力自动化」是真需求而非一时热度，值得产品侧关注。
 
-**链接**：https://github.com/MadsLorentzen/ai-job-search
+**链接**： <https://github.com/MadsLorentzen/ai-job-search>
 
 ### 5. DietrichGebert/ponytail
 
@@ -151,7 +151,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：主打减少过度实现，与 dsh-routing-suite、OpenBot 同指「agent 决策质量」这一新赛道，给「何时不该写代码」提供了可调机制。
 
-**链接**：https://github.com/DietrichGebert/ponytail
+**链接**： <https://github.com/DietrichGebert/ponytail>
 
 ### 6. plannotator/effective-html
 
@@ -161,7 +161,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「Agent 产出可视制品」成为独立品类，+61k 的增速说明设计 / 前端类 agent 技能需求正在爆发，skill 生态向「看得见的交付物」倾斜。
 
-**链接**：https://github.com/plannotator/effective-html
+**链接**： <https://github.com/plannotator/effective-html>
 
 ### 7. yjh051108/dsh-routing-suite
 
@@ -171,7 +171,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与 ponytail、sprix-sage-router 收束到同一问题——「agent 下一步该做什么 / 用什么模式」，佐证「路由与决策」正成为 agent 工程焦点。
 
-**链接**：https://github.com/yjh051108/dsh-routing-suite
+**链接**： <https://github.com/yjh051108/dsh-routing-suite>
 
 ### 8. rohitg00/ai-engineering-from-scratch
 
@@ -181,7 +181,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 agent 工具泛滥的当下，系统化的「AI 工程」学习路径反而更受欢迎，反映从业者从「用工具」转向「懂原理、能落地」的诉求。
 
-**链接**：https://github.com/rohitg00/ai-engineering-from-scratch
+**链接**： <https://github.com/rohitg00/ai-engineering-from-scratch>
 
 ## 三、精选AI行业资讯（2026.08.25-08.27）
 

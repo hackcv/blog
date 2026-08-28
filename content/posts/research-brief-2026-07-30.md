@@ -31,7 +31,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「跨任务技能提炼与复用」做成了统一、低开销的 RL 范式，直击 agent 落地时「换个任务就重训」的痛点，且与 Kimi / Claude 等「技能化」趋势共振。
 
-**链接**：https://arxiv.org/abs/2607.26784
+**链接**： <https://arxiv.org/abs/2607.26784>
 
 ### 2. Think Short, Defer Smart, Act, and Repeat: Calibrated Reasoning and Uncertainty-Aware Deferral for Edge LLM Agents
 
@@ -41,7 +41,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：给出可证明的「端侧少想、想不稳就上云」预算控制方案，对把 agent 塞进手机 / IoT 这类功耗与延迟敏感场景有直接工程价值。
 
-**链接**：https://arxiv.org/abs/2607.26865
+**链接**： <https://arxiv.org/abs/2607.26865>
 
 ### 3. Embodied Agents Take Control: Minimal-Interface Zero-Shot Agents Rival Industrial-Scale Policies in Vision-and-Language Navigation
 
@@ -51,7 +51,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用极简接口证明「通用 agent 自己控循环」已能在零样本导航上逼近专用策略，并量化了模型 / 框架 / 接口三者的互补贡献，对机器人部署很有参考。
 
-**链接**：https://arxiv.org/abs/2607.26148
+**链接**： <https://arxiv.org/abs/2607.26148>
 
 ### 4. Living-Harness Is an Interactive-Agent Evolver
 
@@ -61,7 +61,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「harness 自身也会进化」落到实处，让失败经验跨任务累积，是 agent 从 demo 走向长期可靠系统的关键拼图。
 
-**链接**：https://arxiv.org/abs/2607.26598
+**链接**： <https://arxiv.org/abs/2607.26598>
 
 ### 5. Mitigating Compounding Error via Video Representation Regularization
 
@@ -71,7 +71,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：首次把自回归视频漂移与模型内部表征联系起来，并用 erank 量化误差累积，给长视频生成提供了一条简单有效的稳定化路线。
 
-**链接**：https://arxiv.org/abs/2607.27036
+**链接**： <https://arxiv.org/abs/2607.27036>
 
 ### 6. FreqForcing: Autoregressive Long Video Generation via Spectral Self-Anchoring
 
@@ -81,7 +81,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用频域视角解释并解决长视频生成的核心痛点，24 倍时序外推对实时视频 agent / 世界模型极具吸引力。
 
-**链接**：https://arxiv.org/abs/2607.27110
+**链接**： <https://arxiv.org/abs/2607.27110>
 
 ### 7. 换个「优化器」，RL Agent 训练效率最高提升约 88%
 
@@ -91,7 +91,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「预训练换优化器省一半算力」的结论推进到 RL 阶段，给动辄烧算力的 agent 后训练提供了一条低成本的杠杆。
 
-**链接**：https://arxiv.org/abs/2607.16169
+**链接**： <https://arxiv.org/abs/2607.16169>
 
 ### 8. Scaling GUI Agents with Visual State Transitions
 
@@ -101,7 +101,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：为 GUI agent 提供了一条不同于「堆截图 + 长历史」的预训练思路，对桌面 / 手机自动化 agent 的泛化与效率有直接助益。
 
-**链接**：https://arxiv.org/abs/2607.24112
+**链接**： <https://arxiv.org/abs/2607.24112>
 
 * * *
 
@@ -115,7 +115,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：中文社区最系统的 agent 入门教程之一，把「原理 + 可运行代码」放到一起，适合想真正动手搭 agent 的开发者。
 
-**链接**：https://github.com/datawhalechina/hello-agents
+**链接**： <https://github.com/datawhalechina/hello-agents>
 
 ### 2. KKKKhazix/khazix-skills
 
@@ -125,7 +125,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：个人 IP 把日常使用的 agent 技能开源化，体现了「技能即可复用工作流」的社区潮流，可直接取用。
 
-**链接**：https://github.com/KKKKhazix/khazix-skills
+**链接**： <https://github.com/KKKKhazix/khazix-skills>
 
 ### 3. VectifyAI/PageIndex
 
@@ -135,7 +135,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：对当下主流向量 RAG 提出了一条推理优先的替代路径，在长文档 / 复杂查询场景可能更准，值得关注。
 
-**链接**：https://github.com/VectifyAI/PageIndex
+**链接**： <https://github.com/VectifyAI/PageIndex>
 
 ### 4. VoltAgent/awesome-agent-skills
 
@@ -145,7 +145,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：agent skills 生态「百宝箱」，省去逐个翻找，也能照着学「技能该长什么样」。
 
-**链接**：https://github.com/VoltAgent/awesome-agent-skills
+**链接**： <https://github.com/VoltAgent/awesome-agent-skills>
 
 ### 5. mukul975/Anthropic-Cybersecurity-Skills
 
@@ -155,7 +155,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把网络安全知识工程化为 agent 可调用技能，是「安全 + agent」落地的一个现成脚手架。
 
-**链接**：https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+**链接**： <https://github.com/mukul975/Anthropic-Cybersecurity-Skills>
 
 ### 6. agno-agi/agno
 
@@ -165,7 +165,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：在 Agent 框架「选型焦虑」里提供了一个轻量高性能选项，适合做生产级 agent 服务的底座。
 
-**链接**：https://github.com/agno-agi/agno
+**链接**： <https://github.com/agno-agi/agno>
 
 ### 7. tinyhumansai/openhuman
 
@@ -175,7 +175,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：呼应「大模型下沉到本地」趋势，Rust 实现保证了隐私与性能，是端侧个人 agent 的参考实现。
 
-**链接**：https://github.com/tinyhumansai/openhuman
+**链接**： <https://github.com/tinyhumansai/openhuman>
 
 ### 8. PrefectHQ/fastmcp
 
@@ -185,7 +185,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：MCP 协议已成 agent「怎么连」的事实标准，fastmcp 降低了接入门槛，是构建 agent 工具链的高频依赖。
 
-**链接**：https://github.com/PrefectHQ/fastmcp
+**链接**： <https://github.com/PrefectHQ/fastmcp>
 
 * * *
 

@@ -21,28 +21,28 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **作者**：清华大学、阿里巴巴团队
 **领域**：大模型架构、扩散语言模型、训练优化
 **推荐理由**：ICML 2026最高荣誉杰出论文，颠覆了扩散大模型的训练认知，大道至简的方法解决了dLLM推理能力不足的行业难题，相关结论已被多家头部厂商采纳优化自家扩散模型。
-**链接**：https://arxiv.org/abs/2601.15165
+**链接**： <https://arxiv.org/abs/2601.15165>
 
 ### 2. From Failing to Passing: Evolving Natural Language Prompt Optimization Rules for LLM Code Generation
 **摘要**：针对大模型代码生成对prompt表述敏感的问题，提出基于搜索的方法自动识别和演化自然语言转换规则，大幅提升编码性能。基于此开发的DUALFIX分阶段修复流水线，结合演化规则和执行反馈修复，同时解决规范级和实现级错误，演化的规则与错误类型无关，可跨场景复用。
 **作者**：Amal Akli等程序语言研究团队
 **领域**：AI编程、提示工程、大模型代码优化
 **推荐理由**：解决了AI编码中prompt工程依赖人工经验的痛点，自动演化的优化规则可大幅提升代码生成的通过率，降低大模型在企业级编码场景下的使用门槛。
-**链接**：https://arxiv.org/abs/2607.05121
+**链接**： <https://arxiv.org/abs/2607.05121>
 
 ### 3. Medi-Gemma: A Hybrid Clinical Decision Support System Integrating Deterministic EMR Analytics and Retrieval-Augmented Generation
 **摘要**：提出混合临床决策支持系统Medi-Gemma，结合确定性电子病历分析和检索增强生成技术，解决大模型在高风险临床场景下的结构幻觉、表格数据推理弱、向量检索遗漏等问题。实测可减少语义上下文漂移、避免数据库编译崩溃、提升对临床知识库的事实遵循度，为基于大模型的临床决策支持提供了更安全的落地方案。
 **作者**：Mohammed Saim Ahmed Quadri等医疗AI团队
 **领域**：AI医疗、临床决策支持、检索增强生成
 **推荐理由**：医疗AI落地的重要突破，兼顾了大模型的灵活性和临床场景的高安全性要求，为AI在医疗高风险场景的合规落地提供了可参考的技术范式。
-**链接**：https://arxiv.org/abs/2607.04907
+**链接**： <https://arxiv.org/abs/2607.04907>
 
 ### 4. ASSEMCAD: Production-Ready CAD Assembly Generation from Natural Language
 **摘要**：提出首个生产级自然语言转CAD装配生成系统ASSEMCAD，突破了当前Text-to-CAD仅能生成单个零件的局限，支持多部件协调推理、功能接口设计、公差匹配，结合公理驱动的装配推理和确定性几何执行，将Text-to-CAD从孤立零件生成推向生产级机械装配设计，在多个工业基准数据集上超越现有基线方法。
 **作者**：Yurui Dong等工业AI团队
 **领域**：AI辅助设计、工业AI、Text-to-CAD
 **推荐理由**：工业AI落地的里程碑式成果，大幅降低机械设计的技术门槛，可直接应用于制造业的产品设计环节，提升研发效率，推动工业设计的智能化升级。
-**链接**：https://arxiv.org/abs/2607.05123
+**链接**： <https://arxiv.org/abs/2607.05123>
 
 ### 5. VISTA: A Visual Spec-to-App Benchmark for End-to-End Web Coding Agents
 **摘要**：推出首个面向Visual Spec-to-Web-App编码代理的端到端基准VISTA，支持评估AI编码代理根据产品需求、网页设计稿和Figma信息从零构建完整可运行Web应用的能力，覆盖10类典型Web应用、128个页面，同时评估最终产品质量、开发成本和开发时间，配套持续更新的在线排行榜，记录Coding Agent的能力演进。
@@ -56,21 +56,21 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **作者**：安全AI研究团队
 **领域**：AI安全、智能体安全、代码安全
 **推荐理由**：首次揭示了多轮协作AI编码场景下的新型攻击风险，提出的监控方案可为企业级AI辅助开发场景提供安全防护参考，提前防范AI带来的新型代码安全问题。
-**链接**：https://arxiv.org/abs/2607.02514
+**链接**： <https://arxiv.org/abs/2607.02514>
 
 ### 7. DemoPSD: Disagreement-Modulated Policy Self-Distillation
 **摘要**：针对在线策略自蒸馏中的"特权信息泄漏"与"抑制探索"问题，提出基于师生分布差异自适应调节融合权重的方法，理论上可缓解特权信息泄漏、保留探索能力，在科学推理评测上优于GRPO与SDPO，且对分布外任务更具鲁棒性。
 **作者**：强化学习研究团队
 **领域**：大模型训练、强化学习、自蒸馏优化
 **推荐理由**：大模型训练技术的重要优化，有效解决了自蒸馏方法的固有缺陷，提升模型训练效果和泛化能力，可直接应用于各类大模型的强化学习对齐流程。
-**链接**：https://arxiv.org/abs/2607.02502
+**链接**： <https://arxiv.org/abs/2607.02502>
 
 ### 8. Program-as-Weights: A Programming Paradigm for Fuzzy Functions
 **摘要**：提出"模糊函数编程"新范式：用自然语言规格编译出可本地执行的小型神经构件。PAW系统用4B参数编译器生成0.6B参数的解释器，在MacBook M3上仅需约1/50的显存，就能以30 token/s的速度达到接近Qwen3-32B直接调用的效果，把基础模型从"逐次求解器"变成"工具制造机"。
 **作者**：编程语言与AI交叉研究团队
 **领域**：大模型推理优化、新编程范式、端侧AI
 **推荐理由**：颠覆性的大模型应用新思路，大幅降低大模型本地部署的硬件门槛和推理成本，为端侧AI应用打开了全新的可能性，可能重塑大模型的商业化落地路径。
-**链接**：https://arxiv.org/abs/2607.02512
+**链接**： <https://arxiv.org/abs/2607.02512>
 
 ---
 
@@ -79,49 +79,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **简介**：腾讯云开源的AI Agent沙箱服务，基于RustVMM和KVM提供硬件级隔离，冷启动低于60毫秒，内存占用极小。支持快照、克隆、回滚等状态管理，相当于为AI Agent提供了"Ctrl+Z+Ctrl+D+Ctrl+Y"的状态管理能力，适合需要安全执行AI生成代码的生产级场景。上线不到三个月杀入GitHub Trending全球Top20，是当前最热门的AI基础设施项目之一。
 **热度**：持续霸榜GitHub Trending，全球Top20项目，增长迅猛
 **推荐理由**：AI Agent时代的核心基础设施，解决了AI生成代码安全执行的行业痛点，状态管理能力更是创新功能，是企业级AI智能体落地的必备安全组件，国产开源基础设施的标杆项目。
-**链接**：https://github.com/Tencent/CubeSandbox
+**链接**： <https://github.com/Tencent/CubeSandbox>
 
 ### 2. addyosmani/agent-skills: Google官方AI编程全流程技能库
 **简介**：由Google Chrome工程总监Addy Osmani维护的生产级AI编程技能库，包含24个技能，覆盖从需求定义到发布上线的全软件开发流程，支持Claude Code、Cursor等70多个AI编程平台，经过谷歌内部生产环境验证，大幅减少AI编码的幻觉问题。
 **热度**：总Star 68.2k，本周增量4594颗星
 **推荐理由**：企业级AI编程的必备技能库，经过谷歌官方生产环境验证，可直接提升AI辅助开发的准确率和效率，降低AI生成代码的返工率，是当前最受欢迎的Agent技能项目。
-**链接**：https://github.com/addyosmani/agent-skills
+**链接**： <https://github.com/addyosmani/agent-skills>
 
 ### 3. Leonxlnx/taste-skill: 给AI装上"设计审美"能力
 **简介**：专门解决AI生成前端界面"塑料感"问题的portable agent skills，覆盖布局、字体排印、动效、间距四个维度的设计规范，附带图像生成技能用于生成参考设计板（支持web/mobile/品牌套件等场景），可一行命令安装到Claude Code、Codex、Cursor等13种主流编程Agent中，v2版本做了大幅重写优化。
 **热度**：总Star 56.3k，本周增量4616颗星
 **推荐理由**：填补了AI审美能力的空白，大幅提升AI生成前端界面的设计质量，解决了AI生成界面"能用但不好看"的行业痛点，是前端开发人员必备的AI增强工具。
-**链接**：https://github.com/Leonxlnx/taste-skill
+**链接**： <https://github.com/Leonxlnx/taste-skill>
 
 ### 4. Zackriya-Solutions/meetily: 纯本地运行AI会议助手
 **简介**：基于Rust构建的AI会议助手，支持Whisper/Parakeet实时转写、Ollama本地摘要，全程不依赖云端服务，数据100%保留在本地，隐私性极强，支持macOS和Windows双平台桌面应用。社区版永久免费，专业版提供说话人分离、多格式导出等高级功能，特别适合涉密会议、内部敏感会议场景使用。
 **热度**：总Star 10.7k，本周增量5665颗星，近期增长最快的效率工具
 **推荐理由**：隐私优先的会议工具代表，解决了企业使用云端会议工具的数据泄露风险，纯本地运行的设计完全满足各类保密场景需求，相比Otter.ai等云端竞品安全性优势显著。
-**链接**：https://github.com/Zackriya-Solutions/meetily
+**链接**： <https://github.com/Zackriya-Solutions/meetily>
 
 ### 5. msitarzewski/agency-agents: 轻量多角色AI Agent编排框架
 **简介**：一键打包"AI虚拟公司"的超级角色库，将复杂的前端开发、社区运营、市场营销、数据分析等任务精细拆解成可复用的独立Agent角色，内置多Agent协作调度逻辑，是搭建企业级多角色AI工作流的极佳示范项目，零代码即可快速构建复杂的多智能体工作流。
 **热度**：总Star 8k+，本周增量2800颗星
 **推荐理由**：轻量化多智能体编排的标杆项目，角色设计经过实际业务验证，可快速复用到各类企业级多智能体场景，大幅降低多Agent系统的开发门槛。
-**链接**：https://github.com/msitarzewski/agency-agents
+**链接**： <https://github.com/msitarzewski/agency-agents>
 
 ### 6. ogulcancelik/herdr: AI编程Agent终端多路复用器
 **简介**：单文件Rust二进制（约10MB）的终端Agent多路复用器，每个Agent拥有独立真实终端，支持全屏TUI正常渲染任务状态（running/working/done/idle等），支持SSH detach/reattach，关闭笔记本不会杀死Agent进程，完美解决同时运行多个AI编程Agent时来回切窗口的痛点。
 **热度**：总Star 12.054k，持续热门工具
 **推荐理由**：AI编程从业者的效率神器，大幅提升多Agent并行工作场景下的管理效率，小而美的实用工具，解决了开发者的高频痛点。
-**链接**：https://github.com/ogulcancelik/herdr
+**链接**： <https://github.com/ogulcancelik/herdr>
 
 ### 7. chopratejas/headroom: AI对话Token智能压缩工具
 **简介**：AI对话历史Token压缩工具，通过智能摘要、冗余信息删除、结构化压缩等技术，可在保留95%以上上下文信息的前提下，将对话Token消耗降低60%以上，支持所有主流AI大模型和Agent框架，可大幅降低长对话和多轮任务的Token成本。
 **热度**：总Star 25k+，本周增量1500颗星
 **推荐理由**：简单实用的成本优化工具，无需修改现有业务流程即可大幅降低Token消耗，立竿见影地降低AI使用成本，几乎所有AI应用场景都可以直接集成使用。
-**链接**：https://github.com/chopratejas/headroom
+**链接**： <https://github.com/chopratejas/headroom>
 
 ### 8. bradautomates/claude-video: Claude Code驱动的AI视频制作工具
 **简介**：基于Claude Code的AI视频制作系统，只需用自然语言描述视频需求，即可自动完成脚本编写、素材搜索、配音生成、字幕制作、剪辑合成全流程，支持多种视频风格和分辨率输出，大幅降低视频制作的技术门槛和人工成本。
 **热度**：总Star 5.2k，本周增量约4000颗星，新晋热门项目
 **推荐理由**：AIGC视频领域的新锐项目，将多模态大模型的能力和视频制作流程深度结合，颠覆了传统视频制作的工作流，普通人也可以快速制作专业级视频内容。
-**链接**：https://github.com/bradautomates/claude-video
+**链接**： <https://github.com/bradautomates/claude-video>
 
 ---
 

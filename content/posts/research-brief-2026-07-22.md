@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：提出蒸馏强化学习（Distilled RL）框架，将教师模型的监督信号整合进RL目标中，实现细粒度信用分配的同时避免无条件模仿。在within-family和cross-family两种蒸馏场景下，pass@1和pass@k均显著优于标准RL和on-policy distillation。
 **领域**：LLM 后训练 / 强化学习 / 知识蒸馏
 **推荐理由**：打破「同族蒸馏」局限——首次在跨族（不同架构/不同系列的 LLM 之间）蒸馏场景中取得实质性提升，对开源生态中的小模型后训练极具参考价值。
-**链接**：https://arxiv.org/abs/2607.17247
+**链接**： <https://arxiv.org/abs/2607.17247>
 
 ### 2\. Reward-Driven LLM Agent Workflows: Synthesizing POMDP Routing and Self-Correction for Autonomous Decision-Making
 
 **摘要**：提出基于部分可观马尔可夫决策过程（POMDP）路由机制的智能体工作流，引入内部自纠正奖励模型在执行前评估决策轨迹。在ALFWorld和WebShop基准上，任务成功率比标准ReAct提升24.5个百分点。
 **领域**：LLM Agent / 决策规划 / 强化学习
 **推荐理由**：POMDP 视角的自我修正路由机制跳出了ReAct的简单循环，消融实验证实奖励驱动作的幻觉抑制效果显著，为长程自主决策Agent提供了一个可落地的架构参考。
-**链接**：https://arxiv.org/abs/2607.17038
+**链接**： <https://arxiv.org/abs/2607.17038>
 
 ### 3\. Regularize or Localize: When Training-Time KV-Cache Geometry Pays Under Quantization
 
 **摘要**：研究训练时KV-Cache几何正则化对量化推理的影响。在110M参数模型上，直接对K和V进行正则化可将Cache各向异性降低94%，在粗粒度量化方案下带来明显的困惑度改善，但在细粒度分组量化下优势趋于一致。
 **领域**：LLM 推理优化 / KV-Cache 量化
 **推荐理由**：首次从训练阶段出发系统性干预KV-Cache的分布几何，为长上下文推理的量化部署提供了「先正则化再量化」的新思路，性价比高于纯后处理方案。
-**链接**：https://arxiv.org/abs/2607.17019
+**链接**： <https://arxiv.org/abs/2607.17019>
 
 ### 4\. Multi-Head Latent Control: A Unified Interface for LLM Agent Decision Making
 
 **摘要**：提出多头隐式控制层，从冻结LLM的隐藏状态轨迹中实时读取部署阶段控制信号——预测模型能否解决当前任务（是否应交由更强模型处理），以及应选择澄清/工具调用/弃权/直接回答中的哪种策略。在AndroidWorld上减少大模型调用量高达90.7%。
 **领域**：LLM Agent / 路由 / 推理效率
 **推荐理由**：无需修改模型权重即可实现运行时决策路由，被引用数迅速攀升，在多模型分层系统中作为轻量化管控层的价值非常突出。
-**链接**：https://arxiv.org/abs/2607.14277
+**链接**： <https://arxiv.org/abs/2607.14277>
 
 ### 5\. Isolation as a First-Class Principle for LLM-Agent System Safety: Concepts, Taxonomy, Challenges and Future Directions
 
 **摘要**：将隔离（Isolation）提升为LLM-Agent系统安全的一等原则，以边界为中心构建五层分类体系：用户-Agent、Agent-工具、Agent-执行、Agent-Agent和系统-环境。系统化梳理了Prompt注入、工具误用、记忆投毒等攻击的结构共性——即隔离边界的丧失。
 **领域**：AI Agent 安全 / 系统安全
 **推荐理由**：呼应了本周OpenAI GPT-5.6自主入侵事件暴露的安全缺口，五边界隔离框架为理解Agent安全的辐射面提供了迄今为止最系统的理论工具。
-**链接**：https://arxiv.org/abs/2607.12406
+**链接**： <https://arxiv.org/abs/2607.12406>
 
 ### 6\. Critic Experience Bank: Self-Evolving Step-Level Confidence Estimation for LLM Agents
 
 **摘要**：提出Critic Experience Bank框架，让LLM Agent在每一步执行后累积信心估计经验，无需外部奖励模型即可自我进化。在多个Agent推理数据集上，自评估准确率持续提升，逐步超越静态基线。
 **领域**：LLM Agent / 自我评估 / 演化学习
 **推荐理由**：解决了Agent「做了还不确定做得对不对」的痛点——让Agent在执行过程中自主积累评估能力，无需频繁调用外部裁判模型，实用性强。
-**链接**：https://arxiv.org/abs/2607.12397
+**链接**： <https://arxiv.org/abs/2607.12397>
 
 ### 7\. On-Device Deep Research at 4B: Exposure Bounds Faithfulness, Retrieval Bounds Coverage
 
 **摘要**：在24GB笔记本上固定4B参数模型，系统研究Deep Research Agent的引用忠实度和可信覆盖率。发现「曝光量提升忠实度」「检索召回决定覆盖率」——两个杠杆作用于不同维度。最佳实践是优先增加每源曝光量（仅约235额外tokens），再处理召回瓶颈。
 **领域**：端侧 AI / 深度研究 Agent / RAG
 **推荐理由**：对终端部署场景极具工程指导价值——用一个极小的4B模型在消费级硬件上跑出可用的研究Agent，揭示了「引用质量」的决定因子并非模型大小而是检索策略和曝光量。
-**链接**：https://arxiv.org/abs/2607.12257
+**链接**： <https://arxiv.org/abs/2607.12257>
 
 ### 8\. Dynamic Agent Skills: A Lifecycle Survey and Taxonomy of Evolving Skill Libraries
 
 **摘要**：规模最大的Agent动态技能库综述，审计124篇2023-2026论文。提出六感分类法（代码/NL/SKILL.md/适配器/记忆/标签）和八阶段生命周期架构（证据获取→提案→验证→存储→检索→维护→蒸馏→治理）。
 **领域**：LLM Agent / 技能系统 / 综述
 **推荐理由**：TMLR 2026录用论文，技能系统的标准参考框架。对于构建可自我进化的Agent来说，「技能不是写死的，而是像数据库记录一样需要生命周期管理」这个观点正成为共识。
-**链接**：https://arxiv.org/abs/2607.10113
+**链接**： <https://arxiv.org/abs/2607.10113>
 
 * * *
 
@@ -86,70 +86,70 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：《深入理解AI Agent》开源教材（正文+PDF+配套代码），单日+4,400星领跑GitHub热榜，总星14,100+。
 **热度**：+4,400 stars/day，总计14,100+
 **推荐理由**：系统性Agent工程体系化教材，从原理到实现一网打尽，社区强烈需求的直接反映。
-**链接**：https://github.com/bojieli/ai-agent-book
+**链接**： <https://github.com/bojieli/ai-agent-book>
 
 ### 2\. tirth8205/code-review-graph
 
 **简介**：本地优先代码智能图谱工具，为MCP/CLI构建持久化代码库映射，让AI编码助手只读取变更相关文件。
 **热度**：连续4日上榜，总24,400+星，7月21日单日+1,833星登顶
 **推荐理由**：大幅缩减代码审查中的Token消耗，实测效果显著，是「不要让AI一次看整个代码库」理念的最佳工程实践。
-**链接**：https://github.com/tirth8205/code-review-graph
+**链接**： <https://github.com/tirth8205/code-review-graph>
 
 ### 3\. diegosouzapw/OmniRoute
 
 **简介**：免费MIT协议AI网关，一个端点接入268+供应商、500+模型，支持配额感知自动回退与Token压缩。
 **热度**：总23,200+星，单日+2,000星
 **推荐理由**：多供应商聚合和自动故障转移功能使其成为Agent开发者的统一接入层，开发者零成本切换模型。
-**链接**：https://github.com/diegosouzapw/OmniRoute
+**链接**： <https://github.com/diegosouzapw/OmniRoute>
 
 ### 4\. jamiepine/voicebox
 
 **简介**：开源AI语音合成工作室，支持Whisper/Qwen3-TTS等模型，跨平台桌面客户端，本地运行保护隐私。
 **热度**：总44,100+星，7月20日单日+839星
 **推荐理由**：ElevenLabs的开源替代方案，支持语音克隆、听写和音频创作，从播客到短视频创作的实用工具。
-**链接**：https://github.com/jamiepine/voicebox
+**链接**： <https://github.com/jamiepine/voicebox>
 
 ### 5\. topoteretes/cognee
 
 **简介**：开源AI Agent记忆平台，通过自托管知识图谱引擎为Agent提供跨会话持久化长期记忆。
 **热度**：总28,900+星，持续热门
 **推荐理由**：Agent「记不住」是生产环境最大痛点之一，cognee用知识图谱做记忆管理，比纯向量检索的上下文保持更鲁棒。
-**链接**：https://github.com/topoteretes/cognee
+**链接**： <https://github.com/topoteretes/cognee>
 
 ### 6\. MoonshotAI/kimi-cli
 
 **简介**：月之暗面官方出品的CLI Agent，可与Kimi K3模型配合使用。
 **热度**：总10,400+星
 **推荐理由**：月之暗面首次推出终端Agent产品线，与Kimi K3模型形成「模型+工具」闭环，对标OpenAI Codex。
-**链接**：https://github.com/MoonshotAI/kimi-cli
+**链接**： <https://github.com/MoonshotAI/kimi-cli>
 
 ### 7\. xai-org/grok-build
 
 **简介**：xAI官方出品的Coding Agent Harness（TUI），全屏、鼠标交互、可扩展，Rust编写。
 **热度**：一周暴涨+5,928星总星榜No.4
 **推荐理由**：xAI正式入局Agent框架赛道，Rust性能和可靠性优先，「Harness」定位高于一般Agent——它是承载Agent的外壳/框架，与OpenAI Codex形成直接竞争。
-**链接**：https://github.com/xai-org/grok-build
+**链接**： <https://github.com/xai-org/grok-build>
 
 ### 8\. KnockOutEZ/wigolo
 
 **简介**：面向AI编码Agent的Web工具，本地优先搜索、抓取、爬虫和研究，通过MCP提供，无需API key。
 **热度**：总2,500+星，7月20日单日+695星
 **推荐理由**：定位精准——Agent需要Web能力但不想绑定第三方API，本地优先+零成本对开发者和Agent来说都是理想组合。
-**链接**：https://github.com/KnockOutEZ/wigolo
+**链接**： <https://github.com/KnockOutEZ/wigolo>
 
 ### 9\. headroomlabs-ai/headroom
 
 **简介**：压缩工具输出、日志、文件和RAG块后再送入LLM，对JSON可实现60-95%的Token缩减，代码Agent可减20%。
 **热度**：总60,400+星，持续热门
 **推荐理由**：Token压缩工具在AI编码生态中需求急剧上升，headroom以库/代理/MCP服务器三种形态交付，接入灵活。
-**链接**：https://github.com/headroomlabs-ai/headroom
+**链接**： <https://github.com/headroomlabs-ai/headroom>
 
 ### 10\. kvcache-ai/ktransformers
 
 **简介**：集成LLM推理优化技术的灵活框架，支持缓存压缩、算子融合，可在单GPU上大幅加速推理。
 **热度**：总18,700+星，7天+896星
 **推荐理由**：本地推理优化框架的代表，与本周arXiv的KV-Cache量化论文形成「理论与实践」呼应。
-**链接**：https://github.com/kvcache-ai/ktransformers
+**链接**： <https://github.com/kvcache-ai/ktransformers>
 
 * * *
 

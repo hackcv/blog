@@ -28,7 +28,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用"外部记忆 + 模块化决策"替代单体参数堆砌，8B 干翻 32B 且推理近乎减半，对长程多模态对话的落地成本有现实意义。
 
-**链接**：https://arxiv.org/abs/2607.08497
+**链接**： <https://arxiv.org/abs/2607.08497>
 
 ### 2. PairCoder++: Pair Programming as a Universal Paradigm for Verified Code-Driven Multimodal and Structured-Artifact Generation
 
@@ -38,7 +38,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"编译器/渲染器是否报错"作为客观裁判，让生成从一次到位变成可靠迭代；适合对正确性敏感的工程场景，代价是算力开销上升。
 
-**链接**：https://arxiv.org/abs/2607.01883
+**链接**： <https://arxiv.org/abs/2607.01883>
 
 ### 3. Seeing and Reflecting: Multimodal Memory-Enhanced Agent Collaboration for Recommendation
 
@@ -48,7 +48,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"视觉证据"与"自然语言推理"解耦又融合，在需要看图理解偏好的推荐场景（如电商、内容分发）有明显增益。
 
-**链接**：https://arxiv.org/abs/2607.07108
+**链接**： <https://arxiv.org/abs/2607.07108>
 
 ### 4. Perceive-to-Reason: Decoupling Perception and Reasoning for Fine-Grained Visual Reasoning
 
@@ -58,7 +58,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：2B/4B 小模型靠"先感知后推理"追平甚至超越大模型，说明细粒度 VQA 的瓶颈在证据定位而非参数规模。
 
-**链接**：https://arxiv.org/abs/2607.01191
+**链接**： <https://arxiv.org/abs/2607.01191>
 
 ### 5. HIVE: Understanding Post-Hallucination Reasoning in Vision Language Models
 
@@ -68,7 +68,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：反直觉结论——幻觉不全是坏事，它拓宽语义覆盖并重塑推理；对"该不该无条件抑制幻觉"提出了新视角。
 
-**链接**：https://arxiv.org/abs/2607.07507
+**链接**： <https://arxiv.org/abs/2607.07507>
 
 ### 6. DeltaV: Thinking with Visual State Updates in Unified Large Multimodal Models
 
@@ -78,7 +78,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：用"差分更新"替代"整图重绘"，视觉 token 砍掉一半多且推理更好，是统一多模态模型降本的清晰方向。
 
-**链接**：https://arxiv.org/abs/2607.08434
+**链接**： <https://arxiv.org/abs/2607.08434>
 
 ### 7. ProLaViT: Learning Progressive Latent Visual Thoughts in Structured Latent Space
 
@@ -88,7 +88,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：不依赖外部专家模型即可让模型"在脑子里画图思考"，在显存与推理成本受限时尤其有吸引力。
 
-**链接**：https://arxiv.org/abs/2607.02907
+**链接**： <https://arxiv.org/abs/2607.02907>
 
 ### 8. Multimodal Continuous Reasoning via Asymmetric Mutual Variational Learning (AMVL)
 
@@ -98,7 +98,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：针对评测作弊（表面对齐）的治本思路——把推理搬进连续空间，对大模型评测与对齐的可靠性有启发。
 
-**链接**：https://arxiv.org/abs/2607.00461
+**链接**： <https://arxiv.org/abs/2607.00461>
 
 ## 二、GitHub 热门 AI 开源项目（2026.07.06–07.12）
 
@@ -110,7 +110,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把"虚拟公司"拆成可插拔 Agent 角色，独立开发者用极低成本拼出 AI 团队，是 Agent 编排从 Demo 走向生产的代表。
 
-**链接**：https://github.com/msitarzewski/agency-agents
+**链接**： <https://github.com/msitarzewski/agency-agents>
 
 ### 2. strix
 
@@ -120,7 +120,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**："AI + 安全"从概念落地为可交付工具，自动红队对企业 DevSecOps 是刚需。
 
-**链接**：https://github.com/usestrix/strix
+**链接**： <https://github.com/usestrix/strix>
 
 ### 3. firecrawl
 
@@ -130,7 +130,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 要"上网干活"的前提是拿到干净数据，Firecrawl 是事实上的数据入口层，热度稳定说明需求刚性强。
 
-**链接**：https://github.com/firecrawl/firecrawl
+**链接**： <https://github.com/firecrawl/firecrawl>
 
 ### 4. ponytail
 
@@ -140,7 +140,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：反"过度工程"的 Agent 人格，在成本敏感场景能显著减少无效 token 与返工，值得借鉴到自家 Agent 设定。
 
-**链接**：https://github.com/DietrichGebert/ponytail
+**链接**： <https://github.com/DietrichGebert/ponytail>
 
 ### 5. agent-skills
 
@@ -150,7 +150,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：工程化沉淀的"技能协议"范式，比零散 prompt 更可复用；本仓库 7 天内仅收录一次，避免连登。
 
-**链接**：https://github.com/addyosmani/agent-skills
+**链接**： <https://github.com/addyosmani/agent-skills>
 
 ### 6. orca
 
@@ -160,7 +160,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：多 Agent 并行编排的"开发环境"层出现，说明 Agent 正从单兵走向批量调度，工程化信号明显。
 
-**链接**：https://github.com/stablyai/orca
+**链接**： <https://github.com/stablyai/orca>
 
 ### 7. hermes-agent
 
@@ -170,7 +170,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与 GPT-5.6 Luna 由 Sol 自训的新闻呼应，"自进化 Agent"从论文叙事进入开源生态。
 
-**链接**：https://github.com/NousResearch/hermes-agent
+**链接**： <https://github.com/NousResearch/hermes-agent>
 
 ### 8. pocket-tts
 
@@ -180,7 +180,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与当日"端侧 AI"主线契合——把语音合成塞进 CPU，对隐私与离线场景是刚需，端侧化趋势再添一块拼图。
 
-**链接**：https://github.com/kyutai-labs/pocket-tts
+**链接**： <https://github.com/kyutai-labs/pocket-tts>
 
 ## 三、精选 AI 行业资讯（2026.07.10–07.12）
 
@@ -192,7 +192,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：腾讯科技、钛媒体、凤凰科技
 
-**链接**：https://new.qq.com/rain/a/20260710A07ZN000 ；https://www.163.com/dy/article/L1ISTT8U05118O92.html
+**链接**： <https://new.qq.com/rain/a/20260710A07ZN000> ；https://www.163.com/dy/article/L1ISTT8U05118O92.html
 
 ### 2. 马斯克公开承认 Anthropic 是 AI 领域领先者，SpaceX 继续供算力
 
@@ -202,7 +202,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：IT168、腾讯科技
 
-**链接**：https://new.qq.com/rain/a/20260710A07ZN000
+**链接**： <https://new.qq.com/rain/a/20260710A07ZN000>
 
 ### 3. Meta 发布 Muse Spark 1.1，首次推出付费开发者模型
 
@@ -212,7 +212,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：腾讯科技
 
-**链接**：https://new.qq.com/rain/a/20260710A07ZN000
+**链接**： <https://new.qq.com/rain/a/20260710A07ZN000>
 
 ### 4. Anthropic 企业 API 市场份额首超 OpenAI（34.4% 对 32.3%）
 
@@ -222,7 +222,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：凤凰科技
 
-**链接**：http://www.bjtvnews.com/tech/2026/07/1783753935488.html
+**链接**： <http://www.bjtvnews.com/tech/2026/07/1783753935488.html>
 
 ### 5. 微软"去 OpenAI 化"：用自研模型替代 Copilot
 
@@ -232,7 +232,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：凤凰科技
 
-**链接**：http://www.bjtvnews.com/tech/2026/07/1783753935488.html
+**链接**： <http://www.bjtvnews.com/tech/2026/07/1783753935488.html>
 
 ### 6. Gemini 3.5 Pro 传 7 月 17 日发布，前端 / 视觉代码生成越 Fable 5
 
@@ -244,7 +244,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **状态**：传闻·待证实
 
-**链接**：https://www.163.com/dy/article/L168F1SS05198NMR.html
+**链接**： <https://www.163.com/dy/article/L168F1SS05198NMR.html>
 
 ### 7. GPT-5.6 的 Luna 由旗舰 Sol 自主训练完成（AI 自我进化）
 
@@ -254,7 +254,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：钛媒体
 
-**链接**：https://www.163.com/dy/article/L1ISTT8U05118O92.html
+**链接**： <https://www.163.com/dy/article/L1ISTT8U05118O92.html>
 
 ### 8. 谷歌 Gemma 4 发布：31B 端侧多模态、Apache 2.0 全开源
 
@@ -264,4 +264,4 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：新智元、arXiv
 
-**链接**：https://www.163.com/dy/article/L1ICDGJD0511ABV6.html ；https://arxiv.org/abs/2607.02770
+**链接**： <https://www.163.com/dy/article/L1ICDGJD0511ABV6.html> ；https://arxiv.org/abs/2607.02770

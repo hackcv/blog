@@ -26,56 +26,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：LLM 训练正从人工设计与标注转向交互驱动的自演化，但现有方法在「任务多样性 vs 验证可靠性」间两难：环境束缚法反馈精确却领域窄，开放自生成拓宽任务却缺乏可靠验证、误导奖励污染训练。作者将 agent skills 视为折中——每技能保证特定场景可验证执行，跨技能动态路由维持开放任务多样性。提出 Skill-SP 框架（proposer / solver / skill controller）经 RL 自博弈协同演化；tool-use 与 reasoning 基准上持续推高主干性能上限，对初始未对齐模型有显著扭转。
 **领域**：LLM 自演化 / 后训练 / 智能体技能
 **推荐理由**：把「技能协同演化 + 自博弈」做成一个可验证的自演化引擎，比纯开放自生成更稳，给「模型自己变强」提供了可工程化的路径，值得后训练团队跟进。
-**链接**：https://arxiv.org/abs/2607.22529
+**链接**： <https://arxiv.org/abs/2607.22529>
 
 ### 2. AgentHOI: Multi-Agent Reasoning for Human-Object-Interaction Video Generation via Implicit Representation Alignment
 
 **摘要**：视频扩散推动 HOI（人-物交互）视频生成，需超越单主体动画的细粒度交互控制，但现有方法依赖显式运动控制，跨物体/交互泛化差。提出 AgentHOI，文本驱动、thinking-before-generation 框架，通过感知/交互/运动规划的多智能体推理桥接高层文本意图与物理执行；引入隐式文本-运动对齐，将 text-to-motion 先验蒸馏进扩散模型，推理无需显式运动输入。在「穿/骑」等以物体为中心场景显著提升交互自然度、物体外观保持与复杂指令遵循。
 **领域**：视频生成 / 多模态 / 具身
 **推荐理由**：用多智能体推理替代显式运动控制，降低 HOI 视频对标注轨迹的依赖，对电商/影视「让物体听话」的可控生成有直接价值。
-**链接**：https://arxiv.org/abs/2607.22241
+**链接**： <https://arxiv.org/abs/2607.22241>
 
 ### 3. GuardianAgentBench: Where Agents Fail and How to Guard Them
 
 **摘要**：提出带对抗模式的智能体基准，暴露跨框架的工具调用失败机制；系统考察 agent 在 adversarial 设置下「何处失败、如何防护」，覆盖多种 tool-use 失败场景。
 **领域**：智能体安全 / 评测
 **推荐理由**：把「agent 在对抗输入下如何失控」做成可量化基准，比普通功能评测更贴近真实部署风险，对 agent 落地安全有直接参考。
-**链接**：https://arxiv.org/abs/2607.20982
+**链接**： <https://arxiv.org/abs/2607.20982>
 
 ### 4. Is Deep Research Reliable? Misleading Knowledge Induces False Conclusions
 
 **摘要**：研究 deep research agent 中误导性知识如何诱导错误结论，构建规模可控的框架分析 misleading knowledge 在检索-综合链路中的传播，量化其被放大为确定结论的过程。
 **领域**：智能体可靠性 / 检索增强 /  misinformation
 **推荐理由**：直指「深度研究」类产品（如 ChatGPT Deep Research）的软肋——检索到的错误信息会被放大成确定结论，给评测与防护提供依据。
-**链接**：https://arxiv.org/abs/2607.20891
+**链接**： <https://arxiv.org/abs/2607.20891>
 
 ### 5. From Agent Failures to Text Policies: What Works and What Breaks
 
 **摘要**：TextGrad 用自然语言反馈当「梯度」优化文本组件而不改权重；但用于 agent 时反馈在动作序列后才到达，难定位哪一决策致败。研究分离「遵循有用策略」与「从经验学该策略」两种能力，发现明显鸿沟：人写策略让两个冻结 7B agent 在 TextWorldExpress 上 +5.0 成功点，证明有用策略文本存在；但从 agent 轨迹生成的策略即使加反事实证据、迭代 GEPA 搜索也未能稳定超越固定提示。核心挑战不是执行文本策略更新，而是可靠地从经验生成并选择它们。
 **领域**：智能体优化 / TextGrad / 后训练
 **推荐理由**：给「用反馈自动改进 agent」泼了冷水——经验生成的策略并不可靠，提醒团队别过度迷信自动策略搜索，值得对照自身 agent 回路设计。
-**链接**：https://arxiv.org/abs/2607.20668
+**链接**： <https://arxiv.org/abs/2607.20668>
 
 ### 6. Same Game, Different Story: A Minimal Conservative Strategic Robustness Benchmark for LLM Agents
 
 **摘要**：LLM agent 日益进入策略场景，结果取决于其他 agent 动作，引出可靠性问题：相同激励用不同叙事呈现时模型是否一致选择？提出基准，将策略鲁棒性定义为「收益保持的框架变换下模型诱导动作分布的不变性」。对 GPT-3.5/4/LLaMa-2 在四个社会困境博弈的聚合合作率做二次分析，保守变换下池化策略鲁棒性 0.783，朋友分享框架比商务框架提升合作 0.307。结论：社会关係框架能显著改变 LLM 行为即使动作集/收益不变；策略鲁棒性应与策略能力分开评估。
 **领域**：多智能体 / 对齐 / 评测
 **推荐理由**：揭示「话术框架」能撬动 LLM agent 决策，对多 agent 协商/博弈部署的安全与一致性评测是重要提醒。
-**链接**：https://arxiv.org/abs/2607.19670
+**链接**： <https://arxiv.org/abs/2607.19670>
 
 ### 7. Supra Cognitive Modes: A Routed Architecture for Agent Memory
 
 **摘要**：提出路由式智能体记忆架构，含路由检索/合成（routed retrieval/synthesis），在记忆任务上相较基线取得 benchmark 增益，针对不同记忆需求动态切换认知模式。
 **领域**：智能体记忆 / 长上下文 / 架构
 **推荐理由**：把记忆做成「路由多模式」而非单一向量库，贴合长程 agent 对记忆的差异化需求，是 agent 记忆架构的实用方向。
-**链接**：https://arxiv.org/abs/2607.19096
+**链接**： <https://arxiv.org/abs/2607.19096>
 
 ### 8. Enhancing Rubric-based RL via Self-Distillation
 
 **摘要**：通过自蒸馏改进基于 rubric 的 RL，针对开放式 LLM 行为的后训练推进，缓解 rubric 信号稀疏/噪声问题，提升对齐稳定性。
 **领域**：后训练 / RLHF / 推理 / 对齐
 **推荐理由**：rubric-based RL 是开放式行为对齐的热门路线，自蒸馏进一步降本提质，对做后训练团队有参考价值。
-**链接**：https://arxiv.org/abs/2607.18082
+**链接**： <https://arxiv.org/abs/2607.18082>
 
 ## 二、GitHub热门AI开源项目（2026.07.24-07.27）
 
@@ -84,56 +84,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：面向「真正工程师」的 Skills 集合，源自作者 .agents 目录，汇总可复用 agent 技能与工程实践，总 Star 188.2k、单日涨星约 1.7k。
 **热度**：188.2k ★（单日 +1.7k）
 **推荐理由**：Skills 生态成形的标志项目，把「如何写好 agent 技能」沉淀为社区资产，可直接被 Claude Code 等复用，是 agent 工程化的入口级资源。
-**链接**：https://github.com/mattpocock/skills
+**链接**： <https://github.com/mattpocock/skills>
 
 ### 2. msitarzewski/agency-agents
 
 **简介**：一个完整的 AI agency，含前端向导、社区运营、纠错等多种专职 agent，各有性格、流程与可交付物，总 Star 136.7k、周涨 22.3k。
 **热度**：136.7k ★（周 +22.3k）
 **推荐理由**：把「多 agent 协作公司」做成了开箱即用模板，直观展示 agent 从单点工具走向全栈工程化的趋势。
-**链接**：https://github.com/msitarzewski/agency-agents
+**链接**： <https://github.com/msitarzewski/agency-agents>
 
 ### 3. nextlevelbuilder/ui-ux-pro-max-skill
 
 **简介**：提供跨平台专业 UI/UX 设计智能的 AI Skill，面向 Claude Code、Cursor、Codex 等，总 Star 110.2k、周涨 11.8k。
 **热度**：110.2k ★（周 +11.8k）
 **推荐理由**：AI 从代码走向设计的具体落地，技能化封装让设计能力可被 agent 直接调用，降低「vibe coding 出好界面」的门槛。
-**链接**：https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
+**链接**： <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill>
 
 ### 4. affaan-m/ECC
 
 **简介**：agent harness 性能优化系统，涵盖 Skills、本能（instincts）、记忆、安全等模块，定位为 agent harness 的「性能优化系统」，总 Star 234k、周涨 2.6k。
 **热度**：234k ★（周 +2.6k）
 **推荐理由**：随 agent 框架爆发，「harness 性能 / 可观测 / 安全」成为新痛点，ECC 切中规模化部署的工程需求。
-**链接**：https://github.com/affaan-m/ECC
+**链接**： <https://github.com/affaan-m/ECC>
 
 ### 5. rohitg00/ai-engineering-from-scratch
 
 **简介**：从零构建、端到端交付 AI 产品的 learn-by-building 课程，总 Star 44k、周涨 4.4k。
 **热度**：44k ★（周 +4.4k）
 **推荐理由**：工程化交付是 2026 年 AI 落地的核心能力，教程式仓库降低团队上手门槛，适合作为内部培训素材。
-**链接**：https://github.com/rohitg00/ai-engineering-from-scratch
+**链接**： <https://github.com/rohitg00/ai-engineering-from-scratch>
 
 ### 6. iOfficeAI/OfficeCLI
 
 **简介**：免费开源 Office 套件，专为 AI agent 读写/自动化 Word、Excel、PowerPoint 文件，单二进制、无需安装 Office，总 Star 18k。
 **热度**：18k ★
 **推荐理由**：让日常文件格式原生可被 agent 编辑，是 agent 办公自动化的基础设施级仓库，静默却高频。
-**链接**：https://github.com/iOfficeAI/OfficeCLI
+**链接**： <https://github.com/iOfficeAI/OfficeCLI>
 
 ### 7. langchain-ai/openwiki
 
 **简介**：LangChain 团队出品的 CLI，自动生成并维护对 AI 友好的代码库文档，总 Star 11.8k。
 **热度**：11.8k ★
 **推荐理由**：让文档可被 agent 可靠消费，缓解大库文档过时的老问题，契合 agent-tooling 生态。
-**链接**：https://github.com/langchain-ai/openwiki
+**链接**： <https://github.com/langchain-ai/openwiki>
 
 ### 8. wonderwhy-er/DesktopCommanderMCP
 
 **简介**：MCP 服务端，赋予 Claude（含 Claude Code 命令行）本地系统控制：运行终端命令、文件系统高级搜索、差分代码编辑，总 Star 8.2k。
 **热度**：8.2k ★
 **推荐理由**：MCP 把 AI 编辑器与本地环境解耦的标杆实现，是 agent 操控本机的实用基础设施，解释了为什么 MCP 本月热度暴涨。
-**链接**：https://github.com/wonderwhy-er/DesktopCommanderMCP
+**链接**： <https://github.com/wonderwhy-er/DesktopCommanderMCP>
 
 ## 三、精选AI行业资讯（2026.07.24-07.27）
 

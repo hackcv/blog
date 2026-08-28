@@ -30,56 +30,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：LLM agent 已能端到端后训练另一个 LLM——写代码、拉起训练、评估 checkpoint、提升下游指标。作者指出这混淆了两种能力：执行层能力（在既选策略内迭代）与策略层能力（随实验证据积累修正高层判断）。分析大量公开后训练轨迹发现，agent 的训练策略在最开头就被锁死，剩余全部预算都花在选定策略内的局部微调上。三种解释被逐级加压检验：经验驱动脚手架全面提升执行（GSM8K +12.6 分、HumanEval +40.8 分）但策略依旧僵死；人类指导能有效改写初始策略，可训练一开跑 agent 又落回局部调整循环；追加推理算力在简单任务有回报，最难任务几乎无增益。结论：agent 缺的不是经验、指导或推理算力，而是执行中自发重估策略的机制。
 **领域**：AI for AI / 智能体自动化
 **推荐理由**：把「AI 训 AI」这个当红叙事拆成执行层与策略层，并用三组递进干预证明补经验、补指导、补算力都不解决根因，对正在搭自动化训练流水线的团队是一次必要的降温。
-**链接**：https://arxiv.org/abs/2608.19072
+**链接**： <https://arxiv.org/abs/2608.19072>
 
 ### 2. Bayesian Partner Modelling enables Adaptive Replanning for LLM Coordination
 
 **摘要**：多 agent LLM 系统与中途改变策略的新队友协作时常常失败：因为 agent 执行的是多步、时序延展的技能，往往在公开证据已显示同伴换招之后，仍长时间继续执行过时计划。既有方法要么把同伴追踪当被动上下文（知道变了但反应慢），要么无差别重规划。作者提出 BayesBeliefAgent，把层级 LLM 规划器与贝叶斯追踪模块配对：只在同伴动作与推断技能直接矛盾时才打断当前技能。除常规回报外，还用「重规划效率」与「信念-行动差」（持有正确同伴估计却执行非互补技能的决策占比）评估。在 Overcooked 基准上，矛盾条件触发的控制显著收窄信念-行动差，同时重规划次数比启发式方法少一个数量级。
 **领域**：多智能体协调 / 贝叶斯推断
 **推荐理由**：给多 agent 协作提出了一个便宜且可度量的开关——不是「更频繁重规划」，而是「只在矛盾出现时才打断」，重规划量少一个数量级这个数字对成本敏感的编排系统很有说服力。
-**链接**：https://arxiv.org/abs/2608.18490
+**链接**： <https://arxiv.org/abs/2608.18490>
 
 ### 3. StateM: Reaching 95.3% Raw Accuracy, or a $15 Frontier Run, on Terminal-Bench 2.1 via Harness Scaling
 
 **摘要**：长程 agent 会在底层模型明明能解出各步骤时依然失败：丢失可变状态、无法复用早前执行的经验、跳过已知流程、过早停止。作者押注 harness scaling——不改模型权重，只改 agent 周围的执行系统。StateM 是一个 agent 原生运行时，围绕持久状态、阶段局部上下文、受检查的状态转移、可恢复 runbook 以及 agent 与用户可共同审查的版本化流程实践来组织执行。在 Terminal-Bench 2.1 上，StateM 把 GPT-5.5 xhigh 从 83.1% 参考线提到 92.1%；runbook 原样迁移到 GPT-5.6；配 GPT-5.6 Sol xhigh 达 95.3% 原始准确率（445 次试验），89 个任务全部至少成功一次。同套运行时下，不到 38 美元的适配把 DeepSeek-V4 Flash 从 82.7% 提到 88.1%；最终跑分 API 花费约 15 美元，对照 GPT 参考线 574.68 美元。
 **领域**：智能体运行时 / 工程优化
 **推荐理由**：本期最实用的一篇——证明当下最大的性价比杠杆不在模型而在 harness：不动权重、95.3% 准确率、15 美元对 574 美元，代码已开源，任何做 coding agent 的团队今天就能试。
-**链接**：https://arxiv.org/abs/2608.15089
+**链接**： <https://arxiv.org/abs/2608.15089>
 
 ### 4. Demystifying Agent Skills: Why They Work-Until They Don't
 
 **摘要**：Skills 已成为推理期增强 LLM agent 的实用手段，但既有评测多只看聚合成功率，回避了更根本的问题：技能何时有用、为何有用、在哪失效。作者跨多个基准、多种 agent harness 与多个 LLM 做受控实验，隔离表示方式、结果标注、检索难度与跨框架鲁棒性的影响；再用对照研究结合配对轨迹分析，归一化 8,135 条试验记录、从 240 条开放编码记录中保留 238 个有效标签，凝练成 3 大类、12 种技能使用模式。核心发现：技能之所以有效，是让嘈杂轨迹变成稳定执行的「程序锚点」——程序锚定占 65.7%，显式知识注入仅 4.5%；技能在配对比较中比 Workflow Memory 高 6.06 分。检索是独立瓶颈：技能池从 5 涨到 100，实际使用精度从 29.6% 跌到 3.3%。
 **领域**：智能体技能 / 评测方法
 **推荐理由**：给「技能库越大越好」直接判了死刑——检索精度崩到 3.3% 是所有维护技能库的团队都该抄下来的数字；同时说清技能是稳定动作而非补知识，直接影响技能该怎么写。
-**链接**：https://arxiv.org/abs/2608.14036
+**链接**： <https://arxiv.org/abs/2608.14036>
 
 ### 5. ASI-Bench: At the Dawn of Artificial Superintelligence
 
 **摘要**：通往超级智能要求 AI 超越掌握既有知识，走向探索未知、创造新知识并把新想法变成可验证结果，而今天的系统主要建立在学习、压缩、应用人类既有知识之上。ASI-Bench 是首个联合评估「创新探索」与「自主科研执行」的基准，也是首个在同一研究项目内逐级撤走人类方法学指导、以测试 AI 能独立走多远的基准。由 40 余位专家、31,000+ 人时构建，含 11 个科学领域的 60 个项目级研究任务，全部经专家评审、AI 辅助审计、沙箱执行与打分器验证。18 个前沿 agent-模型组合上，平均分从「给全方法学指导」的 50.91 掉到「仅指定方法」的 29.10，再到「须自行确定方法」的 26.62。
 **领域**：AI for Science / 智能体评测
 **推荐理由**：把「自主科研」从口号变成可测量的阶梯，撤掉指导后近乎腰斩的分数是当前最诚实的能力刻度；基准对外开放共建，适合作为科研 agent 的长期对标线。
-**链接**：https://arxiv.org/abs/2608.17271
+**链接**： <https://arxiv.org/abs/2608.17271>
 
 ### 6. When Agents Act on Web3: An Attack-Surface Survey of MCP, Skills, and Tool Calling
 
 **摘要**：AI agent 正从「读」转向「做」：在 MCP 生态里，会修改外部状态的已部署工具占比已从 27% 升至 65%。当 agent 通过 MCP、skills 与工具调用在公链上行使这种权限时，攻击后果由区块链执行层而非传统软件假设决定。作者指出该执行层的四项特性——不可逆性、签名权限、持续自主性、序列级组合性——从根本上改变威胁模型，把通用 agent 安全里「可恢复」的故障变成持续且不可逆的损失。论文梳理零散的 MCP 安全文献，建立攻击面分类体系，并提出 Web3 风险映射矩阵，把每类攻击对应到被放大的影响、放大因素、代表性缓解与残留漏洞。综合评估显示：现有防护仅能阻止不到 30% 的攻击，模型级安全防护仅能避免不到 3%。
 **领域**：智能体安全 / Web3
 **推荐理由**：MCP 里「会改状态的工具」从 27% 涨到 65% 这个测量本身就值得所有 agent 开发者警醒；再叠加「模型级防护只挡住不到 3%」，说明护栏必须做在执行层而不是提示层。
-**链接**：https://arxiv.org/abs/2608.17275
+**链接**： <https://arxiv.org/abs/2608.17275>
 
 ### 7. Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents
 
 **摘要**：AI agent 越来越多作为交互系统的一部分运行。作者研究了 10,000 多个语言模型 agent 社区，让它们围绕客观数学题与主观政治陈述反复交换消息、修订观点。尽管行为空间巨大，个体与群体动力学可归纳为三种特征状态：冷漠、极化、共识——agent 从冷漠出发，在交互中不断积累确信。客观问题上，沟通提升集体准确率；主观问题上，群体观点常向政治谱系右侧漂移。作者用统计力学形式化解释：agent 随机偏好更低的社会压力。仅给定初始观点，该模型即可预测个体轨迹、优于所有标准基线、可泛化到未见社区图，并复现观测到的群体原型分布。拟合参数揭示三点机制：社区运行在临界社会温度以下（解释确信积累）；吸引性连接强于排斥性（偏向共识）；持有正确答案的 agent 拉力最强（驱动求真）。
 **领域**：多智能体系统 / 复杂系统
 **推荐理由**：把多 agent 群体行为压缩成可预测的动力学定律，还诚实报告了主观议题上的系统性右移——对任何用 agent 群体做投票、评审、决策的产品都是必读的偏差警告。
-**链接**：https://arxiv.org/abs/2608.16578
+**链接**： <https://arxiv.org/abs/2608.16578>
 
 ### 8. Embodied-Navigator: Point, Think, Memorize, and Align for Efficient Navigation
 
 **摘要**：VLM 虽推进了具身导航，直接部署仍困难：既有方法常把 VLM 塞进与其 2D 预训练先验不匹配的非自然动作空间，还叠加了僵化的推理调度与低效记忆管理。作者提出 TAMP-Nav 统一框架。一是 Pixel-to-3D 动作表述（Point），把导航重构为 2D 视觉提示——VLM 只需选 2D 像素，再投影为 3D 坐标交给底层 SLAM 控制器，使具身执行天然对齐 VLM 固有的 2D 视觉能力。二是选择性推理与锚点轨迹记忆（Think and Memorize），仅在关键节点动态触发思维链并保留高保真记忆，把冗余轨迹压缩成轻量时空指示符。三是通过 GRPO 的两级对齐范式（Align），以全局结果奖励叠加细粒度过程奖励做稠密监督。实验达到 SOTA（R2R-CE 上 66.2% SR），且仅需 9 万条训练轨迹。
 **领域**：具身智能 / 计算机视觉
 **推荐理由**：与其硬改 VLM 去适配机器人动作空间，不如把导航翻译成「点像素」这种 VLM 本来就会的事——9 万条轨迹拿到 SOTA，样本效率对缺数据的机器人团队意义直接。
-**链接**：https://arxiv.org/abs/2608.17512
+**链接**： <https://arxiv.org/abs/2608.17512>
 
 * * *
 
@@ -90,56 +90,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：利用 AI 大模型与自动化工作流，根据主题或关键词一键生成高清短视频。用户给一个题目，系统自动完成脚本生成、素材获取、TTS 配音、字幕转场合成，直接产出适配 TikTok / YouTube Shorts / Instagram Reels 的竖版或横版成片。
 **热度**：110,993 星，单日 +2,221 星，登顶 8 月 20 日 GitHub Trending 全榜；Fork 16,820，MIT 协议，Python
 **推荐理由**：把「一条视频」的边际成本压到接近零，是本期最直观的 AI 应用层胜利。单日涨两千多星说明需求真实存在，也预示平台端很快要面对 AI 内容洪水与标注合规问题——想做内容矩阵的团队值得先跑一遍它的流水线结构。
-**链接**：https://github.com/harry0703/MoneyPrinterTurbo
+**链接**： <https://github.com/harry0703/MoneyPrinterTurbo>
 
 ### 2. mattpocock/skills
 
 **简介**：Skills for Real Engineers——作者直接把自己 .agents 目录里在用的工程技能集开源出来，面向真实工程场景而非演示用例，可挂载到 Claude Code、Cursor 等 agent 工具中。
 **热度**：223,962 星，单日 +1,894 星（8 月 19 日 +1,214），Fork 19,264，MIT 协议，Shell
 **推荐理由**：与 arXiv 那篇 Demystifying Agent Skills 正好互为镜像——一边说技能的价值在「程序锚定」且检索会随池子膨胀而崩，一边是一位知名 TS 教育者把亲手打磨、真在用的精简技能集拿出来。学「技能怎么写」比学「技能怎么装」更值。
-**链接**：https://github.com/mattpocock/skills
+**链接**： <https://github.com/mattpocock/skills>
 
 ### 3. cordiverse/cordis
 
 **简介**：时空可组合性元框架（Meta-Framework of Spatiotemporal Composability），DeepSeek Harness 的底层运行时基座，配套论文《A Programming Paradigm for Spatiotemporal Composability》，官方文档挂在 deepseek-harness 站点下。
 **热度**：6,100 星，单日 +959 星，MIT 协议，TypeScript；仓库累计 550 次提交
 **推荐理由**：DeepSeek Harness 一周十几万星的热度终于回流到它真正的地基上。「万物皆插件」不是口号而是这套元框架给的时间×空间可组合语义——要理解 harness 层为什么突然成为竞争焦点，从这里读比读上层封装清楚得多。作者明确标注 API 尚未稳定，生产使用需谨慎。
-**链接**：https://github.com/cordiverse/cordis
+**链接**： <https://github.com/cordiverse/cordis>
 
 ### 4. usestrix/strix
 
 **简介**：开源 AI 渗透测试工具——自主 AI hacker 自动发现并修复应用漏洞，主题覆盖 ai-pentesting、cybersecurity、red-teaming。
 **热度**：55,072 星，单日 +856 星，Fork 5,893，Apache 2.0 协议，Python；仓库创建于 2025 年 8 月
 **推荐理由**：与本期 Web3 攻击面综述「模型级防护只挡住不到 3% 攻击」形成正反两面：攻防两端都在 agent 化。红队工具开源化会持续压缩「没人扫我」的侥幸窗口，任何对外服务都该假设有凭证的自动化扫描随时到来。
-**链接**：https://github.com/usestrix/strix
+**链接**： <https://github.com/usestrix/strix>
 
 ### 5. liustack/modlens
 
 **简介**：DeepSeek Harness 的首个视觉插件，也是给所有纯文本 coding agent 外挂的视觉桥——粘贴一张图，返回结构化 JSON 证据（OCR、版面、语义），让 DeepSeek、GLM 等纯文本模型获得读图能力。
 **热度**：3,102 星，单日 +517 星，MIT 协议，TypeScript
 **推荐理由**：一个很聪明的杠杆位——不等基座补多模态，用插件把视觉能力挂上去，且输出的是结构化证据而不是自然语言描述，对下游程序更友好。纯文本模型仍是很多团队的成本最优解，这类桥接件的实用价值被低估了。
-**链接**：https://github.com/liustack/modlens
+**链接**： <https://github.com/liustack/modlens>
 
 ### 6. MakazhanAlpamys/Soup
 
 **简介**：一个 YAML 配置搞定 LLM 微调；核心是 Layer Streaming 技术，可在 4GB 显存的笔记本 GPU 上训练 8B 模型。
 **热度**：2,303 星，单日 +443 星，Apache-2.0 协议（2026 年 4 月从 MIT 迁移），创建于 2026 年 2 月
 **推荐理由**：把微调门槛从「租 A100」降到「一台带 4GB 独显的笔记本」，配置面收敛到单个 YAML。对做垂直小模型、又拿不到卡的团队，这是本期最有实感的降本项——当然层流式训练的时间成本要自己算清。
-**链接**：https://github.com/MakazhanAlpamys/Soup
+**链接**： <https://github.com/MakazhanAlpamys/Soup>
 
 ### 7. HKUDS/CLI-Anything
 
 **简介**：CLI-Anything: Making ALL Software Agent-Native——港大数据智能实验室出品，目标是把任意软件包装成 agent 原生可调用的 CLI 生态，让 agent 不必依赖 GUI 操控即可驱动现有软件。
 **热度**：47,776 星，单日 +384 星，Apache 2.0 协议，Python
 **推荐理由**：GUI agent 路线（如 UI-Mate 那类）在跟像素死磕的同时，这条路线选择绕开界面直接给软件加 CLI 接口——工程上更稳、更可测试、更省 token。两条路线谁更快落地值得持续观察。
-**链接**：https://github.com/HKUDS/CLI-Anything
+**链接**： <https://github.com/HKUDS/CLI-Anything>
 
 ### 8. anthropics/defending-code-reference-harness
 
 **简介**：Anthropic 官方安全参考实现——提供威胁建模、扫描、分类、修补四类 skills，外加一个可自行定制的自主扫描 harness。
 **热度**：7,318 星，单日 +176 星，Python；2026 年 5 月 23 日首次公开发布
 **推荐理由**：模型厂商亲自下场给出「防守方」的参考 harness，而不只是发安全报告。它和 strix 一起说明：安全能力正在被打包成可复用的 skills + harness 组合件，防守方终于有了和攻击方同代的自动化工具。
-**链接**：https://github.com/anthropics/defending-code-reference-harness
+**链接**： <https://github.com/anthropics/defending-code-reference-harness>
 
 * * *
 

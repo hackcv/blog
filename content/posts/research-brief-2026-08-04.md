@@ -29,56 +29,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：提出一套面向部署的 Agent 治理就绪性框架，把「能力评测分数」与「生产就绪度」显式拆开，用可核查的部署维度（回滚、越权边界、失败可观测性等）替代 demo 效果。
 **领域**：Agent 工程 / 部署治理
 **推荐理由**：tdteach 08-04 日报把它列为当日「先读这篇」。它把行业口头共识写成了可打分的清单，适合直接改造成内部上线 checklist；需要留意的是该就绪性指数尚未跨领域、跨模型栈广泛验证，不要当成通用认证。
-**链接**：https://arxiv.org/abs/2607.27677
+**链接**： <https://arxiv.org/abs/2607.27677>
 
 ### 2\. Context Assembly as the Controlled Variable: A Control-Theoretic View of Harness Policies for Frozen LLM Agents
 
 **摘要**：用控制论视角把「上下文组装」建模为受控变量，为冻结权重的 LLM Agent 设计可审计的 harness 策略，而不是靠改模型或堆提示词。
 **领域**：Agent harness / 上下文工程
 **推荐理由**：给「上下文工程取代提示词工程」这句口号补上了形式化定义与可测指标，对只能调 API、无法微调的团队直接可用。
-**链接**：https://arxiv.org/abs/2607.25408
+**链接**： <https://arxiv.org/abs/2607.25408>
 
 ### 3\. MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems
 
 **摘要**：让多智能体系统在推理时自适应调整通信拓扑，而非固定成串行或全连接，从而在不改基础模型的前提下提升能力与控制效率。
 **领域**：多智能体系统
 **推荐理由**：多数团队的多 Agent 编排还停在人工画流程图阶段，拓扑本身作为可优化对象是被低估的杠杆；与近期「协调模式应是一等公民」的实证研究互为佐证。
-**链接**：https://arxiv.org/abs/2607.28527
+**链接**： <https://arxiv.org/abs/2607.28527>
 
 ### 4\. Long-Horizon Embodied Decision-Making via Multimodal Memory Compression
 
 **摘要**：提出 DunphyBench 评测长时程、以人为中心的具身决策，并给出偏好条件化的多模态记忆压缩器 MeMento。相比最强基线，让 VLM 驱动的 Agent 准确率提升 7.18%，同时记忆占用下降 85.38%。
 **领域**：具身智能 / 多模态记忆
 **推荐理由**：诊断结论比数字更值得看——原始多模态历史本身就是噪声源，记忆管理而非推理能力才是当前瓶颈。8 月 2 日新提交。
-**链接**：https://arxiv.org/abs/2608.01456
+**链接**： <https://arxiv.org/abs/2608.01456>
 
 ### 5\. Rethinking CD: A Reproducibility Study and Extension on the Ineffectiveness of Contrastive Decoding at Mitigating Object Hallucinations in MLLMs
 
 **摘要**：复现研究表明，对比解码缓解多模态大模型物体幻觉的效果在很大程度上是基准伪象（如贪婪解码塌缩），而非真实的幻觉抑制。
 **领域**：多模态 / 可复现性
 **推荐理由**：一篇高价值负面结果。如果你的多模态流水线已经默认开着对比解码，值得按这篇的消融重测一遍，很可能是在为无效算力买单。
-**链接**：https://arxiv.org/abs/2607.25196
+**链接**： <https://arxiv.org/abs/2607.25196>
 
 ### 6\. Cost-Sensitive Conformal Prediction and Human-in-the-Loop Abstention for Imbalanced High-Stakes Decision Support: A Multi-Domain Benchmark
 
 **摘要**：成本敏感的保形预测配合人工拒判机制，在多领域高风险不平衡决策基准上，把少数类覆盖率从 30.5% 提升到 92.2%。
 **领域**：不确定性量化 / 人机协同
 **推荐理由**：把「什么时候该把球踢给人」变成有覆盖率保证的工程问题，风控、医疗、审核类场景可直接落地，数字幅度也足够大。
-**链接**：https://arxiv.org/abs/2607.27143
+**链接**： <https://arxiv.org/abs/2607.27143>
 
 ### 7\. SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them
 
 **摘要**：先训练模型借助空间工具推理，再逐步撤掉工具让能力内化，在多个空间理解基准上取得明显提升。
 **领域**：空间推理 / 工具学习
 **推荐理由**：工具调用不是终点而是脚手架，这个「先扶后撤」的范式对推理成本敏感的端侧部署尤其有意义。
-**链接**：https://arxiv.org/abs/2607.27703
+**链接**： <https://arxiv.org/abs/2607.27703>
 
 ### 8\. Albilich: Steerable Proof-State Orchestration for LLM-Based Mathematical Research with CAS Integration
 
 **摘要**：把计算代数系统与检索接入 LLM 数学研究流程，用可引导的「证明状态账本」编排推理过程，在数学研究基准上取得强结果。
 **领域**：AI for Math / 形式化验证
 **推荐理由**：正好和本周 OpenAI Astra 数学成果的争议对照——Astra 的教训是 Lean 内核漏洞可以被钻，而这类显式证明状态编排正是把「证明到底信不信得过」变成可审计工件的方向。
-**链接**：https://arxiv.org/abs/2607.27705
+**链接**： <https://arxiv.org/abs/2607.27705>
 
 * * *
 
@@ -89,56 +89,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：Rust 编写的高速 PDF 检查、分类与文本抽取库，能智能识别扫描件与文本型 PDF，据此做处理路径分流。
 **热度**：8,946 star，08-04 单日 +1,699，为当日趋势榜第二高增速。
 **推荐理由**：它站在 RAG 与 agentic 流水线的摄入边界——不再把每个 PDF 当成一坨扁平文本，而是按内容类型路由，直接改善下游检索精度。文档摄入这一层长期被低估。
-**链接**：https://github.com/firecrawl/pdf-inspector
+**链接**： <https://github.com/firecrawl/pdf-inspector>
 
 ### 2\. sqliteai/waste
 
 **简介**：零第三方依赖的可嵌入 C 推理引擎，把模型主干留在内存、从 NVMe 直接流式读取被激活的专家权重，剩余内存作有界专家缓存，从而在内存不足的机器上跑完整 2.78 万亿参数的 Kimi K3。
 **热度**：1,043 star（近 7 天新建/爆火项目）。
 **推荐理由**：Kimi K3 开源后，社区第一批答案不是「怎么微调」而是「怎么在普通硬件上跑起来」。项目自陈由人主导思路与测试、代码由 LLM 编写，本身也是一个值得观察的开发范式样本。
-**链接**：https://github.com/sqliteai/waste
+**链接**： <https://github.com/sqliteai/waste>
 
 ### 3\. microsoft/skill-recorder
 
 **简介**：桌面应用，录制你的屏幕工作过程（点击、窗口切换、访问页面、可选语音旁白），再用 GitHub Copilot CLI 把它重建为「意图 + 有序步骤」，最终产出可复用的 Skill 或 Automation。
 **热度**：782 star，TypeScript / Electron。
 **推荐理由**：Skill 生态最大的摩擦是「写 Skill 本身很贵」。用录屏反推意图是目前最省人力的路径，且直接对接 Microsoft Scout、Copilot Cowork 与 Copilot Studio。
-**链接**：https://github.com/microsoft/skill-recorder
+**链接**： <https://github.com/microsoft/skill-recorder>
 
 ### 4\. esengine/DeepSeek-Reasonix
 
 **简介**：面向终端的 DeepSeek 原生 AI 编程 Agent，围绕前缀缓存稳定性做工程设计，主打「开着别关」的常驻使用方式。
 **热度**：30,309 star，08-04 单日 +883，Go 编写。
 **推荐理由**：绝大多数 coding agent 的成本浪费在反复重建上下文，把前缀缓存命中率当成一等设计目标是很务实的切入点，也解释了它在 DeepSeek 生态里的高增长。
-**链接**：https://github.com/esengine/DeepSeek-Reasonix
+**链接**： <https://github.com/esengine/DeepSeek-Reasonix>
 
 ### 5\. lyogavin/airllm
 
 **简介**：通过逐层顺序加载，让 70B 参数模型在单张 4GB 显存 GPU 上完成推理。
 **热度**：27,676 star，08-04 单日 +1,085（前一日 +819，连续加速）。
 **推荐理由**：「70B 跑在 4GB 上」是从业者最常引用的本地部署门槛线。一个存量老项目在本周重新加速，侧面说明开源大模型密集发布后，本地推理的需求被再次点燃。
-**链接**：https://github.com/lyogavin/airllm
+**链接**： <https://github.com/lyogavin/airllm>
 
 ### 6\. drumih/turbo-fieldfare
 
 **简介**：基于 Metal，让 Gemma 4 26B-A4B 在任意 M 系列 MacBook 上以约 2GB 内存完成推理。
 **热度**：4,393 star，上线 17 天，约 258 star/天。
 **推荐理由**：与 waste、airllm 构成本周同一条主线——端侧内存墙正在被工程手段而非模型压缩逐个击穿，对做本地 AI 应用的团队是实打实的可用性变化。
-**链接**：https://github.com/drumih/turbo-fieldfare
+**链接**： <https://github.com/drumih/turbo-fieldfare>
 
 ### 7\. trycompai/crm
 
 **简介**：开源的 agentic-first CRM，产品形态是一个持久运行的研究型 Agent，数据库只是它记录结论的地方。
 **热度**：1,794 star，TypeScript。
 **推荐理由**：它的定位陈述值得抄——传统 CRM 是「数据库加个表单」，AI CRM 只是「在表单旁边挂个聊天框」，两者都把「查清事实并记录下来」这件真正的工作留给了人。这是 Agent 原生产品设计少见的清醒表达。
-**链接**：https://github.com/trycompai/crm
+**链接**： <https://github.com/trycompai/crm>
 
 ### 8\. DannyMac180/sol-advisor
 
 **简介**：Codex 原生的架构师编排工作流，用 Luna 与 Terra 两条实现车道分工，并强制引入一次全新的 Sol 评审后才允许合入。
 **热度**：647 star，Shell。
 **推荐理由**：把「主会话只管需求、架构、规格与验证，实现和评审交给独立 agent 线程」做成了强制流程，正好是本期论文里「结构化接口优于自由形式控制」的工程对应物。
-**链接**：https://github.com/DannyMac180/sol-advisor
+**链接**： <https://github.com/DannyMac180/sol-advisor>
 
 * * *
 

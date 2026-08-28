@@ -31,7 +31,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：点出了 VLA 落地最实在的痛点——全连续动作空间太难训、太吃数据。用「工具调用」把动作空间离散化/模块化，是比堆数据更省的路径，对真实部署的鲁棒性与可扩展性有直接价值。
 
-**链接**：https://arxiv.org/abs/2608.14047
+**链接**： <https://arxiv.org/abs/2608.14047>
 
 ### 2. StateBridge: Training-free Hidden-state Alignment for Latent Communication in LLM Multi-Agent Systems
 
@@ -41,7 +41,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：多 Agent 用纯文本对话是信息瓶颈，而既往潜通信要么逐层注入工作记忆、要么依赖需训练的项目器。StateBridge 的「免训练 + 闭式对齐」思路可移植性强，给「让 Agent 少说废话、直接传状态」提供了一条干净路线。
 
-**链接**：https://arxiv.org/abs/2608.13317
+**链接**： <https://arxiv.org/abs/2608.13317>
 
 ### 3. RippleMem: From Isolated Retrieval to Associative Recollection for Long-Term Agent Memory
 
@@ -51,7 +51,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长程 Agent 最怕「记了但用不上」。把记忆从「关键词命中」做成「联想扩散」，更贴近人类回忆机制，对跨会话、跨步骤任务的状态保持是底层能力的补强，值得在工程侧跟进。
 
-**链接**：https://arxiv.org/abs/2608.13334
+**链接**： <https://arxiv.org/abs/2608.13334>
 
 ### 4. Deliberate Practice: Provably Optimal Allocation for Skill Learning under a Limited Budget
 
@@ -61,7 +61,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：当自主研究 Agent 开始自己决定「练什么」，预算分配就成了核心。这篇给的是「 deliberate practice（刻意练习）」的可证明最优解，对自动化科研、课程式训练数据构建都有方法论启发。
 
-**链接**：https://arxiv.org/abs/2608.13415
+**链接**： <https://arxiv.org/abs/2608.13415>
 
 ### 5. ContactGuard: Action-Conditioned Latent World Model Predicts Failure Before Contact
 
@@ -71,7 +71,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：安全护栏如果只在「撞了之后」才报警就晚了。ContactGuard 把失败预测前移到接触之前，是把世界模型用于主动避险的实在范例，对工业/服务机器人部署很实用。
 
-**链接**：https://arxiv.org/abs/2608.13438
+**链接**： <https://arxiv.org/abs/2608.13438>
 
 ### 6. WMRL: Replacing Real-Environment Execution with a World Model Speeds RL 3-4x for Autonomous Research Agents
 
@@ -81,7 +81,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：自主研究 Agent 的瓶颈往往是「真实环境一步贵一步」。用世界模型当廉价 simulator 做大部分 rollout，是把训练成本打下来的务实杠杆，和本周 Harness 工程主线相互印证。
 
-**链接**：https://arxiv.org/abs/2608.12564
+**链接**： <https://arxiv.org/abs/2608.12564>
 
 ### 7. FUSE: Agents Decide "Where to Look" Before Judging Affordance When Cues Are Occluded
 
@@ -91,7 +91,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：真实场景里物体从不会被拍得清清楚楚。FUSE 把「先决定看哪」建模成一等公民，比盲目整图推理更稳，是机器人从 Demo 走向杂乱真实世界的关键一环。
 
-**链接**：https://arxiv.org/abs/2608.12683
+**链接**： <https://arxiv.org/abs/2608.12683>
 
 ### 8. MLLM-Routed Heterogeneous Ensembles for Robust Cross-Dataset Image Classification
 
@@ -101,7 +101,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：与其训一个更大的单一分类器，不如用 MLLM 当「调度官」把多种骨干组合起来。这种「路由 + 异构集成」的范式对分布漂移场景的鲁棒性很有吸引力，也为多模型协作提供了轻量样板。
 
-**链接**：https://arxiv.org/abs/2608.13463
+**链接**： <https://arxiv.org/abs/2608.13463>
 
 * * *
 
@@ -115,7 +115,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：本周最热的「Harness 工程」标志性项目。它把行业从「卷模型」拉到「卷运行时」的共识落了地，是构建可插拔 Agent 系统的参考实现，值得所有做 Agent 平台的团队研读。
 
-**链接**：https://github.com/deepseek-ai/deepseek-harness
+**链接**： <https://github.com/deepseek-ai/deepseek-harness>
 
 ### 2. github/spec-kit
 
@@ -125,7 +125,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：当 AI 编码 Agent 越来越能干，「用规格约束 Agent 而非靠 prompt 碰运气」成了工程最佳实践。spec-kit 把这套方法论标准化，对想把 Agent 接入正式研发流程的团队是直接可用的脚手架。
 
-**链接**：https://github.com/github/spec-kit
+**链接**： <https://github.com/github/spec-kit>
 
 ### 3. chopratejas/headroom
 
@@ -135,7 +135,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：长上下文是真贵。headroom 把「压缩」做成可插拔层，正好补上 Agent 基础设施里最缺的「上下文节流阀」，与本周「Harness 工程 + 成本敏感」的主线高度契合。
 
-**链接**：https://github.com/chopratejas/headroom
+**链接**： <https://github.com/chopratejas/headroom>
 
 ### 4. earendil-works/pi
 
@@ -145,7 +145,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「调模型 + 跑循环 + 做 TUI + 写代码」收进一个轻量工具箱，降低了个人开发者自建 Agent 的门槛，是当前 Agent 工具化浪潮里「瑞士军刀」型选手。
 
-**链接**：https://github.com/earendil-works/pi
+**链接**： <https://github.com/earendil-works/pi>
 
 ### 5. firecrawl/anydoc
 
@@ -155,7 +155,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：RAG 落地的第一道关卡永远是「脏文档」。anydoc 把多格式清洗收口成一个库，比各家公司各写一遍 parser 省力，是 Agent / 知识库管线的实用基建。
 
-**链接**：https://github.com/firecrawl/anydoc
+**链接**： <https://github.com/firecrawl/anydoc>
 
 ### 6. hugohe3/ppt-master
 
@@ -165,7 +165,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：「AI 做 PPT」长期停在截图级。ppt-master 走原生形状路线，产出可二次编辑，对周报、方案、教学场景是刚需，也是 Agent 接管办公流水线的一环。
 
-**链接**：https://github.com/hugohe3/ppt-master
+**链接**： <https://github.com/hugohe3/ppt-master>
 
 ### 7. koala73/worldmonitor
 
@@ -175,7 +175,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Agent 不只是「问答」，更要「持续盯着世界」。worldmonitor 代表了「常驻监控型 Agent」这一越来越受欢迎的方向，对舆情、风控、研报自动化有直接参考价值。
 
-**链接**：https://github.com/koala73/worldmonitor
+**链接**： <https://github.com/koala73/worldmonitor>
 
 ### 8. tt-a1i/archify
 
@@ -185,7 +185,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：架构图是工程文档里最费手的部分。把它做成可验证的 skill，契合本周「skill 化一切」的趋势（与 spec-kit、headroom 同一脉络），让 Agent 既能写代码也能画得清楚。
 
-**链接**：https://github.com/tt-a1i/archify
+**链接**： <https://github.com/tt-a1i/archify>
 
 * * *
 

@@ -18,61 +18,61 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/大模型效率优化
 - **摘要**：2026年6月2日发布，针对AI编码智能体的输入Token成本瓶颈问题，提出前置本地LLM预处理中间件，通过跨语言翻译、结构重写将非英文提示压缩，使用Llama 3.2 3B模型实现，确保优化后的提示体积不大于原始版本。
 - **推荐理由**：直接降低编码智能体的Token消耗，成本敏感型团队可直接复用方案。
-- **链接**：https://arxiv.org/abs/2606.03618
+- **链接**： <https://arxiv.org/abs/2606.03618>
 
 ### 2. Benchmarking Visual State Tracking in Multimodal Video Understanding
 - **方向**：arXiv/计算机视觉/多模态
 - **摘要**：2026年6月2日发布，提出VSTAT视觉状态跟踪基准，包含834个合成与真实视频片段、1500个需要跨全视频整合信息才能回答的问题，用于诊断多模态大模型的连续感知能力。
 - **推荐理由**：填补了多模态大模型长视频理解能力评估的空白，是视频大模型研发必备基准。
-- **链接**：https://arxiv.org/abs/2606.03920
+- **链接**： <https://arxiv.org/abs/2606.03920>
 
 ### 3. GTBench: A Curriculum-Grounded Benchmark for Evaluating LLMs as Mathematical Research Assistants in Graph Theory
 - **方向**：arXiv/数学推理/大模型评估
 - **摘要**：2026年6月2日发布，提出图论领域大模型数学研究助手评估基准GTBench，包含63个分阶段难度的问题，揭示了人类评估者与自动判分系统在冗长/接近完成证明场景下的系统性分歧（kappa值0.48-0.83）。
 - **推荐理由**：为大模型在专业数学领域的应用提供了标准化评估体系，数学科研场景开发者必看。
-- **链接**：https://arxiv.org/abs/2606.03144
+- **链接**： <https://arxiv.org/abs/2606.03144>
 
 ### 4. ThoughtFold: Folding Reasoning Chains via Introspective Preference Learning
 - **方向**：arXiv/推理效率优化
 - **摘要**：通过内省偏好学习折叠推理链，在DeepSeek-R2-Distill-Qwen-7B模型上实现Token使用量降低约56%，同时保持SOTA级别的推理准确率。
 - **推荐理由**：在不损失推理能力的前提下大幅降低Token消耗，推理优化领域的突破性进展。
-- **链接**：https://arxiv.org/abs/2606.03503
+- **链接**： <https://arxiv.org/abs/2606.03503>
 
 ### 5. Generalizing Graph Foundation Models via Hyperbolic Retrieval-Augmented Generation
 - **方向**：arXiv/图基础模型/RAG
 - **摘要**：提出基于双曲检索增强生成的图基础模型泛化方案，已被KDD 2026接收，提升了图模型在未知领域推理的鲁棒性。
 - **推荐理由**：将RAG与双曲空间结合解决图模型泛化问题，为知识图谱与大模型结合提供新思路。
-- **链接**：https://arxiv.org/abs/2606.03307
+- **链接**： <https://arxiv.org/abs/2606.03307>
 
 ### 6. CP-Agent: Context-Aware Multimodal Reasoning for Cellular Morphological Profiling under Chemical Perturbations
 - **方向**：arXiv/生物医疗AI/多模态
 - **摘要**：ICLR 2026接收论文，提出上下文感知多模态推理智能体CP-Agent，用于化学扰动下的细胞形态分析，可简化药物发现中的假设生成迭代流程。
 - **推荐理由**：AI在药物研发场景的落地标杆性工作，医疗AI从业者可重点参考。
-- **链接**：https://arxiv.org/abs/2606.03435
+- **链接**： <https://arxiv.org/abs/2606.03435>
 
 ### 7. StepFinder: A Temporal Semantic Framework for Failure Attribution in Multi-Agent Systems
 - **方向**：arXiv/多智能体系统/故障诊断
 - **摘要**：KDD 2026接收论文，提出多智能体系统故障归因的时序语义框架StepFinder，可定位故障发生点，额外运行开销极低，代码已开源。
 - **推荐理由**：解决多智能体协作场景下的故障溯源难题，多智能体系统研发必备工具。
-- **链接**：https://arxiv.org/abs/2606.03467
+- **链接**： <https://arxiv.org/abs/2606.03467>
 
 ### 8. A Negative Result on Cross-Model Activation Transfer in a Pythia Multi-Hop Setting
 - **方向**：arXiv/大模型安全/对齐
 - **摘要**：15页论文，6个实验验证：在Pythia多跳推理场景下，跨模型激活迁移无法实现有效的接收模型内部因果通信，对齐模型间的激活空间并不足以实现能力迁移。
 - **推荐理由**：重要的阴性结果论文，纠正了模型间激活迁移可直接复用能力的错误认知，避免研发走弯路。
-- **链接**：https://arxiv.org/abs/2606.03280
+- **链接**： <https://arxiv.org/abs/2606.03280>
 
 ### 9. ChatHealthAI: Aligning Electronic Health Record Representations with Large Language Models for Grounded Clinical Reasoning
 - **方向**：arXiv/医疗AI/临床推理
 - **摘要**：2026年6月3日发布，提出ChatHealthAI模型，将电子健康记录表示与大模型对齐，实现基于真实临床数据的 grounded 临床推理，主论文带附录共13页。
 - **推荐理由**：医疗大模型落地临床场景的代表性工作，解决了电子病历与大模型适配的核心问题。
-- **链接**：https://arxiv.org/abs/2606.02802
+- **链接**： <https://arxiv.org/abs/2606.02802>
 
 ### 10. BehaviorBench: Modeling Real-World User Decisions from Behavioral Traces
 - **方向**：arXiv/用户行为建模/大模型评估
 - **摘要**：2026年6月3日发布，提出BehaviorBench基准，用于评估大模型从用户行为轨迹中建模真实世界决策的能力，覆盖多场景用户行为数据。
 - **推荐理由**：为推荐系统、用户理解类大模型提供了标准化评估方案，用户增长/推荐场景开发者必看。
-- **链接**：https://arxiv.org/abs/2606.02798
+- **链接**： <https://arxiv.org/abs/2606.02798>
 
 ---
 
@@ -82,31 +82,31 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **Stars**：⭐ 近期快速增长 | 语言：多语言
 - **简介**：专为AI Agent设计的上下文压缩层，可在工具输出、日志、文件、RAG数据喂给大模型前先行压缩，支持Python库、代理服务器、MCP Server多种部署方式。
 - **推荐理由**：直接降低大模型Token消耗，为企业节省真金白银的算力成本，Token敏感型团队必备。
-- **链接**：https://github.com/chopratejas/headroom
+- **链接**： <https://github.com/chopratejas/headroom>
 
 ### 2. ECC (Agent Performance Optimization System)
 - **Stars**：⭐ 单日增长1300+ | 语言：多语言
 - **简介**：为Claude Code、Cursor、Codex等AI编程工具提供技能、本能记忆、安全防护和研究优先开发模式的智能体性能优化系统，相当于AI编程助手的外骨骼。
 - **推荐理由**：提升AI编程工具的输出质量与安全性，是当前Agent开发的主流底层方案。
-- **链接**：https://github.com/affaan-m/ECC
+- **链接**： <https://github.com/affaan-m/ECC>
 
 ### 3. OpenHuman
 - **Stars**：⭐ 单日增长1500+ | 语言：Rust/Tauri
 - **简介**：纯本地离线AI助手，所有对话、文件数据留存本机不上云端，兼容Ollama本地大模型，可联动电脑各类软件完成自动化操作，能完整记住用户的项目进度、工作习惯、邮件往来等上下文信息。
 - **推荐理由**：隐私优先的本地AI助手标杆，解决了AI助理跨会话遗忘的核心痛点，适合注重数据安全的个人与团队。
-- **链接**：https://github.com/TinyHumansAI/OpenHuman
+- **链接**： <https://github.com/TinyHumansAI/OpenHuman>
 
 ### 4. MoneyPrinterTurbo
 - **Stars**：⭐ 76742（单日增长3325） | 语言：Python
 - **简介**：爆款AI短视频生成工具，仅输入文案即可自动匹配素材、配音、加字幕并一键成片，可本地部署无需高额接口费用，是自媒体批量剪辑刚需神器。
 - **推荐理由**：内容生产效率提升利器，自媒体/短视频从业者可直接落地使用，降本增效效果显著。
-- **链接**：https://github.com/harry0703/MoneyPrinterTurbo
+- **链接**： <https://github.com/harry0703/MoneyPrinterTurbo>
 
 ### 5. Understand-Anything
 - **Stars**：⭐ 单日增长3700+ | 语言：多语言
 - **简介**：代码可视化工具，自动解析全项目源码生成交互式知识图谱，可对接Cursor、Claude Code等编程助手，梳理大型项目架构，大幅降低大模型Token消耗。
 - **推荐理由**：大型项目开发必备工具，帮助AI快速理解代码库结构，显著提升代码分析与开发效率。
-- **链接**：https://github.com/understand-anything/understand-anything
+- **链接**： <https://github.com/understand-anything/understand-anything>
 
 ### 6. taste-skill
 - **Stars**：⭐ 单日增长2200+ | 语言：多语言
@@ -118,7 +118,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **Stars**：⭐ 快速增长 | 语言：多语言
 - **简介**：聚焦生产级Agentic RAG系统的实战课程，通过构建arXiv论文管理系统的实际项目，一步步教授RAG核心技术，从数据检索到生成增强、从原型到生产部署都有完整代码与讲解。
 - **推荐理由**：Agentic RAG领域最新实战教程，想要系统学习RAG落地的开发者可直接跟着上手。
-- **链接**：https://github.com/jamwithai/production-agentic-rag-course
+- **链接**： <https://github.com/jamwithai/production-agentic-rag-course>
 
 ### 8. andrej-karpathy-skills
 - **Stars**：⭐ 单日增长900+ | 语言：多语言
@@ -136,7 +136,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **Stars**：⭐ 23340+ 快速增长 | 语言：多语言
 - **简介**：AI时代的记忆引擎和API，自动从对话中提取关键信息构建用户画像，支持文本、图像、PDF、视频、音频、代码的混合搜索，RAG+个性化记忆能力在三大AI记忆基准测试中排名第一，自带Google Drive、Gmail、Notion等连接器，查询延迟<50ms。
 - **推荐理由**：解决AI跨会话遗忘的核心痛点，是AI助手、企业知识库、多智能体系统的必备基础组件。
-- **链接**：https://github.com/zhayujie/supermemory
+- **链接**： <https://github.com/zhayujie/supermemory>
 
 ---
 

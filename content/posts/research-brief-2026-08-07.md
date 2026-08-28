@@ -28,56 +28,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：面向"跨工作、学习、生活"的开放式长程请求，提出统一 harness，把开放请求转成受管执行流程：任务分解为有界子任务、在上下文压力下维护执行记忆、对最终交付物做校验与修复。在 AgentIF-OneDay 的 104 个任务上，用 GLM-5.2 后端取得 0.821 总分刷新 SOTA，同一 harness 免调参跑通三个模型家族的五个后端。
 **领域**：LLM Agent / 长程任务 / 执行编排
 **推荐理由**：把"目标漂移、状态丢失、上下文溢出"三类失败模式放进同一个外壳里联合处理，并证明跨后端可迁移——这是"不动权重、改外环"路线里少见的完整消融，工程团队可直接对照自家 Agent 的三处缺口。
-**链接**：https://arxiv.org/abs/2608.05013
+**链接**： <https://arxiv.org/abs/2608.05013>
 
 ### 2\. Mimir: A Neuro-Symbolic Memory System with Dynamic Grounding for Embodied Agents
 
 **摘要**：将具身 Agent 的记忆显式拆成世界记忆（物体位置、状态、感知证据）与任务记忆（有序目标议程、进度、手部状态、失败记录、执行约束），并在每次动作前用 grounding 模块把当前目标绑定到召回的世界候选、补齐缺失位置、附上证据。在 EB-ALFRED 与 EB-Habitat 上最大增益 42.5% / 23.0%，同后端下较此前最佳记忆系统整体平均成功率再提 8.5%，EB-Habitat 长程子集达 86.0%。
 **领域**：具身智能 / 神经符号记忆 / 长程操作
 **推荐理由**：不是又一个向量库，而是把"哪些世界事实支撑当前活跃目标"变成显式接口；86.0% 的长程成功率明显超过所测闭源模型，说明结构化记忆此刻仍能压过纯规模。
-**链接**：https://arxiv.org/abs/2608.04933
+**链接**： <https://arxiv.org/abs/2608.04933>
 
 ### 3\. LeanMem: Simple and Efficient Long-Term Memory for LLM Agents
 
 **摘要**：主张历史对话应按可压缩性、时间动态性与保真需求区别对待。先过滤低价值内容，再按信息性质分别存为紧凑画像记忆、时序结构化事件记忆或源锚定记录记忆；维护期只选择性更新动态演化的事件记忆。在 LoCoMo 与 LongMemEval-S 上（GPT-4.1-mini 与 Qwen3-8B），每种设置均超过最强记忆基线，最高 +15.1 分，且构建成本、推理 token 与延迟处于最低或接近最低。
 **领域**：LLM Agent / 长期记忆 / 成本效率
 **推荐理由**：难得同时给出"准确率更高 + 成本更低"的记忆方案；分类存储 + 只更新易变部分的思路，对已有 RAG/记忆栈是低成本改造项。
-**链接**：https://arxiv.org/abs/2608.03463
+**链接**： <https://arxiv.org/abs/2608.03463>
 
 ### 4\. Toward Skill-Native LLMs: Skill Entropy for Benchmarking and Training Long-Horizon Reasoning
 
 **摘要**：提出"技能熵"——用固定参考模型（Claude-opus-4.7）度量单技能准确率与技能串联后准确率之比，刻画链内切换技能的难度。据此构建覆盖九大领域 558 项技能的 Skill2-Bench，发现准确率随技能熵上升近乎单调下降，同一技能被放进跨技能任务时掉 4~13 分。把该信号当作 RL 奖励后，Qwen3-4B-Instruct 的 Skill2-Bench 从 34.4% 提到 68.4%，Qwen3-1.7B 从 14.6% 提到 40.1%。
 **领域**：推理评测 / 强化学习 / 长程推理
 **推荐理由**：给出"模型单项都会、串起来就崩"的可测量解释，并把度量直接变成奖励拿到近乎翻倍的提升。需要注意其 558×558 技能对采用了分解近似（把配对成本拆成"离开成本×落地成本"），该因子分解尚未直接验证。
-**链接**：https://arxiv.org/abs/2608.05139
+**链接**： <https://arxiv.org/abs/2608.05139>
 
 ### 5\. Unified Agent: Managing Interactions across Devices
 
 **摘要**：指出跨设备场景的核心矛盾——观测散落在不同设备与时刻，而主流系统并未围绕这一事实设计：单 Agent 把设备当工具缺乏跨时空状态管理，多 Agent 系统能协同却维持不了跨设备请求所需的紧凑携带态。提出 Unified Agent，用"参与证据 + 陈述事实 + 待办请求"的紧凑可执行状态来决策，并构建跨设备跨时间的用户-Agent 交互基准；默认设置下显著超过四种已发表设计的改编版，且在 MLLM 家族、能力与推理强度变化下保持领先。
 **领域**：多设备 Agent / 状态设计 / 多模态大模型
 **推荐理由**：随着 Agent 从"单 App 内运行"外溢到手机+电脑+可穿戴，状态设计会取代提示词成为主要工程变量；论文提供了可对比的状态设计基准而非单点方案。
-**链接**：https://arxiv.org/abs/2608.05729
+**链接**： <https://arxiv.org/abs/2608.05729>
 
 ### 6\. Agentic Reinforcement Learning with Observation-Calibrated Self-Distillation (OCSD)
 
 **摘要**：指出在线策略自蒸馏（OPSD）存在混淆：重放视图带来的支撑既来自特权信息，也来自重放脚手架本身引起的分数漂移，当特权信息是"未来环境观测"时尤为严重。OCSD 对比"完整"与"观测消融"两个结构对齐的重放视图，得到观测残差以扣除脚手架共有的分数变化，再用该残差在高不确定步调制 token 级 GRPO 更新，同时保留轨迹级更新方向。在 ALFWorld、WebShop、Search-QA 与三种 Qwen3 规模上稳定超过强基线。
 **领域**：Agent 强化学习 / 自蒸馏 / 信用分配
 **推荐理由**：把"稠密监督到底来自信息还是来自脚手架"这个长期被含糊处理的问题做成可扣除的残差项，是 agentic RL 训练管线里可直接复用的校正手段。
-**链接**：https://arxiv.org/abs/2608.04788
+**链接**： <https://arxiv.org/abs/2608.04788>
 
 ### 7\. TurnSight: Turn-Level Hindsight Self-Distillation for Tool-Integrated Reasoning
 
 **摘要**：针对工具集成推理（TIR）的时间信用分配难题——最终结果只说明整条轨迹成败，无法指出哪次工具交互有效。TurnSight 把决策单元从 token 提到"完整工具交互回合"，用执行条件化的后见之明构建、回合级聚合、多前视教师选择与组归一化的有界符号感知权重，给出回合级稠密监督，避免了参考轨迹匹配在状态偏离后失效的问题。
 **领域**：工具调用 / 自蒸馏 / 多轮推理
 **推荐理由**：与 OCSD 形成互补——一个校准观测残差，一个把粒度对齐到真实决策单元；两篇同周出现，说明 TIR 的稠密监督已从"能不能做"进入"怎么做才不失真"。
-**链接**：https://arxiv.org/abs/2608.04007
+**链接**： <https://arxiv.org/abs/2608.04007>
 
 ### 8\. AI 智能体在真实机器催化实验室的压力测试（中国科大）
 
 **摘要**：搭建含 45 个模块化自动工作站（覆盖合成、表征、催化性能测试）的机器催化实验室，把设备能力封装为机器可读技能，对 6 种智能体框架 × 9 种大语言模型共 48 种配置、32 项专家定义任务做 4,608 次评测。结果：仅 151 个工作流无需人工修复即可执行（3.3%）；最好的 Claude Code + Claude Opus 4.7 组合可执行率 28.1%，Codex + GPT-5.5 为 19.8%。五轮开放闭环中，智能体能按实验结果调参，却始终保留原有工作流骨架，未重新设计分析方法，也未纠正缺电极黏结剂、缺显色试剂等持续性关键遗漏。
 **领域**：AI for Science / 具身实验 / 智能体评测
 **推荐理由**：把"AI 能否做科研"从知识问答推进到真实物理世界的执行与反馈学习，3.3% 的裸执行率是当前最冷静的一盆水；"会调参不等于会重新规划"这句结论值得所有做 Agent 自主性的团队贴在墙上。
-**链接**：https://arxiv.org/abs/2607.23045
+**链接**： <https://arxiv.org/abs/2607.23045>
 
 ## 二、GitHub热门AI开源项目（2026.08.05-08.07）
 
@@ -86,56 +86,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：Give your agent a computer——Cloudflare 官方推出的 Agent 计算环境，让智能体拥有一台可编程操作的"电脑"。
 **热度**：约 2,850 星，单日新增 796 星（TypeScript）
 **推荐理由**：与同期 Cloudflare Wallets（给 Agent 钱包与数字身份）是同一套路线的两块拼图——把"Agent 需要的基础设施"逐件云原生化。基础设施厂商下场做 Agent 底座，比创业项目更值得关注供给格局变化。
-**链接**：https://github.com/cloudflare/computer
+**链接**： <https://github.com/cloudflare/computer>
 
 ### 2\. huangruiteng/loopx
 
 **简介**：面向长时运行 AI Agent 团队的轻量"循环工程状态内核"，跨 Codex、Claude Code 等编码 Agent 通用，提供持久目标、配额感知自动唤醒、可执行 todo、证据日志与可验证交接。
 **热度**：约 2,087 星，单日新增 327 星（Python）
 **推荐理由**：把"长时任务不断线"抽象成独立内核而非绑定某个 Agent，正好对应今天 OneDayAgent 那篇论文的工程化版本——证据日志 + 可验证交接是团队协作型 Agent 的刚需。
-**链接**：https://github.com/huangruiteng/loopx
+**链接**： <https://github.com/huangruiteng/loopx>
 
 ### 3\. firecrawl/anydoc
 
 **简介**：Rust 实现的通用文档转换库，支持 Word、PowerPoint、Excel、OpenDocument、RTF、EPUB、CSV、PDF 转为干净结构化文本。
 **热度**：约 9.8k 星（Rust，趋势榜首）
 **推荐理由**：Agent 落地的隐形瓶颈从来不是模型而是脏输入；同一团队此前的 pdf-inspector 解决"扫描件 vs 文本 PDF"分流，anydoc 把格式面铺全，属于可以直接省掉一整个预处理模块的工具。
-**链接**：https://github.com/firecrawl/anydoc
+**链接**： <https://github.com/firecrawl/anydoc>
 
 ### 4\. DietrichGebert/ponytail
 
 **简介**：给 AI 编程助手装上"最懒的资深工程师"人格，用七级"懒人阶梯"约束模型少写代码——最好的代码是不写的代码。
 **热度**：约 9.8 万星，7 日新增约 5.1k（JavaScript）
 **推荐理由**：实测让无头 Claude Code 的代码行数减 54%、成本降 20%，是少数把"提示词人格"做出可量化经济收益的项目；在 token 成本被企业列入治理目标的当下，这类"反过度设计"约束的 ROI 比多数优化都高。
-**链接**：https://github.com/DietrichGebert/ponytail
+**链接**： <https://github.com/DietrichGebert/ponytail>
 
 ### 5\. earendil-works/pi
 
 **简介**：AI Agent 工具箱，打包统一 LLM API、Agent 循环、TUI 与编码 Agent CLI 于一体。
 **热度**：约 8.5 万星，7 日新增约 3.9k（TypeScript）
 **推荐理由**：把"接模型 + 跑循环 + 终端交互 + 编码 CLI"四件事收进一个仓，适合不想自己粘合五六个库的中小团队起步；与 loopx 的分层刚好互补（pi 管执行、loopx 管长时状态）。
-**链接**：https://github.com/earendil-works/pi
+**链接**： <https://github.com/earendil-works/pi>
 
 ### 6\. kirodotdev/KiroCrew
 
 **简介**：面向开发工作的持久化工作区，能自我改进并跨会话延续任务，不因单次对话结束而丢失进展。
 **热度**：约 2.1k 星（Python，趋势榜新入）
 **推荐理由**：与 loopx 同属"跨会话持久性"这条今日主线，但落点在工作区而非状态内核；两者一起看能比较清楚地看出社区对"Agent 记忆该放在哪一层"尚未收敛。
-**链接**：https://github.com/kirodotdev/KiroCrew
+**链接**： <https://github.com/kirodotdev/KiroCrew>
 
 ### 7\. multica-ai/andrej-karpathy-skills
 
 **简介**：一个 CLAUDE.md 文件，把 Andrej Karpathy 对 LLM 写代码常见坑的观察整理成可直接生效的行为约束。
 **热度**：约 19.8 万星
 **推荐理由**：与 ponytail 同为"单文件改行为"流派，说明社区正在把专家经验压缩成可移植配置而非训练数据；对团队而言这是最便宜的一种能力注入方式。
-**链接**：https://github.com/multica-ai/andrej-karpathy-skills
+**链接**： <https://github.com/multica-ai/andrej-karpathy-skills>
 
 ### 8\. ultraworkers/claw-code
 
 **简介**：一个由 Agent 自主管理的"博物馆展品"式项目，用 Rust 编写，全程由 Gajae-Code / LazyCodex 开发与维护，声称无人工干预。
 **热度**：约 19.5 万星（Rust）
 **推荐理由**：把"Agent 能否独立维护一个真实仓库"做成公开的长期实验，是难得的可观察样本；结合今天中国科大那篇 3.3% 裸执行率的论文一起看，能校正对自主性的期待。
-**链接**：https://github.com/ultraworkers/claw-code
+**链接**： <https://github.com/ultraworkers/claw-code>
 
 ## 三、精选AI行业资讯（2026.08.05-08.07）
 

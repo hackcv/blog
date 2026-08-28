@@ -27,56 +27,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **摘要**：Chain-of-Thought 推理提升了 LLM 处理复杂多步任务的能力，但出错时现有交互要么重新生成可能再次犯错，要么让用户费力标注错误步骤却仍反复出错。本文提出 Deep Interaction，一种精确纠正 LLM 推理错误的高效人工干预机制：直接编辑原始回复、保留正确推理步骤，再把编辑后的 CoT 提炼为蒸馏提示引导模型沿正确路径前进。在 STEM 推理任务上，纠错成功率提升超 25%、token 用量减少约 40%。
 **领域**：大语言模型 / 推理纠错 / 人机交互
 **推荐理由**：把"人对推理过程的人工纠偏"做成可复用、低成本的机制，比重新生成省 40% token，对需要人类在环的代码 / 数学 Agent 非常实用。
-**链接**：https://arxiv.org/abs/2607.14049
+**链接**： <https://arxiv.org/abs/2607.14049>
 
 ### 2. Do Agent Optimizers Compound? A Continual-Learning Evaluation on Terminal-Bench 2.0
 
 **摘要**：多数 agent 优化方法的收益是"一次性"的，未在"新任务持续出现、递归优化"的部署场景检验。本文用 Terminal-Bench 2.0 难例构建两阶段持续学习评测，在同等优化预算下比较 GEPA、Meta Harness、RELAI-VCL 三种方法。静态单阶段三者均优于基线；但引入新任务后分化明显——GEPA 迁移低于未优化基线，Meta Harness 迁移好却无法二次提升，只有 RELAI-VCL 既正向迁移到未见任务、又能在二次优化后继续提升，终身平均通过率 76.4%（GEPA 66.0%、Meta Harness 64.6%、基线 58.7%）。关键发现：只有当回归控制内建进优化循环、抑制捷径解时，优化收益才会"复利"累积。
 **领域**：AI Agent / 持续学习 / 优化评估
 **推荐理由**：直接戳破"优化器收益可叠加"的默认假设，给出"复利式 agent 优化"的充要条件，对长期自进化 agent 系统的工程化是不可忽视的护栏。
-**链接**：https://arxiv.org/abs/2607.14004
+**链接**： <https://arxiv.org/abs/2607.14004>
 
 ### 3. A Self-Evolving Agent for Longitudinal Personal Health Management（HealthClaw）
 
 **摘要**：个人健康管理发生在反复交互中，但多数健康 AI 把每次请求孤立处理。本文提出开源 agent 架构 HealthClaw，随个人习惯、偏好、指标与风险变化更新支持；将共享安全规则 / 医学知识与私有长期记忆（档案事实、可复用流程、情节轨迹）分离，每次交互后通过归纳决定更新档案 / 修订流程 / 保留情节 / 排除。在合成一年期基准与 9 个 200 例生物医学任务上评估：纵向支持准确率从当前查询提示的 0.2% 升至 45.7%，提示侧上下文暴露比全历史提示低 71.7%；100 个隐私探针中更安全披露更少；生物医学任务主指标平均绝对提升 27.0 个百分点。
 **领域**：AI Agent / 长期记忆 / 健康医疗
 **推荐理由**："受治理的自进化长期记忆"范式可迁移到任何需要跨会话记住用户的 agent（客服、教育、个人助理），且隐私暴露显著降低，是纵向 agent 的范本。
-**链接**：https://arxiv.org/abs/2607.13940
+**链接**： <https://arxiv.org/abs/2607.13940>
 
 ### 4. Experience Memory Graph: One-Shot Error Correction for Agents（EMG）
 
 **摘要**：LLM agent 在复杂长程任务中常因错误累积而难以恢复，现有自纠机制依赖基于提示的反思，脆弱且因反复试错带来高昂时间 / API 成本。本文提出 Experience Memory Graph（EMG），把失败恢复重构为图匹配问题：训练时将失败探索轨迹与成功专家轨迹都转为有向动作决策图，匹配提取公共子图（成功流程）与图编辑路径（如何纠正失败），存入带跨任务边的记忆图；测试时单次、无环执行即检索并引导 agent。在 ALFWorld 与 ScienceWorld 上成功率与平均奖励均优于 SOTA 反思基线，且无需测试时试错。
 **领域**：AI Agent / 错误恢复 / 记忆
 **推荐理由**：把"反思-试错"换成"图匹配-单次纠正"，既省 API 成本又更稳，对长程 agent 的可靠性是实打实的工程改进。
-**链接**：https://arxiv.org/abs/2607.13884
+**链接**： <https://arxiv.org/abs/2607.13884>
 
 ### 5. AgentCompass: A Unified Evaluation Infrastructure for Agent Capabilities
 
 **摘要**：LLM 演变为自主 agent 后，统一评测基础设施成为刚需，但现有评测管线高度碎片化且强耦合，损害可复现性、造成重复工程。本文提出开源、轻量、可扩展的 AgentCompass，将评测组织为 Benchmark、Harness、Environment 三个独立组件，无需重写执行逻辑即可灵活配置；具备容错异步运行时与全面的轨迹分析工具，可透明诊断 reward-hacking 等细微失败模式。原生支持 5 大能力维度、20+ 基准。
 **领域**：AI Agent / 评测基础设施 / 可复现性
 **推荐理由**："拆成 Benchmark/Harness/Environment 三件套"的评测基建思路，能终结各团队重复造轮子的评测脚本，对 agent 研究社区是公共品。
-**链接**：https://arxiv.org/abs/2607.13705
+**链接**： <https://arxiv.org/abs/2607.13705>
 
 ### 6. VideoRAE: Taming Video Foundation Models for Generative Modeling via Representation Autoencoders
 
 **摘要**：视频生成模型普遍依赖 3D-VAE 潜空间，但传统 3D-VAE 主要优化像素级重建，限制了语义与时空结构。本文提出 VideoRAE，利用冻结视频基础编码器（V-JEPA 2、VideoMAEv2）的多尺度分层特征，用轻量 1D 自注意力投影器压缩，支持连续潜变量（DiT）与离散 token（自回归）两种生成范式；解码时用与冻结 VFM 教师的局部-全局表示对齐目标提升语义保持、无需 KL 正则。UCF-101 上 AR/DiT 的 class-to-video gFVD 达 SOTA（40/93），收敛比竞品快约 5 倍。
 **领域**：视频生成 / 表征学习 / 计算机视觉
 **推荐理由**：证明"冻结视频基础模型的表征"可直接当生成友好的视频潜变量，给视频生成模型换上更语义化的"压缩层"，收敛快 5 倍，是视频底座的新杠杆。
-**链接**：https://arxiv.org/abs/2607.14088
+**链接**： <https://arxiv.org/abs/2607.14088>
 
 ### 7. M4World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming
 
 **摘要**：驾驶世界生成是自动驾驶可扩展仿真的关键能力，但现有方法在物体级可控性与长程稳定性上受限。本文提出 M4World，一个多视角多模态生成式驾驶世界模型，合成未来环视视频流与同步 LiDAR 扫描，支持交互式物体操控与稳定分钟级流式生成；细粒度物体操控通过灵活条件接口控制单个物体的空间布局与外观，分钟级流式的稳定靠多阶段训练在仅 4 步去噪下在线因果生成实现。还引入自动化 VLM 评判流程评估场景级条件遵循、视角间物体一致等。
 **领域**：自动驾驶 / 世界模型 / 视频生成
 **推荐理由**：同时做到"物体级可控 + 分钟级稳定流式 + 环视 + LiDAR 同步"，把驾驶仿真从"好看"推向"可控可编辑"，长尾场景增强价值突出。
-**链接**：https://arxiv.org/abs/2607.14005
+**链接**： <https://arxiv.org/abs/2607.14005>
 
 ### 8. DeepStress: Stress-Testing Deep Search Agents
 
 **摘要**：搜索 agent 在多步问答上表现出色，但对低质量证据的鲁棒性研究不足——真实基准中很少出现、现实中却可能致命。本文提出 DeepStress 压力测试框架，用受控合成环境替换搜索 agent 的检索模块，控制可信度、相关性、事实性三个影响文档可靠性的维度。在 HotpotQA 与 BrowseCompPlus 上测试多个搜索 agent，发现它们处理不可靠信息的能力差异显著，并提出更好记录系统结果与参数 / 检索知识冲突交互的新指标。
 **领域**：搜索 Agent / 鲁棒性评测 / 信息检索
 **推荐理由**：给"搜索 agent 在脏数据下会不会翻车"一套可量化的压力测试，企业在把检索 Agent 接进生产前尤其需要这类红队评测。
-**链接**：https://arxiv.org/abs/2607.13920
+**链接**： <https://arxiv.org/abs/2607.13920>
 
 ## 二、GitHub热门AI开源项目（2026.07.14–07.16）
 
@@ -85,56 +85,56 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 **简介**：让 Claude 具备"看视频"的能力——下载视频、抽帧、转写，把全部素材交给 Claude 处理。
 **热度**：2026-07-16 TrendShift Python 榜新晋热门（约 39.7k 提及）。
 **推荐理由**：把"视频理解"做成 Claude Code 的即插即用能力，长视频 / 录屏分析工作流直接受益，是多模态 agent 工具化的小巧范例。
-**链接**：https://github.com/bradautomates/claude-video
+**链接**： <https://github.com/bradautomates/claude-video>
 
 ### 2. mvanhorn/last30days-skill
 
 **简介**：AI agent 驱动的搜索引擎 skill，聚合 Reddit、X、YouTube、TikTok、Polymarket 等平台的投票、点赞与真实金钱信号来排序结果，而非依赖编辑推荐；零配置可用，30 秒扩展更多平台。
 **热度**：GitHub 周趋势 2026W23 第一（约 41k stars，本周 +12k）。
 **推荐理由**：用"社区真实信号"而非编辑权重给搜索结果排序，恰好补上传统 RAG / 搜索 agent 的"可信度来源"短板。
-**链接**：https://github.com/mvanhorn/last30days-skill
+**链接**： <https://github.com/mvanhorn/last30days-skill>
 
 ### 3. microsoft/SkillOpt
 
 **简介**：文本空间优化器，通过轨迹驱动的编辑、验证门控更新，为冻结 LLM agent 训练可复用的自然语言 skill，产出可部署的 best_skill.md。
 **热度**：2026-07-16 TrendShift 新晋（约 15.5k 提及）。
 **推荐理由**：把"agent 技能"当成可训练、可验证的资产来优化，微软把 Skill 工程从手写到"自动调优"，是 skills 生态的关键基建。
-**链接**：https://github.com/microsoft/SkillOpt
+**链接**： <https://github.com/microsoft/SkillOpt>
 
 ### 4. anthropics/skills
 
 **简介**：Anthropic 官方开放的 Agent Skills 公共仓库，汇集可供 Claude 等 agent 直接调用的技能集合与规范。
 **热度**：2026-07-16 TrendShift 热门（约 22.7k 提及）。
 **推荐理由**：头部实验室把"skills"作为一等公民开源，意味着 agent 能力正在从模型权重转向可组合、可分发的能力包，值得所有 agent 开发者关注。
-**链接**：https://github.com/anthropics/skills
+**链接**： <https://github.com/anthropics/skills>
 
 ### 5. huggingface/tau
 
 **简介**：一个极简 agent，手把手教你自己造 coding agent——用最小依赖演示 agent 的规划、工具调用与自我改进循环。
 **热度**：2026-07-16 TrendShift 新晋（Hugging Face 官方）。
 **推荐理由**：用几百行代码讲清"coding agent 是怎么炼成的"，对想自研 agent 框架的团队是低门槛的参考实现。
-**链接**：https://github.com/huggingface/tau
+**链接**： <https://github.com/huggingface/tau>
 
 ### 6. github/spec-kit
 
 **简介**：GitHub 官方出品的 Spec-Driven Development（规格驱动开发）工具包，帮助从规格说明出发搭建项目骨架与开发流程。
 **热度**：2026-07-16 TrendShift 热门（约 17.9k 提及）。
 **推荐理由**：当 agent 接管编码，"先写 spec 再写代码"正在成为抗幻觉的工程纪律，GitHub 亲自下场推规格驱动，信号很强。
-**链接**：https://github.com/github/spec-kit
+**链接**： <https://github.com/github/spec-kit>
 
 ### 7. chopratejas/headroom
 
 **简介**：面向 AI agent 的上下文压缩层，可将 token 数减少 60–95%，提供 6 种压缩算法，支持库 / agent / MCP 多种接入，本地优先且可逆，Python 与 npm 均可装。
 **热度**：GitHub 周趋势 2026W23（约 26k stars，本周 +10k）。
 **推荐理由**：直接解决长上下文 agent 的"token 爆炸"痛点，可逆压缩意味着不丢信息还能省大钱，是所有长程 agent 的刚需组件。
-**链接**：https://github.com/chopratejas/headroom
+**链接**： <https://github.com/chopratejas/headroom>
 
 ### 8. OpenCut-app/OpenCut
 
 **简介**：开源的 CapCut（剪映）替代品，提供时间轴剪辑、字幕、转场等视频编辑能力，定位成为自托管、可嵌入的轻量视频生产线。
 **热度**：GitHub 周趋势（约 70.4k stars，本周 +7.2k）。
 **推荐理由**：视频生成火了之后，"可控编辑 / 二次加工"成为空白，OpenCut 把剪辑能力开源，正好接住 AIGC 视频的下游工作流。
-**链接**：https://github.com/OpenCut-app/OpenCut
+**链接**： <https://github.com/OpenCut-app/OpenCut>
 
 ## 持续追踪
 

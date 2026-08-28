@@ -28,7 +28,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「模型内部推理动态」和「真实部署脆弱性」直接挂钩，给压缩/量化部署提供可复用的可靠性视角——不只是准确率，更要看内部是否悄悄崩了。
 
-**链接**：https://arxiv.org/abs/2607.04640
+**链接**： <https://arxiv.org/abs/2607.04640>
 
 ### 2. Gen4U: Unifying Video Generation and Understanding via Diffusion
 
@@ -38,7 +38,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：真正把「生成」与「理解」打通进同一个底座，证明大规模生成训练足以驱动完整感知系统——对「创作-分析一体化」视频平台是直接范式。
 
-**链接**：https://arxiv.org/abs/2607.06856
+**链接**： <https://arxiv.org/abs/2607.06856>
 
 ### 3. Tool-Making and Self-Evolving LLM Agents in Low-Latency Systems
 
@@ -48,7 +48,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「每次请求都重写代码」换成「一次编译、反复调用」，是 coding/流程 agent 降本提效的工业级范本，还能顺带提升可审计性。
 
-**链接**：https://arxiv.org/abs/2607.08010
+**链接**： <https://arxiv.org/abs/2607.08010>
 
 ### 4. Next-Generation Agentic RL Systems Enable Self-Evolving Agents（AReaL 2.0）
 
@@ -58,7 +58,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：自演进 agent 从「个人玩具」走向「企业服务」的关键拼图——不需要重写 agent，也能把真实交互流引入在线 RL，值得持续跟进。
 
-**链接**：https://arxiv.org/abs/2607.01120
+**链接**： <https://arxiv.org/abs/2607.01120>
 
 ### 5. Is One Layer Enough? 单层 RL 可匹敌全参数 RL 训练
 
@@ -68,7 +68,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：不靠堆数据堆算力，而是重构内部信息流来提效，对训练成本敏感的中小团队是更友好的方向。
 
-**链接**：https://arxiv.org/abs/2607.01232
+**链接**： <https://arxiv.org/abs/2607.01232>
 
 ### 6. Vidu S1: A Real-Time Interactive Video Generation Model
 
@@ -78,7 +78,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：区别于「好看的慢 Demo」，直指直播、客服数字人、游戏/教育虚拟角色等真正需要实时反馈的场景，是文本生视频走向可用的务实一步。
 
-**链接**：https://arxiv.org/abs/2607.03118
+**链接**： <https://arxiv.org/abs/2607.03118>
 
 ### 7. SciReasoner: Deep Native Structural Reasoning for Science
 
@@ -88,7 +88,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：科学推理开始从「写论文」走向「成体系的推理基座」，对药物发现、材料筛选等高频试错领域是底层能力升级。
 
-**链接**：https://arxiv.org/abs/2607.07708
+**链接**： <https://arxiv.org/abs/2607.07708>
 
 ### 8. 世界模型综述：走向物理 AGI 的三位一体架构
 
@@ -98,7 +98,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：世界模型是被用滥又缺共识的概念，这篇把「它是什么、该预测什么、怎么建」讲清楚，并点出 Agent-Evaluator-WorldModel 的闭环，是近期最值得通读的奠基性综述。
 
-**链接**：https://arxiv.org/abs/2607.06401
+**链接**： <https://arxiv.org/abs/2607.06401>
 
 ## 二、GitHub 热门 AI 开源项目（2026.07.13 今日热榜新晋）
 
@@ -110,7 +110,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把向量库从「独立服务」压成「进程内组件」，RAG / 本地记忆类应用可大幅省去网络与部署开销，是 agent 记忆底座的极简选项。
 
-**链接**：https://github.com/alibaba/zvec
+**链接**： <https://github.com/alibaba/zvec>
 
 ### 2. TencentCloud/TencentDB-Agent-Memory
 
@@ -120,7 +120,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「长期记忆」做成开箱即用的托管原语，且全程本地、不泄露数据——与本周 agent 记忆主线（cognee、codebase-memory-mcp）形成互补，落地方多了一个稳妥选择。
 
-**链接**：https://github.com/TencentCloud/TencentDB-Agent-Memory
+**链接**： <https://github.com/TencentCloud/TencentDB-Agent-Memory>
 
 ### 3. Zackriya-Solutions/meetily
 
@@ -130,7 +130,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把本地转写、说话人识别、Ollama 总结拼成完整自托管方案；对企业会议、隐私场景、本地 AI 工具链是越来越现实的刚需。
 
-**链接**：https://github.com/Zackriya-Solutions/meetily
+**链接**： <https://github.com/Zackriya-Solutions/meetily>
 
 ### 4. anthropics/jacobian-lens
 
@@ -140,7 +140,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：Claude 内部「意识空间」被第三方（Neel Nanda）在 Qwen 上复现，配套代码开源意味着社区可自己跑可解释性实验——对齐研究的「显微镜」开始普惠。
 
-**链接**：https://github.com/anthropics/jacobian-lens
+**链接**： <https://github.com/anthropics/jacobian-lens>
 
 ### 5. synthetic-sciences/openscience
 
@@ -150,7 +150,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：呼应今天 Science「AI 40 分钟完成 60 小时实验」的走向，把「科研自动化」做成可复现工作台，是 agent 进入实验室的载体之一。
 
-**链接**：https://github.com/synthetic-sciences/openscience
+**链接**： <https://github.com/synthetic-sciences/openscience>
 
 ### 6. Graphify-Labs/graphify
 
@@ -160,7 +160,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「代码库 + 基础设施 + 文档」统一成一张图，让 agent 跨文件、跨系统理解项目，是 coding agent 上下文工程的又一个可复用范式。
 
-**链接**：https://github.com/Graphify-Labs/graphify
+**链接**： <https://github.com/Graphify-Labs/graphify>
 
 ### 7. shadcn/improve
 
@@ -170,7 +170,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：把「模型路由」思想用到研发流程本身：贵模型做架构决策，便宜模型落地，直接降低 AI 编程的 token 成本。
 
-**链接**：https://github.com/shadcn/improve
+**链接**： <https://github.com/shadcn/improve>
 
 ### 8. wonderwhy-er/DesktopCommanderMCP
 
@@ -180,7 +180,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **推荐理由**：MCP 生态里「让 AI 真正动手改本地文件/跑命令」的代表作，与 agent 工程主线契合——本地操作的可控性比云端调用更关键。
 
-**链接**：https://github.com/wonderwhy-er/DesktopCommanderMCP
+**链接**： <https://github.com/wonderwhy-er/DesktopCommanderMCP>
 
 ## 三、精选 AI 行业资讯（2026.07.13 当日）
 
@@ -192,7 +192,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：上海证券报、点点数据、腾讯新闻
 
-**链接**：https://finance.sina.com.cn/roll/2026-07-13/doc-inihrhfm2369960.shtml ；https://dy.163.com/article/L1N9RO1G055662PF.html
+**链接**： <https://finance.sina.com.cn/roll/2026-07-13/doc-inihrhfm2369960.shtml> ；https://dy.163.com/article/L1N9RO1G055662PF.html
 
 ### 2. Anthropic 二次延期 Claude Fable 5 订阅，OpenAI 取消 Codex 限速
 
@@ -202,7 +202,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：腾讯新闻（科技新闻早报）
 
-**链接**：https://new.qq.com/rain/a/20260713A05Z2900?refer=cp_1009
+**链接**： <https://new.qq.com/rain/a/20260713A05Z2900?refer=cp_1009>
 
 ### 3. 商汤开源 SenseNova-Vision 统一视觉大模型
 
@@ -212,7 +212,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：虎嗅、商汤官方
 
-**链接**：https://www.huxiu.com/ainews/13835.html
+**链接**： <https://www.huxiu.com/ainews/13835.html>
 
 ### 4. 蚂蚁开源智能体安全护栏 SingGuard-NSFA
 
@@ -222,7 +222,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：IT之家
 
-**链接**：https://www.ithome.com/0/976/102.htm
+**链接**： <https://www.ithome.com/0/976/102.htm>
 
 ### 5. 美团开源 1.6 万亿参数 LongCat-2.0
 
@@ -232,7 +232,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：腾讯新闻（科技行业每日热点）
 
-**链接**：https://new.qq.com/rain/a/20260713A093SM00?refer=cp_1009
+**链接**： <https://new.qq.com/rain/a/20260713A093SM00?refer=cp_1009>
 
 ### 6. 腾讯开源 Hy3 大模型（295B MoE）
 
@@ -242,7 +242,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：AI 之旅导航、腾讯
 
-**链接**：https://www.aijourney.vip/2751.html
+**链接**： <https://www.aijourney.vip/2751.html>
 
 ### 7. 阶跃星辰发布全球首款 AI 智能体手机及端侧模型
 
@@ -252,7 +252,7 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：微博科技、第一电动网
 
-**链接**：https://weibo.com/7905315703/5320133951884823
+**链接**： <https://weibo.com/7905315703/5320133951884823>
 
 ### 8. 中国超算「灵晟」以 2.19 EFLOPS 重返世界第一
 
@@ -262,4 +262,4 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 
 **来源**：微博 AIGC 日报、联合国报告
 
-**链接**：https://weibo.com/7905315703/5320133951884823
+**链接**： <https://weibo.com/7905315703/5320133951884823>

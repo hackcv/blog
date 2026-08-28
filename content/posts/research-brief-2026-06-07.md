@@ -16,22 +16,22 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 ### 1. OpenWebRL：UIUC与微软联合推出网页智能体在线强化学习训练框架
 - **方向**：AI Agent、强化学习
 - **核心亮点**：提出让AI在真实网页环境中"边干边学"的训练范式，仅用400条初始示范轨迹就在三大网页智能体测评基准上刷新开源最高分，部分指标超越OpenAI和Google商业系统。
-- **论文链接**：https://arxiv.org/abs/2606.02031
+- **论文链接**： <https://arxiv.org/abs/2606.02031>
 
 ### 2. TailLoR：参数高效持续学习的主成分保护方法
 - **方向**：大模型微调、持续学习
 - **核心亮点**：基于谱分解设计软谱惩罚机制，抑制与预训练主奇异方向对齐的更新，减少旧任务遗忘的同时将细粒度适配路由到长尾谱坐标，完美解决持续学习的灾难性遗忘问题。
-- **论文链接**：https://arxiv.org/abs/2606.06494v1
+- **论文链接**： <https://arxiv.org/abs/2606.06494v1>
 
 ### 3. CLSA：跨层稀疏注意力架构
 - **方向**：推理加速、长上下文
 - **核心亮点**：基于KV共享架构实现跨层复用token级top-k路由索引，同时优化预填充、KV存储与长上下文解码三大瓶颈，128K上下文下实现7.6倍解码加速和17.1倍整体吞吐提升。
-- **论文链接**：https://arxiv.org/abs/2606.06467
+- **论文链接**： <https://arxiv.org/abs/2606.06467>
 
 ### 4. SSM睡眠记忆巩固机制
 - **方向**：大模型记忆、SSM架构
 - **核心亮点**：受动物睡眠记忆巩固过程启发，提出上下文窗口填满时模型进入"睡眠"状态，通过多次离线前向传播将上下文信息转化为持久权重，在数学推理等深度任务上性能提升显著。
-- **论文链接**：https://arxiv.org/pdf/2605.26099
+- **论文链接**： <https://arxiv.org/pdf/2605.26099>
 
 ### 5. LongLive-RAG：长视频生成一致性解决方案
 - **方向**：多模态、视频生成
@@ -46,47 +46,47 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 ### 7. OpAI-Bench：人机协同文本转换检测基准
 - **方向**：AI内容检测、多粒度评估
 - **核心亮点**：提供从文档、句子、token到span多个粒度的渐进式人机文本转换基准，发现人机协同编辑的中间版本比纯人工/纯AI内容更难检测，为AI生成内容检测提供重要参考。
-- **论文链接**：https://github.com/VILA-Lab/OpAI-Bench
+- **论文链接**： <https://github.com/VILA-Lab/OpAI-Bench>
 
 ### 8. Agent-Native研究工件范式
 - **方向**：科研范式、AI科学家
 - **核心亮点**：37位顶尖学者联合提出，认为未来当论文作者和读者都是AI时，应该抛弃沿用三百年的PDF范式，转向包含完整实验过程、可直接执行的研究工件包，引发学术圈广泛讨论。
-- **论文链接**：https://arxiv.org/abs/2604.24658
+- **论文链接**： <https://arxiv.org/abs/2604.24658>
 
 ---
 
 ## 🚀 GitHub热门AI项目（8个）
 ### 1. headroom（14.8k⭐，周增12k⭐）
 - **核心亮点**：LLM输入智能压缩工具，可将日志、文件、RAG片段压缩60%-95%且完全不影响回答质量，提供库、代理、MCP服务器多种接入方式，大幅降低大模型调用成本。
-- **项目链接**：https://github.com/chopratejas/headroom
+- **项目链接**： <https://github.com/chopratejas/headroom>
 
 ### 2. markitdown（145.7k⭐，周增16.4k⭐）
 - **核心亮点**：微软官方开源文档转换工具，支持将PDF、Word、Excel等各类办公文档一键转换为Markdown格式，是RAG和AI Agent开发的必备预处理工具。
-- **项目链接**：https://github.com/microsoft/markitdown
+- **项目链接**： <https://github.com/microsoft/markitdown>
 
 ### 3. MoneyPrinterTurbo（80.1k⭐，周增11.4k⭐）
 - **核心亮点**：国产AI短视频生成神器，输入关键词即可自动生成文案、匹配无版权素材、生成配音与字幕，一键合成高清短视频，支持百余种大模型接入与本地私有化部署。
-- **项目链接**：https://github.com/harry0703/MoneyPrinterTurbo
+- **项目链接**： <https://github.com/harry0703/MoneyPrinterTurbo>
 
 ### 4. Hermes Agent（18.2k⭐，日增573⭐）
 - **核心亮点**：NousResearch开源的自进化AI助手，具备持续学习能力，可伴随用户使用不断成长，支持自定义技能扩展，是当前最热门的个人Agent底座项目。
-- **项目链接**：https://github.com/NousResearch/hermes-agent
+- **项目链接**： <https://github.com/NousResearch/hermes-agent>
 
 ### 5. ECC（20.6k⭐，日增1496⭐）
 - **核心亮点**：Agent Harness性能优化系统，提供技能、记忆、安全、研究优先的开发能力，支持Claude Code、Codex、Cursor等主流编码Agent，本周成为GitHub全站最火项目。
-- **项目链接**：https://github.com/affaan-m/everything-claude-code
+- **项目链接**： <https://github.com/affaan-m/everything-claude-code>
 
 ### 6. open-notebook（26.5k⭐，日增783⭐）
 - **核心亮点**：Google NotebookLM的开源实现，支持文档解析、知识管理、播客生成等功能，隐私优先设计可完全本地部署，上线一周星标突破2.6万。
-- **项目链接**：https://github.com/lfnovo/open-notebook
+- **项目链接**： <https://github.com/lfnovo/open-notebook>
 
 ### 7. CopilotKit（33.2k⭐，日增613⭐）
 - **核心亮点**：AI Agent前端开发框架，支持AG-UI交互标准，一键集成到React/Vue项目，帮助开发者快速为应用嵌入AI Agent能力。
-- **项目链接**：https://github.com/CopilotKit/CopilotKit
+- **项目链接**： <https://github.com/CopilotKit/CopilotKit>
 
 ### 8. supermemory（2.1k⭐，周增264⭐）
 - **核心亮点**：AI长期记忆引擎，为大模型提供跨会话持久记忆能力，支持多模态记忆存储与智能检索，是Agent开发的核心记忆模块。
-- **项目链接**：https://github.com/supermemoryai/supermemory
+- **项目链接**： <https://github.com/supermemoryai/supermemory>
 
 ---
 

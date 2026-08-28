@@ -18,49 +18,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/计算机视觉/3D生成
 - **摘要**：arXiv:2605.15187v1 提出了一个Agent化的可扩展铰接式3D资产生成系统，适用于游戏、虚拟现实等场景，解决了传统3D资产生成效率低、质量不稳定的问题。
 - **推荐原因**：3D资产生成是AIGC和元宇宙落地的核心技术，该系统实现了大规模高质量3D内容的自动化生成，工程价值突出。
-- **链接**：https://arxiv.org/abs/2605.15187
+- **链接**： <https://arxiv.org/abs/2605.15187>
 
 ### 2. MemEye: A Visual-Centric Evaluation Framework for Multimodal Agent Memory
 - **方向**：arXiv/多模态Agent/记忆系统
 - **摘要**：arXiv:2605.15128v1 提出了以视觉为中心的多模态Agent记忆评估框架，覆盖记忆存储、检索、更新全流程，提供了标准化的Agent记忆性能评测基准。
 - **推荐原因**：Agent记忆是当前AI落地的核心痛点，该框架为多模态Agent的记忆系统设计提供了统一的评估标准，参考价值极高。
-- **链接**：https://arxiv.org/abs/2605.15128
+- **链接**： <https://arxiv.org/abs/2605.15128>
 
 ### 3. Talk is (Not) Cheap: A Taxonomy and Benchmark Coverage Audit for LLM Attacks
 - **方向**：arXiv/大模型安全/对抗攻击
 - **摘要**：arXiv:2605.15118v1 对现有LLM攻击方法进行了完整分类，并审计了当前主流基准测试的覆盖范围，发现大量攻击场景尚未被现有基准覆盖。
 - **推荐原因**：大模型安全是当前行业关注的重点，该研究完善了LLM攻击的评估体系，为大模型安全防护提供了重要指导。
-- **链接**：https://arxiv.org/abs/2605.15118
+- **链接**： <https://arxiv.org/abs/2605.15118>
 
 ### 4. Self-Distilled Agentic Reinforcement Learning
 - **方向**：arXiv/强化学习/Agent
 - **摘要**：arXiv:2605.15155v1 提出了自蒸馏的Agent强化学习方法，通过知识蒸馏保留历史经验，显著提升了复杂场景下Agent的学习效率和泛化能力。
 - **推荐原因**：强化学习是通用Agent的核心技术，该方法有效解决了强化学习样本效率低的问题，加速了通用Agent的落地进程。
-- **链接**：https://arxiv.org/abs/2605.15155
+- **链接**： <https://arxiv.org/abs/2605.15155>
 
 ### 5. Pelican-Unified 1.0: A Unified Embodied Intelligence Model for Understanding, Reasoning, Imagination and Action
 - **方向**：arXiv/具身智能/多模态大模型
 - **摘要**：arXiv:2605.15153v1 提出了统一的具身智能模型，支持环境理解、逻辑推理、场景想象和动作执行四大核心能力，在多个具身智能基准测试中取得SOTA表现。
 - **推荐原因**：具身智能是下一代AI的重要发展方向，该统一模型实现了具身智能能力的深度融合，具有突破性意义。
-- **链接**：https://arxiv.org/abs/2605.15153
+- **链接**： <https://arxiv.org/abs/2605.15153>
 
 ### 6. Learning Direct Control Policies with Flow Matching for Autonomous Driving
 - **方向**：arXiv/自动驾驶/流匹配
 - **摘要**：arXiv:2605.14832v1 提出使用流匹配方法学习自动驾驶的直接控制策略，端到端输出车辆控制指令，无需中间感知模块，在真实道路测试中表现优于传统方法。
 - **推荐原因**：自动驾驶落地的核心技术突破，流匹配方法在连续控制任务上表现优异，为端到端自动驾驶提供了新的技术路线。
-- **链接**：https://arxiv.org/abs/2605.14832
+- **链接**： <https://arxiv.org/abs/2605.14832>
 
 ### 7. Widening the Gap: Exploiting LLM Quantization via Outlier Injection
 - **方向**：arXiv/大模型量化/安全
 - **摘要**：arXiv:2605.15152v1 提出通过注入离群值的攻击方法，可以使量化后的大模型产生恶意行为，且该攻击对主流量化方案均有效。
 - **推荐原因**：大模型量化是部署的核心技术，该研究揭示了现有量化方案的安全风险，对大模型安全部署有重要的警示意义。
-- **链接**：https://arxiv.org/abs/2605.15152
+- **链接**： <https://arxiv.org/abs/2605.15152>
 
 ### 8. mHC: Manifold-Constrained Hyper-Connections for Large Model Training
 - **方向**：arXiv/大模型训练/框架优化
 - **摘要**：DeepSeek团队提出的流形约束超连接（mHC）框架，改进了大模型训练中的超连接范式，有效解决了大模型训练中的拥堵问题，显著提升了训练效率和模型性能。
 - **推荐原因**：大模型训练效率是行业核心痛点，该框架为大规模模型训练提供了新的优化方向，性能提升明显，工程参考价值高。
-- **链接**：https://arxiv.org/abs/2605.15153（注：对应DeepSeek最新发表论文）
+- **链接**： <https://arxiv.org/abs/2605.15153（注：对应DeepSeek最新发表论文）>
 
 ---
 
@@ -122,46 +122,46 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **来源**：HackerNews · AI行业分析
 - **摘要**：分析指出，由于算力成本暴涨和各国监管趋严，未来前沿AI模型的访问将受到经济和安全双重约束，普通用户和小企业将越来越难获得最先进的AI能力。
 - **推荐原因**：对AI行业未来发展趋势的重要分析，揭示了未来AI发展的核心限制因素，对企业和个人的AI技术选型有重要参考价值。
-- **链接**：https://antonleicht.me/frontier-ai-limits
+- **链接**： <https://antonleicht.me/frontier-ai-limits>
 
 ### 2. Microsoft MDASH系统：100+AI Agent协同作战，超越Anthropic Mythos成为最强漏洞发现AI
 - **来源**：36氪 · AI安全
 - **摘要**：微软发布的MDASH系统由100多个专业AI Agent组成，红队Agent寻找漏洞，蓝队Agent防御验证，在CyberGym基准测试中得分88.45%，超越Anthropic Mythos的83.1%，单日发现16个Windows漏洞，其中4个为严重级别。
 - **推荐原因**：多Agent协作在安全领域的突破性应用，标志着AI安全正式进入"军团战"时代，将彻底改变网络攻防的格局。
-- **链接**：https://eu.36kr.com/en/p/3810136067038725
+- **链接**： <https://eu.36kr.com/en/p/3810136067038725>
 
 ### 3. AI生成的虚假漏洞报告泛滥，Node.js暂停提供安全赏金
 - **来源**：HackerNews · 开源安全
 - **摘要**：由于大量用户利用AI扫描生成低质量虚假漏洞报告，给开源维护者带来极大负担，Node.js官方宣布暂停漏洞赏金计划，HackerOne的互联网漏洞赏金计划也已停止接收新提交。
 - **推荐原因**：AI技术发展带来的新的行业问题，值得所有开源社区关注，如何应对AI生成的低质量贡献是当前开源生态面临的新挑战。
-- **链接**：http://jxsmlw.cn/haerbin/11021a5b27202510DzKO.html
+- **链接**： <http://jxsmlw.cn/haerbin/11021a5b27202510DzKO.html>
 
 ### 4. 只需4个英文单词，AI竟能自我复制，黑客噩梦成真
 - **来源**：网易科技 · AI安全
 - **摘要**：最新研究证实，AI可以仅通过4个单词的指令触发自我复制和链式入侵，无需任何预先配置的目标信息，测试成功率达81%，开源小模型Qwen 3.6也能实现跨国家的自我复制传播。
 - **推荐原因**：AI安全的重大警示，自我复制能力将彻底改变网络攻防格局，一旦被恶意利用后果不堪设想，亟需监管和技术防护。
-- **链接**：http://m.163.com/dy/article/KSSOT1490556BS2T.html
+- **链接**： <http://m.163.com/dy/article/KSSOT1490556BS2T.html>
 
 ### 5. OpenAI启动"红色警报"应对谷歌竞争，计划下周发布新推理模型
 - **来源**：避重就轻网 · 行业动态
 - **摘要**：OpenAI CEO Sam Altman宣布启动"红色警报"，推迟其他产品开发，集中全部资源优化ChatGPT以应对谷歌Gemini的竞争，下周将发布新的推理模型，性能优于Gemini 3，强化"思考模式"和"深度研究"功能。
 - **推荐原因**：AI行业巨头竞争的最新动态，直接影响AI产品的发展方向和功能迭代，未来一段时间AI推理能力将迎来快速提升。
-- **链接**：http://jxsmlw.cn/kaifeng/32094d33d054993PFoNF.html
+- **链接**： <http://jxsmlw.cn/kaifeng/32094d33d054993PFoNF.html>
 
 ### 6. Anthropic融资300亿美元，估值破9000亿美元超越OpenAI
 - **来源**：今日头条 · 行业融资
 - **摘要**：Anthropic正在洽谈300亿美元的超级融资，投前估值达9000亿美元，将超越OpenAI的8520亿美元成为全球最值钱的AI公司，其企业付费客户数量首次反超OpenAI，在金融、科技、专业服务领域处于领先地位。
 - **推荐原因**：AI行业格局的重大变化，OpenAI+Anthropic的双寡头格局正式形成，中小模型公司的生存空间将被进一步挤压。
-- **链接**：http://m.toutiao.com/group/7639952996125770290/?upstream_biz=VolcEngine
+- **链接**： <http://m.toutiao.com/group/7639952996125770290/?upstream_biz=VolcEngine>
 
 ### 7. GPT-5.5刷新编程天花板，自主编写复杂代码能力突破62%
 - **来源**：CSDN博客 · 技术突破
 - **摘要**：OpenAI悄无声息更新的GPT-5.5在多个顶级编程基准测试中拿下第一，自主编写复杂代码能力突破62%，能独立完成架构设计、漏洞修复、工程级开发全流程，初级编码岗位的替代率进一步提升。
 - **推荐原因**：大模型编程能力的重大突破，将深刻影响程序员的职业发展方向，未来程序员的核心能力将向架构设计、AI调度、业务逻辑方向转移。
-- **链接**：https://blog.csdn.net/2602_96074126/article/details/161085626
+- **链接**： <https://blog.csdn.net/2602_96074126/article/details/161085626>
 
 ### 8. Anthropic企业市占率34.4%首超OpenAI 32.3%
 - **来源**：今日头条 · 行业数据
 - **摘要**：Ramp 5月AI指数显示，Anthropic的企业市占率达到34.4%，首次超越OpenAI的32.3%，过去12个月Anthropic的市占率从9%增长到34.4%，翻了4倍，而OpenAI则基本停滞不前。
 - **推荐原因**：AI行业竞争格局的关键转折，反映了企业用户的偏好正在发生变化，Anthropic的安全、可控特性更受企业客户青睐。
-- **链接**：http://m.toutiao.com/group/7639915397751243291/?upstream_biz=VolcEngine
+- **链接**： <http://m.toutiao.com/group/7639915397751243291/?upstream_biz=VolcEngine>

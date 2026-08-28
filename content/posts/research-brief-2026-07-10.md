@@ -18,50 +18,50 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **摘要**：提出先竞争后协作的多AI教师知识蒸馏框架，Claude、Codex-GPT、Grok、Gemini四个前沿模型作为教师，通过基于执行验证（单元测试、输入输出检查）的公平裁判进行排名，再协作构建可验证课程训练学生模型Qwen2.5-Coder。实验发现执行验证下所有教师自校正后标准问题解决率达99-100%，该框架训练的学生模型能力显著超越传统蒸馏方法。
 **领域**：大模型训练、知识蒸馏、AI编码
 **推荐理由**：突破传统多教师知识蒸馏的偏见问题，基于可验证执行的训练方法大幅提升编码模型能力，为小模型性能提升提供新路径，可直接应用于企业级AI编码工具优化。
-**链接**：https://arxiv.org/abs/2607.08255
+**链接**： <https://arxiv.org/abs/2607.08255>
 
 ### 2. Measuring Intelligence Beyond Human Scale
 **摘要**：针对人类编写的基准在超人类水平AI能力评估中饱和的问题，提出基于相对测量的全新智能度量范式：模型生成公开挑战任务分离其他模型能力，支持无裁判判定，能力随Agent发展自然扩展。该框架在可验证领域和开放不可验证领域均实现了超人类尺度的AI能力持续测量。
 **作者**：普林斯顿、谷歌等联合团队
 **领域**：AI评估、大模型评测、AGI研究
 **推荐理由**：解决了超人类AI能力无法有效评估的行业核心痛点，建立了与AI能力同步扩展的评测体系，为前沿模型研发和AGI进展度量提供了统一标准。
-**链接**：https://arxiv.org/abs/2607.07040
+**链接**： <https://arxiv.org/abs/2607.07040>
 
 ### 3. Does AI Understand Imaging? A Systematic Benchmark of Agentic AI for Computational Imaging Tasks
 **摘要**：提出ImagingBench计算成像任务基准，包含光线与波动光学、图像信号处理、逆重建、计算传感、校准五大类20个专业成像任务，覆盖专家引导重建、规划器引导重建、正向系统仿真三种评估设置。系统评测了包括Gemini、GPT系列在内的主流多模态系统在成像专业领域的能力边界。
 **领域**：计算成像、多模态大模型、AI for Science
 **推荐理由**：首个面向专业成像领域的多模态模型评测基准，填补了AI在科学计算领域的能力评估空白，为专业领域多模态模型研发和落地提供明确方向。
-**链接**：https://arxiv.org/abs/2607.07189
+**链接**： <https://arxiv.org/abs/2607.07189>
 
 ### 4. SkillCenter: A Large-Scale Source-Grounded Skill Library for Autonomous AI Agents
 **摘要**：发布目前全球最大的开源AI Agent技能库SkillCenter，包含216,938个结构化技能，覆盖24个领域，其中114,565个技能来自同行评审期刊、arXiv和2.4万+技术来源，经过SkillGate质量过滤，其余102,373个社区技能来自GitHub和ClawHub市场，所有技能均具备源信息可追溯。
 **领域**：AI Agent、智能体开发、技能生态
 **推荐理由**：AI Agent生态的核心基础设施，规模和质量均远超现有同类项目，可直接大幅提升各类智能体的任务执行能力和输出可靠性，降低Agent开发的技能构建成本。
-**链接**：https://arxiv.org/abs/2607.07676
+**链接**： <https://arxiv.org/abs/2607.07676>
 
 ### 5. Overthinking: Amplifying Reasoning Weights to Extract Learned Secrets
 **摘要**：ICML 2026收录论文，发现通过大幅放大推理权重，可以提取大模型在训练过程中学到但不会在正常输出中透露的秘密数据，包括训练数据中的个人信息、商业机密等敏感内容。研究表明足够大的权重扰动可以让模型泄露任意学到的信息。
 **领域**：AI安全、大模型隐私、模型漏洞
 **推荐理由**：揭示了大模型全新的安全攻击面，证明了现有模型存在严重的隐私泄露风险，对大模型的安全部署和隐私保护提出了全新挑战，相关发现已被主流厂商纳入安全修复计划。
-**链接**：https://arxiv.org/abs/2607.08173
+**链接**： <https://arxiv.org/abs/2607.08173>
 
 ### 6. INTENT: An LSTM Framework for Vehicle Intention Prediction in Intersection Scenarios with Comprehensive Ablation Analysis
 **摘要**：提出路口场景车辆意图预测LSTM框架INTENT，可提前2秒预测路口车辆直行、左转、右转意图，在InD数据集上准确率达99.71%，经过全面消融实验验证了模型各组件的有效性。
 **领域**：自动驾驶、智能交通、时序预测
 **推荐理由**：大幅提升自动驾驶车辆路口通行的安全性和效率，准确率达到商用落地标准，可直接集成到现有自动驾驶系统中，降低路口交通事故率。
-**链接**：https://arxiv.org/abs/2607.08316
+**链接**： <https://arxiv.org/abs/2607.08316>
 
 ### 7. SpaCellAgent: A Self-Evolving LLM-Based Multi-Agent Framework for Trajectory Analysis
 **摘要**：提出基于大模型的自进化多智能体框架SpaCellAgent，用于生物细胞轨迹分析，实现了计算生物学研究流程的自动化，相关代码和材料已全部开源，支持复杂生物轨迹的自动分析和新规律发现。
 **领域**：AI for Science、计算生物学、多智能体系统
 **推荐理由**：生命科学研究的重要AI工具，大幅提升生物轨迹分析的效率和发现能力，推动计算生物学研究从半自动化向全自动化转型。
-**链接**：https://arxiv.org/abs/2607.07467
+**链接**： <https://arxiv.org/abs/2607.07467>
 
 ### 8. Ego-Human Motion Prediction with 3D-Aware LLM
 **摘要**：提出Ego3DLM 3D感知大模型，基于3D环境语义和场景理解，整体预测第一视角下的人体运动，将姿态预测和语言解释融合在单次推理中，在AR/VR、人机协作、具身机器人场景下的运动预测准确率提升37%。
 **领域**：具身智能、AR/VR、人机交互
 **推荐理由**：突破了第一视角人体运动预测的技术瓶颈，大幅提升AR/VR交互自然度和人机协作安全性，为元宇宙和具身机器人的交互体验升级提供核心技术支撑。
-**链接**：https://arxiv.org/abs/2607.07001
+**链接**： <https://arxiv.org/abs/2607.07001>
 
 ---
 
@@ -70,49 +70,49 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 网络安全 / 工业AI
 **简介**：基于Claude Code构建的AI求职全流程自动化工具，可自动评估岗位匹配度、定制个性化简历、生成针对性求职信、模拟专业面试，将原本需要数小时的求职准备工作压缩到几分钟完成，单日涨星3716，登顶GitHub Trending总榜。
 **热度**：3.2k Star，单日增长3716
 **推荐理由**：AI垂直场景落地的标杆项目，完美展示了大模型在标准化复杂流程上的自动化能力，可直接推广到各类文档生成、流程处理类场景，为个人开发者提供了AI应用落地的优秀范本。
-**链接**：https://github.com/MadsLorentzen/ai-job-search
+**链接**： <https://github.com/MadsLorentzen/ai-job-search>
 
 ### 2. antgroup/LingBot-VLA 2.0: 通用具身基座模型
 **简介**：蚂蚁集团开源的新一代具身智能基座模型，基于6万小时真实物理世界数据训练，覆盖17个主流机器人品牌的20种机械构型，支持头部、腰部、末端执行器、移动底盘全维度自由度协同控制，双臂协同能力在权威评测中超越π0.5、GR00T N1.7等主流模型。
 **热度**：发布3天获12.4k Star，登顶Hugging Face趋势榜
 **推荐理由**：国内首个达到世界领先水平的开源具身基座模型，大幅降低具身机器人的AI大脑开发门槛，将推动人形机器人、工业机械臂等具身智能产业的规模化落地，是具身智能领域的里程碑式开源项目。
-**链接**：https://github.com/antgroup/LingBot-VLA
+**链接**： <https://github.com/antgroup/LingBot-VLA>
 
 ### 3. DeusData/codebase-memory-mcp: 多语言代码知识库MCP服务
 **简介**：支持158种编程语言的代码库记忆MCP服务，可将整个代码库转化为AI可理解的结构化知识，大幅提升AI理解代码上下文、处理复杂代码任务的能力，平均降低代码生成错误率42%，提升开发效率61%。
 **热度**：9.9k Star，单日增长9900+
 **推荐理由**：AI编程工具的核心增强组件，解决了大模型处理大型代码库时的上下文有限、记忆不足的痛点，可直接集成到Claude Code、Cursor、OpenClaw等主流AI开发工具中，大幅提升大型项目的AI辅助开发效率。
-**链接**：https://github.com/DeusData/codebase-memory-mcp
+**链接**： <https://github.com/DeusData/codebase-memory-mcp>
 
 ### 4. stablyai/orca: 并行AI Agent运行时
 **简介**：高性能多智能体并行运行时，支持成百上千个AI Agent同时高效执行任务，内置Agent间通信、同步、资源调度能力，相比传统串行执行方式，多任务处理效率提升17倍，资源利用率提升72%。
 **热度**：6.8k Star，本周增长5200+
 **推荐理由**：大规模Agent集群部署的核心基础设施，解决了多智能体系统的高效运行和调度难题，为企业级多智能体应用落地提供了可靠的运行时支撑。
-**链接**：https://github.com/stablyai/orca
+**链接**： <https://github.com/stablyai/orca>
 
 ### 5. bradautomates/claude-video: 视频理解AI工具
 **简介**：让Claude Code能够理解和处理视频内容的工具，支持视频摘要、智能剪辑、内容检索、结构化分析等功能，可自动从长视频中提取关键信息、生成剪辑片段、识别视频内容，大幅降低视频处理的人力成本。
 **热度**：5.9k Star，单日增长718
 **推荐理由**：弥补了大模型视频处理能力的短板，打通了AI理解视频内容的最后一公里，可广泛应用于媒体内容生产、监控视频分析、教育视频处理等场景，提升视频相关工作的自动化水平。
-**链接**：https://github.com/bradautomates/claude-video
+**链接**： <https://github.com/bradautomates/claude-video>
 
 ### 6. vxcontrol/pentagi: 全自动AI渗透测试系统
 **简介**：Go语言开发的全自动AI渗透测试系统，接入大模型后可自主执行完整的网络杀伤链流程：侦查、漏洞扫描、权限提升、横向移动、漏洞利用、结果报告，在XBOW安全挑战中准确率达92.7%，完全自托管离线可用，支持可复现验证。
 **热度**：4.2k Star，单日增长535
 **推荐理由**：网络安全领域的革命性工具，大幅降低渗透测试的技术门槛和人力成本，同时也为防御AI驱动的网络攻击提供了参考范式，帮助企业提前发现和修复安全漏洞。
-**链接**：https://github.com/vxcontrol/pentagi
+**链接**： <https://github.com/vxcontrol/pentagi>
 
 ### 7. google-labs-code/design.md: AI编程设计规范
 **简介**：Google推出的面向AI编程代理的设计描述规范，定义了标准化的设计文档格式和描述方式，让AI能够准确理解产品设计需求，大幅降低AI生成代码与设计预期不符的问题，设计理解准确率提升58%。
 **热度**：6.2k Star，单日增长6200+
 **推荐理由**：AI编程工程化的重要标准规范，统一了人和AI之间的设计沟通语言，解决了AI理解设计需求偏差大的行业痛点，将大幅提升AI辅助开发的整体效率和输出质量。
-**链接**：https://github.com/google-labs-code/design.md
+**链接**： <https://github.com/google-labs-code/design.md>
 
 ### 8. cognee: 知识图谱驱动的Agent记忆引擎
 **简介**：基于知识图谱的AI Agent长期记忆引擎，将Agent交互历史、工具调用日志、任务执行信息转化为结构化知识图谱，支持长期记忆的精准检索、关联推理、上下文联想，接入后Agent长任务执行准确率从48%提升到76%，token消耗降低61%。
 **热度**：4.5k Star，本周增长4500+
 **推荐理由**：解决了AI Agent长期记忆混乱、上下文丢失的核心痛点，大幅提升多轮复杂任务的执行连贯性和准确性，是企业级Agent应用的必备基础设施组件。
-**链接**：https://github.com/cognee/cognee
+**链接**： <https://github.com/cognee/cognee>
 
 ---
 

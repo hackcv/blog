@@ -18,25 +18,25 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/大模型理论
 - **摘要**：arXiv:2605.12968v1 针对大模型推理过程中普遍存在的逻辑坍缩问题，提出基于F2有限域的代数本体投影方法，通过结构化逻辑约束将模型推理的逻辑一致性提升47%，同时保持生成流畅度不受影响。
 - **推荐原因**：解决了大模型推理可靠性的核心痛点，为高可信大模型落地提供了新的技术路径。
-- **链接**：https://arxiv.org/abs/2605.12968
+- **链接**： <https://arxiv.org/abs/2605.12968>
 
 ### 2. AdaFocus: Adaptive Relevance-Diversity Sampling with Zero-Cache Look-back for Efficient Long Video Understanding
 - **方向**：arXiv/计算机视觉
 - **摘要**：arXiv:2605.12954v1 提出自适应相关性-多样性采样算法AdaFocus，无需缓存历史帧即可实现长视频的高效理解，在1小时级长视频任务上推理速度提升3.2倍，精度保持98%以上。
 - **推荐原因**：长视频理解是自动驾驶、安防监控等场景的核心需求，该方法极大降低了长视频处理的算力消耗。
-- **链接**：https://arxiv.org/abs/2605.12954
+- **链接**： <https://arxiv.org/abs/2605.12954>
 
 ### 3. PaperFit: AI-Powered LaTeX排版自动优化系统
 - **方向**：arXiv/AI工具
 - **摘要**：arXiv:2605.10341v1 中国科学院大学与上海人工智能实验室联合提出PaperFit系统，通过多模态理解PDF排版效果，自动修改LaTeX代码解决图片漂移、公式溢出、空白页等排版问题，平均节省科研人员90%的排版时间。
 - **推荐原因**：直击科研人员的高频痛点，工具实用性极强，可快速落地到科研工作流中。
-- **链接**：https://arxiv.org/abs/2605.10341
+- **链接**： <https://arxiv.org/abs/2605.10341>
 
 ### 4. ELF: 105M参数扩散语言模型超越主流自回归模型
 - **方向**：arXiv/大模型架构
 - **摘要**：何恺明团队发布首个连续空间扩散语言模型ELF，仅用105M参数、45B训练token、32步采样，效果超越使用500B+ token训练的同规模自回归模型，训练成本降低90%。
 - **推荐原因**：颠覆了自回归架构的垄断地位，证明了扩散模型在语言任务上的巨大潜力，为低参数高性能大模型研发开辟了新方向。
-- **链接**：https://arxiv.org/abs/xxxxxxx（待官方发布）
+- **链接**： <https://arxiv.org/abs/xxxxxxx（待官方发布）>
 
 ### 5. 面向长程具身智能任务的按需搜索方法
 - **方向**：arXiv/具身智能
@@ -54,13 +54,13 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **方向**：arXiv/大模型推理优化
 - **摘要**：arXiv:2605.08083v1 提出AutoTTS框架，让LLM自动发现测试时缩放策略，而非依赖人工设计启发式规则，在数学推理基准上效果显著优于人工设计基线，发现成本仅39.9美元。
 - **推荐原因**：实现了大模型推理策略的自动优化，降低了大模型落地的人工调优成本。
-- **链接**：https://arxiv.org/abs/2605.08083
+- **链接**： <https://arxiv.org/abs/2605.08083>
 
 ### 8. Normalizing Trajectory Models
 - **方向**：arXiv/生成模型
 - **摘要**：arXiv:2605.08078v1 提出归一化轨迹模型NTM，将每个反向步骤建模为条件归一化流，在4步采样内匹敌强基线，同时保留精确似然训练，解决了少步生成中牺牲似然框架的长期痛点。
 - **推荐原因**：提升了扩散模型的生成速度和质量，为低延迟生成场景提供了新的技术方案。
-- **链接**：https://arxiv.org/abs/2605.08078
+- **链接**： <https://arxiv.org/abs/2605.08078>
 
 ---
 
@@ -122,19 +122,19 @@ description: "AI / 大模型 / Agent / 计算机视觉 / 音视频处理算法 /
 - **来源**：华尔街日报 · 行业动态
 - **摘要**：Anthropic最新融资估值达9000亿美元，首次超越OpenAI的8520亿美元估值，企业客户市占率达到34.4%，Claude系列模型成为当前全球最受欢迎的商用大模型。
 - **推荐原因**：全球AI行业格局发生重大变化，头部企业竞争进入白热化阶段，技术路线选择和商业化能力成为核心竞争力。
-- **链接**：https://www.wsj.com/tech/ai/anthropic-valuation-900-billion-xxx
+- **链接**： <https://www.wsj.com/tech/ai/anthropic-valuation-900-billion-xxx>
 
 ### 2. 谷歌Android深度植入Gemini，系统级AI能力覆盖数十亿设备
 - **来源**：谷歌官方公告 · 行业动态
 - **摘要**：谷歌在最新Android系统更新中深度植入Gemini大模型，AI能力直达系统底层，无需安装第三方App即可实现系统级AI交互，覆盖全球数十亿Android设备。
 - **推荐原因**：标志着原生AI终端时代正式到来，AI能力从App级升级为系统级基础设施，将极大提升AI的普及程度。
-- **链接**：https://blog.google/products/android/gemini-integration-2026/
+- **链接**： <https://blog.google/products/android/gemini-integration-2026/>
 
 ### 3. 苹果终止与OpenAI合作，接入Claude+Gemini，双方互诉违约
 - **来源**：The Verge · 行业动态
 - **摘要**：苹果宣布终止与OpenAI的合作，iOS 27将同时接入Anthropic Claude和谷歌Gemini作为AI能力提供商，OpenAI起诉苹果违约，苹果反诉OpenAI挖角40名核心员工，AI生态战全面升级。
 - **推荐原因**：全球消费电子巨头的AI生态选择发生重大变化，对AI行业供应链和市场格局将产生深远影响。
-- **链接**：https://www.theverge.com/2026/5/15/24158763/apple-openai-partnership-end-claude-gemini
+- **链接**： <https://www.theverge.com/2026/5/15/24158763/apple-openai-partnership-end-claude-gemini>
 
 ### 4. 北京发布开源智能体底座"灵玑OS"，统一Agent运行环境
 - **来源**：北京市经信局 · 国内政策
