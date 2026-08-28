@@ -43,9 +43,10 @@
     </details>
     {{ end }}
 
-    <!-- ============ 正文 ============ -->
+    <!-- ============ 正文（去掉正文里的 h1，避免与 article-title 双 h1） ============ -->
+    {{- $content := replaceRE "(?s)<h1[^>]*>.*?</h1>" "" .Content -}}
     <div class="article-content">
-      {{ .Content }}
+      {{ $content | safeHTML }}
     </div>
 
     <!-- ============ 上一篇 / 下一篇 ============ -->
