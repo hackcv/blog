@@ -1,4 +1,16 @@
 /* ============================================================
+   hackcv.com 优化版样式表 v1.1（2026-08-28）
+   - 自托管 Inter variable font（去掉 Google Fonts 跨境请求）
+   - 其余历史说明见 v1.0
+   ============================================================ */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* ============================================================
    hackcv.com 优化版样式表 v1.0（2026-08-22）
    - 移动优先：base = 320px，min-width 正向增强
    - 类名与线上 main.min.css 完全兼容，可直接替换
