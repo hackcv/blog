@@ -1,0 +1,20 @@
+<!--
+  公众号简报底部 affiliate 位（方案 B · 微信净化器安全版）
+  ============================================
+  用法：手动替换 {NAME} {DESC} {CTA} {URL} 四个占位符后，粘贴到公众号草稿正文末尾。
+  {URL} 建议填短链域名绝对地址（如 https://hackcv.com/go/workbuddy/），与网站同一入口便于统计。
+  微信净化器兼容要点（务必保持）：
+  1. 只用行内 style，无 class、无 <style> 块
+  2. 一律 background-color，不用 background 简写
+  3. 无 box-shadow、无 !important、无 border-radius 依赖
+  4. 结构靠 section 嵌套 + border-left 描边，字体用 &quot; 转义写法
+-->
+<section style="margin-top:22px;padding:14px 16px;background-color:#fbf3ef;border-left:3px solid #c86442;">
+  <section style="font-size:11px;color:#a8502f;letter-spacing:2px;margin-bottom:6px;">本期工具推荐</section>
+  <section style="font-size:15px;font-weight:bold;color:#292524;margin-bottom:6px;">{NAME}</section>
+  <section style="font-size:14px;color:#6d6058;line-height:1.7;margin-bottom:10px;">{DESC}</section>
+  <section style="margin-bottom:2px;">
+    <a href="{URL}" style="font-size:14px;font-weight:bold;color:#c86442;text-decoration:none;">{CTA}</a>
+  </section>
+  <section style="margin-top:10px;padding-top:8px;border-top:1px solid #f6e4da;font-size:11px;color:#6d6058;">推广 · 含返佣链接，仅推荐本站实际使用过的工具</section>
+</section>

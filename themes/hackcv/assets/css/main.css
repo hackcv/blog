@@ -1781,3 +1781,49 @@ img { max-width: 100%; display: block; }
 @media (min-width: 1200px) {
   .grid { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* ============================================================
+   文末推广位（affiliate · 方案 B 左描边轻卡片）
+   数据：data/sponsor.yml；模板：layouts/partials/affiliate.html
+   ============================================================ */
+.affiliate {
+  margin: 32px 0 8px;
+  padding: 14px 16px;
+  background-color: var(--primary-50);
+  border-left: 3px solid var(--primary-500);
+  border-radius: 4px;
+}
+.affiliate__tag {
+  font-size: .6875rem;
+  letter-spacing: .08em;
+  color: var(--primary-600);
+  margin-bottom: 5px;
+}
+.affiliate__name {
+  font-size: .9375rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.affiliate__desc {
+  font-size: .875rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+}
+.affiliate__cta {
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--primary-600);
+  text-decoration: none;
+}
+.affiliate__cta:hover { color: var(--primary-700); text-decoration: underline; }
+.affiliate__disclosure {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--primary-100);
+  font-size: .6875rem;
+  color: var(--text-muted);
+}
+.affiliate__disclosure a { color: var(--text-muted); text-decoration: none; }
+.affiliate__disclosure a:hover { color: var(--primary-600); }

@@ -1,0 +1,28 @@
+{{- /*
+  affiliate.html — 文末 affiliate / 推广位（方案 B：左描边轻卡片）
+  数据来源：data/sponsor.yml（enabled / label / disclosure / items[]）
+  规则：
+  - 页面 front matter 设 affiliate: false 可单页关闭
+  - 多条 items 按天轮换（同年同日全站展示同一条，构建结果稳定可缓存）
+  - 链接统一 rel="sponsored nofollow"（SEO + 广告合规）
+*/ -}}
+{{- if and (site.Data.sponsor) (ne site.Data.sponsor.enabled false) (ne .Params.affiliate false) -}}
+{{- $items := site.Data.sponsor.items -}}
+{{- if gt (len $items) 0 -}}
+{{- /* "2006001" = Go 布局：年 + 当年第几天（补零 3 位），拼成 YYYYDDD 取模轮换 */ -}}
+{{- $day := now.Format "2006001" | int -}}
+{{- $idx := mod $day (len $items) -}}
+{{- $s := index $items $idx -}}
+{{- $label := site.Data.sponsor.label | default "本期工具推荐" -}}
+{{- $disclosure := site.Data.sponsor.disclosure | default "推广" -}}
+<aside class="affiliate" aria-label="推广内容">
+  <div class="affiliate__tag">{{ $s.label | default $label }}</div>
+  <div class="affiliate__name">{{ $s.name }}</div>
+  {{- with $s.desc }}
+  <p class="affiliate__desc">{{ . }}</p>
+  {{- end }}
+  <a class="affiliate__cta" href="{{ $s.url }}" target="_blank" rel="sponsored nofollow noopener" data-umami-event="affiliate-click" data-umami-event-sponsor="{{ $s.name }}">{{ $s.cta | default "了解详情 →" }}</a>
+  <div class="affiliate__disclosure">{{ $disclosure }} · <a href="{{ $.Site.BaseURL }}sponsor/" rel="nofollow">投放说明</a></div>
+</aside>
+{{- end -}}
+{{- end -}}

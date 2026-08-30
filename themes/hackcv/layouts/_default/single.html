@@ -49,6 +49,9 @@
       {{ $content | safeHTML }}
     </div>
 
+    <!-- ============ 文末推广位（affiliate，数据见 data/sponsor.yml） ============ -->
+    {{ partial "affiliate.html" . }}
+
     <!-- ============ 上一篇 / 下一篇 ============ -->
     {{ if or .PrevInSection .NextInSection }}
     <nav class="prevnext" aria-label="{{ i18n "article_nav" }}">
